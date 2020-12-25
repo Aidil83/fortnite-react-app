@@ -80,7 +80,7 @@ export const NavMenuRight = styled.li`
   }
 `;
 
-export const NavLink = css`
+const NavLink = css`
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -93,7 +93,7 @@ export const NavLink = css`
   }
 `;
 
-export const NavUnderline = css`
+const NavUnderline = css`
   position: relative;
 
   &:before,

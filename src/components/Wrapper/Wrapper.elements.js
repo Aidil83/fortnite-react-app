@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const WrapperImage = styled.div`
   display: flex;
@@ -44,6 +44,19 @@ export const WrapperText = styled.div`
     left: 0;
   }
 `;
+
+// NOTE: Animate after refresh page:
+const loadText = keyframes`
+   0%, 25% {
+    transform: skewX(23deg) translateX(-10%);
+    opacity: 0; 
+  }
+  40%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
 export const WrapperButton = styled.button`
   position: absolute;
   bottom: 120px;
@@ -54,12 +67,16 @@ export const WrapperButton = styled.button`
   border: none;
   cursor: pointer;
   opacity: 0;
-  transition: 500ms;
+  animation-name: ${loadText};
+  animation-duration: 3.5s;
+  transition: 550ms;
 
   &:hover {
-    transform: skewX(-6deg);
+    transform: skewX(-5deg);
+    background-color: rgba(235, 235, 0);
   }
 `;
+
 export const WrapperLearnMore = styled.p`
   display: flex;
   flex-direction: center;
@@ -71,11 +88,10 @@ export const WrapperLearnMore = styled.p`
   height: 100%;
   padding: 0 34px;
   letter-spacing: 2.1px;
-  transition: 500ms;
+  transition: 550ms;
 
   &:hover {
-    transform: translateX(2%);
-    background-color: rgba(245, 245, 0);
-    transform: skewX(-6deg);
+    padding-left: 36px;
+    transform: translateX(1.25%);
   }
 `;

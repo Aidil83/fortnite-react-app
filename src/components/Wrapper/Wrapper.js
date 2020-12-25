@@ -13,21 +13,19 @@ import { TweenMax, Power3 } from "gsap";
 const Wrapper = () => {
   let animateSnowdown = useRef(null);
   let animateLearnMore = useRef(null);
-  let animateText = useRef(null);
 
   useEffect(() => {
     TweenMax.to(animateSnowdown, 1.2, {
       visibility: "visible",
       opacity: 1,
-      delay: 0.4,
+      delay: 0.8,
       y: -100,
       ease: "back.out",
     });
 
-    TweenMax.to(animateLearnMore, 0.2, {
+    TweenMax.to(animateLearnMore, {
       opacity: 1,
-      delay: 0.4,
-      ease: "back.out",
+      ease: "out",
     });
   }, []);
 

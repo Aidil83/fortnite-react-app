@@ -48,11 +48,11 @@ export const WrapperText = styled.div`
 // NOTE: Animate after refresh page:
 const loadText = keyframes`
    0%, 25% {
-    transform: skewX(23deg) translateX(-10%);
+    transform: skewX(23deg) translate(-4%);
     opacity: 0; 
   }
   40%{
-    transform: translateX(0);
+    transform: translate(0);
     opacity: 1;
   }
 `;

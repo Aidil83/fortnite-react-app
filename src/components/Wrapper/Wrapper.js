@@ -18,7 +18,7 @@ const Wrapper = () => {
     TweenMax.to(animateSnowdown, 1.2, {
       visibility: "visible",
       opacity: 1,
-      delay: 0.8,
+      delay: 0.95,
       y: -100,
       ease: "back.out",
     });

@@ -1,13 +1,14 @@
 import { useEffect, useRef } from "react";
+import Sidebar from "../Sidebar/Sidebar";
+import snowdown from "../../images/snowdown.jpg";
+import operatorSnowdown from "../../images/operatorSnowdown.png";
+import { TweenMax, Power3 } from "gsap";
 import {
   WrapperImage,
   WrapperText,
   WrapperButton,
   WrapperLearnMore,
 } from "./Wrapper.elements";
-import snowdown from "../../images/snowdown.jpg";
-import operatorSnowdown from "../../images/operatorSnowdown.png";
-import { TweenMax, Power3 } from "gsap";
 
 // NOTE: Using GSAP animation library:
 const Wrapper = () => {
@@ -31,6 +32,7 @@ const Wrapper = () => {
 
   return (
     <>
+      <Sidebar />
       <WrapperImage img={snowdown}>
         <WrapperText
           img={operatorSnowdown}

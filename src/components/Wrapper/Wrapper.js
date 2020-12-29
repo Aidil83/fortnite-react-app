@@ -10,7 +10,7 @@ import {
 } from "./Wrapper.elements";
 
 // NOTE: Using GSAP animation library:
-const Wrapper = () => {
+const Wrapper = ({ isOpen }) => {
   let animateSnowdown = useRef(null);
   let animateLearnMore = useRef(null);
 

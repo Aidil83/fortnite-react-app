@@ -1,6 +1,8 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css, keyframes } from "styled-components/macro";
 import { Link } from "react-router-dom";
 import { FaUserPlus } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 
 export const NavContainer = styled.div`
   display: flex;
@@ -64,6 +66,30 @@ export const NavMenuLeftMobile = styled.div`
     font-size: 2.1rem;
     cursor: pointer;
   }
+`;
+
+const animateCloseIcon = keyframes`
+   0% {
+    opacity: 0; 
+  }
+  100%{
+    opacity: 1;
+  }
+`;
+
+export const NavCurrentHamburgerIcon = styled(GiHamburgerMenu)`
+  animation-name: ${animateCloseIcon};
+  animation-duration: "0";
+`;
+
+export const NavHamburgerIcon = styled(GiHamburgerMenu)`
+  animation-name: ${animateCloseIcon};
+  animation-duration: ${({ isOpen }) => (isOpen ? "0s" : "0.8s")};
+`;
+
+export const NavCloseIcon = styled(AiOutlineClose)`
+  animation-name: ${animateCloseIcon};
+  animation-duration: ${({ isOpen }) => (isOpen ? "0s" : "0.8s")};
 `;
 
 export const NavMenuRight = styled.li`

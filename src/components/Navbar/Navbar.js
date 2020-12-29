@@ -1,9 +1,7 @@
-import { useState } from "react";
 import styled, { css } from "styled-components/macro";
 import forniteLogo from "../../images/forniteLogo.png";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoIosGlobe } from "react-icons/io";
-import { GiHamburgerMenu } from "react-icons/gi";
 import {
   NavButton,
   NavContainer,
@@ -17,24 +15,33 @@ import {
   NavUserSignIn,
   NavUserLogo,
   NavMenuLeftMobile,
+  NavCurrentHamburgerIcon,
+  NavHamburgerIcon,
+  NavCloseIcon,
 } from "./Navbar.elements";
 
-const Navbar = ({ handleToggle }) => {
+const Navbar = ({ isOpen, handleToggle, count }) => {
   return (
     <>
       <NavContainer>
         <NavLogo to="/" img={forniteLogo} />
         <NavMenu>
           <NavMenuLeftMobile>
-            <GiHamburgerMenu onClick={handleToggle} />
+            {count < 1 ? (
+              <NavCurrentHamburgerIcon onClick={handleToggle} />
+            ) : isOpen ? (
+              <NavCloseIcon onClick={handleToggle} toggle={isOpen} />
+            ) : (
+              <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />
+            )}
           </NavMenuLeftMobile>
           <NavMenuLeft>
             <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem>
             <NavMenuItem to="/creative">CREATIVE</NavMenuItem>
             <NavMenuItem to="/save_the_world">SAVE THE WORLD</NavMenuItem>
-            <NavMenuItem to="/trending">TRENDING</NavMenuItem>
-            <NavMenuItem to="/features">FEATURES</NavMenuItem>
+            <NavMenuItem to="/competitive">COMPETIVE</NavMenuItem>
             <NavMenuItem to="/news">NEWS</NavMenuItem>
+            <NavMenuItem to="/merch">MERCH</NavMenuItem>
           </NavMenuLeft>
 
           <NavMenuRight>

@@ -16,6 +16,8 @@ export const NavContainer = styled.div`
 `;
 
 export const NavLogo = styled(Link)`
+  position: relative;
+  z-index: 1;
   background-image: url(${({ img }) => img});
   background-position: 50%;
   background-size: contain;

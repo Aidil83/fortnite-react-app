@@ -75,6 +75,7 @@ export const NavMenuRight = styled.li`
   /* NOTE: Brute force the button to stick to the hamburger icon */
   @media screen and (max-width: 800px) {
     position: absolute;
+    width: 100vw;
     right: 50px;
     justify-content: flex-end;
   }
@@ -154,9 +155,9 @@ export const NavMenuIcon = styled.i`
   font-size: 1.4rem;
   padding: 0 10px;
   height: 51px;
-  ${NavLink}
-  ${NavMobileReset}
-  ${({ primary }) => (primary ? `${NavUnderline}` : null)}};
+  ${NavLink};
+  ${NavMobileReset};
+  ${({ primary }) => (primary ? `${NavUnderline}` : null)};
 `;
 
 export const NavmenuItemSignIn = styled(Link)`

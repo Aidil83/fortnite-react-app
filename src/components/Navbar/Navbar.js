@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled, { css } from "styled-components/macro";
 import forniteLogo from "../../images/forniteLogo.png";
 import { IoSearchOutline } from "react-icons/io5";
@@ -19,13 +20,19 @@ import {
 } from "./Navbar.elements";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <>
       <NavContainer>
         <NavLogo to="/" img={forniteLogo} />
         <NavMenu>
           <NavMenuLeftMobile>
-            <GiHamburgerMenu />
+            <GiHamburgerMenu onClick={handleToggle} />
           </NavMenuLeftMobile>
           <NavMenuLeft>
             <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem>
@@ -46,6 +53,7 @@ const Navbar = () => {
             <NavmenuItemSignIn to="/sign_in">
               <NavUserLogo />
               <NavUserSignIn>SIGN IN</NavUserSignIn>
+              <NavUserSignIn>{}</NavUserSignIn>
             </NavmenuItemSignIn>
             <NavButton href="https://www.epicgames.com/fortnite/en-US/download">
               DOWNLOAD

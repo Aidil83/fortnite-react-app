@@ -14,6 +14,7 @@ export const WrapperImage = styled.div`
   height: calc(100vh - 51px);
   width: 100%;
   z-index: 0;
+  overflow-x: hidden;
 
   /* NOTE: Prevents auto scrolling after refreshing page: */
   overflow-anchor: none;

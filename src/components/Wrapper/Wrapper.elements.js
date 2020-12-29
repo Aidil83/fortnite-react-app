@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components/macro";
 
 export const WrapperImage = styled.div`
   display: flex;
@@ -39,8 +39,8 @@ export const WrapperText = styled.div`
   background-image: url(${({ img }) => img});
 
   @media screen and (max-width: 620px) {
-    width: 490px;
-    height: 150px;
+    width: 290px;
+    height: 100px;
     left: 0;
   }
 `;

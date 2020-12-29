@@ -86,12 +86,12 @@ export const NavCurrentHamburgerIcon = styled(GiHamburgerMenu)`
 
 export const NavHamburgerIcon = styled(GiHamburgerMenu)`
   animation-name: ${animateCloseIcon};
-  animation-duration: ${({ isOpen }) => (isOpen ? "0s" : "0.8s")};
+  animation-duration: ${({ isOpen }) => (isOpen ? "0s" : "0.7s")};
 `;
 
 export const NavCloseIcon = styled(AiOutlineClose)`
   animation-name: ${animateCloseIcon};
-  animation-duration: ${({ isOpen }) => (isOpen ? "0s" : "0.8s")};
+  animation-duration: ${({ isOpen }) => (isOpen ? "0s" : "0.7s")};
 `;
 
 export const NavMenuRight = styled.li`

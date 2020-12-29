@@ -1,12 +1,17 @@
 import { Blog, Navbar, Sidebar, Wrapper } from "./components";
 import { AppContainer } from "./App.elements";
 import GlobalStyle from "./globalStyles";
-import { useState } from "react";
-import styled from "styled-components";
+import { useEffect, useRef, useState } from "react";
+import styled from "styled-components/macro";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [count, setCount] = useState(0);
+  let clickAnywhere = useRef(null);
+
+  useEffect(() => {
+    console.log(clickAnywhere);
+  }, []);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -14,12 +19,17 @@ function App() {
   };
 
   return (
-    <AppContainer>
+    <AppContainer ref={(e) => (clickAnywhere = e)}>
       <GlobalStyle />
-      <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
+      <Navbar
+        isOpen={isOpen}
+        count={count}
+        handleToggle={handleToggle}
+        clickAnyWhere={clickAnywhere}
+      />
       <Sidebar isOpen={isOpen} />
       <Wrapper />
-      <AppOverlay isOpen={isOpen}></AppOverlay>
+      <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
       <Blog />
     </AppContainer>
   );
@@ -35,6 +45,10 @@ const AppOverlay = styled.div`
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.75);
   height: 100%;
+
+  @media screen and (min-width: 1190px) {
+    display: none;
+  }
 `;
 
 export default App;

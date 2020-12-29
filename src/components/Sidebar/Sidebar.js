@@ -1,9 +1,9 @@
 import { SidebarMain } from "./Sidebar.elements";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   return (
     <>
-      <SidebarMain>Sidebar</SidebarMain>
+      <SidebarMain isOpen={isOpen}>Sidebar</SidebarMain>
     </>
   );
 };

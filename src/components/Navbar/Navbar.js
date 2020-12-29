@@ -19,13 +19,7 @@ import {
   NavMenuLeftMobile,
 } from "./Navbar.elements";
 
-const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
-
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
-
+const Navbar = ({ handleToggle }) => {
   return (
     <>
       <NavContainer>

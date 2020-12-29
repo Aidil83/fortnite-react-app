@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Sidebar from "../Sidebar/Sidebar";
 import snowdown from "../../images/snowdown.jpg";
 import operatorSnowdown from "../../images/operatorSnowdown.png";
 import { TweenMax, Power3 } from "gsap";
@@ -32,7 +31,6 @@ const Wrapper = () => {
 
   return (
     <>
-      <Sidebar />
       <WrapperImage img={snowdown}>
         <WrapperText
           img={operatorSnowdown}

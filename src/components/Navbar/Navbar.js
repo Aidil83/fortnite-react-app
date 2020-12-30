@@ -19,14 +19,21 @@ import {
   NavHamburgerIcon,
   NavCloseIcon,
 } from "./Navbar.elements";
+import { useState } from "react";
 
 const Navbar = ({ isOpen, handleToggle, count }) => {
+  const [isSearch, setIsSearch] = useState(true);
+
+  const handleSearch = () => {
+    setIsSearch(!isSearch);
+  };
+
   return (
     <>
       <NavContainer>
         <NavLogo to="/" img={forniteLogo} />
-        <NavMenu>
-          <NavMenuLeftMobile>
+        <NavMenu isSearch={isSearch}>
+          <NavMenuLeftMobile isSearch={isSearch}>
             {count < 1 ? (
               <NavCurrentHamburgerIcon onClick={handleToggle} />
             ) : isOpen ? (
@@ -35,17 +42,19 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />
             )}
           </NavMenuLeftMobile>
-          <NavMenuLeft>
-            <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem>
-            <NavMenuItem to="/creative">CREATIVE</NavMenuItem>
-            <NavMenuItem to="/save_the_world">SAVE THE WORLD</NavMenuItem>
-            <NavMenuItem to="/competitive">COMPETIVE</NavMenuItem>
-            <NavMenuItem to="/news">NEWS</NavMenuItem>
-            <NavMenuItem to="/merch">MERCH</NavMenuItem>
-          </NavMenuLeft>
+          {isSearch && (
+            <NavMenuLeft>
+              <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem>
+              <NavMenuItem to="/creative">CREATIVE</NavMenuItem>
+              <NavMenuItem to="/save_the_world">SAVE THE WORLD</NavMenuItem>
+              <NavMenuItem to="/competitive">COMPETIVE</NavMenuItem>
+              <NavMenuItem to="/news">NEWS</NavMenuItem>
+              <NavMenuItem to="/merch">MERCH</NavMenuItem>
+            </NavMenuLeft>
+          )}
 
           <NavMenuRight>
-            <NavMenuIcon primary>
+            <NavMenuIcon primary onClick={handleSearch}>
               <IoSearchOutline />
             </NavMenuIcon>
             <NavMenuIcon css="margin-right: 10px;">

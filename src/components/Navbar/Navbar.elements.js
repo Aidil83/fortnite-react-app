@@ -38,7 +38,9 @@ export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: ${({ isSearch }) =>
+    isSearch ? "space-between" : "flex-end"};
   font-family: sans-serif, arial;
   font-size: 11px;
 
@@ -60,13 +62,17 @@ export const NavMenuLeftMobile = styled.div`
   display: none;
 
   @media screen and (max-width: 1190px) {
-    display: flex;
+    display: ${({ isSearch }) => (isSearch ? "flex" : "none")};
     align-items: center;
     justify-content: center;
     height: 51px;
     width: 50px;
     font-size: 2.1rem;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
   }
 `;
 

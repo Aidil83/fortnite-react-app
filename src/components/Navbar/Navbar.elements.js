@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { FaUserPlus } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { IoMdClose } from "react-icons/io";
-import { IoSearchOutline } from "react-icons/io5";
+import { IoCloseOutline, IoSearchOutline } from "react-icons/io5";
 
 export const NavContainer = styled.div`
   display: flex;
@@ -40,13 +39,12 @@ export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   width: 100%;
-  /* justify-content: space-between; */
   justify-content: ${({ isSearch }) =>
     isSearch ? "space-between" : "flex-end"};
   font-family: sans-serif, arial;
   font-size: 11px;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 768px) {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
@@ -74,7 +72,7 @@ export const NavMenuLeftMobile = styled.div`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 768px) {
     display: flex;
   }
 `;
@@ -110,7 +108,7 @@ export const NavMenuRight = styled.li`
   justify-content: flex-end;
 
   /* NOTE: Brute force the button to stick to the hamburger icon */
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 768px) {
     position: absolute;
     width: 100vw;
     right: 50px;
@@ -175,7 +173,7 @@ const NavUnderline = css`
 `;
 
 export const NavMobileReset = css`
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -202,6 +200,13 @@ export const NavMenuIcon = styled.i`
   }
 `;
 
+const animateSearchBar = keyframes`
+  0%{
+    opacity: 0;
+    width: 0px;
+  }
+`;
+
 export const SearchContainer = styled.div`
   position: relative;
   display: flex;
@@ -211,7 +216,6 @@ export const SearchContainer = styled.div`
 
   input {
     position: relative;
-    max-width: 260px;
     height: 40px;
     padding-left: 15px;
     border-radius: 2px;
@@ -220,9 +224,17 @@ export const SearchContainer = styled.div`
     border-style: none;
     outline: none;
     color: white;
-}
+  }
+
+  input[type="text"] {
+    width: 380px;
+    animation-name: ${animateSearchBar};
+    animation-duration: 0.6s;
+  }
 
   .search__Box {
+    display: flex;
+    justify-content: flex-end;
     position: relative;
     min-width: 230px;
     border-radius: 5px;
@@ -235,13 +247,12 @@ export const SearchContainer = styled.div`
     padding: 5px;
     min-width: 41px;
     height: 40px;
+    cursor: pointer;
+    animation-name: ${animateSearchBar};
+    animation-duration: 3s;
 
     &:hover {
       background-color: #505050;
-}
-
-
-;
     }
   }
 `;
@@ -250,15 +261,12 @@ export const Open = styled(IoSearchOutline)`
   display: ${({ isSearch }) => (isSearch ? "flex" : "none")};
 `;
 
-export const Close = styled(IoMdClose)`
+export const Close = styled(IoCloseOutline)`
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
   ${NavLink};
-
-  &:hover {
-    color: #ccc !important;
-  }
+  transition: 280ms;
 `;
 
 export const NavmenuItemSignIn = styled(Link)`

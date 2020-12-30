@@ -66,10 +66,10 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
             {isSearch ? null : (
               <SearchContainer>
                 <div className="search__Box">
-                  <input type="text" placeholder="search..."></input>
+                  <input type="text" placeholder="Search..."></input>
                 </div>
-                <div className="search__Btn">
-                  <Close onClick={handleSearch} />
+                <div className="search__Btn" onClick={handleSearch}>
+                  <Close />
                 </div>
               </SearchContainer>
             )}

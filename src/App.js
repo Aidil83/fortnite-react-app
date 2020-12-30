@@ -7,11 +7,6 @@ import styled from "styled-components/macro";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [count, setCount] = useState(0);
-  let clickAnywhere = useRef(null);
-
-  useEffect(() => {
-    console.log(clickAnywhere);
-  }, []);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -19,14 +14,9 @@ function App() {
   };
 
   return (
-    <AppContainer ref={(e) => (clickAnywhere = e)}>
+    <AppContainer>
       <GlobalStyle />
-      <Navbar
-        isOpen={isOpen}
-        count={count}
-        handleToggle={handleToggle}
-        clickAnyWhere={clickAnywhere}
-      />
+      <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
       <Sidebar isOpen={isOpen} />
       <Wrapper />
       <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>

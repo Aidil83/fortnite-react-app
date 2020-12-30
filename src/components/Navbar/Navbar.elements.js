@@ -203,12 +203,46 @@ export const NavMenuIcon = styled.i`
 `;
 
 export const SearchContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-right: 20px;
 
   input {
-    width: 250px;
+    position: relative;
+    max-width: 260px;
+    height: 40px;
+    padding-left: 15px;
+    border-radius: 2px;
+    background-color: #393939;
+    font-size: 1.2rem;
+    border-style: none;
+    outline: none;
+    color: white;
+}
+
+  .search__Box {
+    position: relative;
+    min-width: 230px;
+    border-radius: 5px;
+  }
+
+  .search__Btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    min-width: 41px;
+    height: 40px;
+
+    &:hover {
+      background-color: #505050;
+}
+
+
+;
+    }
   }
 `;
 
@@ -217,8 +251,14 @@ export const Open = styled(IoSearchOutline)`
 `;
 
 export const Close = styled(IoMdClose)`
+  position: absolute;
   font-size: 2rem;
   cursor: pointer;
+  ${NavLink};
+
+  &:hover {
+    color: #ccc !important;
+  }
 `;
 
 export const NavmenuItemSignIn = styled(Link)`

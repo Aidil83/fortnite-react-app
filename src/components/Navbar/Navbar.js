@@ -65,8 +65,12 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
             </NavMenuIcon>
             {isSearch ? null : (
               <SearchContainer>
-                <input type="text"></input>
-                <Close onClick={handleSearch} />
+                <div className="search__Box">
+                  <input type="text" placeholder="search..."></input>
+                </div>
+                <div className="search__Btn">
+                  <Close onClick={handleSearch} />
+                </div>
               </SearchContainer>
             )}
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>

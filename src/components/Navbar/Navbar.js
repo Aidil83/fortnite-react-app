@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components/macro";
 import forniteLogo from "../../images/forniteLogo.png";
-import { IoSearchOutline } from "react-icons/io5";
 import { IoIosGlobe } from "react-icons/io";
 import {
   NavButton,
@@ -18,6 +17,9 @@ import {
   NavCurrentHamburgerIcon,
   NavHamburgerIcon,
   NavCloseIcon,
+  Open,
+  Close,
+  SearchContainer,
 } from "./Navbar.elements";
 import { useState } from "react";
 
@@ -54,16 +56,25 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
           )}
 
           <NavMenuRight>
-            <NavMenuIcon primary onClick={handleSearch}>
-              <IoSearchOutline />
+            <NavMenuIcon primary isSearch={isSearch}>
+              {isSearch && (
+                <ul onClick={handleSearch}>
+                  <Open isSearch={isSearch} />
+                </ul>
+              )}
             </NavMenuIcon>
-            <NavMenuIcon css="margin-right: 10px;">
+            {isSearch ? null : (
+              <SearchContainer>
+                <input type="text"></input>
+                <Close onClick={handleSearch} />
+              </SearchContainer>
+            )}
+            <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
               <IoIosGlobe />
             </NavMenuIcon>
             <NavmenuItemSignIn to="/sign_in">
               <NavUserLogo />
               <NavUserSignIn>SIGN IN</NavUserSignIn>
-              <NavUserSignIn>{}</NavUserSignIn>
             </NavmenuItemSignIn>
             <NavButton href="https://www.epicgames.com/fortnite/en-US/download">
               DOWNLOAD

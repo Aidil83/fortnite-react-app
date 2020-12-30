@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { FaUserPlus } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { IoMdClose } from "react-icons/io";
+import { IoSearchOutline } from "react-icons/io5";
 
 export const NavContainer = styled.div`
   display: flex;
@@ -103,9 +105,9 @@ export const NavCloseIcon = styled(AiOutlineClose)`
 
 export const NavMenuRight = styled.li`
   display: flex;
-  min-width: 330px;
+  min-width: 350px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   /* NOTE: Brute force the button to stick to the hamburger icon */
   @media screen and (max-width: 800px) {
@@ -188,11 +190,35 @@ export const NavMenuItem = styled(Link)`
 
 export const NavMenuIcon = styled.i`
   font-size: 1.4rem;
-  padding: 0 10px;
   height: 51px;
   ${NavLink};
   ${NavMobileReset};
   ${({ primary }) => (primary ? `${NavUnderline}` : null)};
+
+  margin: 0 7px;
+
+  ul {
+    padding: 14px;
+  }
+`;
+
+export const SearchContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+
+  input {
+    width: 250px;
+  }
+`;
+
+export const Open = styled(IoSearchOutline)`
+  display: ${({ isSearch }) => (isSearch ? "flex" : "none")};
+`;
+
+export const Close = styled(IoMdClose)`
+  font-size: 2rem;
+  cursor: pointer;
 `;
 
 export const NavmenuItemSignIn = styled(Link)`
@@ -201,6 +227,8 @@ export const NavmenuItemSignIn = styled(Link)`
   align-items: center;
   ${NavLink}
   ${NavMobileReset}
+  margin-left: 17px;
+  margin-right: 24px;
 `;
 
 export const NavUserLogo = styled(FaUserPlus)`
@@ -210,6 +238,7 @@ export const NavUserLogo = styled(FaUserPlus)`
 
 export const NavUserSignIn = styled.div`
   padding-left: 8px;
+  margin-right: 2px;
 `;
 
 export const NavButton = styled.a`

@@ -46,6 +46,7 @@ export const NavMenu = styled.ul`
 
   @media screen and (max-width: 800px) {
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 `;
 

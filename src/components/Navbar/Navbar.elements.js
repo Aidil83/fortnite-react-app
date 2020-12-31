@@ -275,7 +275,7 @@ export const SearchContainer = styled.div`
 `;
 
 export const SearchContainerHidden = styled.div`
-  visibility: none;
+  visibility: ${({ isLoad }) => (isLoad ? "visible" : "hidden")};
   position: absolute;
   left: 0;
   right: 278px;

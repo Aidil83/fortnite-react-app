@@ -26,9 +26,14 @@ import { useState } from "react";
 
 const Navbar = ({ isOpen, handleToggle, count }) => {
   const [isSearch, setIsSearch] = useState(true);
+  const [isLoad, setIsLoad] = useState(false);
+  const [loadCount, setLoadCount] = useState(0);
 
   const handleSearch = () => {
     setIsSearch(!isSearch);
+    setLoadCount(loadCount + 1);
+
+    if (loadCount >= 1) setIsLoad(true);
   };
 
   return (
@@ -65,7 +70,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               )}
             </NavMenuIcon>
             {isSearch ? (
-              <SearchContainerHidden isSearch={isSearch}>
+              <SearchContainerHidden isSearch={isSearch} isLoad={isLoad}>
                 <div className="search__Box">
                   <input type="text" placeholder="Search..."></input>
                 </div>

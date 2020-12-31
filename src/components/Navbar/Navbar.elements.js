@@ -302,7 +302,7 @@ export const SearchContainerHidden = styled.div`
   input[type="text"] {
     width: 380px;
     animation-name: ${animateSearchBarHidden};
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
   }
 
   .search__Box {

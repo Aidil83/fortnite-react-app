@@ -198,6 +198,8 @@ export const NavMenuIcon = styled.i`
   margin: 0 7px;
 
   ul {
+    position: relative;
+    z-index: 1;
     padding: 14px;
   }
 `;

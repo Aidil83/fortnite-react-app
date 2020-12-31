@@ -20,6 +20,7 @@ import {
   Open,
   Close,
   SearchContainer,
+  SearchContainerHidden,
 } from "./Navbar.elements";
 import { useState } from "react";
 
@@ -63,7 +64,16 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                 </ul>
               )}
             </NavMenuIcon>
-            {isSearch ? null : (
+            {isSearch ? (
+              <SearchContainerHidden isSearch={isSearch}>
+                <div className="search__Box">
+                  <input type="text" placeholder="Search..."></input>
+                </div>
+                <div className="search__Btn" onClick={handleSearch}>
+                  <Close />
+                </div>
+              </SearchContainerHidden>
+            ) : (
               <SearchContainer>
                 <div className="search__Box">
                   <input type="text" placeholder="Search..."></input>

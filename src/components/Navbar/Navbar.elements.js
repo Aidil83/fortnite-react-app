@@ -172,7 +172,7 @@ const NavUnderline = css`
   }
 `;
 
-export const NavMobileReset = css`
+const NavMobileReset = css`
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -202,6 +202,17 @@ export const NavMenuIcon = styled.i`
 
 const animateSearchBar = keyframes`
   0%{
+    opacity: 0;
+    width: 0px;
+  }
+`;
+
+const animateSearchBarHidden = keyframes`
+  0%{
+    opacity: 1;
+    width: 380px;
+  }
+  100%{
     opacity: 0;
     width: 0px;
   }
@@ -250,6 +261,62 @@ export const SearchContainer = styled.div`
     cursor: pointer;
     animation-name: ${animateSearchBar};
     animation-duration: 3s;
+
+    &:hover {
+      background-color: #505050;
+    }
+  }
+`;
+
+export const SearchContainerHidden = styled.div`
+  position: absolute;
+  left: 0;
+  right: 278px;
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+
+  input {
+    opacity: 0;
+    transition: 1s;
+    position: relative;
+    height: 40px;
+    padding-left: 15px;
+    border-radius: 2px;
+    background-color: #393939;
+    font-size: 1.2rem;
+    border-style: none;
+    outline: none;
+    color: white;
+  }
+
+  input[type="text"] {
+    width: 380px;
+    animation-name: ${animateSearchBarHidden};
+    animation-duration: 0.6s;
+  }
+
+  .search__Box {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    min-width: 230px;
+    border-radius: 5px;
+  }
+
+  .search__Btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    min-width: 41px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
 
     &:hover {
       background-color: #505050;

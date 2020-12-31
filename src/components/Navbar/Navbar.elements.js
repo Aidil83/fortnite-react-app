@@ -51,6 +51,8 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavMenuLeft = styled.li`
+  display: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
 
@@ -269,6 +271,7 @@ export const SearchContainer = styled.div`
 `;
 
 export const SearchContainerHidden = styled.div`
+  visibility: none;
   position: absolute;
   left: 0;
   right: 278px;

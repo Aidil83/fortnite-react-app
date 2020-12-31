@@ -242,7 +242,7 @@ export const SearchContainer = styled.div`
   input[type="text"] {
     width: 380px;
     animation-name: ${animateSearchBar};
-    animation-duration: 0.6s;
+    animation-duration: 0.5s;
   }
 
   .search__Box {
@@ -262,7 +262,7 @@ export const SearchContainer = styled.div`
     height: 40px;
     cursor: pointer;
     animation-name: ${animateSearchBar};
-    animation-duration: 3s;
+    animation-duration: 0.75s;
 
     &:hover {
       background-color: #505050;
@@ -300,7 +300,7 @@ export const SearchContainerHidden = styled.div`
   input[type="text"] {
     width: 380px;
     animation-name: ${animateSearchBarHidden};
-    animation-duration: 0.6s;
+    animation-duration: 0.5s;
   }
 
   .search__Box {

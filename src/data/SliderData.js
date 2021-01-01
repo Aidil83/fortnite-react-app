@@ -1,18 +1,18 @@
-import bgImageOne from "src/images/background_image/bgSnowdown.jpg";
-import bgImageTwo from "src/images/background_image/bgTeam.jpg";
-import bgImageThree from "src/images/background_image/bgBattlepass.jpg";
-import bgImageFour from "src/images/background_image/bgDisneyPlus.jpg";
+import bgImageOne from "../images/background_image/bgSnowdown.jpg";
+import bgImageTwo from "../images/background_image/bgTeam.jpg";
+import bgImageThree from "../images/background_image/bgBattlepass.jpg";
+import bgImageFour from "../images/background_image/bgDisneyplus.jpg";
+import txtImage from "../images/text_image/operatorSnowdown.png";
 
 export const SliderData = [
   {
     bgImage: bgImageOne,
-    txtImage: txtImageOne,
+    txtImage: txtImage,
     btn: "LEARN MORE",
     alt: "Snowdown",
   },
   {
     bgImage: bgImageTwo,
-    txtImage: txtImageTwo,
     caption: "CHAPTER 2 - SEASON 5",
     title: "ZERO POINT",
     btn: "JOIN THE HUNT",
@@ -20,7 +20,6 @@ export const SliderData = [
   },
   {
     bgImage: bgImageThree,
-    txtImage: txtImageThree,
     caption: "SEASON 5",
     title: "BATTLE PASS",
     section: "ZERO POINT",
@@ -29,7 +28,6 @@ export const SliderData = [
   },
   {
     bgImage: bgImageFour,
-    txtImage: txtImageFour,
     btn: "LEARN MORE",
     alt: "Disney+",
   },

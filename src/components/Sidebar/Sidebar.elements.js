@@ -2,7 +2,10 @@ import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 
 export const SidebarMain = styled.div`
+  display: none;
+
   @media screen and (max-width: 1190px) {
+    display: block;
     position: fixed;
     z-index: 2;
     right: ${({ isOpen }) => (isOpen ? "0" : "-1080px")};

@@ -1,8 +1,9 @@
 import { Blog, Navbar, Sidebar, Wrapper } from "./components";
 import { AppContainer } from "./App.elements";
 import GlobalStyle from "./globalStyles";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components/macro";
+import { SliderData } from "./data/SliderData";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ function App() {
       <GlobalStyle />
       <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
       <Sidebar isOpen={isOpen} />
-      <Wrapper />
+      <Wrapper slides={SliderData} />
       <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
       <Blog />
     </AppContainer>

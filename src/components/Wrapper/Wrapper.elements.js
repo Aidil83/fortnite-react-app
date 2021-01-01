@@ -19,11 +19,27 @@ export const WrapperImage = styled.div`
   overflow-anchor: none;
 `;
 
-export const WrapperText = styled.div`
+export const NextBtn = styled.button`
+  position: absolute;
+  bottom: 120px;
+  right: 500px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: orange;
+  }
+`;
+
+export const WrapperText = styled.img`
   display: flex;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   position: absolute;
   top: 0;
   left: 10px;
@@ -35,8 +51,7 @@ export const WrapperText = styled.div`
   height: 150px;
   object-fit: contain;
   margin-bottom: 0;
-  opacity: 0;
-  background-image: url(${({ img }) => img});
+  opacity: 1;
 
   @media screen and (max-width: 620px) {
     width: 290px;
@@ -47,11 +62,14 @@ export const WrapperText = styled.div`
 
 // NOTE: Animate after refresh page:
 const loadText = keyframes`
-   0%, 25% {
-    transform: skewX(23deg) translate(-4%);
+  0%{
+    opacity:0;
+  }
+  55%{
+    transform: skewX(26deg) translate(-5%); 
     opacity: 0; 
   }
-  40%{
+ 75%{
     transform: translate(0);
     opacity: 1;
   }
@@ -62,14 +80,12 @@ export const WrapperButton = styled.button`
   bottom: 120px;
   background-color: #ff0;
   height: 48px;
-  width: 230px;
+  width: 228px;
   outline: none;
   border: none;
   cursor: pointer;
-  opacity: 0;
-  animation-name: ${loadText};
-  animation-duration: 3.5s;
-  transition: 550ms;
+  animation: ${loadText} 1s linear;
+  transition: 550ms ease-out;
 
   &:hover {
     transform: skewX(-5deg);
@@ -79,19 +95,17 @@ export const WrapperButton = styled.button`
 
 export const WrapperLearnMore = styled.p`
   display: flex;
-  flex-direction: center;
+  justify-content: center;
   align-items: center;
   color: black;
   font-family: "Luckiest Guy", cursive;
   font-size: 1.5rem;
-  width: 100%;
+  width: 230px;
   height: 100%;
-  padding: 0 34px;
   letter-spacing: 2.1px;
-  transition: 550ms;
+  transition: 550ms ease;
 
   &:hover {
-    padding-left: 36px;
-    transform: translateX(1.25%);
+    transform: translateX(1.5%);
   }
 `;

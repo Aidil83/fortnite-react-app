@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import snowdown from "../../images/snowdown.jpg";
-import operatorSnowdown from "../../images/operatorSnowdown.png";
+import bgSnowdown from "../../images/background_image/bgSnowdown.jpg";
+import operatorSnowdown from "../../images/text_image/operatorSnowdown.png";
+
 import { TweenMax, Power3 } from "gsap";
 import {
   WrapperImage,
@@ -31,7 +32,7 @@ const Wrapper = ({ isOpen }) => {
 
   return (
     <>
-      <WrapperImage img={snowdown}>
+      <WrapperImage img={bgSnowdown}>
         <WrapperText
           img={operatorSnowdown}
           ref={(e) => (animateSnowdown = e)}

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components/macro";
-import forniteLogo from "../../images/forniteLogo.png";
+import forniteLogo from "../../images/text_image/forniteLogo.png";
 import { IoIosGlobe } from "react-icons/io";
 import {
   NavButton,

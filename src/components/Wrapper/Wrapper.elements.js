@@ -38,17 +38,38 @@ export const NextBtn = styled.button`
   }
 `;
 
+export const WrapperTitleTxt = styled.h1`
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  line-height: 102.4px;
+  bottom: 90px;
+  right: 0px;
+  /* right: 200px; */
+  width: 100%;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 128px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 3.1px;
+  background-image: linear-gradient(#0a2a8a, #178fd7, #0a2a8a);
+  background-size: 100%;
+  /* NOTE: Ignore the linting: */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
 export const WrapperText = styled.img`
   display: flex;
   position: absolute;
   top: 0;
-  left: 10px;
-  bottom: 85px;
+  bottom: 72px;
   right: 0;
+  left: 3px;
   margin: auto;
 
-  width: 590px;
-  height: 150px;
+  width: 576px;
+  height: 174px;
   object-fit: contain;
   margin-bottom: 0;
   opacity: 1;
@@ -109,3 +130,7 @@ export const WrapperLearnMore = styled.p`
     transform: translateX(1.5%);
   }
 `;
+
+// SECTION: styling for each slide
+
+// export const WrapperSlider

@@ -16,6 +16,7 @@ export const SliderData = [
     caption: "CHAPTER 2 - SEASON 5",
     title: "ZERO POINT",
     btn: "JOIN THE HUNT",
+    pos: 90,
     alt: "Zero Point",
   },
   {

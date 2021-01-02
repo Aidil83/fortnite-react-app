@@ -1,19 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 
-import { TweenMax, Power3 } from "gsap";
+import { TweenMax } from "gsap";
 import {
   WrapperImage,
   WrapperText,
   WrapperButton,
   WrapperLearnMore,
   NextBtn,
+  WrapperTitleTxt,
 } from "./Wrapper.elements";
 
 // NOTE: Using GSAP animation library:
 const Wrapper = ({ slides }) => {
   const [current, setCurrent] = useState(0);
-  const [state, setState] = useState(0);
   const length = slides.length;
+
+  const txt = "txt";
 
   let animateSnowdown = useRef(null);
   let animateLearnMore = useRef(null);
@@ -52,13 +54,23 @@ const Wrapper = ({ slides }) => {
         <div key={index}>
           {index === current && (
             <WrapperImage img={slide.bgImage}>
-              <WrapperText
-                src={slide.txtImage}
-                ref={(e) => {
-                  animateSnowdown = e;
-                }}
-                alt={slide.alt}
-              />
+              {slide.txtImage ? (
+                <WrapperText
+                  src={slide.txtImage}
+                  ref={(e) => {
+                    animateSnowdown = e;
+                  }}
+                  alt={slide.alt}
+                />
+              ) : (
+                <WrapperTitleTxt
+                  ref={(e) => {
+                    animateSnowdown = e;
+                  }}
+                >
+                  {slide.title}
+                </WrapperTitleTxt>
+              )}
               <WrapperButton ref={(e) => (animateLearnMore = e)}>
                 <WrapperLearnMore>{slide.btn}</WrapperLearnMore>
               </WrapperButton>

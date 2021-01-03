@@ -15,11 +15,17 @@ const Wrapper = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
-  const txt = "txt";
-
   let animateSnowdown = useRef(null);
   let animateLearnMore = useRef(null);
-  let timeout = useRef(null);
+  const timeout = useRef(null);
+
+  useEffect(() => {
+    timeout.current = setTimeout(nextSlide, 3000);
+
+    return () => {
+      if (timeout.current) clearTimeout(timeout.current);
+    };
+  }, [current, length]);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -45,7 +51,6 @@ const Wrapper = ({ slides }) => {
       opacity: 1,
       ease: "out",
     });
-    console.log();
   }, [current]);
 
   return (

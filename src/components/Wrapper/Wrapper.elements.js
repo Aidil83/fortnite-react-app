@@ -43,6 +43,7 @@ export const WrapperTitleTxt = styled.h1`
   justify-content: center;
   position: absolute;
   line-height: 102.4px;
+  /* TODO: pass by prop for bottom & right position */
   bottom: 90px;
   right: 0px;
   /* right: 200px; */

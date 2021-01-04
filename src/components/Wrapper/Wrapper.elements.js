@@ -12,8 +12,8 @@ export const WrapperImage = styled.div`
   background-size: cover;
   background-position: top;
   position: absolute;
-  /* top: 51px; */
-  /* height: calc(100vh - 51px); */
+  top: 51px;
+  height: calc(100vh - 51px);
   height: 100vh;
   width: 100%;
   overflow-x: hidden;

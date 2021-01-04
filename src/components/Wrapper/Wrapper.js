@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import Slider from "react-animated-slider";
+import "react-animated-slider/build/horizontal.css";
 
 import { TweenMax } from "gsap";
 import {
@@ -20,7 +22,7 @@ const Wrapper = ({ slides }) => {
   const timeout = useRef(null);
 
   useEffect(() => {
-    timeout.current = setTimeout(nextSlide, 3000);
+    timeout.current = setTimeout(nextSlide, 4000);
 
     return () => {
       if (timeout.current) clearTimeout(timeout.current);
@@ -54,37 +56,35 @@ const Wrapper = ({ slides }) => {
   }, [current]);
 
   return (
-    <>
+    <Slider autoplay={2500} className="wrapper">
       {slides.map((slide, index) => (
         <div key={index}>
-          {index === current && (
-            <WrapperImage img={slide.bgImage}>
-              {slide.txtImage ? (
-                <WrapperText
-                  src={slide.txtImage}
-                  ref={(e) => {
-                    animateSnowdown = e;
-                  }}
-                  alt={slide.alt}
-                />
-              ) : (
-                <WrapperTitleTxt
-                  ref={(e) => {
-                    animateSnowdown = e;
-                  }}
-                >
-                  {slide.title}
-                </WrapperTitleTxt>
-              )}
-              <WrapperButton ref={(e) => (animateLearnMore = e)}>
-                <WrapperLearnMore>{slide.btn}</WrapperLearnMore>
-              </WrapperButton>
-              <NextBtn onClick={nextSlide}>→</NextBtn>
-            </WrapperImage>
-          )}
+          <WrapperImage img={slide.bgImage}>
+            {slide.txtImage ? (
+              <WrapperText
+                src={slide.txtImage}
+                ref={(e) => {
+                  animateSnowdown = e;
+                }}
+                alt={slide.alt}
+              />
+            ) : (
+              <WrapperTitleTxt
+                ref={(e) => {
+                  animateSnowdown = e;
+                }}
+              >
+                {slide.title}
+              </WrapperTitleTxt>
+            )}
+            <WrapperButton ref={(e) => (animateLearnMore = e)}>
+              <WrapperLearnMore>{slide.btn}</WrapperLearnMore>
+            </WrapperButton>
+            <NextBtn onClick={nextSlide}>→</NextBtn>
+          </WrapperImage>
         </div>
       ))}
-    </>
+    </Slider>
   );
 };
 

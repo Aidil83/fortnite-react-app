@@ -14,8 +14,6 @@ function App() {
     setCount(count + 1);
   };
 
-  const add = "hello";
-
   return (
     <AppContainer>
       <GlobalStyle />

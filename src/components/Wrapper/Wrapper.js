@@ -1,8 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-// import Slider from "react-animated-slider";
-// import "react-animated-slider/build/horizontal.css";
-
 import { TweenMax } from "gsap";
 import {
   WrapperImage,
@@ -10,6 +6,7 @@ import {
   WrapperButton,
   WrapperLearnMore,
   NextBtn,
+  PrevBtn,
   WrapperTitleTxt,
 } from "./Wrapper.elements";
 
@@ -32,6 +29,10 @@ const Wrapper = ({ slides }) => {
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
   useEffect(() => {
@@ -84,6 +85,7 @@ const Wrapper = ({ slides }) => {
                 <WrapperLearnMore>{slide.btn}</WrapperLearnMore>
               </WrapperButton>
               <NextBtn onClick={nextSlide}>→</NextBtn>
+              <PrevBtn onClick={prevSlide}>←</PrevBtn>
             </WrapperImage>
           )}
         </div>

@@ -22,15 +22,34 @@ export const WrapperImage = styled.div`
   overflow-anchor: none;
 `;
 
-export const NextBtn = styled.button`
+export const PrevBtn = styled.button`
   position: absolute;
-  bottom: 120px;
-  right: 500px;
-  height: 50px;
-  width: 50px;
+  bottom: 110px;
+  left: 815px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   border: none;
-  background-color: #2a2a2a;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: orange;
+  }
+`;
+
+export const NextBtn = styled.button`
+  position: absolute;
+  bottom: 110px;
+  right: 815px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   font-size: 2rem;
   cursor: pointer;

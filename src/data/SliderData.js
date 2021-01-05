@@ -1,6 +1,7 @@
 import bgImageOne from "../images/background_image/bgSnowdown.jpg";
 import bgImageTwo from "../images/background_image/bgTeam.jpg";
 import bgImageThree from "../images/background_image/bgBattlepass.jpg";
+import bgImageThreeMobile from "../images/background_image/bgBattlepassmobile.jpg";
 import bgImageFour from "../images/background_image/bgDisneyplus.jpg";
 import txtImage from "../images/text_image/operatorSnowdown.png";
 
@@ -31,6 +32,7 @@ export const SliderData = [
   },
   {
     bgImage: bgImageThree,
+    bgImageMobile: bgImageThreeMobile,
     caption: "SEASON 5",
     title: "BATTLE PASS",
     section: "ZERO POINT",

@@ -27,12 +27,17 @@ export const WrapperImage = styled.div`
 
   /* NOTE: Prevents auto scrolling after refreshing page: */
   overflow-anchor: none;
+
+  &.mobile2 {
+    @media (max-width: 768px) {
+      background-image: url(${({ imgMobile }) => imgMobile});
+    }
+  }
 `;
 
 export const PrevBtn = styled.button`
   position: absolute;
   bottom: 110px;
-  /* left: 700px; */
   left: 5%;
   height: 70px;
   width: 70px;

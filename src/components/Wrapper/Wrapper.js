@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import styled, { css } from "styled-components/macro";
 import { TweenMax } from "gsap";
 import {
   WrapperImage,
@@ -62,13 +63,16 @@ const Wrapper = ({ slides }) => {
       {slides.map((slide, index) => (
         <div key={index}>
           {index === current && (
-            <WrapperImage img={slide.bgImage}>
+            <WrapperImage
+              className={`mobile${index}`}
+              img={slide.bgImage}
+              imgMobile={slide.bgImageMobile}
+            >
               {slide.txtImage ? (
                 <WrapperText
                   src={slide.txtImage}
                   ref={(e) => {
                     animateSnowdown = e;
-                    console.log(animateSnowdown);
                   }}
                   alt={slide.alt}
                 />

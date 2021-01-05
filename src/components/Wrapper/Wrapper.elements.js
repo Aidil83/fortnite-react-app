@@ -1,6 +1,13 @@
 import styled, { keyframes } from "styled-components/macro";
 import "react-animated-slider/build/horizontal.css";
 
+const media = {
+  Laptop: "@media (max-width: 1740px)",
+  ipadPro: "@media only screen and (device-width: 1024px)",
+  ipad: "@media only screen and (device-width: 768px)",
+  mobile: "@media only screen and (max-device-width: 480px)",
+};
+
 export const WrapperImage = styled.div`
   width: 100%;
   display: flex;
@@ -25,7 +32,8 @@ export const WrapperImage = styled.div`
 export const PrevBtn = styled.button`
   position: absolute;
   bottom: 110px;
-  left: 815px;
+  /* left: 700px; */
+  left: 5%;
   height: 70px;
   width: 70px;
   border-radius: 50%;
@@ -44,7 +52,7 @@ export const PrevBtn = styled.button`
 export const NextBtn = styled.button`
   position: absolute;
   bottom: 110px;
-  right: 815px;
+  right: 5%;
   height: 70px;
   width: 70px;
   border-radius: 50%;
@@ -64,22 +72,44 @@ export const WrapperTitleTxt = styled.h1`
   display: flex;
   justify-content: center;
   position: absolute;
-  line-height: 102.4px;
+  line-height: 110.4px;
   /* TODO: pass by prop for bottom & right position */
-  bottom: 90px;
-  right: 0px;
-  /* right: 200px; */
+  bottom: ${({ posTitleBottomDesktop }) => posTitleBottomDesktop}px;
+  right: ${({ posTitleRightDesktop }) => posTitleRightDesktop}px;
   width: 100%;
   font-family: "Luckiest Guy", cursive;
-  font-size: 128px;
+  font-size: clamp(5.1rem, 6vw, 10rem);
   font-weight: 500;
+
   font-style: italic;
   letter-spacing: 3.1px;
-  background-image: linear-gradient(#0a2a8a, #178fd7, #0a2a8a);
+  background-image: ${({ backgroundImage }) => backgroundImage};
   background-size: 100%;
   /* NOTE: Ignore the linting: */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  ${media.Laptop} {
+    bottom: ${({ posTitleBottomLaptop }) => posTitleBottomLaptop}px;
+    line-height: 80.4px;
+  }
+
+  ${media.ipadPro} {
+    bottom: ${({ posTitleBottomIpadPro }) => posTitleBottomIpadPro}px;
+    line-height: 80.4px;
+    font-size: 110px;
+  }
+
+  ${media.ipad} {
+    bottom: ${({ posTitleBottomIpad }) => posTitleBottomIpad}px;
+    line-height: 80.4px;
+  }
+
+  ${media.mobile} {
+    bottom: ${({ posTitleBottomMobile }) => posTitleBottomMobile}px;
+    font-size: xxx-large;
+    line-height: 80.4px;
+  }
 `;
 
 export const WrapperText = styled.img`

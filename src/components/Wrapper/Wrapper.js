@@ -74,6 +74,13 @@ const Wrapper = ({ slides }) => {
                 />
               ) : (
                 <WrapperTitleTxt
+                  backgroundImage={slide.backgroundImage}
+                  posTitleRightDesktop={slide.posTitleRightDesktop}
+                  posTitleBottomDesktop={slide.posTitleBottomDesktop}
+                  posTitleBottomLaptop={slide.posTitleBottomLaptop}
+                  posTitleBottomIpadPro={slide.posTitleBottomIpadPro}
+                  posTitleBottomIpad={slide.posTitleBottomIpad}
+                  posTitleBottomMobile={slide.posTitleBottomMobile}
                   ref={(e) => {
                     animateSnowdown = e;
                   }}

@@ -108,15 +108,13 @@ export const WrapperTitleTxt = styled.h1`
   display: flex;
   justify-content: center;
   position: absolute;
-  line-height: 110.4px;
-  /* TODO: pass by prop for bottom & right position */
+  line-height: 113.4px;
   bottom: ${({ posTitleBottomDesktop }) => posTitleBottomDesktop}px;
   right: ${({ posTitleRightDesktop }) => posTitleRightDesktop}px;
   width: 100%;
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(5.1rem, 6vw, 10rem);
+  font-size: clamp(7.1rem, 6vw, 10rem);
   font-weight: 500;
-
   font-style: italic;
   letter-spacing: 3.1px;
   background-image: ${({ backgroundImage }) => backgroundImage};
@@ -127,7 +125,22 @@ export const WrapperTitleTxt = styled.h1`
 
   ${media.Laptop} {
     bottom: ${({ posTitleBottomLaptop }) => posTitleBottomLaptop}px;
-    line-height: 80.4px;
+    right: ${({ posTitleRightLaptop }) => posTitleRightLaptop}px;
+    width: ${({ widthTitleLaptop }) => widthTitleLaptop};
+    /* line-height: 100.4px; */
+  }
+
+  @media (max-width: 768px) {
+    width: ${({ widthTitleIpad }) => widthTitleIpad};
+    font-size: ${({ fontSizeTitleIpad }) => fontSizeTitleIpad};
+    right: ${({ posTitleRightIpad }) => posTitleRightIpad}px;
+  }
+
+  @media screen and (max-width: 1190px) {
+    width: ${({ widthTitleLaptop }) => widthTitleLaptop};
+    right: ${({ posTitleRightLaptopSm }) => posTitleRightLaptopSm}px;
+    bottom: ${({ posTitleBottomLaptopSm }) => posTitleBottomLaptopSm}px;
+    font-size: ${({ fontSizeTitleIpad }) => fontSizeTitleIpad};
   }
 
   ${media.ipadPro} {
@@ -163,7 +176,13 @@ export const WrapperText = styled.img`
   margin-bottom: 0;
   opacity: 1;
 
-  @media screen and (max-width: 620px) {
+  @media only screen and (max-width: 620px) {
+    width: 500px;
+    height: 200px;
+    left: 0;
+  }
+
+  @media only screen and (max-device-width: 320px) {
     width: 340px;
     height: 100px;
     left: 0;
@@ -219,7 +238,5 @@ export const WrapperLearnMore = styled.p`
     transform: translateX(1.5%);
   }
 `;
-
-// SECTION: styling for each slide
 
 // export const WrapperSlider

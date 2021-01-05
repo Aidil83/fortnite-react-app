@@ -10,6 +10,7 @@ export const SliderData = [
     bgImage: bgImageOne,
     txtImage: txtImage,
     btn: "LEARN MORE",
+    widthTitleLaptop: "100%",
     posTitleRightDesktop: 0,
     posTitleBottomDesktop: 150,
     posTitleBottomIpad: 380,
@@ -21,12 +22,14 @@ export const SliderData = [
     caption: "CHAPTER 2 - SEASON 5",
     title: "ZERO POINT",
     btn: "JOIN THE HUNT",
+    widthTitleLaptop: "100%",
     posTitleRightDesktop: 0,
     posTitleBottomDesktop: 150,
     posTitleBottomLaptop: 200,
     posTitleBottomIpadPro: 390,
     posTitleBottomIpad: 250,
     posTitleBottomMobile: 150,
+    fontSizeTitleIpad: "clamp(5.1rem, 6vw, 10rem)",
     alt: "Zero Point",
     backgroundImage: "linear-gradient(#0a2a8a, #178fd7, #0a2a8a)",
   },
@@ -38,16 +41,31 @@ export const SliderData = [
     section: "ZERO POINT",
     btn: "JOIN THE HUNT",
     backgroundImage: "linear-gradient(#FFF, #FFF, #FFF)",
-    posTitleRightDesktop: 350,
-    posTitleBottomDesktop: 350,
-    posTitleBottomLaptop: 200,
+
+    //desktop
+    posTitleRightDesktop: 300,
+    posTitleBottomDesktop: 380,
+
+    posTitleBottomLaptop: 430,
+    posTitleRightLaptop: 760,
+    widthTitleLaptop: "35%",
+
+    posTitleRightLaptopSm: 500,
+    posTitleBottomLaptopSm: 330,
+    //Ipad
     posTitleBottomIpadPro: 390,
+
     posTitleBottomIpad: 250,
+    posTitleRightIpad: 240,
+    fontSizeTitleIpad: "clamp(6.1rem, 6vw, 10rem)",
+    widthTitleIpad: "50%",
+
     posTitleBottomMobile: 150,
     alt: "Battle Pass",
   },
   {
     bgImage: bgImageFour,
+    widthTitleLaptop: "100%",
     btn: "LEARN MORE",
     alt: "Disney+",
   },

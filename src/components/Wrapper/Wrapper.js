@@ -82,7 +82,14 @@ const Wrapper = ({ slides }) => {
                   posTitleRightDesktop={slide.posTitleRightDesktop}
                   posTitleBottomDesktop={slide.posTitleBottomDesktop}
                   posTitleBottomLaptop={slide.posTitleBottomLaptop}
+                  widthTitleLaptop={slide.widthTitleLaptop}
+                  posTitleRightLaptop={slide.posTitleRightLaptop}
+                  posTitleRightLaptopSmall={slide.posTitleRightLaptopSm}
+                  posTitleBottomLaptopSmall={slide.posTitleBottomLaptopSm}
                   posTitleBottomIpadPro={slide.posTitleBottomIpadPro}
+                  widthTitleIpad={slide.widthTitleIpad}
+                  fontSizeTitleIpad={slide.fontSizeTitleIpad}
+                  posTitleRightIpad={slide.posTitleRightIpad}
                   posTitleBottomIpad={slide.posTitleBottomIpad}
                   posTitleBottomMobile={slide.posTitleBottomMobile}
                   ref={(e) => {

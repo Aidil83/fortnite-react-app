@@ -6,6 +6,7 @@ const media = {
   ipadPro: "@media only screen and (device-width: 1024px)",
   ipad: "@media only screen and (device-width: 768px)",
   mobile: "@media only screen and (max-device-width: 480px)",
+  mobileSm: "@media only screen and (max-device-width: 320px)",
 };
 
 export const WrapperImage = styled.div`
@@ -52,6 +53,21 @@ export const PrevBtn = styled.button`
   &:hover {
     background-color: orange;
   }
+
+  ${media.mobile} {
+    bottom: 113px;
+    left: 6px;
+    height: 60px;
+    width: 60px;
+  }
+
+  ${media.mobileSm} {
+    bottom: 123px;
+    left: 3px;
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
+  }
 `;
 
 export const NextBtn = styled.button`
@@ -64,12 +80,27 @@ export const NextBtn = styled.button`
   border: none;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   outline: none;
 
   &:hover {
     background-color: orange;
+  }
+
+  ${media.mobile} {
+    bottom: 113px;
+    right: 6px;
+    height: 60px;
+    width: 60px;
+  }
+
+  ${media.mobileSm} {
+    bottom: 123px;
+    right: 3px;
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
   }
 `;
 
@@ -133,7 +164,7 @@ export const WrapperText = styled.img`
   opacity: 1;
 
   @media screen and (max-width: 620px) {
-    width: 290px;
+    width: 340px;
     height: 100px;
     left: 0;
   }

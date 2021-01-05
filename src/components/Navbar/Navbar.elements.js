@@ -5,6 +5,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoCloseOutline, IoSearchOutline } from "react-icons/io5";
 
+const media = {
+  Laptop: "@media (max-width: 1740px)",
+  ipadPro: "@media only screen and (device-width: 1024px)",
+  ipad: "@media only screen and (device-width: 768px)",
+  mobile: "@media only screen and (max-device-width: 480px)",
+  mobileSm: "@media only screen and (max-device-width: 320px)",
+  orientation: "@media screen and (orientation: landscape)",
+};
+
 export const NavContainer = styled.div`
   display: flex;
   align-items: center;
@@ -247,6 +256,10 @@ export const SearchContainer = styled.div`
     width: 380px;
     animation-name: ${animateSearchBar};
     animation-duration: 0.5s;
+
+    @media screen and (max-width: 812px) and (orientation: landscape) {
+      width: 340px;
+    }
   }
 
   .search__Box {
@@ -307,12 +320,15 @@ export const SearchContainerHidden = styled.div`
     animation-duration: 0.4s;
   }
 
-  .search__Box {
+  &.search__Box {
     display: flex;
     justify-content: flex-end;
     position: relative;
     min-width: 230px;
     border-radius: 5px;
+
+    input[type="text"] {
+    }
   }
 
   .search__Btn {

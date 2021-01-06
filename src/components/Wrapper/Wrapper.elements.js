@@ -125,7 +125,7 @@ export const WrapperTitleTxt = styled.h1`
   -webkit-text-fill-color: transparent;
 
   ${media.Laptop} {
-    bottom: ${({ slide }) => slide.posTitleBottomLaptop}px;
+    bottom: ${({ slide }) => slide.posTitleBottomLaptop};
     right: ${({ slide }) => slide.posTitleRightLaptop};
     width: ${({ slide }) => slide.widthTitleLaptop}px;
     margin-right: ${({ slide }) => slide.marginRightTitleLaptop}px;
@@ -152,7 +152,7 @@ export const WrapperTitleTxt = styled.h1`
     width: ${({ slide }) => slide.widthTitleIpad}px;
     font-size: ${({ slide }) => slide.fontSizeTitleIpadSm};
     right: ${({ slide }) => slide.posTitleRightIpad}px;
-    bottom: ${({ slide }) => slide.posTitleBottomMobileWeb}px;
+    bottom: ${({ slide }) => slide.posTitleBottomMobileWeb};
   }
 
   ${media.ipad} {

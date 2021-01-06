@@ -111,9 +111,10 @@ export const WrapperTitleTxt = styled.h1`
   line-height: 113.4px;
   bottom: ${({ posTitleBottomDesktop }) => posTitleBottomDesktop}px;
   right: ${({ posTitleRightDesktop }) => posTitleRightDesktop}px;
+  /* right: inherit; */
   width: 100%;
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(7.1rem, 6vw, 10rem);
+  font-size: clamp(6.1rem, 6vw, 10rem);
   font-weight: 500;
   font-style: italic;
   letter-spacing: 3.1px;
@@ -125,20 +126,18 @@ export const WrapperTitleTxt = styled.h1`
 
   ${media.Laptop} {
     bottom: ${({ posTitleBottomLaptop }) => posTitleBottomLaptop}px;
-    right: ${({ posTitleRightLaptop }) => posTitleRightLaptop}px;
-    width: ${({ widthTitleLaptop }) => widthTitleLaptop};
+    right: ${({ posTitleRightLaptop }) => posTitleRightLaptop};
+    width: ${({ widthTitleLaptop }) => widthTitleLaptop}px;
+    margin-right: ${({ marginRightTitleLaptop }) => marginRightTitleLaptop}px;
+    /* right: inherit; */
     /* line-height: 100.4px; */
   }
 
-  @media (max-width: 768px) {
-    width: ${({ widthTitleIpad }) => widthTitleIpad};
-    font-size: ${({ fontSizeTitleIpad }) => fontSizeTitleIpad};
-    right: ${({ posTitleRightIpad }) => posTitleRightIpad}px;
-  }
-
   @media screen and (max-width: 1190px) {
-    width: ${({ widthTitleLaptop }) => widthTitleLaptop};
-    right: ${({ posTitleRightLaptopSm }) => posTitleRightLaptopSm}px;
+    width: ${({ widthTitleLaptop }) => widthTitleLaptop}px;
+    right: inherit;
+    margin-right: ${({ marginRightTitleLaptopSm }) =>
+      marginRightTitleLaptopSm}px;
     bottom: ${({ posTitleBottomLaptopSm }) => posTitleBottomLaptopSm}px;
     font-size: ${({ fontSizeTitleIpad }) => fontSizeTitleIpad};
   }
@@ -147,6 +146,14 @@ export const WrapperTitleTxt = styled.h1`
     bottom: ${({ posTitleBottomIpadPro }) => posTitleBottomIpadPro}px;
     line-height: 80.4px;
     font-size: 110px;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    width: ${({ widthTitleIpad }) => widthTitleIpad}px;
+    font-size: ${({ fontSizeTitleIpadSm }) => fontSizeTitleIpadSm};
+    right: ${({ posTitleRightIpad }) => posTitleRightIpad}px;
+    bottom: ${({ posTitleBottomMobileWeb }) => posTitleBottomMobileWeb}px;
   }
 
   ${media.ipad} {

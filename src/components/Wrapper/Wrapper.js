@@ -20,13 +20,13 @@ const Wrapper = ({ slides }) => {
   let animateLearnMore = useRef(null);
   const timeout = useRef(null);
 
-  // useEffect(() => {
-  //   timeout.current = setTimeout(nextSlide, 4000);
+  useEffect(() => {
+    timeout.current = setTimeout(nextSlide, 4000);
 
-  //   return () => {
-  //     if (timeout.current) clearTimeout(timeout.current);
-  //   };
-  // }, [current, length]);
+    return () => {
+      if (timeout.current) clearTimeout(timeout.current);
+    };
+  }, [current, length]);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);

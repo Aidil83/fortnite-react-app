@@ -225,7 +225,7 @@ const animateSearchBar = keyframes`
 const animateSearchBarHidden = keyframes`
   0%{
     opacity: 1;
-    width: 380px;
+    width: 240px;
   }
   100%{
     opacity: 0;
@@ -253,12 +253,15 @@ export const SearchContainer = styled.div`
   }
 
   input[type="text"] {
-    width: 380px;
+    width: 240px;
     animation-name: ${animateSearchBar};
     animation-duration: 0.5s;
 
     @media screen and (max-width: 812px) and (orientation: landscape) {
-      width: 340px;
+      width: 240px;
+      animation-name: ${animateSearchBar} {
+        width: 240px;
+      }
     }
   }
 

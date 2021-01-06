@@ -109,8 +109,8 @@ export const WrapperTitleTxt = styled.h1`
   justify-content: center;
   position: absolute;
   line-height: 113.4px;
-  bottom: ${({ posTitleBottomDesktop }) => posTitleBottomDesktop}px;
-  right: ${({ posTitleRightDesktop }) => posTitleRightDesktop}px;
+  bottom: ${({ slide }) => slide.posTitleBottomDesktop}px;
+  right: ${({ slide }) => slide.posTitleRightDesktop}px;
   /* right: inherit; */
   width: 100%;
   font-family: "Luckiest Guy", cursive;
@@ -118,51 +118,50 @@ export const WrapperTitleTxt = styled.h1`
   font-weight: 500;
   font-style: italic;
   letter-spacing: 3.1px;
-  background-image: ${({ backgroundImage }) => backgroundImage};
+  background-image: ${({ slide }) => slide.backgroundImage};
   background-size: 100%;
   /* NOTE: Ignore the linting: */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   ${media.Laptop} {
-    bottom: ${({ posTitleBottomLaptop }) => posTitleBottomLaptop}px;
-    right: ${({ posTitleRightLaptop }) => posTitleRightLaptop};
-    width: ${({ widthTitleLaptop }) => widthTitleLaptop}px;
-    margin-right: ${({ marginRightTitleLaptop }) => marginRightTitleLaptop}px;
+    bottom: ${({ slide }) => slide.posTitleBottomLaptop}px;
+    right: ${({ slide }) => slide.posTitleRightLaptop};
+    width: ${({ slide }) => slide.widthTitleLaptop}px;
+    margin-right: ${({ slide }) => slide.marginRightTitleLaptop}px;
     /* right: inherit; */
     /* line-height: 100.4px; */
   }
 
   @media screen and (max-width: 1190px) {
-    width: ${({ widthTitleLaptop }) => widthTitleLaptop}px;
+    width: ${({ slide }) => slide.widthTitleLaptop}px;
     right: inherit;
-    margin-right: ${({ marginRightTitleLaptopSm }) =>
-      marginRightTitleLaptopSm}px;
-    bottom: ${({ posTitleBottomLaptopSm }) => posTitleBottomLaptopSm}px;
-    font-size: ${({ fontSizeTitleIpad }) => fontSizeTitleIpad};
+    margin-right: ${({ slide }) => slide.marginRightTitleLaptopSm}px;
+    bottom: ${({ slide }) => slide.posTitleBottomLaptopSm}px;
+    font-size: ${({ slide }) => slide.fontSizeTitleIpad};
   }
 
   ${media.ipadPro} {
-    bottom: ${({ posTitleBottomIpadPro }) => posTitleBottomIpadPro}px;
+    bottom: ${({ slide }) => slide.posTitleBottomIpadPro}px;
     line-height: 80.4px;
     font-size: 110px;
   }
 
   @media (max-width: 768px) {
     margin-right: 0;
-    width: ${({ widthTitleIpad }) => widthTitleIpad}px;
-    font-size: ${({ fontSizeTitleIpadSm }) => fontSizeTitleIpadSm};
-    right: ${({ posTitleRightIpad }) => posTitleRightIpad}px;
-    bottom: ${({ posTitleBottomMobileWeb }) => posTitleBottomMobileWeb}px;
+    width: ${({ slide }) => slide.widthTitleIpad}px;
+    font-size: ${({ slide }) => slide.fontSizeTitleIpadSm};
+    right: ${({ slide }) => slide.posTitleRightIpad}px;
+    bottom: ${({ slide }) => slide.posTitleBottomMobileWeb}px;
   }
 
   ${media.ipad} {
-    bottom: ${({ posTitleBottomIpad }) => posTitleBottomIpad}px;
+    bottom: ${({ slide }) => slide.posTitleBottomIpad}px;
     line-height: 80.4px;
   }
 
   ${media.mobile} {
-    bottom: ${({ posTitleBottomMobile }) => posTitleBottomMobile}px;
+    bottom: ${({ slide }) => slide.posTitleBottomMobile}px;
     font-size: xxx-large;
     line-height: 80.4px;
   }

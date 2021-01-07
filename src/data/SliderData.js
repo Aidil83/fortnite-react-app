@@ -4,7 +4,10 @@ import bgImageThree from "../images/background_image/bgBattlepass.jpg";
 import bgImageThreeMobile from "../images/background_image/bgBattlepassmobile.jpg";
 import bgImageFour from "../images/background_image/bgDisneyplus.jpg";
 import txtImage from "../images/text_image/operatorSnowdown.png";
+import txtImageDisney from "../images/text_image/disney.png";
 
+// left: ${({ slide }) => slide.ImgTxtLeft};
+// height: ${({ slide }) => slide.ImgTxtHeight};
 export const SliderData = [
   {
     bgImage: bgImageOne,
@@ -13,6 +16,12 @@ export const SliderData = [
     widthTitleLaptop: "100%",
     posCaptionRight: "100%",
     alt: "Snowdown",
+
+    imgTxtHeight: "174px",
+    imgTxtLeft: "3px",
+
+    imgmobileBigwidth: "500px",
+    imgmobileBigheight: "200px",
   },
   {
     bgImage: bgImageTwo,
@@ -57,12 +66,11 @@ export const SliderData = [
 
     alignSelf: "flex-start",
     wrapperCaptionWidth: 150,
-    wrapperTxtHeight: "45%",
+    wrapperTxtHeight: "20%",
     wrapperCaptionHeight: "35%",
 
     posTitleBottomLaptop: "28%",
     marginRightTitleLaptop: "41%",
-    posTitleRightLaptop: "inherit",
     widthTitleLaptop: "50%",
 
     marginRightTitleLaptopSm: "31%",
@@ -77,8 +85,15 @@ export const SliderData = [
   },
   {
     bgImage: bgImageFour,
+    txtImage: txtImageDisney,
     widthTitleLaptop: "100%",
     btn: "LEARN MORE",
     alt: "Disney+",
+    imgTxtLeft: "-280px",
+    imgTxtHeight: "780px",
+    imgTxtIpad: "22px",
+
+    imgmobileBigwidth: "450px",
+    imgmobileBigheight: "820px",
   },
 ];

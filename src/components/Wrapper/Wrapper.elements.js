@@ -114,7 +114,6 @@ export const WrapperTextContainer = styled.div`
   position: absolute;
   left: ${({ slide }) => slide.WrapperContainerLeft};
   bottom: ${({ slide }) => slide.WrapperContainerBottom};
-  background-color: rgba(0, 0, 0, 0.3);
 
   @media only screen and (max-width: 768px) {
     height: 51%;
@@ -130,9 +129,10 @@ export const WrapperCaption = styled.div`
   align-self: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 2rem;
+  color: ${({ slide }) => slide.captionColor};
 
   ${media.ipad} {
-    height: 35%;
+    height: 28%;
   }
 `;
 
@@ -168,7 +168,6 @@ export const WrapperTitleTxt = styled.div`
   ${media.ipadPro} {
     bottom: ${({ slide }) => slide.posTitleBottomIpadPro}px;
     line-height: 80.4px;
-    /* font-size: 110px; */
     font-size: 90px;
   }
 
@@ -181,7 +180,6 @@ export const WrapperTitleTxt = styled.div`
   }
 
   ${media.ipad} {
-    /* bottom: ${({ slide }) => slide.posTitleBottomIpad}px; */
     font-size: ${({ slide }) => slide.fontSizeTitleIpad};
     line-height: 80.4px;
     align-self: center;
@@ -196,25 +194,57 @@ export const WrapperText = styled.img`
   top: 0;
   bottom: 72px;
   right: 0;
-  left: 3px;
+  left: ${({ slide }) => slide.imgTxtLeft};
   margin: auto;
 
   width: 576px;
-  height: 174px;
+  height: ${({ slide }) => slide.imgTxtHeight};
   object-fit: contain;
   margin-bottom: 0;
   opacity: 1;
 
+  ${media.ipad} {
+    left: ${({ slide }) => slide.imgTxtIpad};
+  }
+
   @media only screen and (max-width: 620px) {
-    width: 500px;
-    height: 200px;
+    width: ${({ slide }) => slide.imgmobileBigwidth};
+    height: ${({ slide }) => slide.imgmobileBigheight};
     left: 0;
   }
 
-  @media only screen and (max-device-width: 320px) {
+  @media only screen and (max-width: 320px) {
+    /* width: ${({ slide }) => slide.imgmobileBigwidth}; */
+    /* height: ${({ slide }) => slide.imgmobileBigheight}; */
     width: 340px;
     height: 100px;
     left: 0;
+  }
+`;
+
+export const WrapperSection = styled.div`
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-self: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.2rem;
+  width: 200px;
+  height: 45px;
+  left: 297px;
+
+  ${media.Laptop} {
+    left: 297px;
+    font-size: 2rem;
+  }
+
+  ${media.ipadPro} {
+    left: 300px;
+  }
+
+  ${media.ipad} {
+    left: auto;
+    bottom: 200px;
   }
 `;
 

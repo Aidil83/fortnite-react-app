@@ -11,6 +11,7 @@ import {
   WrapperTitleTxt,
   WrapperTextContainer,
   WrapperCaption,
+  WrapperSection,
 } from "./Wrapper.elements";
 
 // NOTE: Using GSAP animation library:
@@ -71,9 +72,10 @@ const Wrapper = ({ slides }) => {
               imgMobile={slide.bgImageMobile}
             >
               <WrapperTextContainer slide={slide}>
-                <WrapperCaption>{slide.caption}</WrapperCaption>
+                <WrapperCaption slide={slide}>{slide.caption}</WrapperCaption>
                 {slide.txtImage ? (
                   <WrapperText
+                    slide={slide}
                     src={slide.txtImage}
                     ref={(e) => {
                       animateSnowdown = e;
@@ -90,6 +92,7 @@ const Wrapper = ({ slides }) => {
                     {slide.title}
                   </WrapperTitleTxt>
                 )}
+                <WrapperSection slide={slide}>{slide.section}</WrapperSection>
               </WrapperTextContainer>
               <WrapperButton ref={(e) => (animateLearnMore = e)}>
                 <WrapperLearnMore>{slide.btn}</WrapperLearnMore>

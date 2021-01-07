@@ -3,10 +3,10 @@ import "react-animated-slider/build/horizontal.css";
 
 const media = {
   Laptop: "@media (max-width: 1740px)",
-  ipadPro: "@media only screen and (device-width: 1024px)",
-  ipad: "@media only screen and (device-width: 768px)",
-  mobile: "@media only screen and (max-device-width: 480px)",
-  mobileSm: "@media only screen and (max-device-width: 320px)",
+  ipadPro: "@media only screen and (max-width: 1024px)",
+  ipad: "@media only screen and (max-width: 768px)",
+  mobile: "@media only screen and (max-width: 480px)",
+  mobileSm: "@media only screen and (max-width: 320px)",
 };
 
 export const WrapperImage = styled.div`
@@ -104,15 +104,47 @@ export const NextBtn = styled.button`
   }
 `;
 
-export const WrapperTitleTxt = styled.h1`
+export const WrapperTextContainer = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: ${({ slide }) => slide.posCaptionRight};
+  height: 49%;
+  position: absolute;
+  left: ${({ slide }) => slide.WrapperContainerLeft};
+  bottom: ${({ slide }) => slide.WrapperContainerBottom};
+  background-color: rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 768px) {
+    height: 45%;
+    width: 100%;
+    bottom: 0;
+    left: 0px;
+  }
+`;
+
+export const WrapperCaption = styled.div`
+  width: 150px;
+  height: 145px;
+  align-self: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2rem;
+
+  ${media.mobile} {
+    /* font-size: ${({ slide }) => slide.fontSizeTitleIpad}; */
+  }
+`;
+
+export const WrapperTitleTxt = styled.div`
   display: flex;
   justify-content: center;
-  position: absolute;
-  line-height: 113.4px;
-  bottom: ${({ slide }) => slide.posTitleBottomDesktop}px;
-  right: ${({ slide }) => slide.posTitleRightDesktop}px;
-  /* right: inherit; */
-  width: 100%;
+  align-self: flex-start;
+  height: 200px;
+  line-height: 93.4px;
+  /* bottom: ${({ slide }) => slide.posTitleBottomDesktop}px; */
+  /* right: ${({ slide }) => slide.posTitleRightDesktop}px; */
+  width: 800px;
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(6.1rem, 6vw, 10rem);
   font-weight: 500;
@@ -156,14 +188,17 @@ export const WrapperTitleTxt = styled.h1`
   }
 
   ${media.ipad} {
-    bottom: ${({ slide }) => slide.posTitleBottomIpad}px;
+    /* bottom: ${({ slide }) => slide.posTitleBottomIpad}px; */
     line-height: 80.4px;
+    align-self: center;
+    height: ${({ slide }) => slide.marginRightTitleLaptop};
   }
 
   ${media.mobile} {
     bottom: ${({ slide }) => slide.posTitleBottomMobile}px;
     font-size: xxx-large;
     line-height: 80.4px;
+    align-self: center;
   }
 `;
 

@@ -11,6 +11,7 @@ export const SliderData = [
     txtImage: txtImage,
     btn: "LEARN MORE",
     widthTitleLaptop: "100%",
+    posCaptionRight: "100%",
     posTitleBottomDesktop: 150,
     posTitleBottomIpad: 380,
     posTitleBottomMobile: 200,
@@ -21,15 +22,21 @@ export const SliderData = [
     caption: "CHAPTER 2 - SEASON 5",
     title: "ZERO POINT",
     btn: "JOIN THE HUNT",
+
+    posCaptionTop: "57%",
+    posCaptionRight: "25%",
+    captionColor: "#000",
+    posCaptionRight: "100%",
+
     widthTitleLaptop: "100%",
     posTitleRightDesktop: 0,
     posTitleBottomDesktop: 150,
-    posTitleBottomLaptop: "11%",
+    posTitleBottomLaptop: "16%",
     posTitleBottomIpadPro: 390,
     posTitleBottomIpad: 250,
     posTitleBottomMobileWeb: "16%",
     posTitleBottomMobile: 150,
-    fontSizeTitleIpad: "clamp(4.5rem, 6vw, 10rem)",
+    fontSizeTitleIpad: "clamp(5.1rem, 6vw, 10rem)",
     alt: "Zero Point",
     backgroundImage: "linear-gradient(#0a2a8a, #178fd7, #0a2a8a)",
   },
@@ -43,18 +50,23 @@ export const SliderData = [
     btn: "JOIN THE HUNT",
     backgroundImage: "linear-gradient(#FFF, #FFF, #FFF)",
 
+    WrapperContainerLeft: "2.1%",
+    WrapperContainerBottom: "20%",
     //desktop
+    posCaptionTop: "31.1%",
+    posCaptionRight: "42%",
+    captionColor: "#fff",
+
     posTitleRightDesktop: 300,
     posTitleBottomDesktop: 380,
 
-    posTitleBottomLaptop: 280,
-    marginRightTitleLaptop: 710,
+    posTitleBottomLaptop: "28%",
+    marginRightTitleLaptop: "41%",
     posTitleRightLaptop: "inherit",
-    widthTitleLaptop: 450,
+    widthTitleLaptop: "50%",
 
-    // posTitleRightLaptopSm: 500,
-    marginRightTitleLaptopSm: 300,
-    posTitleBottomLaptopSm: 280,
+    marginRightTitleLaptopSm: "31%",
+    posTitleBottomLaptopSm: "27%",
     //Ipad
     posTitleBottomIpadPro: 390,
 
@@ -63,7 +75,7 @@ export const SliderData = [
     posTitleBottomIpadSm: 250,
     fontSizeTitleIpadSm: "clamp(4.1rem, 6vw, 10rem)",
     widthTitleIpad: 500,
-    posTitleBottomMobileWeb: 70,
+    posTitleBottomMobileWeb: "8%",
 
     posTitleBottomMobile: 150,
     alt: "Battle Pass",

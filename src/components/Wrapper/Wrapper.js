@@ -9,6 +9,8 @@ import {
   NextBtn,
   PrevBtn,
   WrapperTitleTxt,
+  WrapperTextContainer,
+  WrapperCaption,
 } from "./Wrapper.elements";
 
 // NOTE: Using GSAP animation library:
@@ -68,24 +70,27 @@ const Wrapper = ({ slides }) => {
               img={slide.bgImage}
               imgMobile={slide.bgImageMobile}
             >
-              {slide.txtImage ? (
-                <WrapperText
-                  src={slide.txtImage}
-                  ref={(e) => {
-                    animateSnowdown = e;
-                  }}
-                  alt={slide.alt}
-                />
-              ) : (
-                <WrapperTitleTxt
-                  slide={slide}
-                  ref={(e) => {
-                    animateSnowdown = e;
-                  }}
-                >
-                  {slide.title}
-                </WrapperTitleTxt>
-              )}
+              <WrapperTextContainer slide={slide}>
+                <WrapperCaption>{slide.caption}</WrapperCaption>
+                {slide.txtImage ? (
+                  <WrapperText
+                    src={slide.txtImage}
+                    ref={(e) => {
+                      animateSnowdown = e;
+                    }}
+                    alt={slide.alt}
+                  />
+                ) : (
+                  <WrapperTitleTxt
+                    slide={slide}
+                    ref={(e) => {
+                      animateSnowdown = e;
+                    }}
+                  >
+                    {slide.title}
+                  </WrapperTitleTxt>
+                )}
+              </WrapperTextContainer>
               <WrapperButton ref={(e) => (animateLearnMore = e)}>
                 <WrapperLearnMore>{slide.btn}</WrapperLearnMore>
               </WrapperButton>

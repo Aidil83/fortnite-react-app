@@ -34,6 +34,11 @@ export const WrapperImage = styled.div`
       background-image: url(${({ imgMobile }) => imgMobile});
     }
   }
+  &.mobile3 {
+    @media (max-width: 768px) {
+      background-image: url(${({ imgMobile }) => imgMobile});
+    }
+  }
 `;
 
 export const PrevBtn = styled.button`
@@ -116,7 +121,7 @@ export const WrapperTextContainer = styled.div`
   bottom: ${({ slide }) => slide.WrapperContainerBottom};
 
   @media only screen and (max-width: 768px) {
-    height: 51%;
+    height: ${({ slide }) => slide.WrapperTextContainerHeight};
     width: 100%;
     bottom: 0;
     left: 0px;
@@ -132,7 +137,7 @@ export const WrapperCaption = styled.div`
   color: ${({ slide }) => slide.captionColor};
 
   ${media.ipad} {
-    height: 28%;
+    height: ${({ slide }) => slide.posCaptionHeight};
   }
 `;
 
@@ -205,19 +210,29 @@ export const WrapperText = styled.img`
 
   ${media.ipad} {
     left: ${({ slide }) => slide.imgTxtIpad};
+
+    &.mobile3 {
+      height: 100px;
+      bottom: 150%;
+      margin-bottom: -45px;
+    }
   }
 
   @media only screen and (max-width: 620px) {
     width: ${({ slide }) => slide.imgmobileBigwidth};
     height: ${({ slide }) => slide.imgmobileBigheight};
     left: 0;
+
+    &.mobile3 {
+      height: 100px;
+      bottom: 156%;
+      margin-bottom: -55px;
+    }
   }
 
   @media only screen and (max-width: 320px) {
-    /* width: ${({ slide }) => slide.imgmobileBigwidth}; */
-    /* height: ${({ slide }) => slide.imgmobileBigheight}; */
-    width: 340px;
-    height: 100px;
+    width: ${({ slide }) => slide.imgmobileBigwidth};
+    height: ${({ slide }) => slide.imgmobileBigheight};
     left: 0;
   }
 `;

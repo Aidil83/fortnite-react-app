@@ -75,6 +75,7 @@ const Wrapper = ({ slides }) => {
                 <WrapperCaption slide={slide}>{slide.caption}</WrapperCaption>
                 {slide.txtImage ? (
                   <WrapperText
+                    className={`mobile${index}`}
                     slide={slide}
                     src={slide.txtImage}
                     ref={(e) => {

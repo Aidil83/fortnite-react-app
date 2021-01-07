@@ -3,11 +3,10 @@ import bgImageTwo from "../images/background_image/bgTeam.jpg";
 import bgImageThree from "../images/background_image/bgBattlepass.jpg";
 import bgImageThreeMobile from "../images/background_image/bgBattlepassmobile.jpg";
 import bgImageFour from "../images/background_image/bgDisneyplus.jpg";
+import bgImageFourMobile from "../images/background_image/bgDisneyplusmobile.jpg";
 import txtImage from "../images/text_image/operatorSnowdown.png";
 import txtImageDisney from "../images/text_image/disney.png";
 
-// left: ${({ slide }) => slide.ImgTxtLeft};
-// height: ${({ slide }) => slide.ImgTxtHeight};
 export const SliderData = [
   {
     bgImage: bgImageOne,
@@ -23,7 +22,9 @@ export const SliderData = [
     imgTxtHeight: "174px",
     imgTxtLeft: "3px",
 
-    imgmobileBigwidth: "500px",
+    WrapperTextContainerHeight: "49%",
+
+    imgmobileBigwidth: "380px",
     imgmobileBigheight: "200px",
   },
   {
@@ -37,18 +38,20 @@ export const SliderData = [
 
     alignSelf: "center",
     wrapperCaptionWidth: "auto",
-    wrapperTxtHeight: "55%",
+    wrapperTxtHeight: "35%",
     wrapperCaptionHeight: "35%",
+    WrapperTextContainerHeight: "49%",
 
     posCaptionTop: "57%",
     posCaptionRight: "25%",
     captionColor: "#000",
     posCaptionRight: "100%",
+    posCaptionHeight: " 38%",
 
     widthTitleLaptop: "100%",
     posTitleBottomLaptop: "16%",
     posTitleBottomMobileWeb: "16%",
-    fontSizeTitleIpad: "clamp(5.1rem, 6vw, 10rem)",
+    fontSizeTitleIpad: "clamp(3.8rem, 6vw, 10rem)",
     alt: "Zero Point",
     backgroundImage: "linear-gradient(#0a2a8a, #178fd7, #0a2a8a)",
   },
@@ -68,6 +71,8 @@ export const SliderData = [
 
     WrapperContainerLeft: "2.1%",
     WrapperContainerBottom: "20%",
+    WrapperTextContainerHeight: "70%",
+    posCaptionHeight: " 25%",
     //desktop
 
     posCaptionTop: "31.1%",
@@ -76,7 +81,7 @@ export const SliderData = [
 
     alignSelf: "flex-start",
     wrapperCaptionWidth: 150,
-    wrapperTxtHeight: "20%",
+    wrapperTxtHeight: "12%",
     wrapperCaptionHeight: "35%",
 
     posTitleBottomLaptop: "28%",
@@ -87,12 +92,13 @@ export const SliderData = [
     posTitleBottomLaptopSm: "27%",
     //Ipad
 
-    fontSizeTitleIpad: "clamp(4.1rem, 6vw, 10rem)",
+    fontSizeTitleIpad: "clamp(3.6rem, 6vw, 10rem)",
     fontSizeTitleIpadSm: "clamp(6.1rem, 6vw, 10rem)",
     widthTitleIpad: 500,
   },
   {
     bgImage: bgImageFour,
+    bgImageMobile: bgImageFourMobile,
     txtImage: txtImageDisney,
     widthTitleLaptop: "100%",
     btn: "LEARN MORE",
@@ -105,7 +111,11 @@ export const SliderData = [
     imgTxtHeight: "780px",
     imgTxtIpad: "22px",
 
-    imgmobileBigwidth: "450px",
+    WrapperTextContainerHeight: "49%",
+
+    imgmobileBigwidth: "96.5%",
     imgmobileBigheight: "820px",
+
+    // width: 96.5%;
   },
 ];

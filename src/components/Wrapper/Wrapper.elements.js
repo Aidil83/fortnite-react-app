@@ -117,7 +117,7 @@ export const WrapperTextContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
 
   @media only screen and (max-width: 768px) {
-    height: 45%;
+    height: 51%;
     width: 100%;
     bottom: 0;
     left: 0px;
@@ -125,25 +125,23 @@ export const WrapperTextContainer = styled.div`
 `;
 
 export const WrapperCaption = styled.div`
-  width: 150px;
+  width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth}px;
   height: 145px;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 2rem;
 
-  ${media.mobile} {
-    /* font-size: ${({ slide }) => slide.fontSizeTitleIpad}; */
+  ${media.ipad} {
+    height: 35%;
   }
 `;
 
 export const WrapperTitleTxt = styled.div`
   display: flex;
   justify-content: center;
-  align-self: flex-start;
+  align-self: ${({ slide }) => slide.alignSelf};
   height: 200px;
   line-height: 93.4px;
-  /* bottom: ${({ slide }) => slide.posTitleBottomDesktop}px; */
-  /* right: ${({ slide }) => slide.posTitleRightDesktop}px; */
   width: 800px;
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(6.1rem, 6vw, 10rem);
@@ -157,26 +155,21 @@ export const WrapperTitleTxt = styled.div`
   -webkit-text-fill-color: transparent;
 
   ${media.Laptop} {
-    bottom: ${({ slide }) => slide.posTitleBottomLaptop};
-    right: ${({ slide }) => slide.posTitleRightLaptop};
-    width: ${({ slide }) => slide.widthTitleLaptop}px;
     margin-right: ${({ slide }) => slide.marginRightTitleLaptop}px;
-    /* right: inherit; */
-    /* line-height: 100.4px; */
   }
 
   @media screen and (max-width: 1190px) {
     width: ${({ slide }) => slide.widthTitleLaptop}px;
     right: inherit;
     margin-right: ${({ slide }) => slide.marginRightTitleLaptopSm}px;
-    bottom: ${({ slide }) => slide.posTitleBottomLaptopSm}px;
-    font-size: ${({ slide }) => slide.fontSizeTitleIpad};
+    font-size: ${({ slide }) => slide.fontSizeTitleIpadSm};
   }
 
   ${media.ipadPro} {
     bottom: ${({ slide }) => slide.posTitleBottomIpadPro}px;
     line-height: 80.4px;
-    font-size: 110px;
+    /* font-size: 110px; */
+    font-size: 90px;
   }
 
   @media (max-width: 768px) {
@@ -189,16 +182,11 @@ export const WrapperTitleTxt = styled.div`
 
   ${media.ipad} {
     /* bottom: ${({ slide }) => slide.posTitleBottomIpad}px; */
+    font-size: ${({ slide }) => slide.fontSizeTitleIpad};
     line-height: 80.4px;
     align-self: center;
-    height: ${({ slide }) => slide.marginRightTitleLaptop};
-  }
-
-  ${media.mobile} {
-    bottom: ${({ slide }) => slide.posTitleBottomMobile}px;
-    font-size: xxx-large;
-    line-height: 80.4px;
-    align-self: center;
+    width: 100%;
+    height: ${({ slide }) => slide.wrapperTxtHeight};
   }
 `;
 

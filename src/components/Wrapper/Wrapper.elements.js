@@ -266,7 +266,7 @@ const loadText = keyframes`
 export const WrapperButton = styled.button`
   position: absolute;
   bottom: 120px;
-  background-color: #ff0;
+  background-color: ${({ slide }) => slide.bgBtnColor};
   height: 48px;
   width: 228px;
   outline: none;
@@ -277,7 +277,7 @@ export const WrapperButton = styled.button`
 
   &:hover {
     transform: skewX(-5deg);
-    background-color: rgba(235, 235, 0);
+    background-color: ${({ slide }) => slide.bgBtnColor};
   }
 `;
 
@@ -292,6 +292,7 @@ export const WrapperLearnMore = styled.p`
   height: 100%;
   letter-spacing: 2.1px;
   transition: 550ms ease;
+  color: ${({ slide }) => slide.txtBtnColor};
 
   &:hover {
     transform: translateX(1.5%);

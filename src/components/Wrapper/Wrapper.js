@@ -94,8 +94,8 @@ const Wrapper = ({ slides }) => {
                 )}
                 <WrapperSection slide={slide}>{slide.section}</WrapperSection>
               </WrapperTextContainer>
-              <WrapperButton ref={(e) => (animateLearnMore = e)}>
-                <WrapperLearnMore>{slide.btn}</WrapperLearnMore>
+              <WrapperButton slide={slide} ref={(e) => (animateLearnMore = e)}>
+                <WrapperLearnMore slide={slide}>{slide.btn}</WrapperLearnMore>
               </WrapperButton>
               <NextBtn onClick={nextSlide}>→</NextBtn>
               <PrevBtn onClick={prevSlide}>←</PrevBtn>

@@ -17,6 +17,9 @@ export const SliderData = [
     posCaptionRight: "100%",
     alt: "Snowdown",
 
+    bgBtnColor: "#ff0",
+    txtBtnColor: "#000",
+
     imgTxtHeight: "174px",
     imgTxtLeft: "3px",
 
@@ -28,6 +31,9 @@ export const SliderData = [
     caption: "CHAPTER 2 - SEASON 5",
     title: "ZERO POINT",
     btn: "JOIN THE HUNT",
+
+    bgBtnColor: "#0b0b33",
+    txtBtnColor: "#fff",
 
     alignSelf: "center",
     wrapperCaptionWidth: "auto",
@@ -55,6 +61,10 @@ export const SliderData = [
     section: "ZERO POINT",
     btn: "JOIN THE HUNT",
     backgroundImage: "linear-gradient(#FFF, #FFF, #FFF)",
+    alt: "Battle Pass",
+
+    bgBtnColor: "#0b0b33",
+    txtBtnColor: "#fff",
 
     WrapperContainerLeft: "2.1%",
     WrapperContainerBottom: "20%",
@@ -80,8 +90,6 @@ export const SliderData = [
     fontSizeTitleIpad: "clamp(4.1rem, 6vw, 10rem)",
     fontSizeTitleIpadSm: "clamp(6.1rem, 6vw, 10rem)",
     widthTitleIpad: 500,
-
-    alt: "Battle Pass",
   },
   {
     bgImage: bgImageFour,
@@ -89,6 +97,10 @@ export const SliderData = [
     widthTitleLaptop: "100%",
     btn: "LEARN MORE",
     alt: "Disney+",
+
+    bgBtnColor: "#ff0",
+    txtBtnColor: "#000",
+
     imgTxtLeft: "-280px",
     imgTxtHeight: "780px",
     imgTxtIpad: "22px",

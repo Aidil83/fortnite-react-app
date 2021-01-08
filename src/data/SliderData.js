@@ -46,7 +46,7 @@ export const SliderData = [
     posCaptionRight: "25%",
     captionColor: "#000",
     posCaptionRight: "100%",
-    posCaptionHeight: " 38%",
+    posCaptionHeight: " 8%",
 
     widthTitleLaptop: "100%",
     posTitleBottomLaptop: "16%",
@@ -71,8 +71,8 @@ export const SliderData = [
 
     WrapperContainerLeft: "2.1%",
     WrapperContainerBottom: "20%",
-    WrapperTextContainerHeight: "70%",
-    posCaptionHeight: " 25%",
+    WrapperTextContainerHeight: "42%",
+    posCaptionHeight: " 5%",
     //desktop
 
     posCaptionTop: "31.1%",
@@ -81,7 +81,7 @@ export const SliderData = [
 
     alignSelf: "flex-start",
     wrapperCaptionWidth: 150,
-    wrapperTxtHeight: "12%",
+    wrapperTxtHeight: "22%",
     wrapperCaptionHeight: "35%",
 
     posTitleBottomLaptop: "28%",
@@ -107,7 +107,7 @@ export const SliderData = [
     bgBtnColor: "#ff0",
     txtBtnColor: "#000",
 
-    imgTxtLeft: "-280px",
+    imgTxtLeft: "-200px",
     imgTxtHeight: "780px",
     imgTxtIpad: "22px",
 

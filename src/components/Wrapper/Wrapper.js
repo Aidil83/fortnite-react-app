@@ -19,8 +19,11 @@ const Wrapper = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
+  let animateCaption = useRef(null);
   let animateSnowdown = useRef(null);
+  let animateSection = useRef(null);
   let animateLearnMore = useRef(null);
+
   const timeout = useRef(null);
 
   // useEffect(() => {
@@ -55,6 +58,39 @@ const Wrapper = ({ slides }) => {
         ease: "back.out",
       }
     );
+
+    TweenMax.fromTo(
+      animateCaption,
+      1.3,
+      {
+        opacity: 0,
+      },
+      {
+        visibility: "visible",
+        opacity: 1,
+        autoApha: 1,
+        delay: 0.85,
+        y: -100,
+        ease: "back.out",
+      }
+    );
+
+    TweenMax.fromTo(
+      animateSection,
+      1.3,
+      {
+        opacity: 0,
+      },
+      {
+        visibility: "visible",
+        opacity: 1,
+        autoApha: 1,
+        delay: 0.75,
+        y: -160,
+        ease: "back.out",
+      }
+    );
+
     TweenMax.to(animateLearnMore, {
       opacity: 1,
       ease: "out",
@@ -72,7 +108,9 @@ const Wrapper = ({ slides }) => {
               imgMobile={slide.bgImageMobile}
             >
               <WrapperTextContainer slide={slide}>
-                <WrapperCaption slide={slide}>{slide.caption}</WrapperCaption>
+                <WrapperCaption ref={(e) => (animateCaption = e)} slide={slide}>
+                  {slide.caption}
+                </WrapperCaption>
                 {slide.txtImage ? (
                   <WrapperText
                     className={`mobile${index}`}
@@ -93,7 +131,9 @@ const Wrapper = ({ slides }) => {
                     {slide.title}
                   </WrapperTitleTxt>
                 )}
-                <WrapperSection slide={slide}>{slide.section}</WrapperSection>
+                <WrapperSection ref={(e) => (animateSection = e)} slide={slide}>
+                  {slide.section}
+                </WrapperSection>
               </WrapperTextContainer>
               <WrapperButton slide={slide} ref={(e) => (animateLearnMore = e)}>
                 <WrapperLearnMore slide={slide}>{slide.btn}</WrapperLearnMore>

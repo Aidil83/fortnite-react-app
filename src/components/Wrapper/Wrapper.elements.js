@@ -130,7 +130,8 @@ export const WrapperTextContainer = styled.div`
 
 export const WrapperCaption = styled.div`
   width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth}px;
-  height: 145px;
+  /* height: 145px; */
+  height: 45px;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 2rem;
@@ -145,7 +146,8 @@ export const WrapperTitleTxt = styled.div`
   display: flex;
   justify-content: center;
   align-self: ${({ slide }) => slide.alignSelf};
-  height: 200px;
+  /* height: 200px; */
+  height: 170px;
   line-height: 93.4px;
   width: 800px;
   font-family: "Luckiest Guy", cursive;
@@ -240,7 +242,7 @@ export const WrapperText = styled.img`
 export const WrapperSection = styled.div`
   display: flex;
   justify-content: center;
-  position: absolute;
+  /* position: absolute; */
   align-self: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 2.2rem;
@@ -258,8 +260,10 @@ export const WrapperSection = styled.div`
   }
 
   ${media.ipad} {
+    height: 12%;
+    position: absolute;
     left: auto;
-    bottom: 200px;
+    bottom: 8%;
   }
 `;
 

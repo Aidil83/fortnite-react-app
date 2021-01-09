@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components/macro";
-import "react-animated-slider/build/horizontal.css";
 
 const media = {
   Laptop: "@media (max-width: 1740px)",

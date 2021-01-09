@@ -1,9 +1,11 @@
-import { BlogContainer } from "./Blog.elements";
+import { BlogContainer, BlogMain } from "./Blog.elements";
 
 const Blog = () => {
   return (
     <>
-      <BlogContainer>Howdy Ho!</BlogContainer>
+      <BlogMain>
+        <BlogContainer>inner</BlogContainer>
+      </BlogMain>
     </>
   );
 };

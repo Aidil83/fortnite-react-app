@@ -10,6 +10,7 @@ const media = {
 };
 
 export const WrapperImage = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,9 +20,7 @@ export const WrapperImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  position: absolute;
   top: 51px;
-  height: calc(100vh - 51px);
   height: 100vh;
   width: 100%;
   overflow-x: hidden;

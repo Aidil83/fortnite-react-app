@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     transition: "1s",
 
     "&:hover": {
+      overflow: "hidden",
       transition: "1s",
       opacity: 0,
     },
@@ -26,14 +27,16 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     zIndex: 0,
     height: 648,
+    maxHeight: 648,
     backgroundPosition: "top",
     display: "flex",
     alignItems: "flex-end",
+    overflow: "hidden",
 
     transition: ".5s",
 
     "&:hover": {
-      // transform: "scale(1.1)",
+      transform: "scale(1.05)",
       transition: ".5s",
       "& $contentHover": {
         opacity: 0,
@@ -42,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
       "& $fontLarge": {
         marginBottom: 15,
         transition: ".5s",
+        overflow: "hidden",
       },
     },
   },
@@ -51,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper1: {
     width: 300,
+    overflow: "hidden",
   },
   paper2: {
     backgroundSize: "cover",
@@ -107,14 +112,16 @@ export default function BlogCard() {
           </CardMedia>
         </Grid>
         <Grid className={classes.paper1} item xs={12} md={6} lg={5} xl={5}>
-          <CardMedia className={classes.media1} image={gridImage[1]}>
-            <CardContent>
-              <Typography className={classes.fontLarge}>
-                Marvel Royalty and Warriors Pack
-              </Typography>
-            </CardContent>
-            <div className={classes.contentHover} />
-          </CardMedia>
+          <div style={{ overflow: "hidden" }}>
+            <CardMedia className={classes.media1} image={gridImage[1]}>
+              <CardContent>
+                <Typography className={classes.fontLarge}>
+                  Marvel Royalty and Warriors Pack
+                </Typography>
+              </CardContent>
+              <div className={classes.contentHover} />
+            </CardMedia>
+          </div>
         </Grid>
         <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>
           <CardMedia className={classes.media2} image={gridImage[2]} />

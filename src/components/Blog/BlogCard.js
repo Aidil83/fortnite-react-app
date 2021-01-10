@@ -7,6 +7,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
+  contentHover: {
+    backgroundImage:
+      "linear-gradient( 180deg, transparent, rgba(37, 37, 37, 0.61), #111)",
+  },
+
   media1: {
     height: 648,
     backgroundPosition: "top",
@@ -32,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   fontLarge: {
     fontSize: "2.5rem",
+    lineHeight: 0.85,
     fontFamily: "Luckiest Guy",
     textTransform: "uppercase",
     textAlign: "left",
@@ -63,7 +69,7 @@ export default function BlogCard() {
       <Grid container spacing={3}>
         <Grid className={classes.paper1} item xs={12} md={6} lg={7}>
           <CardMedia className={classes.media1} image={gridImage[0]}>
-            <CardContent>
+            <CardContent className={classes.contentHover}>
               <Typography className={classes.fontLarge}>
                 Fortnite Crew: Green Arrow Revealed for January Crew P...
               </Typography>
@@ -72,7 +78,7 @@ export default function BlogCard() {
         </Grid>
         <Grid className={classes.paper1} item xs={12} md={6} lg={5} xl={5}>
           <CardMedia className={classes.media1} image={gridImage[1]}>
-            <CardContent>
+            <CardContent className={classes.contentHover}>
               <Typography className={classes.fontLarge}>
                 Marvel Royalty and Warriors Pack
               </Typography>

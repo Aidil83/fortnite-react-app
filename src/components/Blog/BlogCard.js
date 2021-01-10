@@ -5,13 +5,16 @@ import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    overflowAnchor: "none",
   },
 
   media1: {
     height: 680,
+    backgroundPosition: "top",
   },
   media2: {
     height: 480,
+    backgroundPosition: "top",
   },
   paper1: {
     width: 300,

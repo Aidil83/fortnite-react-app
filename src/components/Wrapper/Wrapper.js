@@ -26,20 +26,26 @@ const Wrapper = ({ slides }) => {
 
   const timeout = useRef(null);
 
-  // useEffect(() => {
-  //   timeout.current = setTimeout(nextSlide, 4000);
+  useEffect(() => {
+    const nextSlide = () => {
+      setCurrent((current) => (current === length - 1 ? 0 : current + 1));
+    };
 
-  //   return () => {
-  //     if (timeout.current) clearTimeout(timeout.current);
-  //   };
-  // }, [current, length]);
+    timeout.current = setTimeout(nextSlide, 3000);
 
-  const nextSlide = () => {
+    return function () {
+      if (timeout.current) clearTimeout(timeout.current);
+    };
+  }, [current, length]);
+
+  const nextSlide = (e) => {
     setCurrent(current === length - 1 ? 0 : current + 1);
+    if (timeout.current) clearTimeout(timeout.current);
   };
 
-  const prevSlide = () => {
+  const prevSlide = (e) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
+    if (timeout.current) clearTimeout(timeout.current);
   };
 
   useEffect(() => {
@@ -50,7 +56,6 @@ const Wrapper = ({ slides }) => {
         opacity: 0,
       },
       {
-        visibility: "visible",
         opacity: 1,
         autoApha: 1,
         delay: 0.75,
@@ -66,7 +71,6 @@ const Wrapper = ({ slides }) => {
         opacity: 0,
       },
       {
-        visibility: "visible",
         opacity: 1,
         autoApha: 1,
         delay: 0.85,
@@ -82,7 +86,6 @@ const Wrapper = ({ slides }) => {
         opacity: 0,
       },
       {
-        visibility: "visible",
         opacity: 1,
         autoApha: 1,
         delay: 0.75,
@@ -96,6 +99,10 @@ const Wrapper = ({ slides }) => {
       ease: "out",
     });
   }, [current]);
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
 
   return (
     <>

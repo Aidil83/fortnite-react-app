@@ -8,15 +8,42 @@ const useStyles = makeStyles((theme) => ({
   },
 
   contentHover: {
+    position: "absolute",
+    zIndex: 1,
     backgroundImage:
       "linear-gradient( 180deg, transparent, rgba(37, 37, 37, 0.61), #111)",
+    height: 100,
+    width: "100%",
+    transition: "1s",
+
+    "&:hover": {
+      transition: "1s",
+      opacity: 0,
+    },
   },
 
   media1: {
+    position: "relative",
+    zIndex: 0,
     height: 648,
     backgroundPosition: "top",
     display: "flex",
     alignItems: "flex-end",
+
+    transition: ".5s",
+
+    "&:hover": {
+      // transform: "scale(1.1)",
+      transition: ".5s",
+      "& $contentHover": {
+        opacity: 0,
+        transition: "1s",
+      },
+      "& $fontLarge": {
+        marginBottom: 15,
+        transition: ".5s",
+      },
+    },
   },
   media2: {
     height: 480,
@@ -36,6 +63,8 @@ const useStyles = makeStyles((theme) => ({
     height: 150,
   },
   fontLarge: {
+    position: "relative",
+    zIndex: 2,
     fontSize: "2.5rem",
     lineHeight: 0.85,
     fontFamily: "Luckiest Guy",
@@ -69,20 +98,22 @@ export default function BlogCard() {
       <Grid container spacing={3}>
         <Grid className={classes.paper1} item xs={12} md={6} lg={7}>
           <CardMedia className={classes.media1} image={gridImage[0]}>
-            <CardContent className={classes.contentHover}>
+            <CardContent>
               <Typography className={classes.fontLarge}>
                 Fortnite Crew: Green Arrow Revealed for January Crew P...
               </Typography>
             </CardContent>
+            <div className={classes.contentHover} />
           </CardMedia>
         </Grid>
         <Grid className={classes.paper1} item xs={12} md={6} lg={5} xl={5}>
           <CardMedia className={classes.media1} image={gridImage[1]}>
-            <CardContent className={classes.contentHover}>
+            <CardContent>
               <Typography className={classes.fontLarge}>
                 Marvel Royalty and Warriors Pack
               </Typography>
             </CardContent>
+            <div className={classes.contentHover} />
           </CardMedia>
         </Grid>
         <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>

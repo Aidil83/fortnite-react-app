@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import { CardContent, CardMedia, Typography } from "@material-ui/core";
+import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
 
   contentHover: {
     position: "absolute",
-    zIndex: 1,
+    zIndex: 25,
     backgroundImage:
       "linear-gradient( 180deg, transparent, rgba(37, 37, 37, 0.61), #111)",
     height: 100,
@@ -32,22 +32,31 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "flex-end",
     overflow: "hidden",
-
     transition: ".5s",
 
     "&:hover": {
-      transform: "scale(1.05)",
       transition: ".5s",
       "& $contentHover": {
         opacity: 0,
         transition: "1s",
       },
       "& $fontLarge": {
-        marginBottom: 15,
+        marginBottom: 35,
         transition: ".5s",
-        overflow: "hidden",
+      },
+      "& $imageLarge": {
+        transform: "scale(1.03)",
+        transition: ".5s",
       },
     },
+  },
+  imageLarge: {
+    position: "absolute",
+    zIndex: 20,
+    width: "100%",
+    height: "100%",
+    maxHeight: "100%",
+    transition: ".5s",
   },
   media2: {
     height: 480,
@@ -68,14 +77,14 @@ const useStyles = makeStyles((theme) => ({
     height: 150,
   },
   fontLarge: {
-    position: "relative",
-    zIndex: 2,
+    pointerEvents: "none",
     fontSize: "2.5rem",
     lineHeight: 0.85,
     fontFamily: "Luckiest Guy",
     textTransform: "uppercase",
     textAlign: "left",
     color: "#fff",
+    transition: ".5s",
   },
   font1: {
     color: "#1db8f3",
@@ -102,14 +111,20 @@ export default function BlogCard() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid className={classes.paper1} item xs={12} md={6} lg={7}>
-          <CardMedia className={classes.media1} image={gridImage[0]}>
-            <CardContent>
-              <Typography className={classes.fontLarge}>
-                Fortnite Crew: Green Arrow Revealed for January Crew P...
-              </Typography>
-            </CardContent>
-            <div className={classes.contentHover} />
-          </CardMedia>
+          <div style={{ overflow: "hidden" }}>
+            <Card className={classes.media1}>
+              <CardMedia
+                className={classes.imageLarge}
+                image={gridImage[0]}
+              ></CardMedia>
+              <CardContent style={{ position: "absolute", zIndex: 30 }}>
+                <Typography className={classes.fontLarge}>
+                  Fortnite Crew: Green Arrow Revealed for January Crew P...
+                </Typography>
+              </CardContent>
+              <div className={classes.contentHover} />
+            </Card>
+          </div>
         </Grid>
         <Grid className={classes.paper1} item xs={12} md={6} lg={5} xl={5}>
           <div style={{ overflow: "hidden" }}>

@@ -7,6 +7,58 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
+  paper1: {
+    width: 300,
+    overflow: "hidden",
+  },
+  media1: {
+    position: "relative",
+    zIndex: 0,
+    height: 648,
+    maxHeight: 648,
+    backgroundPosition: "top",
+    display: "flex",
+    alignItems: "flex-end",
+    overflow: "hidden",
+    transition: ".5s",
+
+    "&:hover": {
+      transition: ".5s",
+      "& $contentHover": {
+        opacity: 0,
+        transition: ".3s",
+      },
+      "& $fontLarge": {
+        marginBottom: 25,
+        transition: ".3s",
+      },
+      "& $imageLarge": {
+        transform: "scale(1.05)",
+        transition: ".5s",
+      },
+    },
+  },
+
+  imageLarge: {
+    position: "absolute",
+    zIndex: 20,
+    width: "100%",
+    height: "100%",
+    maxHeight: "100%",
+    transition: ".5s",
+  },
+
+  fontLarge: {
+    pointerEvents: "none",
+    fontSize: "2.5rem",
+    lineHeight: 0.85,
+    fontFamily: "Luckiest Guy",
+    textTransform: "uppercase",
+    textAlign: "left",
+    color: "#fff",
+    transition: ".5s",
+  },
+
   contentHover: {
     position: "absolute",
     zIndex: 25,
@@ -23,73 +75,34 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  media1: {
-    position: "relative",
-    zIndex: 0,
-    height: 648,
-    maxHeight: 648,
-    backgroundPosition: "top",
-    display: "flex",
-    alignItems: "flex-end",
-    overflow: "hidden",
-    transition: ".5s",
+  paper2: {
+    backgroundSize: "cover",
+    transition: ".3s",
+    backfaceVisibility: "hidden",
 
     "&:hover": {
-      transition: ".5s",
-      "& $contentHover": {
-        opacity: 0,
-        transition: "1s",
-      },
-      "& $fontLarge": {
-        marginBottom: 35,
-        transition: ".5s",
-      },
-      "& $imageLarge": {
-        transform: "scale(1.03)",
-        transition: ".5s",
-      },
+      transform: "scale(1.02) translateZ(0) perspective(1px)",
+      transition: ".3s",
+      backfaceVisibility: "hidden",
     },
   },
-  imageLarge: {
-    position: "absolute",
-    zIndex: 20,
-    width: "100%",
-    height: "100%",
-    maxHeight: "100%",
-    transition: ".5s",
-  },
+
   media2: {
     height: 480,
     backgroundPosition: "top",
   },
-  paper1: {
-    width: 300,
-    overflow: "hidden",
-  },
-  paper2: {
-    backgroundSize: "cover",
-    paddingLeft: 0,
-    paddingRigth: 0,
-  },
+
   cardContent: {
     backgroundColor: "#f9f9f9",
     textAlign: "left",
     height: 150,
   },
-  fontLarge: {
-    pointerEvents: "none",
-    fontSize: "2.5rem",
-    lineHeight: 0.85,
-    fontFamily: "Luckiest Guy",
-    textTransform: "uppercase",
-    textAlign: "left",
-    color: "#fff",
-    transition: ".5s",
-  },
+
   font1: {
     color: "#1db8f3",
     fontWeight: "600",
   },
+
   font2: {
     fontFamily: "Luckiest Guy",
     textTransform: "uppercase",
@@ -118,6 +131,9 @@ export default function BlogCard() {
                 image={gridImage[0]}
               ></CardMedia>
               <CardContent style={{ position: "absolute", zIndex: 30 }}>
+                <Typography className={classes.font1} style={{ color: "#fff" }}>
+                  Dec 23, 2020
+                </Typography>
                 <Typography className={classes.fontLarge}>
                   Fortnite Crew: Green Arrow Revealed for January Crew P...
                 </Typography>
@@ -128,14 +144,21 @@ export default function BlogCard() {
         </Grid>
         <Grid className={classes.paper1} item xs={12} md={6} lg={5} xl={5}>
           <div style={{ overflow: "hidden" }}>
-            <CardMedia className={classes.media1} image={gridImage[1]}>
-              <CardContent>
+            <Card className={classes.media1}>
+              <CardMedia
+                className={classes.imageLarge}
+                image={gridImage[1]}
+              ></CardMedia>
+              <CardContent style={{ position: "absolute", zIndex: 30 }}>
+                <Typography className={classes.font1} style={{ color: "#fff" }}>
+                  Dec 21, 2020
+                </Typography>
                 <Typography className={classes.fontLarge}>
                   Marvel Royalty and Warriors Pack
                 </Typography>
               </CardContent>
               <div className={classes.contentHover} />
-            </CardMedia>
+            </Card>
           </div>
         </Grid>
         <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>

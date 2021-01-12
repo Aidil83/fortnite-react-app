@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { gridImage } from "../../data/GridData";
+import { gridImage, gridLoadMoreImage } from "../../data/GridData";
 import Grid from "@material-ui/core/Grid";
 import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 import { BlogButton, BlogButtonContainer, BlogLoadMore } from "./Blog.elements";
@@ -186,6 +186,20 @@ export default function BlogCard() {
             </Typography>
           </CardContent>
         </Grid>
+        {isLoadMore && (
+          <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>
+            <CardMedia
+              className={classes.media2}
+              image={gridLoadMoreImage[0]}
+            />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 18, 2020</Typography>
+              <Typography className={classes.font2}>
+                operation snowdown
+              </Typography>
+            </CardContent>
+          </Grid>
+        )}
       </Grid>
 
       {/* NOTE: Next Grid */}
@@ -198,12 +212,12 @@ export default function BlogCard() {
       )}
       {isLoadMore && (
         <Grid container spacing={3}>
-          <Grid className={classes.paper1} item xs={12} md={6} lg={7}>
+          <Grid className={classes.paper1} item xs={12} md={6} lg={5}>
             <div style={{ overflow: "hidden" }}>
               <Card className={classes.media1}>
                 <CardMedia
                   className={classes.imageLarge}
-                  image={gridImage[0]}
+                  image={gridLoadMoreImage[1]}
                 ></CardMedia>
                 <CardContent style={{ position: "absolute", zIndex: 30 }}>
                   <Typography
@@ -220,12 +234,12 @@ export default function BlogCard() {
               </Card>
             </div>
           </Grid>
-          <Grid className={classes.paper1} item xs={12} md={6} lg={5} xl={5}>
+          <Grid className={classes.paper1} item xs={12} md={6} lg={6} xl={7}>
             <div style={{ overflow: "hidden" }}>
               <Card className={classes.media1}>
                 <CardMedia
                   className={classes.imageLarge}
-                  image={gridImage[1]}
+                  image={gridLoadMoreImage[2]}
                 ></CardMedia>
                 <CardContent style={{ position: "absolute", zIndex: 30 }}>
                   <Typography
@@ -243,7 +257,10 @@ export default function BlogCard() {
             </div>
           </Grid>
           <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>
-            <CardMedia className={classes.media2} image={gridImage[2]} />
+            <CardMedia
+              className={classes.media2}
+              image={gridLoadMoreImage[3]}
+            />
             <CardContent className={classes.cardContent}>
               <Typography className={classes.font1}>Dec 21, 2020</Typography>
               <Typography className={classes.font2}>
@@ -252,20 +269,14 @@ export default function BlogCard() {
             </CardContent>
           </Grid>
           <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>
-            <CardMedia className={classes.media2} image={gridImage[3]} />
+            <CardMedia
+              className={classes.media2}
+              image={gridLoadMoreImage[4]}
+            />
             <CardContent className={classes.cardContent}>
               <Typography className={classes.font1}>Dec 21, 2020</Typography>
               <Typography className={classes.font2}>
                 fortography results
-              </Typography>
-            </CardContent>
-          </Grid>
-          <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>
-            <CardMedia className={classes.media2} image={gridImage[4]} />
-            <CardContent className={classes.cardContent}>
-              <Typography className={classes.font1}>Dec 18, 2020</Typography>
-              <Typography className={classes.font2}>
-                operation snowdown
               </Typography>
             </CardContent>
           </Grid>

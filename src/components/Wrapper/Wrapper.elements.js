@@ -10,7 +10,6 @@ const media = {
 
 export const WrapperImage = styled.div`
   position: relative;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

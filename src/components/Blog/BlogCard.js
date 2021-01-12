@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
   imageLarge: {
     position: "absolute",
+    backgroundPosition: "top",
     zIndex: 20,
     width: "100%",
     height: "100%",

@@ -193,11 +193,13 @@ export default function BlogCard() {
         </Grid>
       </Grid>
       {/* NOTE: Next Grid */}
-      <BlogButtonContainer>
-        <BlogButton onClick={() => setIsLoadMore(true)}>
-          <BlogLoadMore>LOAD MORE</BlogLoadMore>
-        </BlogButton>
-      </BlogButtonContainer>
+      {!isLoadMore && (
+        <BlogButtonContainer>
+          <BlogButton onClick={() => setIsLoadMore(true)}>
+            <BlogLoadMore>LOAD MORE</BlogLoadMore>
+          </BlogButton>
+        </BlogButtonContainer>
+      )}
       {isLoadMore && (
         <Grid container spacing={3}>
           <Grid className={classes.paper1} item xs={12} md={6} lg={7}>

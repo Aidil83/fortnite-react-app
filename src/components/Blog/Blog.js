@@ -1,5 +1,6 @@
-import { BlogContainer, BlogMain } from "./Blog.elements";
 import BlogCard from "./BlogCard";
+import imageStore from "../../images/background_image/imageStore.png";
+import { BlogContainer, BlogImageContainer, BlogMain } from "./Blog.elements";
 
 const Blog = () => {
   return (
@@ -9,6 +10,9 @@ const Blog = () => {
           <BlogCard />
         </BlogContainer>
       </BlogMain>
+      <BlogImageContainer>
+        <img src={imageStore} alt="imageStore" />
+      </BlogImageContainer>
     </>
   );
 };

@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
+import { BlogButton, BlogButtonContainer, BlogLoadMore } from "./Blog.elements";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -112,6 +114,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function BlogCard() {
+  const [isLoadMore, setIsLoadMore] = useState(false);
   const classes = useStyles();
   const gridImage = [
     "https://cdn2.unrealengine.com/en-15br-social-subs-announce-greenarrow-news-header-1920x1080-42a73c3e0f98.jpg",
@@ -189,6 +192,87 @@ export default function BlogCard() {
           </CardContent>
         </Grid>
       </Grid>
+      {/* NOTE: Next Grid */}
+      <BlogButtonContainer>
+        <BlogButton onClick={() => setIsLoadMore(true)}>
+          <BlogLoadMore>LOAD MORE</BlogLoadMore>
+        </BlogButton>
+      </BlogButtonContainer>
+      {isLoadMore && (
+        <Grid container spacing={3}>
+          <Grid className={classes.paper1} item xs={12} md={6} lg={7}>
+            <div style={{ overflow: "hidden" }}>
+              <Card className={classes.media1}>
+                <CardMedia
+                  className={classes.imageLarge}
+                  image={gridImage[0]}
+                ></CardMedia>
+                <CardContent style={{ position: "absolute", zIndex: 30 }}>
+                  <Typography
+                    className={classes.font1}
+                    style={{ color: "#fff" }}
+                  >
+                    Dec 23, 2020
+                  </Typography>
+                  <Typography className={classes.fontLarge}>
+                    Fortnite Crew: Green Arrow Revealed for January Crew P...
+                  </Typography>
+                </CardContent>
+                <div className={classes.contentHover} />
+              </Card>
+            </div>
+          </Grid>
+          <Grid className={classes.paper1} item xs={12} md={6} lg={5} xl={5}>
+            <div style={{ overflow: "hidden" }}>
+              <Card className={classes.media1}>
+                <CardMedia
+                  className={classes.imageLarge}
+                  image={gridImage[1]}
+                ></CardMedia>
+                <CardContent style={{ position: "absolute", zIndex: 30 }}>
+                  <Typography
+                    className={classes.font1}
+                    style={{ color: "#fff" }}
+                  >
+                    Dec 21, 2020
+                  </Typography>
+                  <Typography className={classes.fontLarge}>
+                    Marvel Royalty and Warriors Pack
+                  </Typography>
+                </CardContent>
+                <div className={classes.contentHover} />
+              </Card>
+            </div>
+          </Grid>
+          <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>
+            <CardMedia className={classes.media2} image={gridImage[2]} />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 21, 2020</Typography>
+              <Typography className={classes.font2}>
+                wakanda solute emote
+              </Typography>
+            </CardContent>
+          </Grid>
+          <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>
+            <CardMedia className={classes.media2} image={gridImage[3]} />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 21, 2020</Typography>
+              <Typography className={classes.font2}>
+                fortography results
+              </Typography>
+            </CardContent>
+          </Grid>
+          <Grid className={classes.paper2} item xs={12} md={6} lg={3} xl={3}>
+            <CardMedia className={classes.media2} image={gridImage[4]} />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 18, 2020</Typography>
+              <Typography className={classes.font2}>
+                operation snowdown
+              </Typography>
+            </CardContent>
+          </Grid>
+        </Grid>
+      )}
     </div>
   );
 }

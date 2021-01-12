@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import styled, { css } from "styled-components/macro";
 import forniteLogo from "../../images/text_image/forniteLogo.png";
 import { IoIosGlobe } from "react-icons/io";
@@ -22,17 +23,17 @@ import {
   SearchContainer,
   SearchContainerHidden,
 } from "./Navbar.elements";
-import { useState } from "react";
 
 const Navbar = ({ isOpen, handleToggle, count }) => {
   const [isSearch, setIsSearch] = useState(true);
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
 
+  // let searchRef1 = useRef(null);
+
   const handleSearch = () => {
     setIsSearch(!isSearch);
     setLoadCount(loadCount + 1);
-
     if (loadCount >= 1) setIsLoad(true);
   };
 
@@ -42,7 +43,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
         <NavLogo to="/" img={forniteLogo} />
         <NavMenu isSearch={isSearch}>
           <NavMenuLeftMobile isSearch={isSearch}>
-            {count < 1 ? (
+            {count > 1 ? (
               <NavCurrentHamburgerIcon onClick={handleToggle} />
             ) : isOpen ? (
               <NavCloseIcon onClick={handleToggle} toggle={isOpen} />
@@ -72,7 +73,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
             {isSearch ? (
               <SearchContainerHidden isSearch={isSearch} isLoad={isLoad}>
                 <div className="search__Box">
-                  <input type="text" placeholder="Search..."></input>
+                  <input type="text" placeholder="Search..." />
                 </div>
                 <div className="search__Btn" onClick={handleSearch}>
                   <Close />
@@ -80,8 +81,12 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               </SearchContainerHidden>
             ) : (
               <SearchContainer>
-                <div className="search__Box">
-                  <input type="text" placeholder="Search..."></input>
+                <div className="search__Box" onBlur={handleSearch}>
+                  <input
+                    handleToggle
+                    type="text"
+                    placeholder="Search..."
+                  ></input>
                 </div>
                 <div className="search__Btn" onClick={handleSearch}>
                   <Close />

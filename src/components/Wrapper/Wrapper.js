@@ -57,7 +57,7 @@ const Wrapper = ({ slides }) => {
       },
       {
         opacity: 1,
-        autoApha: 1,
+        // autoApha: 1,
         delay: 0.75,
         y: -100,
         ease: "back.out",
@@ -72,7 +72,7 @@ const Wrapper = ({ slides }) => {
       },
       {
         opacity: 1,
-        autoApha: 1,
+        // autoApha: 1,
         delay: 0.85,
         y: -100,
         ease: "back.out",
@@ -87,7 +87,7 @@ const Wrapper = ({ slides }) => {
       },
       {
         opacity: 1,
-        autoApha: 1,
+        // autoApha: 1,
         delay: 0.75,
         y: -160,
         ease: "back.out",

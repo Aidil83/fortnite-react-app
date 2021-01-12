@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { gridImage } from "../../data/GridData";
 import Grid from "@material-ui/core/Grid";
 import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 import { BlogButton, BlogButtonContainer, BlogLoadMore } from "./Blog.elements";
-import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -116,13 +117,7 @@ const useStyles = makeStyles((theme) => ({
 export default function BlogCard() {
   const [isLoadMore, setIsLoadMore] = useState(false);
   const classes = useStyles();
-  const gridImage = [
-    "https://cdn2.unrealengine.com/en-15br-social-subs-announce-greenarrow-news-header-1920x1080-42a73c3e0f98.jpg",
-    "https://cdn2.unrealengine.com/15br-marvel-holiday-rmt-news-thumb-576x576-7f5288f20f13.jpg",
-    "https://cdn2.unrealengine.com/15br-wakandaforever-newsthumb-1-576x576-c4a35b4c20f2.jpg",
-    "https://cdn2.unrealengine.com/15br-fortography-blog-thumb-576x576-3521dfc95405.jpg",
-    "https://cdn2.unrealengine.com/15br-snowdown-keyart-newsthumb-576x576-367961dd9c45.jpg",
-  ];
+
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
@@ -192,6 +187,7 @@ export default function BlogCard() {
           </CardContent>
         </Grid>
       </Grid>
+
       {/* NOTE: Next Grid */}
       {!isLoadMore && (
         <BlogButtonContainer>

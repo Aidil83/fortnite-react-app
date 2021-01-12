@@ -115,7 +115,5 @@ export const SliderData = [
 
     imgmobileBigwidth: "96.5%",
     imgmobileBigheight: "820px",
-
-    // width: 96.5%;
   },
 ];

@@ -366,13 +366,7 @@ export default function BlogCard() {
           lg={5}
           ref={(e) => (animateBigGrid3 = e)}
         >
-          <div
-            style={{
-              overflow: "hidden",
-              transform: "translateY(0, 740px)",
-              visibility: `${state}`,
-            }}
-          >
+          <div>
             <Card className={classes.media1}>
               <CardMedia
                 className={classes.imageLarge}

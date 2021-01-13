@@ -126,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function BlogCard() {
   const [isLoadMore, setIsLoadMore] = useState(false);
-  const [state, setState] = useState("hidden");
+  const [state, setState] = useState("none");
   const [showGrid, setshowGrid] = useState("none");
   const classes = useStyles();
 
@@ -178,11 +178,10 @@ export default function BlogCard() {
           scrollTrigger: {
             trigger: e,
           },
-          duration: 1.4,
+          duration: 1.2,
           opacity: 0,
           ease: "power4.out",
           y: 150,
-          delay: 0.4,
         });
       });
       const animateSmallGrid56 = [smallGridRef5, smallGridRef6];
@@ -191,11 +190,10 @@ export default function BlogCard() {
           scrollTrigger: {
             trigger: e,
           },
-          duration: 1.4,
+          duration: 1.2,
           opacity: 0,
           ease: "power4.out",
           y: 150,
-          delay: 0.4,
         });
       });
     }
@@ -314,6 +312,7 @@ export default function BlogCard() {
             </CardContent>
           </Card>
         </Grid>
+
         <Grid
           className={classes.paper2}
           item
@@ -322,7 +321,7 @@ export default function BlogCard() {
           lg={3}
           xl={3}
           ref={(e) => (smallGridRef4 = e)}
-          style={{ transform: "translateY(0, 740px)", visibility: `${state}` }}
+          style={{ transform: "translateY(0, 740px)", display: `${state}` }}
         >
           <Card className={classes.cardContainer2}>
             <CardMedia
@@ -344,7 +343,7 @@ export default function BlogCard() {
         <BlogButtonContainer>
           <BlogButton
             onClick={() => {
-              setState("visible");
+              setState("block");
               setshowGrid("flex");
               setIsLoadMore(true);
             }}

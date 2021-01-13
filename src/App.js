@@ -1,4 +1,4 @@
-import { Blog, Navbar, Sidebar, Wrapper } from "./components";
+import { Blog, Footer, Navbar, Sidebar, Wrapper } from "./components";
 import { AppContainer } from "./App.elements";
 import GlobalStyle from "./globalStyles";
 import { useState } from "react";
@@ -22,6 +22,7 @@ function App() {
       <Wrapper slides={SliderData} />
       <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
       <Blog />
+      <Footer />
     </AppContainer>
   );
 }

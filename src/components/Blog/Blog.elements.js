@@ -25,14 +25,16 @@ export const BlogButtonContainer = styled.div`
 export const BlogButton = styled.button``;
 export const BlogLoadMore = styled.p``;
 export const BlogImageContainer = styled.div`
-  position: absolute;
-  max-width: 100%;
+  position: relative;
+  min-width: 100%;
   max-height: 100%;
   background-size: cover;
   background-position: top;
+  margin-bottom: -5px;
 
   img {
     max-width: 100%;
+    max-height: 100%;
     background-size: cover;
     background-position: top;
   }

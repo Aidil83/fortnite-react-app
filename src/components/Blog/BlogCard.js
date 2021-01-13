@@ -92,6 +92,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
+  cardContainer2: {
+    transition: ".3s",
+    "&:hover": {
+      transition: ".3s",
+      transform: "scale(1.02) translateZ(0) perspective(1px)",
+    },
+  },
+
   media2: {
     height: 480,
     backgroundPosition: "top",
@@ -161,6 +169,7 @@ export default function BlogCard() {
 
   useEffect(() => {
     const animateBigGrid34 = [smallGridRef4, animateBigGrid3, animateBigGrid4];
+    //NOTE: This is for aniamtebigGrid4:
     if (isLoadMore) {
       animateBigGrid34.forEach((e) => {
         gsap.from(e, {
@@ -168,7 +177,7 @@ export default function BlogCard() {
           opacity: 0,
           ease: "power4.out",
           y: 150,
-          delay: 0.3,
+          delay: 0.5,
         });
       });
       const animateSmallGrid56 = [smallGridRef5, smallGridRef6];
@@ -250,13 +259,15 @@ export default function BlogCard() {
           xl={3}
           ref={(e) => (smallGridRef1 = e)}
         >
-          <CardMedia className={classes.media2} image={gridImage[2]} />
-          <CardContent className={classes.cardContent}>
-            <Typography className={classes.font1}>Dec 21, 2020</Typography>
-            <Typography className={classes.font2}>
-              wakanda solute emote
-            </Typography>
-          </CardContent>
+          <Card className={classes.cardContainer2}>
+            <CardMedia className={classes.media2} image={gridImage[2]} />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 21, 2020</Typography>
+              <Typography className={classes.font2}>
+                wakanda solute emote
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
         <Grid
           className={classes.paper2}
@@ -267,13 +278,15 @@ export default function BlogCard() {
           xl={3}
           ref={(e) => (smallGridRef2 = e)}
         >
-          <CardMedia className={classes.media2} image={gridImage[3]} />
-          <CardContent className={classes.cardContent}>
-            <Typography className={classes.font1}>Dec 21, 2020</Typography>
-            <Typography className={classes.font2}>
-              fortography results
-            </Typography>
-          </CardContent>
+          <Card className={classes.cardContainer2}>
+            <CardMedia className={classes.media2} image={gridImage[3]} />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 21, 2020</Typography>
+              <Typography className={classes.font2}>
+                fortography results
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
         <Grid
           className={classes.paper2}
@@ -284,13 +297,15 @@ export default function BlogCard() {
           xl={3}
           ref={(e) => (smallGridRef3 = e)}
         >
-          <CardMedia className={classes.media2} image={gridImage[4]} />
-          <CardContent className={classes.cardContent}>
-            <Typography className={classes.font1}>Dec 18, 2020</Typography>
-            <Typography className={classes.font2}>
-              operation snowdown
-            </Typography>
-          </CardContent>
+          <Card className={classes.cardContainer2}>
+            <CardMedia className={classes.media2} image={gridImage[4]} />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 18, 2020</Typography>
+              <Typography className={classes.font2}>
+                operation snowdown
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
         {isLoadMore && (
           <Grid
@@ -303,16 +318,18 @@ export default function BlogCard() {
             ref={(e) => (smallGridRef4 = e)}
             style={{ transform: "translateY(0, 740px)" }}
           >
-            <CardMedia
-              className={classes.media2}
-              image={gridLoadMoreImage[0]}
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography className={classes.font1}>Dec 17, 2020</Typography>
-              <Typography className={classes.font2}>
-                Happy Holidays from Fornite Creative
-              </Typography>
-            </CardContent>
+            <Card className={classes.cardContainer2}>
+              <CardMedia
+                className={classes.media2}
+                image={gridLoadMoreImage[0]}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography className={classes.font1}>Dec 17, 2020</Typography>
+                <Typography className={classes.font2}>
+                  Happy Holidays from Fornite Creative
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
         )}
       </Grid>
@@ -395,16 +412,18 @@ export default function BlogCard() {
             xl={3}
             ref={(e) => (smallGridRef5 = e)}
           >
-            <CardMedia
-              className={classes.media2}
-              image={gridLoadMoreImage[3]}
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography className={classes.font1}>Dec 16, 2020</Typography>
-              <Typography className={classes.font2}>
-                Daryl Dixon and Michonne Join the Hunt
-              </Typography>
-            </CardContent>
+            <Card className={classes.cardContainer2}>
+              <CardMedia
+                className={classes.media2}
+                image={gridLoadMoreImage[3]}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography className={classes.font1}>Dec 16, 2020</Typography>
+                <Typography className={classes.font2}>
+                  Daryl Dixon and Michonne Join the Hunt
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
           <Grid
             className={classes.paper2}
@@ -415,16 +434,18 @@ export default function BlogCard() {
             xl={3}
             ref={(e) => (smallGridRef6 = e)}
           >
-            <CardMedia
-              className={classes.media2}
-              image={gridLoadMoreImage[4]}
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography className={classes.font1}>Dec 16, 2020</Typography>
-              <Typography className={classes.font2}>
-                Fornite Generations Cup - only on PS4 | PS5
-              </Typography>
-            </CardContent>
+            <Card className={classes.cardContainer2}>
+              <CardMedia
+                className={classes.media2}
+                image={gridLoadMoreImage[4]}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography className={classes.font1}>Dec 16, 2020</Typography>
+                <Typography className={classes.font2}>
+                  Fornite Generations Cup - only on PS4 | PS5
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
         </Grid>
       )}

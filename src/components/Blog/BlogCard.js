@@ -126,6 +126,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function BlogCard() {
   const [isLoadMore, setIsLoadMore] = useState(false);
+  const [state, setState] = useState("hidden");
+  const [showGrid, setshowGrid] = useState("none");
   const classes = useStyles();
 
   let animateBigGrid1 = useRef(null);
@@ -169,26 +171,31 @@ export default function BlogCard() {
 
   useEffect(() => {
     const animateBigGrid34 = [smallGridRef4, animateBigGrid3, animateBigGrid4];
-    //NOTE: This is for aniamtebigGrid4:
+    //NOTE: This is for aniamteLoadMore:
     if (isLoadMore) {
       animateBigGrid34.forEach((e) => {
         gsap.from(e, {
+          scrollTrigger: {
+            trigger: e,
+          },
           duration: 1.4,
           opacity: 0,
           ease: "power4.out",
           y: 150,
-          delay: 0.5,
+          delay: 0.4,
         });
       });
       const animateSmallGrid56 = [smallGridRef5, smallGridRef6];
       animateSmallGrid56.forEach((e) => {
         gsap.from(e, {
-          scrollTrigger: e,
+          scrollTrigger: {
+            trigger: e,
+          },
           duration: 1.4,
           opacity: 0,
           ease: "power4.out",
           y: 150,
-          delay: 0.3,
+          delay: 0.4,
         });
       });
     }
@@ -307,148 +314,154 @@ export default function BlogCard() {
             </CardContent>
           </Card>
         </Grid>
-        {isLoadMore && (
-          <Grid
-            className={classes.paper2}
-            item
-            xs={12}
-            md={6}
-            lg={3}
-            xl={3}
-            ref={(e) => (smallGridRef4 = e)}
-            style={{ transform: "translateY(0, 740px)" }}
-          >
-            <Card className={classes.cardContainer2}>
-              <CardMedia
-                className={classes.media2}
-                image={gridLoadMoreImage[0]}
-              />
-              <CardContent className={classes.cardContent}>
-                <Typography className={classes.font1}>Dec 17, 2020</Typography>
-                <Typography className={classes.font2}>
-                  Happy Holidays from Fornite Creative
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        )}
+        <Grid
+          className={classes.paper2}
+          item
+          xs={12}
+          md={6}
+          lg={3}
+          xl={3}
+          ref={(e) => (smallGridRef4 = e)}
+          style={{ transform: "translateY(0, 740px)", visibility: `${state}` }}
+        >
+          <Card className={classes.cardContainer2}>
+            <CardMedia
+              className={classes.media2}
+              image={gridLoadMoreImage[0]}
+            />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 17, 2020</Typography>
+              <Typography className={classes.font2}>
+                Happy Holidays from Fornite Creative
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       </Grid>
 
       {/* NOTE: Next Grid */}
       {!isLoadMore && (
         <BlogButtonContainer>
-          <BlogButton onClick={() => setIsLoadMore(true)}>
+          <BlogButton
+            onClick={() => {
+              setState("visible");
+              setshowGrid("flex");
+              setIsLoadMore(true);
+            }}
+          >
             <BlogLoadMore>LOAD MORE</BlogLoadMore>
           </BlogButton>
         </BlogButtonContainer>
       )}
-      {isLoadMore && (
-        <Grid container spacing={3}>
-          <Grid
-            className={classes.paper1}
-            item
-            xs={12}
-            md={6}
-            lg={5}
-            ref={(e) => (animateBigGrid3 = e)}
+      <Grid
+        container
+        spacing={3}
+        style={{ display: `${showGrid}`, marginTop: "1%" }}
+      >
+        <Grid
+          className={classes.paper1}
+          item
+          xs={12}
+          md={6}
+          lg={5}
+          ref={(e) => (animateBigGrid3 = e)}
+        >
+          <div
+            style={{
+              overflow: "hidden",
+              transform: "translateY(0, 740px)",
+              visibility: `${state}`,
+            }}
           >
-            <div style={{ overflow: "hidden" }}>
-              <Card className={classes.media1}>
-                <CardMedia
-                  className={classes.imageLarge}
-                  image={gridLoadMoreImage[1]}
-                ></CardMedia>
-                <CardContent style={{ position: "absolute", zIndex: 30 }}>
-                  <Typography
-                    className={classes.font1}
-                    style={{ color: "#fff" }}
-                  >
-                    Dec 17, 2020
-                  </Typography>
-                  <Typography className={classes.fontLarge}>
-                    Fornite on Xbox series X|S and PS5
-                  </Typography>
-                </CardContent>
-                <div className={classes.contentHover} />
-              </Card>
-            </div>
-          </Grid>
-          <Grid
-            className={classes.paper1}
-            item
-            xs={12}
-            md={6}
-            lg={6}
-            xl={7}
-            ref={(e) => (animateBigGrid4 = e)}
-          >
-            <div style={{ overflow: "hidden" }}>
-              <Card className={classes.media1}>
-                <CardMedia
-                  className={classes.imageLarge}
-                  image={gridLoadMoreImage[2]}
-                ></CardMedia>
-                <CardContent style={{ position: "absolute", zIndex: 30 }}>
-                  <Typography
-                    className={classes.font1}
-                    style={{ color: "#fff" }}
-                  >
-                    Dec 17, 2020
-                  </Typography>
-                  <Typography className={classes.fontLarge}>
-                    Fornite Creative - New Year, New Games
-                  </Typography>
-                </CardContent>
-                <div className={classes.contentHover} />
-              </Card>
-            </div>
-          </Grid>
-          <Grid
-            className={classes.paper2}
-            item
-            xs={12}
-            md={6}
-            lg={3}
-            xl={3}
-            ref={(e) => (smallGridRef5 = e)}
-          >
-            <Card className={classes.cardContainer2}>
+            <Card className={classes.media1}>
               <CardMedia
-                className={classes.media2}
-                image={gridLoadMoreImage[3]}
-              />
-              <CardContent className={classes.cardContent}>
-                <Typography className={classes.font1}>Dec 16, 2020</Typography>
-                <Typography className={classes.font2}>
-                  Daryl Dixon and Michonne Join the Hunt
+                className={classes.imageLarge}
+                image={gridLoadMoreImage[1]}
+              ></CardMedia>
+              <CardContent style={{ position: "absolute", zIndex: 30 }}>
+                <Typography className={classes.font1} style={{ color: "#fff" }}>
+                  Dec 17, 2020
+                </Typography>
+                <Typography className={classes.fontLarge}>
+                  Fornite on Xbox series X|S and PS5
                 </Typography>
               </CardContent>
+              <div className={classes.contentHover} />
             </Card>
-          </Grid>
-          <Grid
-            className={classes.paper2}
-            item
-            xs={12}
-            md={6}
-            lg={3}
-            xl={3}
-            ref={(e) => (smallGridRef6 = e)}
-          >
-            <Card className={classes.cardContainer2}>
-              <CardMedia
-                className={classes.media2}
-                image={gridLoadMoreImage[4]}
-              />
-              <CardContent className={classes.cardContent}>
-                <Typography className={classes.font1}>Dec 16, 2020</Typography>
-                <Typography className={classes.font2}>
-                  Fornite Generations Cup - only on PS4 | PS5
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+          </div>
         </Grid>
-      )}
+        <Grid
+          className={classes.paper1}
+          item
+          xs={12}
+          md={6}
+          lg={6}
+          xl={7}
+          ref={(e) => (animateBigGrid4 = e)}
+        >
+          <div style={{ overflow: "hidden" }}>
+            <Card className={classes.media1}>
+              <CardMedia
+                className={classes.imageLarge}
+                image={gridLoadMoreImage[2]}
+              ></CardMedia>
+              <CardContent style={{ position: "absolute", zIndex: 30 }}>
+                <Typography className={classes.font1} style={{ color: "#fff" }}>
+                  Dec 17, 2020
+                </Typography>
+                <Typography className={classes.fontLarge}>
+                  Fornite Creative - New Year, New Games
+                </Typography>
+              </CardContent>
+              <div className={classes.contentHover} />
+            </Card>
+          </div>
+        </Grid>
+        <Grid
+          className={classes.paper2}
+          item
+          xs={12}
+          md={6}
+          lg={3}
+          xl={3}
+          ref={(e) => (smallGridRef5 = e)}
+        >
+          <Card className={classes.cardContainer2}>
+            <CardMedia
+              className={classes.media2}
+              image={gridLoadMoreImage[3]}
+            />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 16, 2020</Typography>
+              <Typography className={classes.font2}>
+                Daryl Dixon and Michonne Join the Hunt
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid
+          className={classes.paper2}
+          item
+          xs={12}
+          md={6}
+          lg={3}
+          xl={3}
+          ref={(e) => (smallGridRef6 = e)}
+        >
+          <Card className={classes.cardContainer2}>
+            <CardMedia
+              className={classes.media2}
+              image={gridLoadMoreImage[4]}
+            />
+            <CardContent className={classes.cardContent}>
+              <Typography className={classes.font1}>Dec 16, 2020</Typography>
+              <Typography className={classes.font2}>
+                Fornite Generations Cup - only on PS4 | PS5
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     </div>
   );
 }

@@ -1,7 +1,8 @@
-import styled, { css } from "styled-components/macro";
+import styled from "styled-components/macro";
 
 const media = {
-  phone: "max-width: ",
+  phone: "@media screen and (max-width: 376px)",
+  ipad: "@media screen and (max-width: 768px)",
 };
 
 export const Main = styled.footer`
@@ -12,6 +13,10 @@ export const Main = styled.footer`
   min-height: 420px;
   width: 100%;
   background-color: #2a2a2a;
+
+  ${media.ipad} {
+    min-height: 87vh;
+  }
 `;
 export const MainContainer = styled.div`
   height: 90%;
@@ -44,6 +49,14 @@ export const LinkContainer = styled.div`
   width: 100%;
   height: 30%;
   background-color: #f0f;
+
+  ul {
+    a {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: #ccc;
+    }
+  }
 
   img {
     align-self: center;

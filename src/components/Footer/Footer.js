@@ -1,7 +1,16 @@
 import ratedT from "../../images/text_image/ratedT.png";
-import { Instagram, YouTube } from "@material-ui/icons";
+import {
+  Android,
+  Games,
+  Instagram,
+  Phonelink,
+  Tv,
+  VideogameAsset,
+  YouTube,
+} from "@material-ui/icons";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import { FaTwitch } from "react-icons/fa";
 import {
   LinkContainer,
@@ -9,6 +18,7 @@ import {
   MainContainer,
   SocialContainer,
   CopyrightContainer,
+  PlateFormContainer,
 } from "./Footer.elements";
 
 const Footer = () => {
@@ -27,16 +37,23 @@ const Footer = () => {
           </ul>
         </SocialContainer>
         <LinkContainer>
-          <ul>
-            <a href="">Home</a>
-            <a href="">News</a>
-            <a href="">FAQ</a>
-            <a href="">Help</a>
-            <a href="">Safety and Security</a>
-            <a href="">Competitive</a>
-            <a href="">Battle Pass</a>
-            <a href="">Get Fornite</a>
-          </ul>
+          <div>
+            <ul>
+              <a href="">Home</a>
+              <a href="">News</a>
+              <a href="">FAQ</a>
+            </ul>
+            <ul>
+              <a href="">Help</a>
+              <a href="">Safety and Security</a>
+              <a href="">Competitive</a>
+            </ul>
+            <ul>
+              <a href="">Battle Pass</a>
+              <a href="">Get Fornite</a>
+              <a href="">Battle Pass</a>
+            </ul>
+          </div>
           <img src={ratedT} alt="rated" style={{ height: 60, width: 100 }} />
         </LinkContainer>
         <CopyrightContainer>
@@ -47,6 +64,15 @@ const Footer = () => {
             United States of America and elsewhere. All rights reserved.
           </p>
         </CopyrightContainer>
+        <PlateFormContainer>
+          <ul>
+            <SportsEsportsIcon />
+            <VideogameAsset />
+            <Games />
+            <Phonelink />
+            <Android />
+          </ul>
+        </PlateFormContainer>
       </MainContainer>
     </Main>
   );

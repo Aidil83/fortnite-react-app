@@ -1,82 +1,52 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components/macro";
 
 const media = {
-  ipad: "@media only screen and (max-width: 768px)",
+  phone: "max-width: ",
 };
 
-export const FooterMain = styled.div`
+export const Main = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 43vh;
+  height: 420px;
+  min-height: 420px;
   width: 100%;
   background-color: #2a2a2a;
 `;
-
-export const FooterContainer = styled.div`
-  height: 80%;
+export const MainContainer = styled.div`
+  height: 90%;
   width: 90%;
-  background-color: #fae;
+  background-color: #fafa;
 `;
-
-export const FooterInnerContainer1 = styled.div`
+export const SocialContainer = styled.div`
   display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-color: #ff1;
-  color: #ccc;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  width: 180px;
+  background-color: #000;
 
-  & .innerLeft {
+  ul {
+    width: 170px;
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    width: 50%;
-    height: 100%;
-    background-color: orange;
+    justify-content: space-between;
 
-    ul {
-      display: flex;
-      justify-content: space-around;
-      max-width: 140px;
-      font-size: 2.5rem;
-      background-color: yellow;
+    .MuiSvgIcon-root {
+      font-size: 1.8rem;
+      color: #ccc;
     }
-
-    div {
-      display: flex;
-      flex-flow: wrap column;
-      height: 5vh;
-      width: 300px;
-      background-color: #dc143c;
-      font-size: 0.8rem;
-
-      a {
-        text-decoration: none;
-        color: #ccc;
-      }
-    }
-
-    ${media.ipad} {
-      width: 100%;
-    }
-  }
-
-  & .innerRight {
-    width: 50%;
-    height: 100%;
-    background-color: #0e9;
-  }
-
-  ${media.ipad} {
-    flex-direction: column;
   }
 `;
-
-export const FooterInnerContainer2 = styled.div`
+export const LinkContainer = styled.div`
   display: flex;
-  justify-content: center;
-  height: 80%;
-  width: 90%;
-  background-color: #eaa;
+  justify-content: space-between;
+  flex-flow: wrap;
+  width: 100%;
+  height: 30%;
+  background-color: #f0f;
+
+  img {
+    align-self: center;
+  }
 `;
+export const CopyrightContainer = styled.div``;

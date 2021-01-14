@@ -101,14 +101,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   media2: {
-    height: 480,
+    height: 330,
     backgroundPosition: "top",
   },
 
   cardContent: {
     backgroundColor: "#f9f9f9",
     textAlign: "left",
-    height: 150,
+    height: 180,
   },
 
   font1: {

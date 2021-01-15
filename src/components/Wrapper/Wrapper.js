@@ -12,6 +12,7 @@ import {
   WrapperTextContainer,
   WrapperCaption,
   WrapperSection,
+  WrapperHidden,
 } from "./Wrapper.elements";
 
 // NOTE: Using GSAP animation library:
@@ -104,6 +105,12 @@ const Wrapper = ({ slides }) => {
 
   return (
     <>
+      <WrapperHidden>
+        <img src={slides[0].bgImage} />
+        <img src={slides[1].bgImage} />
+        <img src={slides[2].bgImage} />
+        <img src={slides[3].bgImage} />
+      </WrapperHidden>
       {slides.map((slide, index) => (
         <div key={index}>
           {index === current && (

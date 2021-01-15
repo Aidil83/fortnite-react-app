@@ -16,7 +16,6 @@ export const Main = styled.footer`
   width: 100%;
   background-color: #2a2a2a;
   overflow: hidden;
-
   ${media.desktop1025} {
     min-height: calc(885px - 25vh);
   }
@@ -24,11 +23,13 @@ export const Main = styled.footer`
     min-height: calc(585px - 20vh);
   }
 `;
+
 export const MainContainer = styled.div`
   height: 90%;
   width: 90%;
   /* background-color: #fafa; */
 `;
+
 export const SocialContainer = styled.div`
   display: flex;
   align-items: center;
@@ -40,13 +41,13 @@ export const SocialContainer = styled.div`
     width: 170px;
     display: flex;
     justify-content: space-between;
-
     .MuiSvgIcon-root {
       font-size: 1.8rem;
       color: #ccc;
     }
   }
 `;
+
 export const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -83,25 +84,25 @@ export const LinkContainer = styled.div`
   img {
     align-self: center;
   }
-
   ${media.ipad768} {
     justify-content: space-between;
     width: 100%;
   }
 `;
+
 export const CopyrightContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 20px 0;
   color: #ccc;
-
   p {
     width: 60%;
     max-width: 70%;
     height: 100%;
   }
 `;
+
 export const PlateFormContainer = styled.div`
   display: flex;
   /* align-items: flex-end; */

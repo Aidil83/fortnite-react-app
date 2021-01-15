@@ -4,7 +4,6 @@ import {
   Games,
   Instagram,
   Phonelink,
-  Tv,
   VideogameAsset,
   YouTube,
 } from "@material-ui/icons";

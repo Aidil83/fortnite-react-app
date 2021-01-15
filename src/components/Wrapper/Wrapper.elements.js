@@ -8,6 +8,10 @@ const media = {
   mobileSm: "@media only screen and (max-width: 320px)",
 };
 
+export const WrapperHidden = styled.div`
+  display: none;
+`;
+
 export const WrapperImage = styled.div`
   position: relative;
   display: flex;
@@ -23,6 +27,7 @@ export const WrapperImage = styled.div`
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
+  will-change: top;
 
   /* NOTE: Prevents auto scrolling after refreshing page: */
   overflow-anchor: none;

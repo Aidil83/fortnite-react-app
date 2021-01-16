@@ -177,7 +177,7 @@ export default function BlogCard() {
     if (isLoadMore) {
       animateBigGrid34.forEach((e) => {
         gsap.from(e, {
-          duration: 1.2,
+          duration: 1.4,
           ease: "power4.out",
           y: 80,
           delay: 0.5,

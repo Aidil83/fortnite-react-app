@@ -83,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   paper2: {
+    visibility: "hidden",
     backgroundSize: "cover",
     backfaceVisibility: "hidden",
 
@@ -150,7 +151,8 @@ export default function BlogCard() {
         scrollTrigger: {
           trigger: e,
         },
-        opacity: 0,
+        // NOTE: autoAlpha is a combination of opacity and visibility.
+        autoAlpha: 0,
         y: 126,
         delay: 0.25,
       });
@@ -160,7 +162,7 @@ export default function BlogCard() {
     animateSmallGrid.forEach((e) => {
       gsap.from(e, {
         scrollTrigger: e,
-        opacity: 0,
+        autoAlpha: 0,
         ease: "power4.out",
         duration: 1.4,
         y: 150,
@@ -175,13 +177,11 @@ export default function BlogCard() {
     if (isLoadMore) {
       animateBigGrid34.forEach((e) => {
         gsap.from(e, {
-          scrollTrigger: {
-            trigger: e,
-          },
           duration: 1.2,
-          opacity: 0,
           ease: "power4.out",
-          y: 150,
+          y: 80,
+          delay: 0.5,
+          autoAlpha: 0,
         });
       });
       const animateSmallGrid56 = [smallGridRef5, smallGridRef6];
@@ -191,9 +191,11 @@ export default function BlogCard() {
             trigger: e,
           },
           duration: 1.2,
-          opacity: 0,
+          // opacity: 0,
+          autoAlpha: 0,
           ease: "power4.out",
-          y: 150,
+          y: 80,
+          delay: 0.5,
         });
       });
     }

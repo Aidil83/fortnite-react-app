@@ -166,7 +166,7 @@ export default function BlogCard() {
         ease: "power4.out",
         duration: 1.4,
         y: 150,
-        delay: 0.3,
+        delay: 0.25,
       });
     });
   }, []);
@@ -191,7 +191,6 @@ export default function BlogCard() {
             trigger: e,
           },
           duration: 1.2,
-          // opacity: 0,
           autoAlpha: 0,
           ease: "power4.out",
           y: 80,

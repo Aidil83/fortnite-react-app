@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 
 const media = {
-  phone320: "@media only screen and (max-width: 320px)",
+  phone320: "@media only screen and (min-width: 320px)",
   phone375: "@media only screen and (min-width: 375px)",
   ipad768: "@media only screen and (min-width: 768px)",
   desktop1025: "@media only screen and (min-width: 1025px)",
@@ -25,6 +25,9 @@ export const Main = styled.footer`
 `;
 
 export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 90%;
   width: 90%;
   /* background-color: #fafa; */
@@ -35,7 +38,7 @@ export const SocialContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   height: 50px;
-  width: 180px;
+  width: 100%;
   /* background-color: #000; */
   ul {
     width: 170px;
@@ -52,6 +55,7 @@ export const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: wrap;
+  align-self: center;
   width: 100%;
   height: 30%;
   /* background-color: #f0f; */
@@ -59,7 +63,12 @@ export const LinkContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-flow: wrap;
-    height: 30%;
+    height: 40%;
+    flex-basis: 40%;
+    flex: 0.41;
+    ${media.ipad768} {
+      align-self: center;
+    }
   }
   ul {
     display: flex;
@@ -83,10 +92,17 @@ export const LinkContainer = styled.div`
   }
   img {
     align-self: center;
+    object-fit: contain;
+    flex: 0.5;
+  }
+  ${media.phone320} {
+    flex-flow: column-reverse;
   }
   ${media.ipad768} {
     justify-content: space-between;
     width: 100%;
+    width: max(20%, 600px);
+    padding-bottom: 2%;
   }
 `;
 
@@ -103,10 +119,10 @@ export const CopyrightContainer = styled.div`
   }
 `;
 
-export const PlateFormContainer = styled.div`
+export const PlatFormContainer = styled.div`
   display: flex;
-  /* align-items: flex-end; */
-  width: 100%;
+  width: max(40%, 380px);
+  align-self: center;
   ul {
     padding-top: 10px;
     display: flex;

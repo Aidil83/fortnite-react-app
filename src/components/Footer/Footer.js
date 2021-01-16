@@ -17,7 +17,7 @@ import {
   MainContainer,
   SocialContainer,
   CopyrightContainer,
-  PlateFormContainer,
+  PlatFormContainer,
 } from "./Footer.elements";
 
 const Footer = () => {
@@ -63,7 +63,7 @@ const Footer = () => {
             United States of America and elsewhere. All rights reserved.
           </p>
         </CopyrightContainer>
-        <PlateFormContainer>
+        <PlatFormContainer>
           <ul>
             <SportsEsportsIcon />
             <VideogameAsset />
@@ -71,7 +71,7 @@ const Footer = () => {
             <Phonelink />
             <Android />
           </ul>
-        </PlateFormContainer>
+        </PlatFormContainer>
       </MainContainer>
     </Main>
   );

@@ -94,6 +94,7 @@ export const LinkContainer = styled.div`
     align-self: center;
     object-fit: contain;
     flex: 0.5;
+    padding-bottom: 2%;
   }
   ${media.phone320} {
     flex-flow: column-reverse;

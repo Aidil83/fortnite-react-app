@@ -1,9 +1,10 @@
-import { Blog, Footer, Navbar, Sidebar, Wrapper } from "./components";
-import { AppContainer } from "./App.elements";
+import { Blog, Footer, Merch, Navbar, Sidebar, Wrapper } from "./components";
+import { AppContainer, RouteError } from "./App.elements";
 import GlobalStyle from "./globalStyles";
 import { useState } from "react";
 import styled from "styled-components/macro";
 import { SliderData } from "./data/SliderData";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,15 +16,28 @@ function App() {
   };
 
   return (
-    <AppContainer>
-      <GlobalStyle />
-      <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
-      <Sidebar isOpen={isOpen} />
-      <Wrapper slides={SliderData} />
-      <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
-      <Blog />
-      <Footer />
-    </AppContainer>
+    <Router>
+      <AppContainer>
+        <GlobalStyle />
+        <Switch>
+          <Route path="/" exact>
+            <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
+            <Sidebar isOpen={isOpen} />
+            <Wrapper slides={SliderData} />
+            <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
+            <Blog />
+            <Footer />
+          </Route>
+          <Route path="/merch" exact component={Merch} />
+          {/* NOTE: Catch any routes that don't match and display 404. */}
+          <Route path="/">
+            <RouteError>
+              <h1>404</h1>
+            </RouteError>
+          </Route>
+        </Switch>
+      </AppContainer>
+    </Router>
   );
 }
 

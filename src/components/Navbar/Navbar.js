@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import styled, { css } from "styled-components/macro";
 import forniteLogo from "../../images/text_image/forniteLogo.png";
 import { IoIosGlobe } from "react-icons/io";

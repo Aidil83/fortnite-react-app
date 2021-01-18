@@ -60,7 +60,10 @@ const Footer = () => {
             © 2021, Epic Games, Inc. Epic, Epic Games, the Epic Games logo,
             Fortnite, the Fortnite logo, Unreal, Unreal Engine 4 and UE4 are
             trademarks or registered trademarks of Epic Games, Inc. in the
-            United States of America and elsewhere. All rights reserved.
+            United States of America and elsewhere. Fortnite-React-app is a
+            non-official personal site and not endorsed by Epic Games in any
+            way. Epic Games, Fortnite, and all associated properties are
+            trademarks or registered trademarks of Epic Games, Inc.
           </p>
         </CopyrightContainer>
         <PlatFormContainer>

@@ -29,8 +29,6 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
 
-  // let searchRef1 = useRef(null);
-
   const handleSearch = () => {
     setIsSearch(!isSearch);
     setLoadCount(loadCount + 1);

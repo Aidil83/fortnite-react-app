@@ -1,7 +1,11 @@
+import { MerchMain } from "./Merch.elements";
+
 const Merch = () => {
   return (
     <>
-      <h1>Merch</h1>
+      <MerchMain>
+        <h1>Merch</h1>
+      </MerchMain>
     </>
   );
 };

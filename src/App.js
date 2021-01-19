@@ -28,7 +28,13 @@ function App() {
             <Blog />
             <Footer />
           </Route>
-          <Route path="/merch" exact component={Merch} />
+          <Route path="/merch" exact>
+            <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
+            <Sidebar isOpen={isOpen} />
+            <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
+            <Merch />
+            <Footer />
+          </Route>
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">
             <RouteError>

@@ -19,21 +19,16 @@ function App() {
     <Router>
       <AppContainer>
         <GlobalStyle />
+        <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
+        <Sidebar isOpen={isOpen} />
+        <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
         <Switch>
           <Route path="/" exact>
-            <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
-            <Sidebar isOpen={isOpen} />
             <Wrapper slides={SliderData} />
-            <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
             <Blog />
-            <Footer />
           </Route>
           <Route path="/merch" exact>
-            <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
-            <Sidebar isOpen={isOpen} />
-            <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
             <Merch />
-            <Footer />
           </Route>
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">
@@ -42,6 +37,7 @@ function App() {
             </RouteError>
           </Route>
         </Switch>
+        <Footer />
       </AppContainer>
     </Router>
   );

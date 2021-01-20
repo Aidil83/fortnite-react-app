@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import {
   MerchMain,
   MerchHeroContainer,
   MerchListCard,
   MerchTab,
 } from "./Merch.elements";
+import MerchCard from "./MerchCard";
 
 const Merch = () => {
   return (
@@ -17,15 +19,11 @@ const Merch = () => {
         </MerchHeroContainer>
         <h1>Merch</h1>
         <MerchListCard>
-          <h3>Item1</h3>
-          <h3>Item2</h3>
-          <h3>Item3</h3>
-          <h3>Item4</h3>
-          <h3>Item5</h3>
-          <h3>Item6</h3>
-          <h3>Item7</h3>
-          <h3>Item8</h3>
-          <h3>Item9</h3>
+          {Array(25)
+            .fill()
+            .map((_) => (
+              <MerchCard />
+            ))}
         </MerchListCard>
       </MerchMain>
     </>

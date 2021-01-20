@@ -9,6 +9,24 @@ export const MerchMain = styled.div`
   }
 `;
 
+export const MerchTab = styled.div`
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  div {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
+    border-radius: 18px 18px 0 0;
+    background-color: #393939;
+    color: #cdc4c4;
+  }
+`;
+
 export const MerchHeroContainer = styled.div`
   min-height: 40vh;
   width: 100%;

@@ -1,9 +1,17 @@
-import { MerchMain, MerchHeroContainer, MerchListCard } from "./Merch.elements";
+import {
+  MerchMain,
+  MerchHeroContainer,
+  MerchListCard,
+  MerchTab,
+} from "./Merch.elements";
 
 const Merch = () => {
   return (
     <>
       <MerchMain>
+        <MerchTab>
+          <div>Item Shop</div>
+        </MerchTab>
         <MerchHeroContainer>
           <h3>Hero</h3>
         </MerchHeroContainer>

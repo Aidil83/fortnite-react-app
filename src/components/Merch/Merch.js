@@ -18,8 +18,8 @@ const Merch = () => {
       const res = await axios("https://fortnite-api.com/v2/shop/br/combined");
       const res1 = await axios("https://fortnite-api.com/v2/cosmetics/br");
       // console.log(res.data.data.featured.entries);
-      // console.log(res1.data.data[1001].images.featured);
-      setImages(res.data.data.featured.entries);
+      // console.log(res1.data.data[1001]);
+      // setImages(res.data.data.featured.entries);
       setImages2(res1.data.data);
     })();
   }, []);
@@ -38,9 +38,11 @@ const Merch = () => {
           <MerchListCard>
             {images2.map((item, id) => {
               return (
-                id <= 20 &&
+                id >= 1150 &&
+                id <= 1200 &&
+                item.type.value === "outfit" &&
                 item.images.featured && (
-                  <MerchCard image={item.images.featured} id={id} />
+                  <MerchCard image={item.images.smallIcon} id={id} />
                 )
               );
             })}

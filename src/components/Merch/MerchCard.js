@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import blackWidow from "../../images/merch_image_icon/smallicon-blackWidow.png";
 
 const Main = styled.div`
   max-width: calc(100% + 10px);

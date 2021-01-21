@@ -34,12 +34,10 @@ const Merch = () => {
           <MerchListCard>
             {images1.map((item, id) => {
               return (
-                id >= 1350 &&
-                id <= 1390 &&
+                id >= 1010 &&
+                id <= 1050 &&
                 item.type.value === "outfit" &&
-                item.images.featured && (
-                  <MerchCard image={item.images.icon} id={id} />
-                )
+                item.images.featured && <MerchCard item={item} id={id} />
               );
             })}
           </MerchListCard>

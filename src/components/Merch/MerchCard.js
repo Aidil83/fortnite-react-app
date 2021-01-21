@@ -21,20 +21,24 @@ const Main = styled.div`
     }
   }
   span {
-    display: flex;
-    justify-content: center;
-    font-size: 0.8rem;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.78rem;
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 
-const MerchCard = ({ image, id }) => {
-  console.log(image);
+const MerchCard = ({ item, id }) => {
+  // console.log(item);
   return (
     <Main>
       <div className="imageWrapper" key={id}>
-        <img src={image} alt={id} />
+        <img src={item.images.icon} alt={id} />
       </div>
-      <span>name</span>
+      <span>{item.name}</span>
     </Main>
   );
 };

@@ -4,16 +4,21 @@ const Main = styled.div`
   max-width: calc(100% + 10px);
   display: flex;
   flex-direction: column;
-  margin: 2px 4px;
+  margin: 2px 2px;
   & .imageWrapper {
     transform: skew(25rad);
+    width: 85px;
+    height: 92px;
+    border: 2px #fff solid;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #868686, #fff);
+    overflow: hidden;
     img {
-      height: 84px;
-      background-color: #343a57;
-      width: 84px;
-      border: 2px #fff solid;
-      /* border: 2px #ffd900 solid; */
-      border-radius: 5px;
+      height: 125px;
+      width: 130px;
+      position: relative;
+      right: 23px;
+      bottom: 5px;
     }
   }
   span {
@@ -23,13 +28,13 @@ const Main = styled.div`
   }
 `;
 
-const MerchCard = ({image, id}) => {
+const MerchCard = ({ image, id }) => {
   console.log(image);
   return (
     <Main>
-      <span className="imageWrapper" key={id}>
+      <div className="imageWrapper" key={id}>
         <img src={image} alt={id} />
-      </span>
+      </div>
       <span>name</span>
     </Main>
   );

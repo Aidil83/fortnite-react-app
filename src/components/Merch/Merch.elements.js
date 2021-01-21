@@ -34,11 +34,10 @@ export const MerchHeroContainer = styled.div`
 
 export const MerchListContainer = styled.div`
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
   width: 100%;
-  /* background-color: #c0c0c0; */
-  background-image: linear-gradient(to right, #f1b1b1 , #82e6e8);
+  background-image: linear-gradient(to right, #f1b1b1, #82e6e8);
 `;
 
 export const MerchListCard = styled.div`

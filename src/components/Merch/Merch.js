@@ -38,7 +38,7 @@ const Merch = () => {
                 id <= 1190 &&
                 item.type.value === "outfit" &&
                 item.images.featured && (
-                  <MerchCard image={item.images.smallIcon} id={id} />
+                  <MerchCard image={item.images.icon} id={id} />
                 )
               );
             })}

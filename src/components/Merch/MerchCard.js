@@ -23,11 +23,12 @@ const Main = styled.div`
   }
 `;
 
-const MerchCard = () => {
+const MerchCard = ({image, id}) => {
+  console.log(image);
   return (
     <Main>
-      <span className="imageWrapper">
-        <img src={blackWidow} alt="blackWidow" />
+      <span className="imageWrapper" key={id}>
+        <img src={image} alt={id} />
       </span>
       <span>name</span>
     </Main>

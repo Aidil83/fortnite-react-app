@@ -4,6 +4,7 @@ import {
   MerchHeroContainer,
   MerchListCard,
   MerchTab,
+  MerchListContainer,
 } from "./Merch.elements";
 import MerchCard from "./MerchCard";
 
@@ -18,13 +19,15 @@ const Merch = () => {
           <h3>Hero</h3>
         </MerchHeroContainer>
         <h1>Merch</h1>
-        <MerchListCard>
-          {Array(25)
-            .fill()
-            .map((_) => (
-              <MerchCard />
-            ))}
-        </MerchListCard>
+        <MerchListContainer>
+          <MerchListCard>
+            {Array(32)
+              .fill()
+              .map((_) => (
+                <MerchCard />
+              ))}
+          </MerchListCard>
+        </MerchListContainer>
       </MerchMain>
     </>
   );

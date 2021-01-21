@@ -3,8 +3,9 @@ import styled from "styled-components/macro";
 export const MerchMain = styled.div`
   position: relative;
   top: 51px;
-  min-height: 200vh;
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
 `;
 
 export const MerchTab = styled.div`
@@ -31,9 +32,17 @@ export const MerchHeroContainer = styled.div`
   background-color: #fffcac;
 `;
 
+export const MerchListContainer = styled.div`
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  width: 100%;
+`;
+
 export const MerchListCard = styled.div`
   height: 100%;
-  margin: 5px 30px;
+  max-width: 1200px;
+  margin: 5px 14px;
   display: flex;
   justify-content: center;
   flex-flow: wrap;

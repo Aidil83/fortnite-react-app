@@ -2,16 +2,16 @@ import styled from "styled-components/macro";
 import blackWidow from "../../images/merch_image_icon/smallicon-blackWidow.png";
 
 const Main = styled.div`
-  max-width: 60px;
+  max-width: calc(100% + 10px);
   display: flex;
   flex-direction: column;
-  margin: 0 6px;
+  margin: 2px 4px;
   & .imageWrapper {
     transform: skew(25rad);
     img {
-      height: 62px;
+      height: 84px;
       background-color: #898989;
-      width: 69px;
+      width: 84px;
       border: 2px #fff solid;
       border-radius: 5px;
     }
@@ -19,6 +19,7 @@ const Main = styled.div`
   span {
     display: flex;
     justify-content: center;
+    font-size: 0.8rem;
   }
 `;
 

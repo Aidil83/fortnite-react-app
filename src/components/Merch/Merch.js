@@ -34,8 +34,8 @@ const Merch = () => {
           <MerchListCard>
             {images1.map((item, id) => {
               return (
-                id >= 1150 &&
-                id <= 1190 &&
+                id >= 1350 &&
+                id <= 1390 &&
                 item.type.value === "outfit" &&
                 item.images.featured && (
                   <MerchCard image={item.images.icon} id={id} />

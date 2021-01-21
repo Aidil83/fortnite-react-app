@@ -4,21 +4,20 @@ const Main = styled.div`
   max-width: calc(100% + 10px);
   display: flex;
   flex-direction: column;
-  margin: 2px 2px;
+  margin: 2px 4px;
   & .imageWrapper {
     transform: skew(25rad);
     width: 85px;
     height: 92px;
-    border: 2px #fff solid;
+    border: 2.5px #fff solid;
     border-radius: 5px;
     background: linear-gradient(to bottom, #868686, #fff);
     overflow: hidden;
     img {
-      height: 125px;
-      width: 130px;
+      height: 100px;
+      width: 100px;
       position: relative;
-      right: 23px;
-      bottom: 5px;
+      right: 10px;
     }
   }
   span {

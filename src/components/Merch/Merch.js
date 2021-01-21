@@ -10,17 +10,13 @@ import {
 import MerchCard from "./MerchCard";
 
 const Merch = () => {
-  const [images1, setImages] = useState([]);
-  const [images2, setImages2] = useState([]);
+  const [images1, setImages1] = useState([]);
 
   useEffect(() => {
     (async () => {
-      const res = await axios("https://fortnite-api.com/v2/shop/br/combined");
-      const res1 = await axios("https://fortnite-api.com/v2/cosmetics/br");
-      // console.log(res.data.data.featured.entries);
+      const res = await axios("https://fortnite-api.com/v2/cosmetics/br");
       // console.log(res1.data.data[1001]);
-      // setImages(res.data.data.featured.entries);
-      setImages2(res1.data.data);
+      setImages1(res.data.data);
     })();
   }, []);
 
@@ -36,7 +32,7 @@ const Merch = () => {
         <h1>Merch</h1>
         <MerchListContainer>
           <MerchListCard>
-            {images2.map((item, id) => {
+            {images1.map((item, id) => {
               return (
                 id >= 1150 &&
                 id <= 1190 &&
@@ -46,13 +42,6 @@ const Merch = () => {
                 )
               );
             })}
-            {/* {images.map((item, id) => {
-              return (
-                item.items[0].images.featured && (
-                  <MerchCard img={item.items[0].images.smallIcon} id={id} />
-                )
-              );
-            })} */}
           </MerchListCard>
         </MerchListContainer>
       </MerchMain>

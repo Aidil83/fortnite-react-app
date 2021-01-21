@@ -39,7 +39,7 @@ const Merch = () => {
             {images2.map((item, id) => {
               return (
                 id >= 1150 &&
-                id <= 1200 &&
+                id <= 1190 &&
                 item.type.value === "outfit" &&
                 item.images.featured && (
                   <MerchCard image={item.images.smallIcon} id={id} />

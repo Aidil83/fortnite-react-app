@@ -37,6 +37,8 @@ export const MerchListContainer = styled.div`
   justify-content: center;  
   align-items: center;
   width: 100%;
+  /* background-color: #c0c0c0; */
+  background-image: linear-gradient(to right, #f1b1b1 , #82e6e8);
 `;
 
 export const MerchListCard = styled.div`
@@ -46,5 +48,5 @@ export const MerchListCard = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  background-color: #ccc;
+  /* background-color: #ccc; */
 `;

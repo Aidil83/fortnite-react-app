@@ -9,9 +9,10 @@ const Main = styled.div`
     transform: skew(25rad);
     img {
       height: 84px;
-      background-color: #898989;
+      background-color: #343a57;
       width: 84px;
       border: 2px #fff solid;
+      /* border: 2px #ffd900 solid; */
       border-radius: 5px;
     }
   }

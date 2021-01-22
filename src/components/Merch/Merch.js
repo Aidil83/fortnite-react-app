@@ -12,6 +12,8 @@ import { NavigateBefore, NavigateNext } from "@material-ui/icons";
 
 const Merch = () => {
   const [images1, setImages1] = useState([]);
+  const [loadStart, setLoadStart] = useState(1201);
+  const [loadEnd, setLoadEnd] = useState(1231);
 
   useEffect(() => {
     (async () => {
@@ -20,6 +22,16 @@ const Merch = () => {
       setImages1(res.data.data);
     })();
   }, []);
+
+  const handlePrevtBtn = () => {
+    setLoadStart(loadStart - 30);
+    setLoadEnd(loadEnd - 30);
+  };
+
+  const handleNextBtn = () => {
+    setLoadStart(loadStart + 30);
+    setLoadEnd(loadEnd + 30);
+  };
 
   return (
     <>
@@ -34,8 +46,8 @@ const Merch = () => {
           <MerchListCard>
             {images1.map((item, id) => {
               return (
-                id >= 1050 &&
-                id <= 1090 &&
+                id >= loadStart &&
+                id <= loadEnd &&
                 item.type.value === "outfit" &&
                 item.images.featured && <MerchCard item={item} id={id} />
               );
@@ -43,10 +55,10 @@ const Merch = () => {
           </MerchListCard>
           <div className="buttonContainer">
             <button>
-              <NavigateBefore />
+              <NavigateBefore onClick={handlePrevtBtn} />
             </button>
             <button>
-              <NavigateNext />
+              <NavigateNext onClick={handleNextBtn} />
             </button>
           </div>
         </MerchListContainer>

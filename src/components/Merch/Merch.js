@@ -12,14 +12,19 @@ import { NavigateBefore, NavigateNext } from "@material-ui/icons";
 
 const Merch = () => {
   const [images1, setImages1] = useState([]);
-  const [loadStart, setLoadStart] = useState(1201);
-  const [loadEnd, setLoadEnd] = useState(1231);
+  const [loadStart, setLoadStart] = useState(0);
+  const [loadEnd, setLoadEnd] = useState(30);
 
   useEffect(() => {
     (async () => {
       const res = await axios("https://fortnite-api.com/v2/cosmetics/br");
-      // console.log(res1.data.data[1001]);
-      setImages1(res.data.data);
+      const _data = res.data.data;
+      // console.log(_data[1001]);
+      const featuredData = _data.filter(
+        (item) => item.images.featured !== null
+      );
+      console.log(featuredData);
+      setImages1(featuredData);
     })();
   }, []);
 
@@ -45,12 +50,11 @@ const Merch = () => {
         <MerchListContainer>
           <MerchListCard>
             {images1.map((item, id) => {
-              return (
-                id >= loadStart &&
-                id <= loadEnd &&
-                item.type.value === "outfit" &&
-                item.images.featured && <MerchCard item={item} id={id} />
-              );
+              if (item.images.featured !== null)
+                return (
+                  id >= loadStart &&
+                  id <= loadEnd && <MerchCard item={item} id={id} />
+                );
             })}
           </MerchListCard>
           <div className="buttonContainer">

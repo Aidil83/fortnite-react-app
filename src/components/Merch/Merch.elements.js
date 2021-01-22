@@ -52,6 +52,7 @@ export const MerchListContainer = styled.div`
       margin: 20px 0;
       cursor: pointer;
       transition: 0.1s;
+      outline: none;
       &:hover {
         transition: 0.1s;
         background-color: rgba(155, 154, 154, 0.5);
@@ -63,9 +64,12 @@ export const MerchListContainer = styled.div`
 
 export const MerchListCard = styled.div`
   height: 100%;
+  min-height: 340px;
+  max-height: 340px;
   max-width: 1200px;
   margin: 5px 14px;
   display: flex;
   justify-content: center;
   flex-flow: wrap;
+  overflow: auto;
 `;

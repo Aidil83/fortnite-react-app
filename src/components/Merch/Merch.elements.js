@@ -68,5 +68,4 @@ export const MerchListCard = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  /* background-color: #ccc; */
 `;

@@ -6,7 +6,9 @@ const Main = styled.div`
   flex-direction: column;
   margin: 2px 4px;
   cursor: pointer;
+  transition: 0.175s;
   & .imageWrapper {
+    transition: 0.175s;
     transform: skew(25rad);
     width: 85px;
     height: 92px;
@@ -30,6 +32,21 @@ const Main = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  &:hover .imageWrapper {
+    /* max-height cuz I'm telling the container to not expand more than 80px in height.*/
+    max-height: 80px;
+    margin: 0;
+    overflow: hidden;
+    transition: 0.15s;
+    transform: skew(25rad) scale(1.2);
+    background: linear-gradient(to bottom, #ffae00, #fff);
+  }
+  &:hover span {
+    position: relative;
+    background-color: #fdfdfd;
+    border-radius: 3px;
+    padding: 3px;
   }
 `;
 

@@ -29,15 +29,36 @@ export const MerchTab = styled.div`
 export const MerchHeroContainer = styled.div`
   min-height: 40vh;
   width: 100%;
-  background-color: #fffcac;
+  background-image: linear-gradient(to right, #fffcac, #82e6e8);
 `;
 
 export const MerchListContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   background-image: linear-gradient(to right, #f1b1b1, #82e6e8);
+  & .buttonContainer {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    button {
+      padding: 10px 10px;
+      border-radius: 50%;
+      background-color: rgba(253, 253, 253, 0.6);
+      border: solid 1px #fff;
+      color: #505050;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: 0.1s;
+      &:hover {
+        transition: 0.1s;
+        background-color: rgba(155, 154, 154, 0.5);
+        border: solid 1px #000;
+      }
+    }
+  }
 `;
 
 export const MerchListCard = styled.div`

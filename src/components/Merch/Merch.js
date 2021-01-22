@@ -8,6 +8,7 @@ import {
   MerchListContainer,
 } from "./Merch.elements";
 import MerchCard from "./MerchCard";
+import { NavigateBefore, NavigateNext } from "@material-ui/icons";
 
 const Merch = () => {
   const [images1, setImages1] = useState([]);
@@ -29,18 +30,25 @@ const Merch = () => {
         <MerchHeroContainer>
           <h3>Hero</h3>
         </MerchHeroContainer>
-        <h1>Merch</h1>
         <MerchListContainer>
           <MerchListCard>
             {images1.map((item, id) => {
               return (
-                id >= 1010 &&
-                id <= 1050 &&
+                id >= 1050 &&
+                id <= 1090 &&
                 item.type.value === "outfit" &&
                 item.images.featured && <MerchCard item={item} id={id} />
               );
             })}
           </MerchListCard>
+          <div className="buttonContainer">
+            <button>
+              <NavigateBefore />
+            </button>
+            <button>
+              <NavigateNext />
+            </button>
+          </div>
         </MerchListContainer>
       </MerchMain>
     </>

@@ -5,6 +5,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   margin: 2px 4px;
+  cursor: pointer;
   & .imageWrapper {
     transform: skew(25rad);
     width: 85px;
@@ -24,6 +25,7 @@ const Main = styled.div`
     display: inline-block;
     text-align: center;
     font-size: 0.78rem;
+    margin-top: 2px;
     width: 80px;
     white-space: nowrap;
     overflow: hidden;

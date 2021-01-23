@@ -12,8 +12,8 @@ import { NavigateBefore, NavigateNext } from "@material-ui/icons";
 
 const Merch = () => {
   const [images1, setImages1] = useState([]);
-  const [loadStart, setLoadStart] = useState(0);
-  const [loadEnd, setLoadEnd] = useState(30);
+  const [loadStart, setLoadStart] = useState(30);
+  const [loadEnd, setLoadEnd] = useState(60);
 
   useEffect(() => {
     (async () => {
@@ -35,11 +35,27 @@ const Merch = () => {
   }, []);
 
   const handlePrevtBtn = () => {
+    // NOTE: 30 cuz asynchronous render
+    if (loadStart <= 30) {
+      setLoadStart(images1.length - 30);
+      setLoadEnd(images1.length);
+      console.log(loadStart);
+      return;
+    }
+    console.log(loadStart);
     setLoadStart(loadStart - 30);
     setLoadEnd(loadEnd - 30);
   };
 
   const handleNextBtn = () => {
+    // NOTE: 30 cuz asynchronous render
+    if (loadEnd >= images1.length - 30) {
+      setLoadStart(2);
+      setLoadEnd(32);
+      console.log(loadStart);
+      return;
+    }
+    console.log(loadStart);
     setLoadStart(loadStart + 30);
     setLoadEnd(loadEnd + 30);
   };

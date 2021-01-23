@@ -19,21 +19,29 @@ const Merch = () => {
     (async () => {
       const res = await axios("https://fortnite-api.com/v2/cosmetics/br");
       const _data = res.data.data;
-      // console.log(_data[1001]);
+      // console.log(_data[1010]);
       const featuredData = _data.filter(
         (item) => item.images.featured !== null
       );
-      console.log(featuredData);
+      // console.log(featuredData);
       setImages1(featuredData);
     })();
   }, []);
 
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
   const handlePrevtBtn = () => {
+    // console.log(images1.length);
+    // console.log(images1);
+    shuffle(images1);
     setLoadStart(loadStart - 30);
     setLoadEnd(loadEnd - 30);
   };
 
   const handleNextBtn = () => {
+    shuffle(images1);
     setLoadStart(loadStart + 30);
     setLoadEnd(loadEnd + 30);
   };
@@ -52,6 +60,7 @@ const Merch = () => {
             {images1.map((item, id) => {
               if (item.images.featured !== null)
                 return (
+                  // Display 30 images:
                   id >= loadStart &&
                   id <= loadEnd && <MerchCard item={item} id={id} />
                 );

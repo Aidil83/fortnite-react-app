@@ -68,6 +68,7 @@ export const MerchListCard = styled.div`
   max-height: 338px;
   max-width: 1200px;
   margin: 5px 14px;
+  padding-top:5px; 
   display: flex;
   justify-content: center;
   flex-flow: wrap;

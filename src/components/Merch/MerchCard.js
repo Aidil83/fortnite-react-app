@@ -1,5 +1,19 @@
 import styled from "styled-components/macro";
 
+export const CardNum = styled.div`
+position: absolute;
+top: -3px;
+z-index: 999;
+height: 18%;
+width: 40%;
+border-radius: 0 25% 50% 0;
+background-color: rgba(255,255,255,.90);
+text-align: start;
+color: black;
+font-size: .7rem;
+font-weight: 900;
+`;
+
 const Main = styled.div`
   max-width: calc(100% + 10px);
   display: flex;
@@ -48,14 +62,25 @@ const Main = styled.div`
     border-radius: 3px;
     padding: 3px;
   }
+
+  &:hover ${CardNum}{
+  height: 20%;
+  width: 45%;
+  color: black;
+background-color: rgba(255,255,255,.95);
+  /* border-radius: 0; */
+  }
+
 `;
+
 
 const MerchCard = ({ item, id }) => {
   // console.log(item);
   return (
     <Main>
       <div className="imageWrapper" key={id}>
-        <img src={item.images.icon} alt={id} />
+      <CardNum>{id}</CardNum>
+        <img src={item.images.icon} alt={id}/>
       </div>
       <span>{item.name}</span>
     </Main>

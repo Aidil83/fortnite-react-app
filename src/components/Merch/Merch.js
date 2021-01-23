@@ -39,10 +39,8 @@ const Merch = () => {
     if (loadStart <= 30) {
       setLoadStart(images1.length - 30);
       setLoadEnd(images1.length);
-      console.log(loadStart);
       return;
     }
-    console.log(loadStart);
     setLoadStart(loadStart - 30);
     setLoadEnd(loadEnd - 30);
   };
@@ -52,10 +50,8 @@ const Merch = () => {
     if (loadEnd >= images1.length - 30) {
       setLoadStart(2);
       setLoadEnd(32);
-      console.log(loadStart);
       return;
     }
-    console.log(loadStart);
     setLoadStart(loadStart + 30);
     setLoadEnd(loadEnd + 30);
   };

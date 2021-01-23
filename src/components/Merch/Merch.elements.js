@@ -72,5 +72,10 @@ export const MerchListCard = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @media screen and (min-width: 1200px){
+  overflow: hidden;
+  }
 `;

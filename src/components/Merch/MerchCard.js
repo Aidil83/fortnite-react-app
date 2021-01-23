@@ -3,9 +3,11 @@ import styled from "styled-components/macro";
 export const CardNum = styled.div`
 position: absolute;
 top: -3px;
+left: -1px;
 z-index: 999;
 height: 18%;
-width: 40%;
+max-width: 100%;
+padding-right: 3px;
 border-radius: 0 25% 50% 0;
 background-color: rgba(255,255,255,.90);
 text-align: start;
@@ -65,10 +67,8 @@ const Main = styled.div`
 
   &:hover ${CardNum}{
   height: 20%;
-  width: 45%;
   color: black;
-background-color: rgba(255,255,255,.95);
-  /* border-radius: 0; */
+  background-color: rgba(255,255,255,.95);
   }
 
 `;

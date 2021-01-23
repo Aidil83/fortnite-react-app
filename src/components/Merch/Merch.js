@@ -23,25 +23,23 @@ const Merch = () => {
       const featuredData = _data.filter(
         (item) => item.images.featured !== null
       );
+      function shuffle(array) {
+        return array.sort(() => Math.random() - 0.5);
+      }
+      //NOTE: shuffle image cards after the first load:
+      shuffle(featuredData);
+
       // console.log(featuredData);
       setImages1(featuredData);
     })();
   }, []);
 
-  function shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
-  }
-
   const handlePrevtBtn = () => {
-    // console.log(images1.length);
-    // console.log(images1);
-    shuffle(images1);
     setLoadStart(loadStart - 30);
     setLoadEnd(loadEnd - 30);
   };
 
   const handleNextBtn = () => {
-    shuffle(images1);
     setLoadStart(loadStart + 30);
     setLoadEnd(loadEnd + 30);
   };
@@ -68,10 +66,10 @@ const Merch = () => {
           </MerchListCard>
           <div className="buttonContainer">
             <button>
-              <NavigateBefore onClick={handlePrevtBtn} />
+              <NavigateBefore onMouseDown={handlePrevtBtn} />
             </button>
             <button>
-              <NavigateNext onClick={handleNextBtn} />
+              <NavigateNext onMouseDown={handleNextBtn} />
             </button>
           </div>
         </MerchListContainer>

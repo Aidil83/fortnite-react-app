@@ -1,10 +1,12 @@
-import {ModalClose, ModalMain} from './Modal.elements'
+import {InfoContainer, ModalClose, ModalMain} from './Modal.elements'
 
 const Modal = ({handleModal}) => {
   return (
     <ModalMain>
-      <div>
+      <div className="modal-container">
+        <div className="modal-background"></div>
         <ModalClose onClick={handleModal} />
+        <InfoContainer />
       </div>
     </ModalMain>
   )

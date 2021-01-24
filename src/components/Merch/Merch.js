@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 import {
   MerchMain,
@@ -6,14 +6,17 @@ import {
   MerchListCard,
   MerchTab,
   MerchListContainer,
+  MerchModal,
 } from "./Merch.elements";
 import MerchCard from "./MerchCard";
-import { NavigateBefore, NavigateNext } from "@material-ui/icons";
+import {NavigateBefore, NavigateNext} from "@material-ui/icons";
+import {Modal} from '..';
 
 const Merch = () => {
   const [images1, setImages1] = useState([]);
   const [loadStart, setLoadStart] = useState(1);
   const [loadEnd, setLoadEnd] = useState(30);
+  const [isModal, setIsModal] = useState(false)
 
   useEffect(() => {
     (async () => {
@@ -35,11 +38,6 @@ const Merch = () => {
 
 
   }, []);
-
-  // useEffect(() => {
-    
-  // }, [handleModal])
-
 
   const handlePrevtBtn = () => {
     // NOTE: 30 cuz asynchronous render
@@ -65,18 +63,25 @@ const Merch = () => {
 
   const handleModal = (id) => {
     console.log({id})
-    // setIsModal(true);
+    setIsModal(true);
   };
 
   return (
     <>
       <MerchMain>
+
+        {isModal &&
+          <Modal>
+            <div>
+              <h1>Modal</h1>
+            </div>
+          </Modal>
+        }
         <MerchTab>
           <div>Item Shop</div>
         </MerchTab>
         <MerchHeroContainer>
           <h3>Hero</h3>
-
         </MerchHeroContainer>
         <MerchListContainer>
           <MerchListCard>
@@ -85,7 +90,7 @@ const Merch = () => {
                 return (
                   // Display 30 images:
                   id >= loadStart &&
-                  id <= loadEnd && <MerchCard item={item} id={id} handleModal={handleModal}/>
+                  id <= loadEnd && <MerchCard item={item} id={id} handleModal={handleModal} />
                 );
             })}
           </MerchListCard>

@@ -1,4 +1,3 @@
-import {useEffect, useState} from 'react';
 import styled from "styled-components/macro";
 
 export const CardNum = styled.div`
@@ -67,21 +66,20 @@ const Main = styled.div`
   }
 
   &:hover ${CardNum}{
-  height: 20%;
+    height: 20%;
   color: black;
   background-color: rgba(255,255,255,.95);
   }
 
 `;
 
-const MerchCard = ({ item, id, handleModal }) => {
-  const [isModal, setIsModal] = useState(false)
+const MerchCard = ({item, id, handleModal}) => {
 
   return (
     <Main onClick={() => handleModal(id)}>
       <div className="imageWrapper" key={id}>
-      <CardNum>{id}</CardNum>
-        <img src={item.images.icon} alt={id}/>
+        <CardNum>{id}</CardNum>
+        <img src={item.images.icon} alt={id} />
       </div>
       <span>{item.name}</span>
     </Main>

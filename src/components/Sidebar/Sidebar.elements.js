@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export const SidebarMain = styled.div`
   display: none;
@@ -7,8 +7,8 @@ export const SidebarMain = styled.div`
   @media screen and (max-width: 1190px) {
     display: block;
     position: fixed;
-    z-index: 2;
-    right: ${({ isOpen }) => (isOpen ? "0" : "-1080px")};
+    z-index: 3;
+    right: ${({isOpen}) => (isOpen ? "0" : "-1080px")};
     transition: 300ms;
     top: 51px;
     height: calc(100vh - 51px);

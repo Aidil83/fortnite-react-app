@@ -1,10 +1,10 @@
-import { Blog, Footer, Merch, Navbar, Sidebar, Wrapper } from "./components";
-import { AppContainer, RouteError } from "./App.elements";
+import {Blog, Footer, Merch, Navbar, Sidebar, Wrapper} from "./components";
+import {AppContainer, RouteError} from "./App.elements";
 import GlobalStyle from "./globalStyles";
-import { useState } from "react";
+import {useState} from "react";
 import styled from "styled-components/macro";
-import { SliderData } from "./data/SliderData";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {SliderData} from "./data/SliderData";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,13 +44,13 @@ function App() {
 }
 
 const AppOverlay = styled.div`
-  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  display: ${({isOpen}) => (isOpen ? "block" : "none")};
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.75);
   height: 100%;
 

@@ -80,3 +80,4 @@ export const MerchListCard = styled.div`
   overflow: hidden;
   }
 `;
+

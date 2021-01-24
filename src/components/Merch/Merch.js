@@ -32,7 +32,14 @@ const Merch = () => {
       // console.log(featuredData);
       setImages1(featuredData);
     })();
+
+
   }, []);
+
+  // useEffect(() => {
+    
+  // }, [handleModal])
+
 
   const handlePrevtBtn = () => {
     // NOTE: 30 cuz asynchronous render
@@ -56,6 +63,11 @@ const Merch = () => {
     setLoadEnd(loadEnd + 30);
   };
 
+  const handleModal = (id) => {
+    console.log({id})
+    // setIsModal(true);
+  };
+
   return (
     <>
       <MerchMain>
@@ -64,6 +76,7 @@ const Merch = () => {
         </MerchTab>
         <MerchHeroContainer>
           <h3>Hero</h3>
+
         </MerchHeroContainer>
         <MerchListContainer>
           <MerchListCard>
@@ -72,7 +85,7 @@ const Merch = () => {
                 return (
                   // Display 30 images:
                   id >= loadStart &&
-                  id <= loadEnd && <MerchCard item={item} id={id} />
+                  id <= loadEnd && <MerchCard item={item} id={id} handleModal={handleModal}/>
                 );
             })}
           </MerchListCard>

@@ -66,6 +66,7 @@ export const MerchListCard = styled.div`
   height: 100%;
   min-height: 338px;
   max-height: 338px;
+  width: 100%;
   max-width: 1200px;
   margin: 5px 14px;
   padding-top:5px; 

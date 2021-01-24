@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import styled from "styled-components/macro";
 
 export const CardNum = styled.div`
@@ -73,11 +74,11 @@ const Main = styled.div`
 
 `;
 
+const MerchCard = ({ item, id, handleModal }) => {
+  const [isModal, setIsModal] = useState(false)
 
-const MerchCard = ({ item, id }) => {
-  // console.log(item);
   return (
-    <Main>
+    <Main onClick={() => handleModal(id)}>
       <div className="imageWrapper" key={id}>
       <CardNum>{id}</CardNum>
         <img src={item.images.icon} alt={id}/>

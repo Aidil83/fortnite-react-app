@@ -62,20 +62,14 @@ const Merch = () => {
   };
 
   const handleModal = (id) => {
-    console.log({id})
-    setIsModal(true);
+    setIsModal(!isModal);
   };
 
   return (
     <>
       <MerchMain>
 
-        {isModal &&
-          <Modal>
-            <div>
-              <h1>Modal</h1>
-            </div>
-          </Modal>
+        {isModal && <Modal handleModal={handleModal} />
         }
         <MerchTab>
           <div>Item Shop</div>

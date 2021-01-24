@@ -1,10 +1,10 @@
-import {ModalMain} from './Modal.elements'
+import {ModalClose, ModalMain} from './Modal.elements'
 
-const Modal = () => {
+const Modal = ({handleModal}) => {
   return (
     <ModalMain>
       <div>
-        Modal
+        <ModalClose onClick={handleModal} />
       </div>
     </ModalMain>
   )

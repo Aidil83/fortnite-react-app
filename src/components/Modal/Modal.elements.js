@@ -31,7 +31,7 @@ export const ModalMain = styled.div`
     }
     & .modal-type {
         position: absolute;
-        top: 20px;
+        top: 5%;
         z-index: 2;
         display: flex;
         justify-content: center;

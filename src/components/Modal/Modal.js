@@ -16,7 +16,11 @@ const Modal = ({handleModal}) => {
           <img src={modalData.images.featured} alt="Featured-image" />
         </div>
         <ModalClose onClick={handleModal} />
-        <InfoContainer />
+        <InfoContainer>
+          <div className="modal-footer">
+            <div className="modal-purchase">Purchase</div>
+          </div>
+        </InfoContainer>
       </div>
     </ModalMain>
   )

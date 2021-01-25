@@ -10,7 +10,7 @@ const Modal = ({handleModal}) => {
     <ModalMain>
       <div className="modal-container">
         <div className="modal-type">
-          <span>{modalData.type.displayValue}</span>
+          <span>{modalData.type.value}</span>
         </div>
         <div className="modal-background">
           <img src={modalData.images.featured} alt="Featured-image" />

@@ -1,5 +1,5 @@
 export const initialState = {
-  modalCard: "",
+  modalCard: {},
   getApi: [],
 };
 
@@ -8,17 +8,17 @@ const reducer = (state, action) => {
 
   // NOTE: This is where all the logics happen:
   switch (action.type) {
-    case "MODALCARD":
+    case "MODALDATA":
       return {
         // NOTE: action is the dispatch that we passed in:
         ...state, // state is currentState and initialState.
-        modalCard: action.modalCard,
+        modalData: action.modalData,
       };
     case "GETAPI":
       return {
         // NOTE: action is the dispatch that we passed in:
         ...state, // state is currentState and initialState.
-        modalCard: action.modalCard,
+        getApi: action.getApi,
       };
     default:
       return state;

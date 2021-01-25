@@ -61,13 +61,13 @@ const Merch = () => {
     setLoadEnd(loadEnd + 30);
   };
 
-  const handleModal = (images) => {
+  // coming from MerchCard
+  const handleModal = (modalData) => {
     setIsModal(!isModal);
     dispatch({
-      type: "MODALCARD",
-      modalCard: images.featured,
+      type: "MODALDATA",
+      modalData: modalData,
     });
-    // console.log(images.featured);
   };
 
   return (

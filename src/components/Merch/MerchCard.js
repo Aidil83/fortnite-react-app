@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 const MerchCard = ({item, id, handleModal}) => {
 
   return (
-    <Main onClick={() => handleModal(item.images)}>
+    <Main onClick={() => handleModal(item)}>
       <div className="imageWrapper" key={id}>
         <CardNum>{id}</CardNum>
         <img src={item.images.icon} alt={id} />

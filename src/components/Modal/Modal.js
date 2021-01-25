@@ -4,13 +4,16 @@ import {InfoContainer, ModalClose, ModalMain} from './Modal.elements'
 
 const Modal = ({handleModal}) => {
   const [state] = useContext(StateContext);
-  const {modalCard} = state;
+  const {modalData} = state;
 
   return (
     <ModalMain>
       <div className="modal-container">
+        <div className="modal-type">
+          <span>{modalData.type.displayValue}</span>
+        </div>
         <div className="modal-background">
-          <img src={modalCard} alt="Featured-image" />
+          <img src={modalData.images.featured} alt="Featured-image" />
         </div>
         <ModalClose onClick={handleModal} />
         <InfoContainer />

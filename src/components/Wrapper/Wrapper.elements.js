@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components/macro";
+import styled, {keyframes} from "styled-components/macro";
 
 const media = {
   Laptop: "@media (max-width: 1740px)",
@@ -18,7 +18,7 @@ export const WrapperImage = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-image: url(${({ img }) => img});
+  background-image: url(${({img}) => img});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -34,12 +34,12 @@ export const WrapperImage = styled.div`
 
   &.mobile2 {
     @media (max-width: 768px) {
-      background-image: url(${({ imgMobile }) => imgMobile});
+      background-image: url(${({imgMobile}) => imgMobile});
     }
   }
   &.mobile3 {
     @media (max-width: 768px) {
-      background-image: url(${({ imgMobile }) => imgMobile});
+      background-image: url(${({imgMobile}) => imgMobile});
     }
   }
 `;
@@ -57,6 +57,9 @@ export const PrevBtn = styled.button`
   font-size: 3rem;
   cursor: pointer;
   outline: none;
+  .MuiSvgIcon-root{
+    font-size: 2rem;
+  }
 
   &:hover {
     background-color: orange;
@@ -91,6 +94,9 @@ export const NextBtn = styled.button`
   font-size: 3rem;
   cursor: pointer;
   outline: none;
+  .MuiSvgIcon-root{
+    font-size: 2rem;
+  }
 
   &:hover {
     background-color: orange;
@@ -117,14 +123,14 @@ export const WrapperTextContainer = styled.div`
   flex-flow: column wrap;
   justify-content: center;
   align-items: flex-start;
-  width: ${({ slide }) => slide.posCaptionRight};
+  width: ${({slide}) => slide.posCaptionRight};
   height: 49%;
   position: absolute;
-  left: ${({ slide }) => slide.WrapperContainerLeft};
-  bottom: ${({ slide }) => slide.WrapperContainerBottom};
+  left: ${({slide}) => slide.WrapperContainerLeft};
+  bottom: ${({slide}) => slide.WrapperContainerBottom};
 
   @media only screen and (max-width: 768px) {
-    height: ${({ slide }) => slide.WrapperTextContainerHeight};
+    height: ${({slide}) => slide.WrapperTextContainerHeight};
     width: 100%;
     bottom: 0;
     left: 0px;
@@ -132,23 +138,23 @@ export const WrapperTextContainer = styled.div`
 `;
 
 export const WrapperCaption = styled.div`
-  width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth}px;
+  width: ${({wrapperCaptionWidth}) => wrapperCaptionWidth}px;
   /* height: 145px; */
   height: 45px;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 2rem;
-  color: ${({ slide }) => slide.captionColor};
+  color: ${({slide}) => slide.captionColor};
 
   ${media.ipad} {
-    height: ${({ slide }) => slide.posCaptionHeight};
+    height: ${({slide}) => slide.posCaptionHeight};
   }
 `;
 
 export const WrapperTitleTxt = styled.div`
   display: flex;
   justify-content: center;
-  align-self: ${({ slide }) => slide.alignSelf};
+  align-self: ${({slide}) => slide.alignSelf};
   /* height: 200px; */
   height: 170px;
   line-height: 93.4px;
@@ -158,43 +164,43 @@ export const WrapperTitleTxt = styled.div`
   font-weight: 500;
   font-style: italic;
   letter-spacing: 3.1px;
-  background-image: ${({ slide }) => slide.backgroundImage};
+  background-image: ${({slide}) => slide.backgroundImage};
   background-size: 100%;
   /* NOTE: Ignore the linting: */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   ${media.Laptop} {
-    margin-right: ${({ slide }) => slide.marginRightTitleLaptop}px;
+    margin-right: ${({slide}) => slide.marginRightTitleLaptop}px;
   }
 
   @media screen and (max-width: 1190px) {
-    width: ${({ slide }) => slide.widthTitleLaptop}px;
+    width: ${({slide}) => slide.widthTitleLaptop}px;
     right: inherit;
-    margin-right: ${({ slide }) => slide.marginRightTitleLaptopSm}px;
-    font-size: ${({ slide }) => slide.fontSizeTitleIpadSm};
+    margin-right: ${({slide}) => slide.marginRightTitleLaptopSm}px;
+    font-size: ${({slide}) => slide.fontSizeTitleIpadSm};
   }
 
   ${media.ipadPro} {
-    bottom: ${({ slide }) => slide.posTitleBottomIpadPro}px;
+    bottom: ${({slide}) => slide.posTitleBottomIpadPro}px;
     line-height: 80.4px;
     font-size: 90px;
   }
 
   @media (max-width: 768px) {
     margin-right: 0;
-    width: ${({ slide }) => slide.widthTitleIpad}px;
-    font-size: ${({ slide }) => slide.fontSizeTitleIpadSm};
-    right: ${({ slide }) => slide.posTitleRightIpad}px;
-    bottom: ${({ slide }) => slide.posTitleBottomMobileWeb};
+    width: ${({slide}) => slide.widthTitleIpad}px;
+    font-size: ${({slide}) => slide.fontSizeTitleIpadSm};
+    right: ${({slide}) => slide.posTitleRightIpad}px;
+    bottom: ${({slide}) => slide.posTitleBottomMobileWeb};
   }
 
   ${media.ipad} {
-    font-size: ${({ slide }) => slide.fontSizeTitleIpad};
+    font-size: ${({slide}) => slide.fontSizeTitleIpad};
     line-height: 80.4px;
     align-self: center;
     width: 100%;
-    height: ${({ slide }) => slide.wrapperTxtHeight};
+    height: ${({slide}) => slide.wrapperTxtHeight};
   }
 `;
 
@@ -204,17 +210,17 @@ export const WrapperText = styled.img`
   top: 0;
   bottom: 72px;
   right: 0;
-  left: ${({ slide }) => slide.imgTxtLeft};
+  left: ${({slide}) => slide.imgTxtLeft};
   margin: auto;
 
   width: 576px;
-  height: ${({ slide }) => slide.imgTxtHeight};
+  height: ${({slide}) => slide.imgTxtHeight};
   object-fit: contain;
   margin-bottom: 0;
   opacity: 1;
 
   ${media.ipad} {
-    left: ${({ slide }) => slide.imgTxtIpad};
+    left: ${({slide}) => slide.imgTxtIpad};
 
     &.mobile3 {
       height: 100px;
@@ -224,8 +230,8 @@ export const WrapperText = styled.img`
   }
 
   @media only screen and (max-width: 620px) {
-    width: ${({ slide }) => slide.imgmobileBigwidth};
-    height: ${({ slide }) => slide.imgmobileBigheight};
+    width: ${({slide}) => slide.imgmobileBigwidth};
+    height: ${({slide}) => slide.imgmobileBigheight};
     left: 0;
 
     &.mobile3 {
@@ -236,8 +242,8 @@ export const WrapperText = styled.img`
   }
 
   @media only screen and (max-width: 320px) {
-    width: ${({ slide }) => slide.imgmobileBigwidth};
-    height: ${({ slide }) => slide.imgmobileBigheight};
+    width: ${({slide}) => slide.imgmobileBigwidth};
+    height: ${({slide}) => slide.imgmobileBigheight};
     left: 0;
   }
 `;
@@ -288,7 +294,7 @@ const loadText = keyframes`
 export const WrapperButton = styled.button`
   position: absolute;
   bottom: 120px;
-  background-color: ${({ slide }) => slide.bgBtnColor};
+  background-color: ${({slide}) => slide.bgBtnColor};
   height: 48px;
   width: 228px;
   outline: none;
@@ -299,7 +305,7 @@ export const WrapperButton = styled.button`
 
   &:hover {
     transform: skewX(-5deg);
-    background-color: ${({ slide }) => slide.bgBtnColor};
+    background-color: ${({slide}) => slide.bgBtnColor};
   }
 `;
 
@@ -314,7 +320,7 @@ export const WrapperLearnMore = styled.p`
   height: 100%;
   letter-spacing: 2.1px;
   transition: 550ms ease;
-  color: ${({ slide }) => slide.txtBtnColor};
+  color: ${({slide}) => slide.txtBtnColor};
 
   &:hover {
     transform: translateX(1.5%);

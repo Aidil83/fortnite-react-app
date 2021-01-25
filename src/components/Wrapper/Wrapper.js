@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import styled, { css } from "styled-components/macro";
-import { TweenMax } from "gsap";
+import {useEffect, useRef, useState} from "react";
+import styled, {css} from "styled-components/macro";
+import {NavigateBefore, NavigateNext} from "@material-ui/icons";
+import {TweenMax} from "gsap";
 import {
   WrapperImage,
   WrapperText,
@@ -16,7 +17,7 @@ import {
 } from "./Wrapper.elements";
 
 // NOTE: Using GSAP animation library:
-const Wrapper = ({ slides }) => {
+const Wrapper = ({slides}) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -86,7 +87,6 @@ const Wrapper = ({ slides }) => {
       },
       {
         opacity: 1,
-        // autoApha: 1,
         delay: 0.75,
         y: -160,
         ease: "back.out",
@@ -134,15 +134,15 @@ const Wrapper = ({ slides }) => {
                     alt={slide.alt}
                   />
                 ) : (
-                  <WrapperTitleTxt
-                    slide={slide}
-                    ref={(e) => {
-                      animateSnowdown = e;
-                    }}
-                  >
-                    {slide.title}
-                  </WrapperTitleTxt>
-                )}
+                    <WrapperTitleTxt
+                      slide={slide}
+                      ref={(e) => {
+                        animateSnowdown = e;
+                      }}
+                    >
+                      {slide.title}
+                    </WrapperTitleTxt>
+                  )}
                 <WrapperSection ref={(e) => (animateSection = e)} slide={slide}>
                   {slide.section}
                 </WrapperSection>
@@ -150,8 +150,12 @@ const Wrapper = ({ slides }) => {
               <WrapperButton slide={slide} ref={(e) => (animateLearnMore = e)}>
                 <WrapperLearnMore slide={slide}>{slide.btn}</WrapperLearnMore>
               </WrapperButton>
-              <NextBtn onClick={nextSlide}>→</NextBtn>
-              <PrevBtn onClick={prevSlide}>←</PrevBtn>
+              <NextBtn onClick={nextSlide}>
+                <NavigateNext />
+              </NextBtn>
+              <PrevBtn onClick={prevSlide}>
+                <NavigateBefore />
+              </PrevBtn>
             </WrapperImage>
           )}
         </div>

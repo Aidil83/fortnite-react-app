@@ -42,8 +42,9 @@ export const ModalMain = styled.div`
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 50px;
-          width: 70%;
+          text-align: center;
+          max-width: 80%;
+          padding: 5px 13px;
           border-radius: 11px;
           font-size: 2rem;
           font-family: 'Luckiest Guy';
@@ -51,6 +52,8 @@ export const ModalMain = styled.div`
           background-color: #1F0061;
           text-transform: uppercase;
           color: #fff;
+          /* white-space: nowrap; */
+          /* overflow: hidden; */
         }
     }
     .MuiSvgIcon-root {

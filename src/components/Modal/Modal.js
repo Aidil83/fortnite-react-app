@@ -4,7 +4,9 @@ const Modal = ({handleModal}) => {
   return (
     <ModalMain>
       <div className="modal-container">
-        <div className="modal-background"></div>
+        <div className="modal-background">
+          {/* <img src={} alt="" /> */}
+        </div>
         <ModalClose onClick={handleModal} />
         <InfoContainer />
       </div>

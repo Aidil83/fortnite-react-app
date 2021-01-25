@@ -24,7 +24,6 @@ export const ModalMain = styled.div`
     min-width: 300px;
     width: 80%;
     max-width: 400px;
-    /* width: 100%; */
     border-radius: 24px;
     box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.4);
     @media screen and (min-width: 450px) {

@@ -1,22 +1,20 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {
-  MerchMain,
-  MerchHeroContainer,
-  MerchListCard,
-  MerchTab,
-  MerchListContainer,
-  MerchModal,
-} from "./Merch.elements";
+import {MerchMain, MerchHeroContainer, MerchListCard} from "./Merch.elements";
+import {MerchTab, MerchListContainer, } from "./Merch.elements";
 import MerchCard from "./MerchCard";
 import {NavigateBefore, NavigateNext} from "@material-ui/icons";
 import {Modal} from '..';
+import {useContext} from 'react';
+import {StateContext} from '../../context/StateProvider';
 
 const Merch = () => {
   const [images1, setImages1] = useState([]);
   const [loadStart, setLoadStart] = useState(1);
   const [loadEnd, setLoadEnd] = useState(30);
   const [isModal, setIsModal] = useState(false)
+
+  const [, dispatch] = useContext(StateContext);
 
   useEffect(() => {
     (async () => {
@@ -35,8 +33,6 @@ const Merch = () => {
       // console.log(featuredData);
       setImages1(featuredData);
     })();
-
-
   }, []);
 
   const handlePrevtBtn = () => {
@@ -63,14 +59,18 @@ const Merch = () => {
 
   const handleModal = (id) => {
     setIsModal(!isModal);
+    dispatch({
+      type: "MODALCARD",
+      modalCard: id,
+    });
+    console.log(id);
+
   };
 
   return (
     <>
       <MerchMain>
-
-        {isModal && <Modal handleModal={handleModal} />
-        }
+        {isModal && <Modal handleModal={handleModal} />}
         <MerchTab>
           <div>Item Shop</div>
         </MerchTab>

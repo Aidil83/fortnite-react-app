@@ -32,14 +32,23 @@ export const ModalMain = styled.div`
     .MuiSvgIcon-root {
         font-size: 2rem;
     }
-    .modal-background {
+  & .modal-background {
       position: absolute;
       z-index: 1;
       height: 100%;
       width: 100%;
+      display: flex;
+      justify-content: center;
       background: ${ModalData.legendCard.gradOrange};
       -webkit-clip-path:circle(85% at 50% -15%);
       clip-path: circle(85% at 50% -15%);
+      img {
+        position: relative;
+        top: 40px;
+        width: 100%;
+        height: 270px;
+        object-fit: contain;
+      }
     }
   }
 `;

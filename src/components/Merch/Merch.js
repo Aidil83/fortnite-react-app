@@ -32,6 +32,10 @@ const Merch = () => {
 
       // console.log(featuredData);
       setImages1(featuredData);
+      dispatch({
+        type: "GETAPI",
+        getApi: featuredData,
+      })
     })();
   }, []);
 
@@ -57,14 +61,13 @@ const Merch = () => {
     setLoadEnd(loadEnd + 30);
   };
 
-  const handleModal = (id) => {
+  const handleModal = (images) => {
     setIsModal(!isModal);
     dispatch({
       type: "MODALCARD",
-      modalCard: id,
+      modalCard: images.featured,
     });
-    console.log(id);
-
+    // console.log(images.featured);
   };
 
   return (
@@ -80,12 +83,11 @@ const Merch = () => {
         <MerchListContainer>
           <MerchListCard>
             {images1.map((item, id) => {
-              if (item.images.featured !== null)
-                return (
-                  // Display 30 images:
-                  id >= loadStart &&
-                  id <= loadEnd && <MerchCard item={item} id={id} handleModal={handleModal} />
-                );
+              return (
+                // Display 30 images:
+                id >= loadStart &&
+                id <= loadEnd && <MerchCard item={item} id={id} handleModal={handleModal} />
+              );
             })}
           </MerchListCard>
           <div className="buttonContainer">

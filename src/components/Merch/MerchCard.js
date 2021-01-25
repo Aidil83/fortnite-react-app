@@ -1,5 +1,18 @@
 import styled from "styled-components/macro";
 
+const MerchCard = ({item, id, handleModal}) => {
+
+  return (
+    <Main onClick={() => handleModal(item.images)}>
+      <div className="imageWrapper" key={id}>
+        <CardNum>{id}</CardNum>
+        <img src={item.images.icon} alt={id} />
+      </div>
+      <span>{item.name}</span>
+    </Main>
+  );
+};
+
 export const CardNum = styled.div`
 position: absolute;
 top: -3px;
@@ -72,18 +85,5 @@ const Main = styled.div`
   }
 
 `;
-
-const MerchCard = ({item, id, handleModal}) => {
-
-  return (
-    <Main onClick={() => handleModal(id)}>
-      <div className="imageWrapper" key={id}>
-        <CardNum>{id}</CardNum>
-        <img src={item.images.icon} alt={id} />
-      </div>
-      <span>{item.name}</span>
-    </Main>
-  );
-};
 
 export default MerchCard;

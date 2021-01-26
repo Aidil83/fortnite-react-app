@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components/macro";
+import {createGlobalStyle} from "styled-components/macro";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif, 'Montserrat';
   /* NOTE: Prevents auto scrolling after refreshing page: */
   overflow-anchor: none;
 

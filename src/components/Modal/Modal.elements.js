@@ -118,6 +118,7 @@ export const InfoContainer = styled.div`
       text-align: center;
       h2 {
         margin-bottom: 8px;
+        font-family: 'Montserrat', sans-serif;
       }
       p {
         color: #000000;

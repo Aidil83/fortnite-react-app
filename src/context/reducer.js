@@ -5,7 +5,7 @@ export const initialState = {
 };
 
 const reducer = (state, action) => {
-  // console.log(action);
+  console.log(action);
 
   // NOTE: This is where all the logics happen:
   switch (action.type) {

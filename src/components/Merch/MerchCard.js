@@ -14,19 +14,20 @@ const MerchCard = ({item, id, handleModal}) => {
 };
 
 export const CardNum = styled.div`
-position: absolute;
-top: -3px;
-left: -1px;
-z-index: 999;
-height: 18%;
-max-width: 100%;
-padding-right: 3px;
-border-radius: 0 25% 50% 0;
-background-color: rgba(255,255,255,.90);
-text-align: start;
-color: black;
-font-size: .7rem;
-font-weight: 900;
+  position: absolute;
+  top: -3px;
+  left: -1px;
+  z-index: 999;
+  height: 18%;
+  max-width: 100%;
+  padding-right: 3px;
+  border-radius: 0 25% 50% 0;
+  background-color: rgba(255,255,255,.90);
+  text-align: start;
+  color: black;
+  font-size: .7rem;
+  font-weight: 900;
+  font-family: sans-serif;
 `;
 
 const Main = styled.div`
@@ -55,12 +56,14 @@ const Main = styled.div`
   span {
     display: inline-block;
     text-align: center;
+    font-size: 0.88rem;
     font-size: 0.78rem;
     margin-top: 2px;
     width: 80px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: sans-serif;
   }
   &:hover .imageWrapper {
     /* max-height cuz I'm telling the container to not expand more than 80px in height.*/
@@ -80,8 +83,8 @@ const Main = styled.div`
 
   &:hover ${CardNum}{
     height: 20%;
-  color: black;
-  background-color: rgba(255,255,255,.95);
+    color: black;
+    background-color: rgba(255,255,255,.95);
   }
 
 `;

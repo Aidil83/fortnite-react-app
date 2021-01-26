@@ -145,13 +145,23 @@ export const ModalFooter = styled.div`
     & .modal-purchase {
       position: relative;
       z-index: 9;
-      padding: 8px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 20px;
+      padding-right: 5px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
       background: linear-gradient(180deg, #FFFFFF 0%, rgba(235, 223, 223, 0) 100%), linear-gradient(180deg, #F8B200 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFA800 0%, rgba(255, 246, 21, 0.916667) 48.96%, rgba(255, 255, 255, 0) 53.12%), #FFC700;
-      font-size: 20px;
+      font-size: 25px;
       line-height: 24px;
       letter-spacing: .1rem;
       cursor: pointer;
+      font-family: 'Londrina Solid';
+      img {
+        width: 55px;
+        height: 43px;
+        object-fit: contain;
+      }
     }
 `;

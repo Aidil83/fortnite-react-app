@@ -31,20 +31,24 @@ export const ModalMain = styled.div`
     }
     & .modal-type {
         position: absolute;
-        top: 5%;
+        top: 50%;
         z-index: 3;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        @media screen and (min-width: 375px) {
+          top: 49%;
+        }
+        @media screen and (min-width: 414px) {
+          top: 51%;
+        }
         span {
           display: flex;
           justify-content: center;
           align-items: center;
           text-align: center;
-          max-width: 80%;
-          padding: 5px 13px;
+          padding: 3px 8px;
           border-radius: 11px;
           font-size: 2rem;
           font-family: 'Luckiest Guy';
@@ -91,7 +95,7 @@ export const ModalClose = styled(CloseIcon)`
 `;
 
 export const InfoContainer = styled.div`
-  height: 100%;
+  height: 54%;
   max-height: 572px;
   min-width: 300px;
   width: 100%;
@@ -103,9 +107,13 @@ export const InfoContainer = styled.div`
   justify-content: center;
   background-color: white;
     & .modal-info {
-      height: 125px;
+      height: 70%;
       width: 80%;
-      margin-bottom: 24%;
+      margin-bottom: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       text-align: center;
       h2 {
         margin-bottom: 8px;

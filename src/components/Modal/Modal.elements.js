@@ -32,7 +32,7 @@ export const ModalMain = styled.div`
     & .modal-type {
         position: absolute;
         top: 5%;
-        z-index: 2;
+        z-index: 3;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -91,26 +91,52 @@ export const ModalClose = styled(CloseIcon)`
 `;
 
 export const InfoContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  z-index: 0;
   height: 100%;
   max-height: 572px;
   min-width: 300px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   background-color: white;
-  & .modal-footer {
+    & .modal-info {
+      height: 125px;
+      width: 80%;
+      margin-bottom: 24%;
+      text-align: center;
+      h2 {
+        margin-bottom: 8px;
+      }
+      p {
+        color: #000000;
+        font-family: 'Montserrat', sans-serif;
+        &::before {
+          content: open-quote;
+          font-size: 1.5rem;
+        }
+        &::after {
+          content: close-quote;
+          font-size: 1.5rem;
+        }
+      }
+    }
+`
+export const ModalFooter = styled.div`
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: flex-end;
     width: 100%;
     height: 11%;
     background-color: #E9E9E9;
     box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.3);
     & .modal-purchase {
-
+      position: relative;
+      z-index: 9;
       padding: 8px 35px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
@@ -118,6 +144,6 @@ export const InfoContainer = styled.div`
       font-size: 20px;
       line-height: 24px;
       letter-spacing: .1rem;
+      cursor: pointer;
     }
-  }
-`
+`;

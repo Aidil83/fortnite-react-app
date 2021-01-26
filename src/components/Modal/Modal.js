@@ -1,6 +1,6 @@
 import {useContext, useEffect} from 'react'
 import {StateContext} from '../../context/StateProvider'
-import {InfoContainer, ModalClose, ModalMain} from './Modal.elements'
+import {InfoContainer, ModalClose, ModalDescription, ModalFooter, ModalMain} from './Modal.elements'
 
 const Modal = ({handleModal}) => {
   const [state] = useContext(StateContext);
@@ -17,10 +17,14 @@ const Modal = ({handleModal}) => {
         </div>
         <ModalClose onClick={handleModal} />
         <InfoContainer>
-          <div className="modal-footer">
-            <div className="modal-purchase">Purchase</div>
+          <div className="modal-info">
+            <h2>{modalData.name}</h2>
+            <p>{modalData.description}</p>
           </div>
         </InfoContainer>
+        <ModalFooter>
+          <div className="modal-purchase">Purchase</div>
+        </ModalFooter>
       </div>
     </ModalMain>
   )

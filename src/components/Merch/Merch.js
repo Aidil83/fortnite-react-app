@@ -68,6 +68,43 @@ const Merch = () => {
       type: "MODALDATA",
       modalData: modalData,
     });
+    if (modalData.rarity?.value === "legendary") {
+      dispatch({
+        type: "MODALPRICE",
+        modalPrice: 2000,
+      })
+    }
+    else if (modalData.rarity?.value === "epic") {
+      dispatch({
+        type: "MODALPRICE",
+        modalPrice: 1000,
+      })
+    }
+    else if (modalData.rarity?.value === "rare") {
+      dispatch({
+        type: "MODALPRICE",
+        modalPrice: 500,
+      })
+    }
+    else if (modalData.rarity?.value === "uncommon") {
+      dispatch({
+        type: "MODALPRICE",
+        modalPrice: 300,
+      })
+    }
+    else if (modalData.rarity?.value === "common") {
+      dispatch({
+        type: "MODALPRICE",
+        modalPrice: 100,
+      })
+    }
+    else {
+      dispatch({
+        type: "MODALPRICE",
+        modalPrice: 700,
+      })
+    }
+    console.log(modalData.rarity?.value);
   };
 
   return (

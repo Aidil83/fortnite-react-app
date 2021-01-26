@@ -1,11 +1,11 @@
-import {useContext, useEffect} from 'react'
+import {useContext} from 'react'
 import {StateContext} from '../../context/StateProvider'
-import {InfoContainer, ModalClose, ModalDescription, ModalFooter, ModalMain} from './Modal.elements'
+import {InfoContainer, ModalClose, ModalFooter, ModalMain} from './Modal.elements'
 import gold_coin from "../../images/merch_image_icon/gold-coin.png"
 
 const Modal = ({handleModal}) => {
   const [state] = useContext(StateContext);
-  const {modalData} = state;
+  const {modalData, modalPrice} = state;
 
   return (
     <ModalMain>
@@ -24,7 +24,7 @@ const Modal = ({handleModal}) => {
           </div>
         </InfoContainer>
         <ModalFooter>
-          <div className="modal-purchase">100 <img src={gold_coin} alt="gold_coin" /></div>
+          <div className="modal-purchase">{modalPrice} <img src={gold_coin} alt="gold_coin" /></div>
         </ModalFooter>
       </div>
     </ModalMain>

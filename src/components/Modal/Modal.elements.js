@@ -68,7 +68,8 @@ export const ModalMain = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
-        background: ${ModalData.legendCard.gradOrange};
+        /* background: ${ModalData.legendCard.radialOrange}; */
+        background: ${ModalData.epicCard.radialPurple};
         -webkit-clip-path:circle(85% at 50% -15%);
         clip-path: circle(85% at 50% -15%);
         img {
@@ -148,7 +149,7 @@ export const ModalFooter = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 3px 20px;
+      padding: 0px 20px;
       padding-right: 5px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 10px;

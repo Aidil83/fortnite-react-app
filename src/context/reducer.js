@@ -25,6 +25,11 @@ const reducer = (state, action) => {
         ...state,
         modalPrice: action.modalPrice,
       };
+    case "MODALBACKGROUND":
+      return {
+        ...state,
+        modalBackground: action.modalBackground,
+      };
     default:
       return state;
   }

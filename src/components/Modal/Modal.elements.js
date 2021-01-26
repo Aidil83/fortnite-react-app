@@ -158,6 +158,12 @@ export const ModalFooter = styled.div`
       letter-spacing: .1rem;
       cursor: pointer;
       font-family: 'Londrina Solid';
+      transition: .3s;
+      &:hover {
+        transition: .3s;
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(235, 223, 223, 0) 100%), linear-gradient(180deg, #F8B200 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFA800 0%, rgba(255, 246, 21, 0.916667) 48.96%, rgba(255, 255, 255, 0) 53.12%), #FFC700;
+        box-shadow: 0px 4px 72px #ffd900;
+      }
       img {
         width: 55px;
         height: 43px;

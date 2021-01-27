@@ -19,4 +19,8 @@ export const ModalData = {
     radialGray:
       "radial-gradient(50% 50% at 50% 50%, #CFCFCF 0%, #F9F9F9 0.01%, #FBFBFB 22.92%, #D1D1D1 50%, #A6A6A6 100%)"
   },
+  specialCard: {
+    radialBlack:
+      "radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #ECEAEA 17.71%, #CFCFCF 33.33%, #556D9C 53.65%, #040402 100%)"
+  },
 }

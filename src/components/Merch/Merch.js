@@ -5,6 +5,7 @@ import {MerchTab, MerchListContainer, } from "./Merch.elements";
 import MerchCard from "./MerchCard";
 import {NavigateBefore, NavigateNext} from "@material-ui/icons";
 import {Modal} from '..';
+import {ModalData} from '../../data/ModalData';
 import {useContext} from 'react';
 import {StateContext} from '../../context/StateProvider';
 
@@ -71,40 +72,39 @@ const Merch = () => {
     if (modalData.rarity?.value === "legendary") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: 2000,
+        modalPrice: {price: 2000, background: ModalData.legendCard.radialOrange},
       })
     }
     else if (modalData.rarity?.value === "epic") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: 1000,
+        modalPrice: {price: 1000, background: ModalData.epicCard.radialPurple},
       })
     }
     else if (modalData.rarity?.value === "rare") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: 500,
+        modalPrice: {price: 500, background: ModalData.rareCard.radialBlue},
       })
     }
     else if (modalData.rarity?.value === "uncommon") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: 300,
+        modalPrice: {price: 300, background: ModalData.uncommonCard.radialGreen},
       })
     }
     else if (modalData.rarity?.value === "common") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: 100,
+        modalPrice: {price: 100, background: ModalData.commonCard.radialGray},
       })
     }
     else {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: 700,
+        modalPrice: {price: 700, background: ModalData.specialCard.radialBlack},
       })
     }
-    console.log(modalData.rarity?.value);
   };
 
   return (

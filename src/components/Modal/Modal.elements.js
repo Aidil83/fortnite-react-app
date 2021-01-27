@@ -68,8 +68,6 @@ export const ModalMain = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
-        /* background: ${ModalData.legendCard.radialOrange}; */
-        background: ${ModalData.epicCard.radialPurple};
         -webkit-clip-path:circle(85% at 50% -15%);
         clip-path: circle(85% at 50% -15%);
         img {

@@ -59,7 +59,7 @@ export const ModalMain = styled.div`
         }
     }
     .MuiSvgIcon-root {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     & .modal-background {
         position: absolute;
@@ -91,6 +91,7 @@ export const ModalClose = styled(CloseIcon)`
   height: 30px;
   margin: 13px;
   color: #FFAE35;
+  color: rgba(255,255,255,0.3);
 `;
 
 export const InfoContainer = styled.div`
@@ -148,12 +149,14 @@ export const ModalFooter = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 40px;
       padding: 0px 20px;
       padding-right: 5px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
       background: linear-gradient(180deg, #FFFFFF 0%, rgba(235, 223, 223, 0) 100%), linear-gradient(180deg, #F8B200 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFA800 0%, rgba(255, 246, 21, 0.916667) 48.96%, rgba(255, 255, 255, 0) 53.12%), #FFC700;
       font-size: 25px;
+      text-align: center; 
       line-height: 24px;
       letter-spacing: .1rem;
       cursor: pointer;
@@ -162,7 +165,8 @@ export const ModalFooter = styled.div`
       &:hover {
         transition: .3s;
         background: linear-gradient(180deg, #FFFFFF 0%, rgba(235, 223, 223, 0) 100%), linear-gradient(180deg, #F8B200 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFA800 0%, rgba(255, 246, 21, 0.916667) 48.96%, rgba(255, 255, 255, 0) 53.12%), #FFC700;
-        box-shadow: 0px 4px 72px #ffd900;
+        box-shadow: -2px 3px 30px rgba(255, 230, 0, 0.75);
+        transform: translateY(-2px);
       }
       img {
         width: 55px;

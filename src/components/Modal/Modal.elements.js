@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro';
-import {ModalData} from '../../data/ModalData'
 import CloseIcon from '@material-ui/icons/Close';
 
 export const ModalMain = styled.div`
@@ -91,7 +90,7 @@ export const ModalClose = styled(CloseIcon)`
   height: 30px;
   margin: 13px;
   color: #FFAE35;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.4);
 `;
 
 export const InfoContainer = styled.div`

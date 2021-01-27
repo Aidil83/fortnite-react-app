@@ -15,6 +15,6 @@ export const MerchData = {
     linearGray: "linear-gradient(to bottom,#a5a5a5,#fff)",
   },
   specialCard: {
-    linearTan: "linear-gradient(to bottom,#eedf9e,#fff)",
+    linearTan: "linear-gradient(to bottom,#e5ff00,#e0ff9e, #87F8FF)",
   },
 }

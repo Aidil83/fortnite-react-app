@@ -22,6 +22,6 @@ export const ModalData = {
   },
   specialCard: {
     radialTan:
-      "radial-gradient(50% 50% at 50% 25%, rgb(231, 247, 194) 0%, rgb(248, 233, 144) 60.48%, rgb(248, 234, 144) 65.65%, rgb(244, 206, 136) 88.06%, rgb(255, 199, 139) 100%)"
+      "conic-gradient(from 180deg at 50% -7%, #87F8FF -67.3deg, #FAFF00 54.81deg, #FFAE35 118.17deg, #566D5E 206.72deg, #87F8FF 292.7deg, #FAFF00 414.81deg)"
   },
 }

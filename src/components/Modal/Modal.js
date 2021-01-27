@@ -6,7 +6,7 @@ import gold_coin from "../../images/merch_image_icon/gold-coin.png"
 const Modal = ({handleModal}) => {
   const [state] = useContext(StateContext);
   const {modalData, modalPrice} = state;
-  console.log(modalPrice.background)
+  console.log(modalPrice);
 
   return (
     <ModalMain>

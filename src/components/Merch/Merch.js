@@ -102,7 +102,7 @@ const Merch = () => {
     else {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: {price: 700, background: ModalData.specialCard.radialBlack},
+        modalPrice: {price: 700, background: ModalData.specialCard.radialTan},
       })
     }
   };

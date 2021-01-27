@@ -1,10 +1,19 @@
+import {useEffect, useState} from 'react';
 import styled from "styled-components/macro";
+import {MerchData} from '../../data/MerchData';
+import {merchCardLogic} from './merchCardLogic';
 
 const MerchCard = ({item, id, handleModal}) => {
+  const [bgCard, setBgCard] = useState("");
+
+  useEffect(() => {
+    merchCardLogic(item, MerchData, setBgCard);
+    console.log(bgCard);
+  }, [bgCard])
 
   return (
     <Main onClick={() => handleModal(item)}>
-      <div className="imageWrapper" key={id}>
+      <div className="imageWrapper" key={id} style={{background: `${bgCard}`}}>
         <CardNum>{id}</CardNum>
         <img src={item.images.icon} alt={id} />
       </div>
@@ -44,8 +53,10 @@ const Main = styled.div`
     height: 92px;
     border: 2.5px #fff solid;
     border-radius: 5px;
-    background: linear-gradient(to bottom, #868686, #fff);
     overflow: hidden;
+    &:hover {
+      background: linear-gradient(to bottom,#ffbb00,#000),
+    }
     img {
       height: 100px;
       width: 100px;

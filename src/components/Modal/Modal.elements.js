@@ -107,7 +107,7 @@ export const InfoContainer = styled.div`
   justify-content: center;
   background-color: white;
     & .modal-info {
-      height: 70%;
+      height: 65%;
       width: 80%;
       margin-bottom: 20%;
       display: flex;
@@ -115,6 +115,12 @@ export const InfoContainer = styled.div`
       align-items: center;
       flex-direction: column;
       text-align: center;
+      @media screen and (max-width: 320px) {
+      height: 50%;
+      }
+      @media screen and (min-width: 414px ) and (max-width: 414px) {
+      height: 50%;
+      }
       h2 {
         margin-bottom: 8px;
         font-family: 'Montserrat', sans-serif;

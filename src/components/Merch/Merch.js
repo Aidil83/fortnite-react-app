@@ -17,7 +17,7 @@ const Merch = () => {
   const [loadEnd, setLoadEnd] = useState(30);
   const [isModal, setIsModal] = useState(false)
 
-  const [, dispatch] = useContext(StateContext);
+  const [{hoverCard}, dispatch] = useContext(StateContext);
 
   useEffect(() => {
     (async () => {
@@ -111,6 +111,7 @@ const Merch = () => {
 
   return (
     <>
+      {/* <MerchMain style={{backgroundImage: `url(${hoverCard})`}}> */}
       <MerchMain style={{backgroundImage: `url(${backdrop6})`}}>
         {isModal && <Modal handleModal={handleModal} />}
         {/* <MerchTab>
@@ -118,7 +119,7 @@ const Merch = () => {
         </MerchTab> */}
         <MerchHeroContainer >
           <div className="innerContainer">
-            <img src={blackWidow} alt="blackWidow" />
+            <img src={hoverCard} alt="" />
             <div className="inner-description">
               <h1>Omega</h1>
               <h4>An outlaw gunslinger who doles out justice on his own terms.</h4>

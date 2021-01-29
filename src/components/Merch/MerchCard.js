@@ -1,19 +1,29 @@
+import {useContext} from 'react';
 import {useEffect, useState} from 'react';
 import styled from "styled-components/macro";
+import {StateContext} from '../../context/StateProvider';
 import {MerchData} from '../../data/MerchData';
 import {merchCardLogic} from './merchCardLogic';
 
 const MerchCard = ({item, id, handleModal}) => {
   const [bgCard, setBgCard] = useState("");
+  const [, dispatch] = useContext(StateContext);
 
   useEffect(() => {
     merchCardLogic(item, MerchData, setBgCard);
-    console.log(bgCard);
   }, [bgCard])
 
+  const handleHoverCard = (item) => {
+    dispatch({
+      type: "HOVERCARD",
+      hoverCard: item.images.featured,
+    })
+  }
+
   return (
-    <Main onClick={() => handleModal(item)}>
-      <div className="imageWrapper" key={id} style={{background: `${bgCard}`}}>
+    <Main onClick={() => handleModal(item)} onMouseEnter={() => handleHoverCard(item)}>
+      <div className="imageWrapper" key={id} style={{background: `${bgCard}`}}
+      >
         <CardNum>{id}</CardNum>
         <img src={item.images.icon} alt={id} />
       </div>
@@ -97,7 +107,6 @@ const Main = styled.div`
     color: black;
     background-color: rgba(255,255,255,.95);
   }
-
 `;
 
 export default MerchCard;

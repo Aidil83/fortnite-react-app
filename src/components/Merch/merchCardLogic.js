@@ -1,6 +1,5 @@
 export const merchCardLogic = ({rarity}, MerchData, setBgCard) => {
   if (rarity.value === "legendary") {
-    console.log(MerchData.legendCard.linearOrange);
     setBgCard(MerchData.legendCard.linearOrange);
   }
   else if (rarity.value === "epic") {

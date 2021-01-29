@@ -2,6 +2,7 @@ export const initialState = {
   modalCard: {},
   getApi: [],
   modalPrice: {},
+  hoverCard: "",
 };
 
 const reducer = (state, action) => {
@@ -29,6 +30,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         modalBackground: action.modalBackground,
+      };
+    case "HOVERCARD":
+      return {
+        ...state,
+        hoverCard: action.hoverCard,
       };
     default:
       return state;

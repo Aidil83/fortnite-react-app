@@ -16,7 +16,7 @@ const MerchCard = ({item, id, handleModal}) => {
   const handleHoverCard = (item) => {
     dispatch({
       type: "HOVERCARD",
-      hoverCard: item.images.featured,
+      hoverCard: item,
     })
   }
 
@@ -25,7 +25,7 @@ const MerchCard = ({item, id, handleModal}) => {
       <div className="imageWrapper" key={id} style={{background: `${bgCard}`}}
       >
         <CardNum>{id}</CardNum>
-        <img src={item.images.icon} alt={id} />
+        <img src={item.images.smallIcon} alt={id} />
       </div>
       <span>{item.name}</span>
     </Main>

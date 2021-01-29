@@ -2,7 +2,7 @@ export const initialState = {
   modalCard: {},
   getApi: [],
   modalPrice: {},
-  hoverCard: "",
+  hoverCard: {},
 };
 
 const reducer = (state, action) => {

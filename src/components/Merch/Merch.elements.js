@@ -32,12 +32,13 @@ export const MerchHeroContainer = styled.div`
       padding-left: 130px;
     }
     & .inner-description {
-      width: 30%;
+      width: 40%;
       height: 200px;
       padding-left: 10px;
       display: flex;
       justify-content: center;
       flex-direction: column;
+      color: #f0f0f0;
     }
   }
 `;

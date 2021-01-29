@@ -121,8 +121,8 @@ const Merch = () => {
           <div className="innerContainer">
             <img src={hoverCard.images?.featured} alt="" />
             <div className="inner-description">
-              <h1>Omega</h1>
-              <h4>An outlaw gunslinger who doles out justice on his own terms.</h4>
+              <h1>{hoverCard.name}</h1>
+              <h4>{hoverCard.description}</h4>
             </div>
           </div>
         </MerchHeroContainer>

@@ -8,6 +8,8 @@ import {Modal} from '..';
 import {ModalData} from '../../data/ModalData';
 import {useContext} from 'react';
 import {StateContext} from '../../context/StateProvider';
+import backdrop6 from '../../images/backdrop/backdrop6.jpg';
+import blackWidow from '../../images/merch_image_icon/smallicon-blackWidow.png'
 
 const Merch = () => {
   const [images1, setImages1] = useState([]);
@@ -109,13 +111,19 @@ const Merch = () => {
 
   return (
     <>
-      <MerchMain>
+      <MerchMain style={{backgroundImage: `url(${backdrop6})`}}>
         {isModal && <Modal handleModal={handleModal} />}
-        <MerchTab>
+        {/* <MerchTab>
           <div>Item Shop</div>
-        </MerchTab>
-        <MerchHeroContainer>
-          <h3>Hero</h3>
+        </MerchTab> */}
+        <MerchHeroContainer >
+          <div className="innerContainer">
+            <img src={blackWidow} alt="blackWidow" />
+            <div className="inner-description">
+              <h1>Omega</h1>
+              <h4>An outlaw gunslinger who doles out justice on his own terms.</h4>
+            </div>
+          </div>
         </MerchHeroContainer>
         <MerchListContainer>
           <MerchListCard>

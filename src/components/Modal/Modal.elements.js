@@ -11,6 +11,7 @@ export const ModalMain = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: .3s;
 
   & .modal-container {
     position: relative;

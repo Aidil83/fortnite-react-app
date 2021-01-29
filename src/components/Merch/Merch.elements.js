@@ -1,10 +1,14 @@
 import styled from "styled-components/macro";
 
 export const MerchMain = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
   top: 51px;
   width: 100%;
-  height: 100%;
   margin-bottom: 50px;
 `;
 
@@ -29,7 +33,30 @@ export const MerchTab = styled.div`
 export const MerchHeroContainer = styled.div`
   min-height: 40vh;
   width: 100%;
-  background-image: linear-gradient(to right, #fffcac, #82e6e8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(0,0,0,.2); */
+  & .innerContainer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270.03deg, rgba(102, 110, 139, 0) -3.51%, rgba(102, 110, 139, 0.1) -3.5%, rgba(79, 87, 117, 0.7) 31.67%, rgba(79, 87, 117, 0.7) 68.25%, rgba(102, 110, 139, 0.1) 100.33%); 
+    img {
+      margin-right: 20px;
+      height: 100%;
+    }
+    & .innerDescription {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `;
 
 export const MerchListContainer = styled.div`
@@ -38,7 +65,6 @@ export const MerchListContainer = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background-image: linear-gradient(to right, #f1b1b1, #82e6e8);
   & .buttonContainer {
     width: 70%;
     display: flex;
@@ -46,8 +72,8 @@ export const MerchListContainer = styled.div`
     button {
       padding: 10px 10px;
       border-radius: 50%;
-      background-color: rgba(253, 253, 253, 0.6);
-      border: solid 1px #fff;
+      background-color: rgba(218, 218, 218, 0.6);
+      border: solid 2px #fff;
       color: #505050;
       margin: 20px 0;
       cursor: pointer;

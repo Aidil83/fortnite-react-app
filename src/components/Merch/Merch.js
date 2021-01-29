@@ -114,9 +114,6 @@ const Merch = () => {
       {/* <MerchMain style={{backgroundImage: `url(${hoverCard})`}}> */}
       <MerchMain style={{backgroundImage: `url(${backdrop6})`}}>
         {isModal && <Modal handleModal={handleModal} />}
-        {/* <MerchTab>
-          <div>Item Shop</div>
-        </MerchTab> */}
         <MerchHeroContainer >
           <div className="innerContainer">
             <img src={hoverCard.images?.featured} alt="" />

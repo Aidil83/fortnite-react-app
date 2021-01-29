@@ -45,16 +45,16 @@ export const MerchHeroContainer = styled.div`
     align-items: center;
     background: linear-gradient(270.03deg, rgba(102, 110, 139, 0) -3.51%, rgba(102, 110, 139, 0.1) -3.5%, rgba(79, 87, 117, 0.7) 31.67%, rgba(79, 87, 117, 0.7) 68.25%, rgba(102, 110, 139, 0.1) 100.33%); 
     img {
-      margin-right: 20px;
       height: 100%;
+      padding-left: 130px;
     }
-    & .innerDescription {
-      width: 100%;
+    & .inner-description {
+      width: 30%;
       height: 200px;
+      padding-left: 10px;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-items: center;
     }
   }
 `;

@@ -4,10 +4,15 @@ export const initialState = {
   modalPrice: {},
   hoverCard: {},
   firstCard: 0,
+  purchasedItems: [],
 };
 
 const reducer = (state, action) => {
   // console.log(action);
+
+  // if (action.value) {
+  //   console.log([...state.purchasedItems, action.value]);
+  // }
 
   // NOTE: This is where all the logics happen:
   switch (action.type) {
@@ -41,6 +46,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         firstCard: action.firstCard,
+      };
+    case "PURCHASEDITEM":
+      return {
+        ...state,
+        purchasedItems: [...state.purchasedItems, action.value],
       };
     default:
       return state;

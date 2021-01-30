@@ -1,11 +1,24 @@
-import {useContext} from 'react'
+import {useContext, useEffect} from 'react'
 import {StateContext} from '../../context/StateProvider'
 import {InfoContainer, ModalClose, ModalFooter, ModalMain} from './Modal.elements'
 import gold_coin from "../../images/merch_image_icon/gold-coin.png"
 
-const Modal = ({handleModal}) => {
-  const [state] = useContext(StateContext);
-  const {modalData, modalPrice} = state;
+const Modal = ({handleModal, setIsModal}) => {
+  const [state, dispatch] = useContext(StateContext);
+  const {modalData, purchasedItems, modalPrice} = state;
+
+  const handlePurchase = () => {
+    if (!purchasedItems.includes(modalData))
+      dispatch({
+        type: "PURCHASEDITEM",
+        value: modalData,
+      })
+    setIsModal(prevStateModal => !prevStateModal);
+  }
+
+  // useEffect(() => {
+  //   console.log(purchasedItems);
+  // }, [purchasedItems])
 
   return (
     <ModalMain>
@@ -25,7 +38,10 @@ const Modal = ({handleModal}) => {
           </div>
         </InfoContainer>
         <ModalFooter>
-          <div className="modal-purchase">{modalPrice.price} <img src={gold_coin} alt="gold_coin" /></div>
+          <div className="modal-purchase" onClick={handlePurchase}>
+            {modalPrice.price}
+            <img src={gold_coin} alt="gold_coin" />
+          </div>
         </ModalFooter>
       </div>
     </ModalMain>

@@ -17,23 +17,18 @@ const Merch = () => {
   const [loadEnd, setLoadEnd] = useState(30);
   const [isModal, setIsModal] = useState(false);
   const [spinner, setSpinner] = useState(true);
-  const [hoverImage, setHoverImage] = useState([])
 
   useEffect(() => {
     (async () => {
       const res = await axios("https://fortnite-api.com/v2/cosmetics/br");
       const _data = res.data.data;
-      // console.log(_data[1010]);
-      const featuredData = _data.filter(
-        (item) => item.images.featured !== null
-      );
+      const featuredData = _data.filter((item) => item.images.featured !== null);
       //IMPORTANT: shuffling method:
       function shuffle(array) {
         return array.sort(() => Math.random() - 0.5);
       }
       //NOTE: shuffle image cards after the first load:
       shuffle(featuredData);
-      setHoverImage(featuredData);
 
       dispatch({
         type: "GETAPI",
@@ -117,7 +112,7 @@ const Merch = () => {
     <>
       {/* <MerchMain style={{backgroundImage: `url(${hoverCard.images?.featured})`}}> */}
       <MerchMain style={{backgroundImage: `url(${backdrop6})`}}>
-        {isModal && <Modal handleModal={handleModal} />}
+        {isModal && <Modal handleModal={handleModal} setIsModal={setIsModal} />}
         <MerchHeroContainer >
           {firstCard === 0 ? (spinner ? <></> : (<div className="innerContainer">
             <img src={getApi[1]?.images?.featured} alt="" />
@@ -135,7 +130,7 @@ const Merch = () => {
             </div>))}
         </MerchHeroContainer>
         <MerchListContainer>
-          {spinner ? <MerchListCard><MerchSpinner color={"#999999"} /></MerchListCard> : (<MerchListCard>
+          {spinner ? <MerchListCard><MerchSpinner color={"#999999"} size={60} /></MerchListCard> : (<MerchListCard>
             {getApi.map((item, id) => {
               return (
                 // Display 30 images:

@@ -18,6 +18,10 @@ const MerchCard = ({item, id, handleModal}) => {
       type: "HOVERCARD",
       hoverCard: item,
     })
+    dispatch({
+      type: "FIRSTCARD",
+      firsCard: 1,
+    })
   }
 
   return (

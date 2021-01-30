@@ -3,6 +3,7 @@ export const initialState = {
   getApi: [],
   modalPrice: {},
   hoverCard: {},
+  firstCard: 0,
 };
 
 const reducer = (state, action) => {
@@ -35,6 +36,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         hoverCard: action.hoverCard,
+      };
+    case "FIRSTCARD":
+      return {
+        ...state,
+        firstCard: action.firstCard,
       };
     default:
       return state;

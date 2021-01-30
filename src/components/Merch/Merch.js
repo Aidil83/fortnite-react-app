@@ -11,12 +11,13 @@ import {StateContext} from '../../context/StateProvider';
 import backdrop6 from '../../images/backdrop/backdrop6.jpg';
 
 const Merch = () => {
+  const [{hoverCard, firstCard, getApi}, dispatch] = useContext(StateContext);
+
   const [loadStart, setLoadStart] = useState(1);
   const [loadEnd, setLoadEnd] = useState(30);
   const [isModal, setIsModal] = useState(false);
   const [spinner, setSpinner] = useState(true);
-
-  const [{hoverCard, getApi}, dispatch] = useContext(StateContext);
+  const [hoverImage, setHoverImage] = useState([])
 
   useEffect(() => {
     (async () => {
@@ -32,6 +33,7 @@ const Merch = () => {
       }
       //NOTE: shuffle image cards after the first load:
       shuffle(featuredData);
+      setHoverImage(featuredData);
 
       dispatch({
         type: "GETAPI",
@@ -41,7 +43,6 @@ const Merch = () => {
   }, []);
 
   useEffect(() => {
-    // setTimeout(() => setSpinner(false), 900);
     setTimeout(() => setSpinner(false), 2500);
   }, [loadStart, loadEnd])
 
@@ -114,17 +115,24 @@ const Merch = () => {
 
   return (
     <>
-      {/* <MerchMain style={{backgroundImage: `url(${hoverCard})`}}> */}
+      {/* <MerchMain style={{backgroundImage: `url(${hoverCard.images?.featured})`}}> */}
       <MerchMain style={{backgroundImage: `url(${backdrop6})`}}>
         {isModal && <Modal handleModal={handleModal} />}
         <MerchHeroContainer >
-          <div className="innerContainer">
-            <img src={hoverCard.images?.featured} alt="" />
+          {firstCard === 0 ? (spinner ? <></> : (<div className="innerContainer">
+            <img src={getApi[1]?.images?.featured} alt="" />
             <div className="inner-description">
-              <h1>{hoverCard.name}</h1>
-              <h4>{hoverCard.description}</h4>
+              <h1>{getApi[1]?.name}</h1>
+              <h4>{getApi[1]?.description}</h4>
             </div>
-          </div>
+          </div>)) :
+            (spinner ? <></> : (<div className="innerContainer">
+              <img src={hoverCard?.images?.featured} alt="" />
+              <div className="inner-description">
+                <h1>{hoverCard?.name}</h1>
+                <h4>{hoverCard?.description}</h4>
+              </div>
+            </div>))}
         </MerchHeroContainer>
         <MerchListContainer>
           {spinner ? <MerchListCard><MerchSpinner color={"#999999"} /></MerchListCard> : (<MerchListCard>

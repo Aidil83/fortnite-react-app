@@ -1,4 +1,8 @@
 import styled from "styled-components/macro";
+import PacmanLoader from 'react-spinners/PacmanLoader';
+import HashLoader from 'react-spinners/HashLoader';
+// import PacmanLoader from 'react-spinners/PacmanLoader';
+
 
 export const MerchMain = styled.div`
   display: flex;
@@ -72,6 +76,25 @@ export const MerchListContainer = styled.div`
   }
 `;
 
+export const MerchSpinner = styled(HashLoader)`
+  height: 100%;
+  min-height: 338px;
+  max-height: 338px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5px 14px;
+  padding-top:5px; 
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @media screen and (min-width: 1200px){
+  overflow: hidden;
+  }
+`
+
 export const MerchListCard = styled.div`
   height: 100%;
   min-height: 338px;
@@ -90,6 +113,7 @@ export const MerchListCard = styled.div`
   overflow: hidden;
   }
 `;
+
 
 export const MerchHidden = styled.div`
   display: none;

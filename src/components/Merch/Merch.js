@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {MerchListContainer, } from "./Merch.elements";
+import {MerchListContainer, MerchSpinner, } from "./Merch.elements";
 import {MerchMain, MerchHeroContainer, MerchListCard, MerchHidden} from "./Merch.elements";
 import MerchCard from "./MerchCard";
 import {NavigateBefore, NavigateNext} from "@material-ui/icons";
@@ -13,7 +13,8 @@ import backdrop6 from '../../images/backdrop/backdrop6.jpg';
 const Merch = () => {
   const [loadStart, setLoadStart] = useState(1);
   const [loadEnd, setLoadEnd] = useState(30);
-  const [isModal, setIsModal] = useState(false)
+  const [isModal, setIsModal] = useState(false);
+  const [spinner, setSpinner] = useState(true);
 
   const [{hoverCard, getApi}, dispatch] = useContext(StateContext);
 
@@ -38,6 +39,11 @@ const Merch = () => {
       })
     })();
   }, []);
+
+  useEffect(() => {
+    // setTimeout(() => setSpinner(false), 900);
+    setTimeout(() => setSpinner(false), 2000);
+  }, [loadStart, loadEnd])
 
   const handlePrevtBtn = () => {
     // NOTE: 30 cuz asynchronous render
@@ -121,18 +127,19 @@ const Merch = () => {
           </div>
         </MerchHeroContainer>
         <MerchListContainer>
-          <MerchListCard>
+          {spinner ? <MerchListCard><MerchSpinner color={"#3b3b3b"} /></MerchListCard> : (<MerchListCard>
             {getApi.map((item, id) => {
               return (
                 // Display 30 images:
                 id >= loadStart &&
-                id <= loadEnd && <> <MerchCard item={item} id={id} handleModal={handleModal} /> <MerchHidden>
-                  <img src={item.images.featured} alt="" />
-                </MerchHidden></>
-
+                id <= loadEnd && <>
+                  <MerchCard item={item} id={id} handleModal={handleModal} />
+                  <MerchHidden>
+                    <img src={item.images.featured} alt={id} />
+                  </MerchHidden></>
               );
             })}
-          </MerchListCard>
+          </MerchListCard>)}
           <div className="buttonContainer">
             <button>
               <NavigateBefore onMouseDown={handlePrevtBtn} />

@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {MerchMain, MerchHeroContainer, MerchListCard} from "./Merch.elements";
-import {MerchTab, MerchListContainer, } from "./Merch.elements";
+import {MerchListContainer, } from "./Merch.elements";
+import {MerchMain, MerchHeroContainer, MerchListCard, MerchHidden} from "./Merch.elements";
 import MerchCard from "./MerchCard";
 import {NavigateBefore, NavigateNext} from "@material-ui/icons";
 import {Modal} from '..';
@@ -9,15 +9,13 @@ import {ModalData} from '../../data/ModalData';
 import {useContext} from 'react';
 import {StateContext} from '../../context/StateProvider';
 import backdrop6 from '../../images/backdrop/backdrop6.jpg';
-import blackWidow from '../../images/merch_image_icon/smallicon-blackWidow.png'
 
 const Merch = () => {
-  const [images1, setImages1] = useState([]);
   const [loadStart, setLoadStart] = useState(1);
   const [loadEnd, setLoadEnd] = useState(30);
   const [isModal, setIsModal] = useState(false)
 
-  const [{hoverCard}, dispatch] = useContext(StateContext);
+  const [{hoverCard, getApi}, dispatch] = useContext(StateContext);
 
   useEffect(() => {
     (async () => {
@@ -27,14 +25,13 @@ const Merch = () => {
       const featuredData = _data.filter(
         (item) => item.images.featured !== null
       );
+      //IMPORTANT: shuffling method:
       function shuffle(array) {
         return array.sort(() => Math.random() - 0.5);
       }
       //NOTE: shuffle image cards after the first load:
       shuffle(featuredData);
 
-      // console.log(featuredData);
-      setImages1(featuredData);
       dispatch({
         type: "GETAPI",
         getApi: featuredData,
@@ -45,8 +42,8 @@ const Merch = () => {
   const handlePrevtBtn = () => {
     // NOTE: 30 cuz asynchronous render
     if (loadStart <= 30) {
-      setLoadStart(images1.length - 30);
-      setLoadEnd(images1.length);
+      setLoadStart(getApi.length - 30);
+      setLoadEnd(getApi.length);
       return;
     }
     setLoadStart(loadStart - 30);
@@ -55,7 +52,7 @@ const Merch = () => {
 
   const handleNextBtn = () => {
     // NOTE: 30 cuz asynchronous render
-    if (loadEnd >= images1.length - 30) {
+    if (loadEnd >= getApi.length - 30) {
       setLoadStart(1);
       setLoadEnd(30);
       return;
@@ -125,11 +122,14 @@ const Merch = () => {
         </MerchHeroContainer>
         <MerchListContainer>
           <MerchListCard>
-            {images1.map((item, id) => {
+            {getApi.map((item, id) => {
               return (
                 // Display 30 images:
                 id >= loadStart &&
-                id <= loadEnd && <MerchCard item={item} id={id} handleModal={handleModal} />
+                id <= loadEnd && <> <MerchCard item={item} id={id} handleModal={handleModal} /> <MerchHidden>
+                  <img src={item.images.featured} alt="" />
+                </MerchHidden></>
+
               );
             })}
           </MerchListCard>

@@ -91,3 +91,6 @@ export const MerchListCard = styled.div`
   }
 `;
 
+export const MerchHidden = styled.div`
+  display: none;
+`;

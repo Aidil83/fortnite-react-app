@@ -1,7 +1,5 @@
 import styled from "styled-components/macro";
-import PacmanLoader from 'react-spinners/PacmanLoader';
 import HashLoader from 'react-spinners/HashLoader';
-// import PacmanLoader from 'react-spinners/PacmanLoader';
 
 
 export const MerchMain = styled.div`

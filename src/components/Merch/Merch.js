@@ -42,7 +42,7 @@ const Merch = () => {
 
   useEffect(() => {
     // setTimeout(() => setSpinner(false), 900);
-    setTimeout(() => setSpinner(false), 2000);
+    setTimeout(() => setSpinner(false), 2500);
   }, [loadStart, loadEnd])
 
   const handlePrevtBtn = () => {
@@ -127,7 +127,7 @@ const Merch = () => {
           </div>
         </MerchHeroContainer>
         <MerchListContainer>
-          {spinner ? <MerchListCard><MerchSpinner color={"#3b3b3b"} /></MerchListCard> : (<MerchListCard>
+          {spinner ? <MerchListCard><MerchSpinner color={"#999999"} /></MerchListCard> : (<MerchListCard>
             {getApi.map((item, id) => {
               return (
                 // Display 30 images:

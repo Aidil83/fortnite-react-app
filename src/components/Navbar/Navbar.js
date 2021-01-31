@@ -1,7 +1,6 @@
-import { useState } from "react";
-import styled, { css } from "styled-components/macro";
+import {useState} from "react";
+import styled, {css} from "styled-components/macro";
 import forniteLogo from "../../images/text_image/forniteLogo.png";
-import { IoIosGlobe } from "react-icons/io";
 import {
   NavButton,
   NavContainer,
@@ -22,9 +21,10 @@ import {
   Close,
   SearchContainer,
   SearchContainerHidden,
+  NavCart,
 } from "./Navbar.elements";
 
-const Navbar = ({ isOpen, handleToggle, count }) => {
+const Navbar = ({isOpen, handleToggle, count}) => {
   const [isSearch, setIsSearch] = useState(true);
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
@@ -46,8 +46,8 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
             ) : isOpen ? (
               <NavCloseIcon onClick={handleToggle} toggle={isOpen} />
             ) : (
-              <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />
-            )}
+                  <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />
+                )}
           </NavMenuLeftMobile>
           {isSearch && (
             <NavMenuLeft>
@@ -78,21 +78,21 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                 </div>
               </SearchContainerHidden>
             ) : (
-              <SearchContainer>
-                <div className="search__Box" onBlur={handleSearch}>
-                  <input
-                    handleToggle
-                    type="text"
-                    placeholder="Search..."
-                  ></input>
-                </div>
-                <div className="search__Btn" onClick={handleSearch}>
-                  <Close />
-                </div>
-              </SearchContainer>
-            )}
+                <SearchContainer>
+                  <div className="search__Box" onBlur={handleSearch}>
+                    <input
+                      handleToggle
+                      type="text"
+                      placeholder="Search..."
+                    ></input>
+                  </div>
+                  <div className="search__Btn" onClick={handleSearch}>
+                    <Close />
+                  </div>
+                </SearchContainer>
+              )}
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
-              <IoIosGlobe />
+              <NavCart />
             </NavMenuIcon>
             <NavmenuItemSignIn to="/sign_in">
               <NavUserLogo />

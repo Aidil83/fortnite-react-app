@@ -30,6 +30,9 @@ function App() {
           <Route path="/merch" exact>
             <Merch />
           </Route>
+          <Route path="/checkout" exact>
+            <div>checkout</div>
+          </Route>
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">
             <RouteError>

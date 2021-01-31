@@ -22,6 +22,7 @@ import {
   SearchContainer,
   SearchContainerHidden,
   NavCart,
+  NavCartBtn,
 } from "./Navbar.elements";
 
 const Navbar = ({isOpen, handleToggle, count}) => {
@@ -92,7 +93,9 @@ const Navbar = ({isOpen, handleToggle, count}) => {
                 </SearchContainer>
               )}
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
-              <NavCart />
+              <NavCartBtn to="/checkout">
+                <NavCart />
+              </NavCartBtn>
             </NavMenuIcon>
             <NavmenuItemSignIn to="/sign_in">
               <NavUserLogo />

@@ -401,6 +401,14 @@ export const NavButton = styled.a`
   }
 `;
 
+export const NavCartBtn = styled(Link)`
+  height: 51px;
+  display: flex;
+  align-items: center;
+  ${NavLink};
+  ${NavUnderline};
+`;
+
 export const NavCart = styled(GiShoppingCart)`
   font-size: 1.5rem;
   width: 40px;

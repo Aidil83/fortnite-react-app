@@ -130,7 +130,7 @@ const Merch = () => {
             </div>))}
         </MerchHeroContainer>
         <MerchListContainer>
-          {spinner ? <MerchListCard><MerchSpinner color={"#999999"} size={60} /></MerchListCard> : (<MerchListCard>
+          {spinner ? <MerchListCard><MerchSpinner color={"#999999"} size={60} css={spinnerOverride} /></MerchListCard> : (<MerchListCard>
             {getApi.map((item, id) => {
               return (
                 // Display 30 images:
@@ -156,5 +156,11 @@ const Merch = () => {
     </>
   );
 };
+
+const spinnerOverride = `
+  @media screen and (max-width: 767px){
+    top: 150px;
+  }
+`
 
 export default Merch;

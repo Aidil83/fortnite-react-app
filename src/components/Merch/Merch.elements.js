@@ -43,6 +43,10 @@ export const MerchHeroContainer = styled.div`
       color: #f0f0f0;
     }
   }
+  @media screen and (max-width: 767px){
+  overflow: hidden;
+  display: none;
+  }
 `;
 
 export const MerchListContainer = styled.div`
@@ -72,6 +76,10 @@ export const MerchListContainer = styled.div`
       }
     }
   }
+  @media screen and (max-width: 767px){
+  overflow: hidden;
+  height: 70%;
+  }
 `;
 
 export const MerchSpinner = styled(HashLoader)`
@@ -87,9 +95,13 @@ export const MerchSpinner = styled(HashLoader)`
   flex-flow: wrap;
   overflow-x: hidden;
   overflow-y: auto;
+  position: relative;
+  top: 140px;
 
   @media screen and (min-width: 1200px){
   overflow: hidden;
+  }
+  @media screen and (max-width: 767px){
   }
 `
 

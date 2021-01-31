@@ -5,3 +5,4 @@ export {default as Blog} from "./Blog/Blog";
 export {default as Footer} from "./Footer/Footer";
 export {default as Merch} from "./Merch/Merch";
 export {default as Modal} from "./Modal/Modal";
+export {default as Checkout} from "./Checkout/Checkout";

@@ -412,6 +412,7 @@ export const NavCartBtn = styled(Link)`
     top: 10px;
     right: -22px;
     width: 30px;
+    max-width: 30px;
     font-size: .85rem;
   }
 `;

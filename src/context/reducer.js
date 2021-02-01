@@ -5,14 +5,15 @@ export const initialState = {
   hoverCard: {},
   firstCard: 0,
   purchasedItems: [],
+  cartCount: 0,
 };
 
 const reducer = (state, action) => {
   // console.log(action);
 
-  // if (action.value) {
-  //   console.log([...state.purchasedItems, action.value]);
-  // }
+  if (action.value) {
+    console.log([...state.purchasedItems, action.value]);
+  }
 
   // NOTE: This is where all the logics happen:
   switch (action.type) {
@@ -51,6 +52,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         purchasedItems: [...state.purchasedItems, action.value],
+      };
+    case "CARTCOUNT":
+      return {
+        ...state,
+        cartCount: action.payload + 1,
       };
     default:
       return state;

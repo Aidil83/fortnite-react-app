@@ -5,14 +5,20 @@ import gold_coin from "../../images/merch_image_icon/gold-coin.png"
 
 const Modal = ({handleModal, setIsModal}) => {
   const [state, dispatch] = useContext(StateContext);
-  const {modalData, purchasedItems, modalPrice} = state;
+  const {modalData, purchasedItems, modalPrice, cartCount} = state;
 
   const handlePurchase = () => {
-    if (!purchasedItems.includes(modalData))
+    // Restrict user from purchasing the same item:
+    if (!purchasedItems.includes(modalData)) {
       dispatch({
         type: "PURCHASEDITEM",
         value: modalData,
       })
+      dispatch({
+        type: "CARTCOUNT",
+        payload: cartCount,
+      })
+    }
     setIsModal(prevStateModal => !prevStateModal);
   }
 

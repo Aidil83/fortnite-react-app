@@ -1,5 +1,6 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import styled, {css} from "styled-components/macro";
+import {StateContext} from '../../context/StateProvider';
 import forniteLogo from "../../images/text_image/forniteLogo.png";
 import {
   NavButton,
@@ -29,6 +30,8 @@ const Navbar = ({isOpen, handleToggle, count}) => {
   const [isSearch, setIsSearch] = useState(true);
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
+
+  const [{cartCount}] = useContext(StateContext);
 
   const handleSearch = () => {
     setIsSearch(!isSearch);
@@ -94,8 +97,8 @@ const Navbar = ({isOpen, handleToggle, count}) => {
               )}
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
               <NavCartBtn to="/checkout">
-                <NavCart > </NavCart>
-                <span>0</span>
+                <NavCart />
+                <span>{cartCount}</span>
               </NavCartBtn>
             </NavMenuIcon>
             <NavmenuItemSignIn to="/sign_in">

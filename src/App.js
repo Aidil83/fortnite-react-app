@@ -1,4 +1,4 @@
-import {Blog, Checkout, Footer, Merch, Navbar, Sidebar, Wrapper} from "./components";
+import {Blog, Cart, Footer, Merch, Navbar, Sidebar, Wrapper} from "./components";
 import {AppContainer, RouteError} from "./App.elements";
 import GlobalStyle from "./globalStyles";
 import {useState} from "react";
@@ -30,8 +30,8 @@ function App() {
           <Route path="/merch" exact>
             <Merch />
           </Route>
-          <Route path="/checkout" exact>
-            <Checkout />
+          <Route path="/cart" exact>
+            <Cart />
           </Route>
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">

@@ -96,7 +96,7 @@ const Navbar = ({isOpen, handleToggle, count}) => {
                 </SearchContainer>
               )}
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
-              <NavCartBtn to="/checkout">
+              <NavCartBtn to="/cart">
                 <NavCart />
                 <span>{cartCount}</span>
               </NavCartBtn>

@@ -94,7 +94,8 @@ const Navbar = ({isOpen, handleToggle, count}) => {
               )}
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
               <NavCartBtn to="/checkout">
-                <NavCart />
+                <NavCart > </NavCart>
+                <span>0</span>
               </NavCartBtn>
             </NavMenuIcon>
             <NavmenuItemSignIn to="/sign_in">

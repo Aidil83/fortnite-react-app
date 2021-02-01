@@ -19,7 +19,7 @@ export const NavContainer = styled.div`
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
   height: 51px;
   background-color: #2a2a2a;
@@ -407,6 +407,13 @@ export const NavCartBtn = styled(Link)`
   align-items: center;
   ${NavLink};
   ${NavUnderline};
+  span {
+    position: absolute;
+    top: 10px;
+    right: -22px;
+    width: 30px;
+    font-size: .85rem;
+  }
 `;
 
 export const NavCart = styled(GiShoppingCart)`

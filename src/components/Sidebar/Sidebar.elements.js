@@ -21,7 +21,7 @@ export const SidebarMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 40vh;
+  height: 60vh;
   width: 100%;
   font-size: 1rem;
   font-weight: 500;

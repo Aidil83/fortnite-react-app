@@ -21,7 +21,7 @@ function App() {
       <AppContainer>
         <GlobalStyle />
         <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
-        <Sidebar isOpen={isOpen} />
+        <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
         <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
         <Switch>
           <Route path="/" exact>

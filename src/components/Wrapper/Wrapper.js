@@ -92,7 +92,6 @@ const Wrapper = ({slides}) => {
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
-
   return (
     <>
       <WrapperHidden>

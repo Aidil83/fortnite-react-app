@@ -1,5 +1,5 @@
 import {Blog, Cart, Footer, Merch, Navbar, Sidebar, Wrapper} from "./components";
-import {AppContainer, RouteError} from "./App.elements";
+import {AppContainer, RouteError, RouteErrorImage} from "./App.elements";
 import GlobalStyle from "./globalStyles";
 import {useState} from "react";
 import styled from "styled-components/macro";
@@ -37,9 +37,14 @@ function App() {
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">
             <RouteError>
-              <div src={construction}>
-                <h1>404</h1>
-              </div>
+              <RouteErrorImage image={construction}>
+                <div className="container">
+                  <div className="inner-container">
+                    <h1>under maintenance</h1>
+                    <h4>We’re making lots of improvements and will be back soon</h4>
+                  </div>
+                </div>
+              </RouteErrorImage>
             </RouteError>
           </Route>
         </Switch>

@@ -5,7 +5,7 @@ import {useState} from "react";
 import styled from "styled-components/macro";
 import {SliderData} from "./data/SliderData";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import construction from "./images/construction/construction.png";
+import construction from "./images/construction/maintenance.jpg";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,11 +36,11 @@ function App() {
           </Route>
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">
-            <RouteError>
-              <RouteErrorImage image={construction}>
+            <RouteError img={construction}>
+              <RouteErrorImage>
                 <div className="container">
                   <div className="inner-container">
-                    <h1>under maintenance</h1>
+                    <h1>under development</h1>
                     <h4>We’re making lots of improvements and will be back soon</h4>
                   </div>
                 </div>

@@ -10,4 +10,7 @@ export const MainContainer = styled.div`
   height: 100vh;
   width: 85%;
   background-color: #ffd587;
+  div {
+    
+  }
 `;

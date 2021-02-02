@@ -5,6 +5,7 @@ import {useState} from "react";
 import styled from "styled-components/macro";
 import {SliderData} from "./data/SliderData";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import construction from "./images/construction/construction.png";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,9 @@ function App() {
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">
             <RouteError>
-              <h1>404</h1>
+              <div src={construction}>
+                <h1>404</h1>
+              </div>
             </RouteError>
           </Route>
         </Switch>

@@ -8,7 +8,7 @@ export const RouteError = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #ccc;
+  /* background-color: #ccc; */
   h1 {
     color: red;
     padding: 2rem;

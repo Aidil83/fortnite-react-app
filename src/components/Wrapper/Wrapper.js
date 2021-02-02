@@ -2,19 +2,9 @@ import {useEffect, useRef, useState} from "react";
 import styled, {css} from "styled-components/macro";
 import {NavigateBefore, NavigateNext} from "@material-ui/icons";
 import {TweenMax} from "gsap";
-import {
-  WrapperImage,
-  WrapperText,
-  WrapperButton,
-  WrapperLearnMore,
-  NextBtn,
-  PrevBtn,
-  WrapperTitleTxt,
-  WrapperTextContainer,
-  WrapperCaption,
-  WrapperSection,
-  WrapperHidden,
-} from "./Wrapper.elements";
+import {WrapperHidden, PrevBtn} from "./Wrapper.elements";
+import {WrapperImage, WrapperText, WrapperButton, WrapperLearnMore, NextBtn} from "./Wrapper.elements";
+import {WrapperTitleTxt, WrapperTextContainer, WrapperCaption, WrapperSection} from "./Wrapper.elements";
 
 // NOTE: Using GSAP animation library:
 const Wrapper = ({slides}) => {

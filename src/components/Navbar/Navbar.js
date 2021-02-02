@@ -2,29 +2,10 @@ import {useContext, useState} from "react";
 import styled, {css} from "styled-components/macro";
 import {StateContext} from '../../context/StateProvider';
 import forniteLogo from "../../images/text_image/forniteLogo.png";
-import {
-  NavButton,
-  NavContainer,
-  NavLogo,
-  NavMenu,
-  NavMenuIcon,
-  NavMenuItem,
-  NavmenuItemSignIn,
-  NavMenuLeft,
-  NavMenuRight,
-  NavUserSignIn,
-  NavUserLogo,
-  NavMenuLeftMobile,
-  NavCurrentHamburgerIcon,
-  NavHamburgerIcon,
-  NavCloseIcon,
-  Open,
-  Close,
-  SearchContainer,
-  SearchContainerHidden,
-  NavCart,
-  NavCartBtn,
-} from "./Navbar.elements";
+import {NavCartBtn} from "./Navbar.elements";
+import {NavButton, NavContainer, NavLogo, NavMenu, NavMenuIcon, NavMenuItem, NavmenuItemSignIn} from "./Navbar.elements";
+import {NavMenuLeft, NavMenuRight, NavUserSignIn, NavUserLogo, NavMenuLeftMobile, NavCurrentHamburgerIcon} from "./Navbar.elements";
+import {NavHamburgerIcon, NavCloseIcon, Open, Close, SearchContainer, SearchContainerHidden, NavCart} from "./Navbar.elements";
 
 const Navbar = ({isOpen, handleToggle, count}) => {
   const [isSearch, setIsSearch] = useState(true);

@@ -41,7 +41,7 @@ function App() {
                 <div className="container">
                   <div className="inner-container">
                     <h1>under development</h1>
-                    <h4>We’re making lots of improvements and will be back soon</h4>
+                    <h4>We’re making lots of improvements and will be back soon.</h4>
                   </div>
                 </div>
               </RouteErrorImage>

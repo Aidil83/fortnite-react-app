@@ -13,18 +13,19 @@ export const RouteError = styled.div`
   background-image: url(${({img}) => img});
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: #ccc; */
 `;
 
 export const RouteErrorImage = styled.div`
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   & .container {
     width: 100%;
     height: 100%;
+    padding: 5px;
+    margin-top: 10%;
     & .inner-container {
       display: flex;
       justify-content: center;
@@ -35,8 +36,7 @@ export const RouteErrorImage = styled.div`
         text-transform: uppercase;
         font-style: normal;
         font-weight: bold;
-        font-size: 5rem;
-        line-height: 45px;
+        font-size: clamp(1.5rem, 7vw, 5rem);
         text-align: center;
         letter-spacing: 0.05em;
       }
@@ -45,10 +45,17 @@ export const RouteErrorImage = styled.div`
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 600;
-        font-size: 1.5rem;
-        line-height: 56px;
+        font-size: clamp(.9rem, 2vw, 1.7rem);
+        line-height: 26px;
+        width: 95%;
         text-align: center;
         letter-spacing: 0.05em;
+        @media screen and (min-width: 375px){
+          width: 80%;
+        }
+        @media screen and (min-width: 678px){
+          line-height: 46px;
+        }
       }
     }
   }

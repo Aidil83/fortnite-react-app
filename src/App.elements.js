@@ -14,12 +14,11 @@ export const RouteError = styled.div`
 `;
 
 export const RouteErrorImage = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 81px;
   background-image: url(${({image}) => image});
   background-repeat: no-repeat;
   background-size: contain;

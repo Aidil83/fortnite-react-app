@@ -68,28 +68,34 @@ export const Info__header = styled.div`
 `;
 export const Info__content = styled.div`
   display: flex;
+  justify-content: center;
   & .product-container {
     display: flex;
-    justify-content: space-between;
     flex: 1 1 60%;
     padding: 1em .75em;
     & .image-container {
-      width: 50px;
-      height: 50px;
       display: flex;
-      background-color: #ccc;
-      & .image-item {
+      justify-content: center;
+      flex-basis: 25%;
+      & .image-inner-container{
+        background-color: #ccc;
         width: 50px;
         height: 50px;
+        & .image-item {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
       & .name-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        flex-basis: 75%;
         height: 100%;
         margin-right: .5em;
         & .product-name {
+          align-self: center;
           font-family: Roboto;
           font-style: normal;
           font-weight: bold;
@@ -100,6 +106,7 @@ export const Info__content = styled.div`
           text-align: start;
         }
         & .product-rarity {
+          align-self: center;
           font-family: Montserrat;
           font-style: normal;
           font-weight: normal;
@@ -112,7 +119,7 @@ export const Info__content = styled.div`
     display: flex;
     align-items: center;
     flex: 1 1 30%;
-    margin-left: .4em;
+    padding-left: 1.3vw;
   }
   & .close-icon {
     flex: 1 1 10%;

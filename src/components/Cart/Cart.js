@@ -19,7 +19,9 @@ const Cart = () => {
           <Info__content>
             <div className="product-container">
               <div className="image-container">
-                <img src={blackWidow} alt="black Widow" className="image-item" />
+                <div className="image-inner-container">
+                  <img src={blackWidow} alt="black Widow" className="image-item" />
+                </div>
               </div>
               <div className="name-container">
                 <h3 className="product-name">Omega</h3>

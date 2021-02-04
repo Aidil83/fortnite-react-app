@@ -82,15 +82,18 @@ export const Info__content = styled.div`
         width: 50px;
         height: 50px;
       }
+    }
       & .name-container {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         height: 100%;
+        margin-right: .5em;
         & .product-name {
           font-family: Roboto;
           font-style: normal;
           font-weight: bold;
-          line-height: 20px;
+          line-height: 15px;
           text-align: center;
           letter-spacing: 0.05em;
           font-size: .95rem;
@@ -104,7 +107,6 @@ export const Info__content = styled.div`
           line-height: 17px;
         }
       }
-    }
   }
   & .product-price {
     display: flex;

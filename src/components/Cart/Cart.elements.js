@@ -6,7 +6,7 @@ export const Main = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
-  background-color: #ccc;
+  /* background-color: #e9e9e9; */
 `;
 export const MainContainer = styled.div`
   height: 100vh;
@@ -64,6 +64,7 @@ export const Info__header = styled.div`
     flex: 1 1 10%; 
     text-align: right;
     padding-right: .25em;
+    cursor: pointer;
   }
 `;
 export const Info__content = styled.div`
@@ -91,29 +92,36 @@ export const Info__content = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         flex-basis: 75%;
         height: 100%;
         margin-right: .5em;
-        & .product-name {
-          align-self: center;
-          font-family: Roboto;
-          font-style: normal;
-          font-weight: bold;
-          line-height: 15px;
-          text-align: center;
-          letter-spacing: 0.05em;
-          font-size: .95rem;
-          text-align: start;
-        }
-        & .product-rarity {
-          align-self: center;
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: .75rem;
-          line-height: 17px;
+        & .name-inner-container {
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          flex-direction: column;
+          & .product-name {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 15px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            font-size: .95rem;
+            text-align: start;
+          }
+          & .product-rarity {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: .75rem;
+            line-height: 17px;
+          }
         }
       }
+
   }
   & .product-price {
     display: flex;

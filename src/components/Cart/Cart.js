@@ -24,8 +24,10 @@ const Cart = () => {
                 </div>
               </div>
               <div className="name-container">
-                <h3 className="product-name">Omega</h3>
-                <h4 className="product-rarity">legendary</h4>
+                <div className="name-inner-container">
+                  <h3 className="product-name">Omega</h3>
+                  <h4 className="product-rarity">legendary</h4>
+                </div>
               </div>
             </div>
             <h3 className="product-price">$5</h3>

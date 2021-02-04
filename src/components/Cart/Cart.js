@@ -1,6 +1,8 @@
 import {Main, MainContainer, Title, Cart__line} from './Cart.elements'
 import {Info, Info__content, Info__header, Total, Total__header, Total__subtotal} from './Cart.elements'
 import {Total__shipping, Total__total, Total__btn} from './Cart.elements'
+import EditIcon from '@material-ui/icons/Edit';
+import blackWidow from "../../images/merch_image_icon/smallicon-blackWidow.png"
 
 const Cart = () => {
   return (
@@ -11,20 +13,21 @@ const Cart = () => {
           <Info__header>
             <h2 className="header-label">Product</h2>
             <h2 className="header-label">Price</h2>
-            <i className="edit-icon"></i>
+            <EditIcon className="edit-icon" />
           </Info__header>
           <Cart__line />
           <Info__content>
-            <div className="image-container">
-              <img src="" alt="" className="image-item" />
-            </div>
-            <div className="name-container">
-              <h3 className="product-name">Omega</h3>
-              <h4 className="product-rarity">legendary</h4>
+            <div className="product-container">
+              <div className="image-container">
+                <img src={blackWidow} alt="black Widow" className="image-item" />
+              </div>
+              <div className="name-container">
+                <h3 className="product-name">Omega</h3>
+                <h4 className="product-rarity">legendary</h4>
+              </div>
             </div>
             <h3 className="product-price">$5</h3>
             <i className="close-icon"></i>
-            <hr className="product-underline" />
           </Info__content>
         </Info>
         <Cart__line />

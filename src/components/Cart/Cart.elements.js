@@ -3,18 +3,17 @@ import styled from "styled-components/macro";
 export const Main = styled.div`
   height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  top: 51px;
   overflow: hidden;
   /* background-color: #e9e9e9; */
 `;
 export const MainContainer = styled.div`
   height: 100vh;
   width: 90%;
-  position: relative;
-  top: 51px;
+  display: flex;
   background-color: #fff;
-
+  margin: 50px auto;
 `;
 
 export const Title = styled.div`
@@ -52,7 +51,6 @@ export const Info__header = styled.div`
   & .header-label:first-child { 
     flex: 1 1 60%; 
     text-align: start;
-    padding-left: .7em;
   }
   & .header-label:nth-child(2) { 
     flex: 1 1 30%; 
@@ -71,7 +69,7 @@ export const Info__content = styled.div`
   & .product-container {
     display: flex;
     flex: 1 1 60%;
-    padding: 1em .75em;
+    padding: 1em 0;
     & .image-container {
       display: flex;
       justify-content: center;
@@ -132,7 +130,9 @@ export const Info__content = styled.div`
   }
 `;
 
-export const Total = styled.div``;
+export const Total = styled.div`
+  width: 50%;
+`;
 export const Total__header = styled.div``;
 export const Total__subtotal = styled.div``;
 export const Total__shipping = styled.div``;

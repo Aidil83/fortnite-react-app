@@ -7,8 +7,8 @@ import blackWidow from "../../images/merch_image_icon/smallicon-blackWidow.png"
 const Cart = () => {
   return (
     <Main>
+      <Title><h1>my cart</h1></Title>
       <MainContainer>
-        <Title><h1>my cart</h1></Title>
         <Info>
           <Info__header>
             <h2 className="header-label">Product</h2>
@@ -48,10 +48,10 @@ const Cart = () => {
             <div className="total-name">Total</div>
             <div className="total-price">$99.99</div>
           </Total__total>
+          <Total__btn>
+            <h2>proceed to checkout</h2>
+          </Total__btn>
         </Total>
-        <Total__btn>
-          <h2>proceed to checkout</h2>
-        </Total__btn>
       </MainContainer>
     </Main>
   )

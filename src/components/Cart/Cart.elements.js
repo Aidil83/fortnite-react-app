@@ -17,8 +17,6 @@ export const MainContainer = styled.div`
 
 `;
 
-export const Cart__line = styled.hr``;
-
 export const Title = styled.div`
   width: 100%;
   display: flex;

@@ -1,4 +1,4 @@
-import {Main, MainContainer, Title, Cart__line} from './Cart.elements'
+import {Main, MainContainer, Title} from './Cart.elements'
 import {Info, Info__content, Info__header, Total, Total__header, Total__subtotal} from './Cart.elements'
 import {Total__shipping, Total__total, Total__btn} from './Cart.elements'
 import EditIcon from '@material-ui/icons/Edit';
@@ -15,7 +15,6 @@ const Cart = () => {
             <h2 className="header-label">Price</h2>
             <EditIcon className="edit-icon" />
           </Info__header>
-          <Cart__line />
           <Info__content>
             <div className="product-container">
               <div className="image-container">
@@ -34,7 +33,6 @@ const Cart = () => {
             <i className="close-icon"></i>
           </Info__content>
         </Info>
-        <Cart__line />
         {/* Cart card */}
         <Total>
           <Total__header>cart totals</Total__header>
@@ -42,12 +40,10 @@ const Cart = () => {
             <div className="subtotal-name">Subtotal</div>
             <div className="subtotal-price">$99.99</div>
           </Total__subtotal>
-          <Cart__line />
           <Total__shipping>
             <div className="shipping-name">Shipping</div>
             <div className="shipping-price">Free</div>
           </Total__shipping>
-          <Cart__line />
           <Total__total>
             <div className="total-name">Total</div>
             <div className="total-price">$99.99</div>

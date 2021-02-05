@@ -78,6 +78,7 @@ export const Info__content = styled.div`
         background-color: #ccc;
         width: 50px;
         height: 50px;
+        margin-left: 1rem;
         & .image-item {
           width: 50px;
           height: 50px;

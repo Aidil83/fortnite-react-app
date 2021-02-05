@@ -90,7 +90,7 @@ export const Info__price = styled.div`
     font-size: clamp(1.2rem, 3vw, 1.5rem);
   }
   & .price-cost {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
     padding-bottom: 1.45em;
   }
 `;
@@ -107,10 +107,15 @@ export const Info__edit = styled.div`
 `;
 
 export const Total = styled.div`
-  display: none;
-  width: 50%;
+  width: 100%;
+  background-color: orange;
+  padding: 1.1em;
 `;
-export const Total__header = styled.div``;
+export const Total__header = styled.div`
+  height: 5vh;
+  display: flex;
+
+`;
 export const Total__subtotal = styled.div``;
 export const Total__shipping = styled.div``;
 export const Total__total = styled.div``;

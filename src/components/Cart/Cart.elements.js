@@ -12,6 +12,7 @@ export const MainContainer = styled.div`
   height: 100vh;
   width: 90%;
   display: flex;
+  flex-direction: column;
   background-color: #fff;
   margin: 50px auto;
 `;
@@ -34,27 +35,53 @@ export const Title = styled.div`
 export const Info = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 export const Info__product = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+  background-color: orange;
+  & .product-label {
+    font-size: 1rem;
+  }
   img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     background-color: #ccc;
   }
 `;
 export const Info__name = styled.div`
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: .65em;
+  margin-right: auto;
+  padding-left: 10px;
+  background-color: violet;
 `;
 export const Info__price = styled.div`
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: .2em;
 `;
 export const Info__edit = styled.div`
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1em;
 `;
 
 export const Total = styled.div`
+  display: none;
   width: 50%;
 `;
 export const Total__header = styled.div``;

@@ -1,7 +1,8 @@
 import {Main, MainContainer, Title} from './Cart.elements'
-import {Info, Info__content, Info__header, Total, Total__header, Total__subtotal} from './Cart.elements'
+import {Info, Info__product, Info__name, Info__price, Info__edit, Total, Total__header, Total__subtotal} from './Cart.elements'
 import {Total__shipping, Total__total, Total__btn} from './Cart.elements'
 import EditIcon from '@material-ui/icons/Edit';
+import CloseIcon from '@material-ui/icons/Close';
 import blackWidow from "../../images/merch_image_icon/smallicon-blackWidow.png"
 
 const Cart = () => {
@@ -10,28 +11,22 @@ const Cart = () => {
       <Title><h1>my cart</h1></Title>
       <MainContainer>
         <Info>
-          <Info__header>
-            <h2 className="header-label">Product</h2>
-            <h2 className="header-label">Price</h2>
+          <Info__product>
+            <div className="product-label">Product</div>
+            <img className="product-image" src={blackWidow} />
+          </Info__product>
+          <Info__name>
+            <div className="product-name">Omega</div>
+            <div className="product-rarity">Legendary</div>
+          </Info__name>
+          <Info__price>
+            <div className="price-label">Price</div>
+            <div className="price-cost">$5</div>
+          </Info__price>
+          <Info__edit>
             <EditIcon className="edit-icon" />
-          </Info__header>
-          <Info__content>
-            <div className="product-container">
-              <div className="image-container">
-                <div className="image-inner-container">
-                  <img src={blackWidow} alt="black Widow" className="image-item" />
-                </div>
-              </div>
-              <div className="name-container">
-                <div className="name-inner-container">
-                  <h3 className="product-name">Omega</h3>
-                  <h4 className="product-rarity">legendary</h4>
-                </div>
-              </div>
-            </div>
-            <h3 className="product-price">$5</h3>
-            <i className="close-icon"></i>
-          </Info__content>
+            <CloseIcon className="close-icon" />
+          </Info__edit>
         </Info>
         {/* Cart card */}
         <Total>

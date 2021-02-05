@@ -1,4 +1,8 @@
-import styled from "styled-components/macro";
+import styled, {css} from "styled-components/macro";
+
+const fs = css`
+  font-family: "Roboto", sans-serif;
+`
 
 export const Main = styled.div`
   height: 100vh;
@@ -71,7 +75,7 @@ export const Info__name = styled.div`
   padding-bottom: 1.4em;
   & .product-name {
     font-size: clamp(.85rem, 3vw, 1.3rem);
-    font-family: "Roboto", sans-serif;
+    ${fs}
     font-weight: 700;
   }
   & .product-rarity {
@@ -108,15 +112,62 @@ export const Info__edit = styled.div`
 
 export const Total = styled.div`
   width: 100%;
-  background-color: orange;
+  background: #FAFAFA;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
   padding: 1.1em;
+  border-radius: 8px;
+  margin-top: 10px;
 `;
 export const Total__header = styled.div`
   height: 5vh;
   display: flex;
-
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  ${fs};
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
 `;
-export const Total__subtotal = styled.div``;
-export const Total__shipping = styled.div``;
-export const Total__total = styled.div``;
-export const Total__btn = styled.div``;
+
+export const Total__subtotal = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: .55em 0;
+  padding-top: .75em;
+  ${fs};
+  font-size: clamp(1rem, 3vw, 1.2rem);
+`;
+
+export const Total__shipping = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: .55em 0;
+  ${fs};
+  font-size: clamp(1rem, 3vw, 1.2rem);
+`;
+export const Total__total = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: .55em 0;
+  text-transform: uppercase;
+  ${fs};
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 700;
+`;
+export const Total__btn = styled.div`
+  display: flex;
+  justify-content: center;
+  & .checkoutBtn {
+    border: none;
+    padding: .6em 1.5em .3em 1.5em;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    text-transform: uppercase;
+    ${fs};
+    font-weight: 900;
+    font-size: clamp(.95rem, 3vw, 1.4rem);
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    background-color: #1D0070;
+    color: #fff;
+  }
+`;

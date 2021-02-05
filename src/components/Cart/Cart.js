@@ -44,7 +44,9 @@ const Cart = () => {
             <div className="total-price">$99.99</div>
           </Total__total>
           <Total__btn>
-            <h2>proceed to checkout</h2>
+            <button className="checkoutBtn">
+              proceed to checkout
+            </button>
           </Total__btn>
         </Total>
       </MainContainer>

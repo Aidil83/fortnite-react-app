@@ -10,15 +10,16 @@ export const Main = styled.div`
   position: relative;
   top: 51px;
   overflow: hidden;
-  /* background-color: #e9e9e9; */
 `;
 export const MainContainer = styled.div`
-  height: 100vh;
   width: 90%;
   display: flex;
   flex-direction: column;
   background-color: #fff;
   margin: 50px auto;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const Title = styled.div`
@@ -100,7 +101,7 @@ export const Info__price = styled.div`
 `;
 
 export const Info__edit = styled.div`
-  height: 100%x;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -115,8 +116,18 @@ export const Total = styled.div`
   background: #FAFAFA;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
   padding: 1.1em;
-  border-radius: 8px;
-  margin-top: 10px;
+  border-radius: 10%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    position: static;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 20px;
+    margin-left: 20px;
+  }
 `;
 export const Total__header = styled.div`
   height: 5vh;
@@ -164,7 +175,7 @@ export const Total__btn = styled.div`
     text-transform: uppercase;
     ${fs};
     font-weight: 900;
-    font-size: clamp(.95rem, 3vw, 1.4rem);
+    font-size: clamp(.80rem, 2vw, 1.2rem);
     line-height: 28px;
     letter-spacing: 0.05em;
     background-color: #1D0070;

@@ -46,40 +46,25 @@ export const SocialContainer = styled.div`
 
 export const LinkContainer = styled.div`
   display: flex;
-  justify-content: center;
   flex-flow: wrap;
   align-self: center;
   width: 100%;
   height: 30%;
-  /* background-color: #f0f; */
-  div {
+  & .inner-link {
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: space-around;
     justify-content: center;
-    flex-flow: wrap;
-    height: 40%;
-    flex-basis: 40%;
-    flex: 0.41;
-    ${media.ipad768} {
-      align-self: center;
-    }
   }
   ul {
     display: flex;
-    justify-content: space-around;
-    flex-flow: column wrap;
-    width: 100%;
-    &:nth-child(1) {
-      flex: 1 1 20%;
-    }
-    &:nth-child(2) {
-      flex: 1 1 40%;
-    }
-    &:nth-child(3) {
-      flex: 1 1 30%;
-    }
+    flex-direction: column;
+    margin: 0 auto;
     a {
       font-size: 0.9rem;
       text-decoration: none;
+      line-height: 1.5;
       color: #ccc;
     }
   }

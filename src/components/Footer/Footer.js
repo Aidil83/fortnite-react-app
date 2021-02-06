@@ -10,7 +10,7 @@ import {
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
-import { FaTwitch } from "react-icons/fa";
+import {FaTwitch} from "react-icons/fa";
 import {
   LinkContainer,
   Main,
@@ -29,14 +29,14 @@ const Footer = () => {
             <FacebookIcon />
             <TwitterIcon />
             <FaTwitch
-              style={{ fontSize: "1.5rem", alignSelf: "center", color: "#ccc" }}
+              style={{fontSize: "1.5rem", alignSelf: "center", color: "#ccc"}}
             />
             <Instagram />
             <YouTube />
           </ul>
         </SocialContainer>
         <LinkContainer>
-          <div>
+          <div className="inner-link">
             <ul>
               <a href="">Home</a>
               <a href="">News</a>
@@ -53,7 +53,7 @@ const Footer = () => {
               <a href="">Battle Pass</a>
             </ul>
           </div>
-          <img src={ratedT} alt="rated" style={{ height: 60, width: 100 }} />
+          <img src={ratedT} alt="rated" style={{height: 60, width: 100}} />
         </LinkContainer>
         <CopyrightContainer>
           <p>

@@ -1,4 +1,4 @@
-import {Main, MainContainer, Title} from './Cart.elements'
+import {InfoContainer, Main, MainContainer, Title} from './Cart.elements'
 import {Info, Info__product, Info__name, Info__price, Info__edit, Total, Total__header, Total__subtotal} from './Cart.elements'
 import {Total__shipping, Total__total, Total__btn} from './Cart.elements'
 import EditIcon from '@material-ui/icons/Edit';
@@ -10,24 +10,26 @@ const Cart = () => {
     <Main>
       <Title><h1>my cart</h1></Title>
       <MainContainer>
-        <Info>
-          <Info__product>
-            <div className="product-label">Product</div>
-            <img className="product-image" src={blackWidow} />
-          </Info__product>
-          <Info__name>
-            <div className="product-name">Omega</div>
-            <div className="product-rarity">Legendary</div>
-          </Info__name>
-          <Info__price>
-            <div className="price-label">Price</div>
-            <div className="price-cost">$5</div>
-          </Info__price>
-          <Info__edit>
-            <EditIcon className="edit-icon" />
-            <CloseIcon className="close-icon" />
-          </Info__edit>
-        </Info>
+        <InfoContainer>
+          <Info>
+            <Info__product>
+              <div className="product-label">Product</div>
+              <img className="product-image" src={blackWidow} />
+            </Info__product>
+            <Info__name>
+              <div className="product-name">Omega</div>
+              <div className="product-rarity">Legendary</div>
+            </Info__name>
+            <Info__price>
+              <div className="price-label">Price</div>
+              <div className="price-cost">$5</div>
+            </Info__price>
+            <Info__edit>
+              <EditIcon className="edit-icon" />
+              <CloseIcon className="close-icon" />
+            </Info__edit>
+          </Info>
+        </InfoContainer>
         {/* Cart card */}
         <Total>
           <Total__header>cart totals</Total__header>
@@ -37,7 +39,7 @@ const Cart = () => {
           </Total__subtotal>
           <Total__shipping>
             <div className="shipping-name">Shipping</div>
-            <div className="shipping-price">Free</div>
+            <div className="shipping-price">FREE</div>
           </Total__shipping>
           <Total__total>
             <div className="total-name">Total</div>

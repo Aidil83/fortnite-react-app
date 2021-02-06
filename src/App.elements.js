@@ -1,6 +1,8 @@
 import styled from "styled-components/macro";
 
-export const AppContainer = styled.div``;
+export const AppContainer = styled.div`
+overflow-y: hidden;
+`;
 
 export const RouteError = styled.div`
   position: relative;

@@ -5,7 +5,7 @@ const fs = css`
 `
 
 export const Main = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   top: 51px;
@@ -14,12 +14,13 @@ export const Main = styled.div`
 export const MainContainer = styled.div`
   width: 90%;
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap;
   background-color: #fff;
   margin: 50px auto;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
+  margin-bottom: 70px;
+  /* @media screen and (min-width: 768px) {
+    flex-direction: column;
+  } */
 `;
 
 export const Title = styled.div`
@@ -36,10 +37,17 @@ export const Title = styled.div`
     letter-spacing: 0.05em;
   }
 `;
+export const InfoContainer = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+`
 
 export const Info = styled.div`
   height: 115px;
   width: 100%;
+  max-width: 500px;
   display: flex;
   justify-content: space-between;
 `;
@@ -113,26 +121,27 @@ export const Info__edit = styled.div`
 
 export const Total = styled.div`
   width: 100%;
+  max-width: 400px;
   background: #FAFAFA;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
   padding: 1.1em;
-  border-radius: 10%;
+  border-radius: 2%;
   margin-top: 50px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     position: static;
     min-width: 300px;
     max-width: 400px;
-    border-radius: 20px;
+    border-radius: 2%;
     margin-left: 20px;
-  }
+  } */
 `;
 export const Total__header = styled.div`
   height: 5vh;
   display: flex;
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 700;
   ${fs};
   text-transform: uppercase;

@@ -16,12 +16,6 @@ export const Main = styled.footer`
   width: 100%;
   background-color: #2a2a2a;
   overflow: hidden;
-  ${media.desktop1025} {
-    min-height: calc(885px - 25vh);
-  }
-  ${media.tv1200} {
-    min-height: calc(585px - 20vh);
-  }
 `;
 
 export const MainContainer = styled.div`
@@ -30,7 +24,6 @@ export const MainContainer = styled.div`
   justify-content: center;
   height: 90%;
   width: 90%;
-  /* background-color: #fafa; */
 `;
 
 export const SocialContainer = styled.div`

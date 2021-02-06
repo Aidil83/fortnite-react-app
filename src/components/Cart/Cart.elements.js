@@ -5,7 +5,7 @@ const fs = css`
 `
 
 export const Main = styled.div`
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   top: 51px;
@@ -179,6 +179,7 @@ export const Total__btn = styled.div`
     padding: .6em 1.5em .3em 1.5em;
     font-size: clamp(1rem, 3vw, 1.2rem);
     text-transform: uppercase;
+    border-radius: 3px;
     ${fs};
     font-weight: 900;
     font-size: clamp(.80rem, 2vw, 1.2rem);

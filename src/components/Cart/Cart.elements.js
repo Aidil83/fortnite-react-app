@@ -5,26 +5,25 @@ const fs = css`
 `
 
 export const Main = styled.div`
-  height: 90vh;
+  height: 100%;
   width: 100%;
   position: relative;
   top: 51px;
   overflow: hidden;
-  @media screen and (max-width: 1100px) {
-    height: 100%;
+  @media screen and (min-width: 1000px) {
+    height: 80vh;
+  }
+  @media screen and (min-width: 1200px) {
+    height: 90vh;
   }
 `;
 export const MainContainer = styled.div`
-  /* height: 100%; */
   width: 90%;
   display: flex;
   flex-flow: wrap;
   background-color: #fff;
   margin: 50px auto;
   margin-bottom: 70px;
-  /* @media screen and (min-width: 768px) {
-    flex-direction: column;
-  } */
 `;
 
 export const Title = styled.div`
@@ -43,6 +42,7 @@ export const Title = styled.div`
 `;
 export const InfoContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;

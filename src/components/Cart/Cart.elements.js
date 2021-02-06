@@ -5,13 +5,17 @@ const fs = css`
 `
 
 export const Main = styled.div`
-  height: 100%;
+  height: 80vh;
   width: 100%;
   position: relative;
   top: 51px;
   overflow: hidden;
+  @media screen and (max-width: 1100px) {
+    height: 100%;
+  }
 `;
 export const MainContainer = styled.div`
+  /* height: 100%; */
   width: 90%;
   display: flex;
   flex-flow: wrap;
@@ -130,13 +134,6 @@ export const Total = styled.div`
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  /* @media screen and (min-width: 768px) {
-    position: static;
-    min-width: 300px;
-    max-width: 400px;
-    border-radius: 2%;
-    margin-left: 20px;
-  } */
 `;
 export const Total__header = styled.div`
   height: 5vh;

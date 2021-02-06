@@ -52,16 +52,13 @@ export const Info = styled.div`
   height: 115px;
   width: 100%;
   max-width: 500px;
-  display: flex;
-  justify-content: space-between;
 `;
 
-export const Info__product = styled.div`
+export const Info__title = styled.div`
+  width: 100%;
   display: flex;
-  align-items: center;
-  flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  margin-left: 2px;
   & .product-label {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     &::after {
@@ -74,9 +71,24 @@ export const Info__product = styled.div`
       width: 93%;
     }
   }
+`
+
+export const Info__productContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 60%;
+  margin-top: 20px;
+  margin-left: 6px;
+`
+
+export const Info__product = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   & .product-image {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: #ccc;
   }
 `;

@@ -11,10 +11,10 @@ export const Main = styled.div`
   top: 51px;
   overflow: hidden;
   @media screen and (min-width: 1000px) {
-    height: 80vh;
+    min-height: 80vh;
   }
   @media screen and (min-width: 1200px) {
-    height: 90vh;
+    min-height: 90vh;
   }
 `;
 export const MainContainer = styled.div`
@@ -46,6 +46,17 @@ export const InfoContainer = styled.div`
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  margin-top: 40px;
+}
+`
+
+export const CartProduct__container = styled.div`
+  height: 100%;
+  @media (min-width: 968px){
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 600px;
+  }
 `
 
 export const Info = styled.div`
@@ -125,6 +136,7 @@ export const Info__name = styled.div`
 export const Total = styled.div`
   width: 100%;
   max-width: 400px;
+  max-height: 300px;
   background: #FAFAFA;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
   padding: 1.1em;

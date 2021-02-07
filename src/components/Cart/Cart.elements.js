@@ -122,33 +122,6 @@ export const Info__name = styled.div`
   }
 `;
 
-export const Info__price = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  & .price-label {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-  }
-  & .price-cost {
-    font-size: clamp(1.2rem, 3vw, 1.3rem);
-    padding-bottom: 1.45em;
-    margin-right: 10%;
-  }
-`;
-
-export const Info__edit = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 1.65em;
-  & .close-icon {
-    color: #ccc;
-  }
-`;
-
 export const Total = styled.div`
   width: 100%;
   max-width: 400px;
@@ -203,12 +176,12 @@ export const Total__btn = styled.div`
   & .checkoutBtn {
     border: none;
     padding: .6em 1.5em .3em 1.5em;
-    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-top: 10px;
     text-transform: uppercase;
     border-radius: 3px;
     ${fs};
     font-weight: 900;
-    font-size: clamp(.80rem, 2vw, 1.2rem);
+    font-size: clamp(.80rem, 1.3vw, 1.1rem);
     line-height: 28px;
     letter-spacing: 0.05em;
     background-color: #1D0070;

@@ -71,15 +71,25 @@ export const Info__title = styled.div`
       width: 93%;
     }
   }
+  & .price-label {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-left: auto;
+    margin-right: 10%;
+  }
 `
 
 export const Info__productContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 60%;
   margin-top: 20px;
-  margin-left: 6px;
+  & .price-cost {
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
+    margin-left: auto;
+    margin-right: 13%;
+  }
 `
 
 export const Info__product = styled.div`
@@ -90,6 +100,7 @@ export const Info__product = styled.div`
     width: 60px;
     height: 60px;
     background-color: #ccc;
+    margin-left: 5px;
   }
 `;
 export const Info__name = styled.div`
@@ -98,6 +109,8 @@ export const Info__name = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 1.4em;
+  margin-right: 10px;
+  padding-left: 20px;
   & .product-name {
     font-size: clamp(.85rem, 3vw, 1.3rem);
     ${fs}
@@ -121,6 +134,7 @@ export const Info__price = styled.div`
   & .price-cost {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     padding-bottom: 1.45em;
+    margin-right: 10%;
   }
 `;
 

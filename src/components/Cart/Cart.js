@@ -25,6 +25,8 @@ const Cart = () => {
                 <div className="product-name">Omega</div>
                 <div className="product-rarity">Legendary</div>
               </Info__name>
+              <div className="price-cost">$5</div>
+              <CloseIcon className="close-icon" />
             </Info__productContainer>
             {/* <Info__product>
               <div className="product-label">Product</div>

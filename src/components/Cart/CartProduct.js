@@ -2,12 +2,13 @@ import {Info, Info__product, Info__name, Info__productContainer} from './Cart.el
 import CloseIcon from '@material-ui/icons/Close';
 import blackWidow from "../../images/merch_image_icon/smallicon-blackWidow.png";
 
-const CartProduct = () => {
+const CartProduct = ({purchasedItem}) => {
+  const {images, name, rarity} = purchasedItem;
   return (
     <Info>
       <Info__productContainer>
         <Info__product>
-          <img className="product-image" src={blackWidow} />
+          <img className="product-image" src={images.smallIcon} />
         </Info__product>
         <Info__name>
           <div className="product-name">Omega</div>

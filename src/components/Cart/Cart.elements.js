@@ -110,8 +110,9 @@ export const Info__product = styled.div`
   & .product-image {
     width: 60px;
     height: 60px;
-    background-color: #ccc;
+    background-image: radial-gradient(white, #ccc);
     margin-left: 13px;
+    border-radius: 4px;
   }
 `;
 export const Info__name = styled.div`

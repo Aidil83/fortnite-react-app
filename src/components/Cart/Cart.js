@@ -3,8 +3,12 @@ import {Total, Total__header, Total__subtotal} from './Cart.elements'
 import {Total__shipping, Total__total, Total__btn, } from './Cart.elements'
 import EditIcon from '@material-ui/icons/Edit';
 import CartProduct from './CartProduct';
+import {useContext} from 'react';
+import {StateContext} from '../../context/StateProvider';
 
 const Cart = () => {
+  const [{purchasedItems}] = useContext(StateContext);
+  console.log(purchasedItems);
   return (
     <Main>
       <Title><h1>my cart</h1></Title>
@@ -16,16 +20,9 @@ const Cart = () => {
             <EditIcon className="edit-icon" />
           </Info__title>
           <CartProduct__container>
-            <CartProduct />
-            <CartProduct />
-            <CartProduct />
-            <CartProduct />
-            <CartProduct />
-            <CartProduct />
-            <CartProduct />
-            <CartProduct />
-            <CartProduct />
-            <CartProduct />
+            {purchasedItems.map((purchasedItem, index) => {
+              return <CartProduct key={index} purchasedItem={purchasedItem} />
+            })}
           </CartProduct__container>
         </InfoContainer>
         {/* Cart card */}

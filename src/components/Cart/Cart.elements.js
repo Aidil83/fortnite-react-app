@@ -66,8 +66,8 @@ export const Info__title = styled.div`
       position: absolute;
       top: 130px;
       left: 4%;
-      border: 1px solid #ccc;
-      opacity: .4;
+      border: 1px solid #aaa;
+      opacity: .8;
       width: 93%;
     }
   }

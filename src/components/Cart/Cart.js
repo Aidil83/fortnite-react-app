@@ -28,6 +28,33 @@ const Cart = () => {
               <div className="price-cost">$5</div>
               <CloseIcon className="close-icon" />
             </Info__productContainer>
+            <hr style={{opacity: .3}} />
+          </Info><Info>
+            <Info__productContainer>
+              <Info__product>
+                <img className="product-image" src={blackWidow} />
+              </Info__product>
+              <Info__name>
+                <div className="product-name">Omega</div>
+                <div className="product-rarity">Legendary</div>
+              </Info__name>
+              <div className="price-cost">$5</div>
+              <CloseIcon className="close-icon" />
+            </Info__productContainer>
+            <hr style={{opacity: .3}} />
+          </Info><Info>
+            <Info__productContainer>
+              <Info__product>
+                <img className="product-image" src={blackWidow} />
+              </Info__product>
+              <Info__name>
+                <div className="product-name">Omega</div>
+                <div className="product-rarity">Legendary</div>
+              </Info__name>
+              <div className="price-cost">$5</div>
+              <CloseIcon className="close-icon" />
+            </Info__productContainer>
+            <hr style={{opacity: .3}} />
           </Info>
         </InfoContainer>
         {/* Cart card */}

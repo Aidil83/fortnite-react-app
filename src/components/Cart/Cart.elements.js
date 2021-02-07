@@ -22,7 +22,7 @@ export const MainContainer = styled.div`
   display: flex;
   flex-flow: wrap;
   background-color: #fff;
-  margin: 50px auto;
+  margin: 20px auto;
   margin-bottom: 70px;
 `;
 
@@ -49,7 +49,7 @@ export const InfoContainer = styled.div`
 `
 
 export const Info = styled.div`
-  height: 115px;
+  height: 80px;
   width: 100%;
   max-width: 500px;
 `;
@@ -64,7 +64,7 @@ export const Info__title = styled.div`
     &::after {
       content: '';
       position: absolute;
-      top: 160px;
+      top: 130px;
       left: 4%;
       border: 1px solid #ccc;
       opacity: .4;
@@ -83,7 +83,7 @@ export const Info__productContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60%;
+  height: 85%;
   margin-top: 25px;
   & .price-cost {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
@@ -132,6 +132,7 @@ export const Total = styled.div`
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
 `;
 export const Total__header = styled.div`
   height: 5vh;

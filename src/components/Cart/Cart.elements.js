@@ -100,7 +100,7 @@ export const Info__product = styled.div`
     width: 60px;
     height: 60px;
     background-color: #ccc;
-    margin-left: 5px;
+    margin-left: 13px;
   }
 `;
 export const Info__name = styled.div`
@@ -133,6 +133,9 @@ export const Total = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  @media (min-width: 1000px) {
+    margin-top: 50px;
+  }
 `;
 export const Total__header = styled.div`
   height: 5vh;

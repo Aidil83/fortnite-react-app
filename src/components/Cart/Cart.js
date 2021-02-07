@@ -24,6 +24,8 @@ const Cart = () => {
             <CartProduct />
             <CartProduct />
             <CartProduct />
+            <CartProduct />
+            <CartProduct />
           </CartProduct__container>
         </InfoContainer>
         {/* Cart card */}

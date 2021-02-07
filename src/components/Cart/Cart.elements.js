@@ -136,7 +136,7 @@ export const Info__name = styled.div`
 export const Total = styled.div`
   width: 100%;
   max-width: 400px;
-  max-height: 300px;
+  max-height: 280px;
   background: #FAFAFA;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
   padding: 1.1em;
@@ -151,6 +151,7 @@ export const Total = styled.div`
 `;
 export const Total__header = styled.div`
   height: 5vh;
+  max-height: 38px;
   display: flex;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 700;
@@ -191,7 +192,7 @@ export const Total__btn = styled.div`
   & .checkoutBtn {
     border: none;
     padding: .6em 1.5em .3em 1.5em;
-    margin-top: 10px;
+    margin: 1em;
     text-transform: uppercase;
     border-radius: 3px;
     ${fs};

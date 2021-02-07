@@ -11,12 +11,12 @@ const Cart = () => {
       <Title><h1>my cart</h1></Title>
       <MainContainer>
         <InfoContainer>
+          <Info__title>
+            <div className="product-label">Product</div>
+            <div className="price-label">Price</div>
+            <EditIcon className="edit-icon" />
+          </Info__title>
           <Info>
-            <Info__title>
-              <div className="product-label">Product</div>
-              <div className="price-label">Price</div>
-              <EditIcon className="edit-icon" />
-            </Info__title>
             <Info__productContainer>
               <Info__product>
                 <img className="product-image" src={blackWidow} />

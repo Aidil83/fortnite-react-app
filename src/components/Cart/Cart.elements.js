@@ -84,7 +84,7 @@ export const Info__productContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 60%;
-  margin-top: 20px;
+  margin-top: 25px;
   & .price-cost {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     margin-left: auto;
@@ -129,7 +129,6 @@ export const Total = styled.div`
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
   padding: 1.1em;
   border-radius: 2%;
-  margin-top: 50px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;

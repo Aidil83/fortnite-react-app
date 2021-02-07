@@ -1,9 +1,8 @@
 import {InfoContainer, Info__title, Main, MainContainer, Title} from './Cart.elements'
-import {Info, Info__product, Info__name, Total, Total__header, Total__subtotal} from './Cart.elements'
-import {Total__shipping, Total__total, Total__btn, Info__productContainer} from './Cart.elements'
+import {Total, Total__header, Total__subtotal} from './Cart.elements'
+import {Total__shipping, Total__total, Total__btn, } from './Cart.elements'
 import EditIcon from '@material-ui/icons/Edit';
-import CloseIcon from '@material-ui/icons/Close';
-import blackWidow from "../../images/merch_image_icon/smallicon-blackWidow.png"
+import CartProduct from './CartProduct';
 
 const Cart = () => {
   return (
@@ -16,46 +15,9 @@ const Cart = () => {
             <div className="price-label">Price</div>
             <EditIcon className="edit-icon" />
           </Info__title>
-          <Info>
-            <Info__productContainer>
-              <Info__product>
-                <img className="product-image" src={blackWidow} />
-              </Info__product>
-              <Info__name>
-                <div className="product-name">Omega</div>
-                <div className="product-rarity">Legendary</div>
-              </Info__name>
-              <div className="price-cost">$5</div>
-              <CloseIcon className="close-icon" />
-            </Info__productContainer>
-            <hr style={{opacity: .3}} />
-          </Info><Info>
-            <Info__productContainer>
-              <Info__product>
-                <img className="product-image" src={blackWidow} />
-              </Info__product>
-              <Info__name>
-                <div className="product-name">Omega</div>
-                <div className="product-rarity">Legendary</div>
-              </Info__name>
-              <div className="price-cost">$5</div>
-              <CloseIcon className="close-icon" />
-            </Info__productContainer>
-            <hr style={{opacity: .3}} />
-          </Info><Info>
-            <Info__productContainer>
-              <Info__product>
-                <img className="product-image" src={blackWidow} />
-              </Info__product>
-              <Info__name>
-                <div className="product-name">Omega</div>
-                <div className="product-rarity">Legendary</div>
-              </Info__name>
-              <div className="price-cost">$5</div>
-              <CloseIcon className="close-icon" />
-            </Info__productContainer>
-            <hr style={{opacity: .3}} />
-          </Info>
+          <CartProduct />
+          <CartProduct />
+          <CartProduct />
         </InfoContainer>
         {/* Cart card */}
         <Total>

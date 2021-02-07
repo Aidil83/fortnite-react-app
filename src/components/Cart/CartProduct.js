@@ -11,10 +11,10 @@ const CartProduct = ({purchasedItem}) => {
           <img className="product-image" src={images.smallIcon} />
         </Info__product>
         <Info__name>
-          <div className="product-name">Omega</div>
-          <div className="product-rarity">Legendary</div>
+          <div className="product-name">{name}</div>
+          <div className="product-rarity">{rarity.value}</div>
         </Info__name>
-        <div className="price-cost">$5</div>
+        <div className="price-cost">$2</div>
         <CloseIcon className="close-icon" />
       </Info__productContainer>
       <hr style={{opacity: .3}} />

@@ -1,16 +1,25 @@
-import {CartProduct__container, InfoContainer, Info__title, Main, MainContainer, Title} from './Cart.elements'
-import {Total, Total__header, Total__subtotal} from './Cart.elements'
-import {Total__shipping, Total__total, Total__btn, } from './Cart.elements'
-import EditIcon from '@material-ui/icons/Edit';
-import CartProduct from './CartProduct';
-import {useContext} from 'react';
-import {StateContext} from '../../context/StateProvider';
+import {
+  CartProduct__container,
+  InfoContainer,
+  Info__title,
+  Main,
+  MainContainer,
+  Title,
+} from "./Cart.elements";
+import { Total, Total__header, Total__subtotal } from "./Cart.elements";
+import { Total__shipping, Total__total, Total__btn } from "./Cart.elements";
+import EditIcon from "@material-ui/icons/Edit";
+import CartProduct from "./CartProduct";
+import { useContext } from "react";
+import { StateContext } from "../../context/StateProvider";
 
 const Cart = () => {
-  const [{purchasedItems, modalPrice}] = useContext(StateContext);
+  const [{ purchasedItems }] = useContext(StateContext);
   return (
     <Main>
-      <Title><h1>my cart</h1></Title>
+      <Title>
+        <h1>my cart</h1>
+      </Title>
       <MainContainer>
         <InfoContainer>
           <Info__title>
@@ -20,7 +29,7 @@ const Cart = () => {
           </Info__title>
           <CartProduct__container>
             {purchasedItems.map((purchasedItem, index) => {
-              return <CartProduct key={index} purchasedItem={purchasedItem} />
+              return <CartProduct key={index} purchasedItem={purchasedItem} />;
             })}
           </CartProduct__container>
         </InfoContainer>
@@ -40,14 +49,12 @@ const Cart = () => {
             <div className="total-price">$99.99</div>
           </Total__total>
           <Total__btn>
-            <button className="checkoutBtn">
-              proceed to checkout
-            </button>
+            <button className="checkoutBtn">proceed to checkout</button>
           </Total__btn>
         </Total>
       </MainContainer>
     </Main>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

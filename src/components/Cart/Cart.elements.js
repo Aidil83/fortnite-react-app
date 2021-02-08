@@ -52,7 +52,7 @@ export const InfoContainer = styled.div`
 
 export const CartProduct__container = styled.div`
   height: 100%;
-  @media (min-width: 968px){
+  @media (min-width: 1020px){
   overflow-y: auto;
   overflow-x: hidden;
   height: 600px;
@@ -71,7 +71,7 @@ export const Info__title = styled.div`
   display: flex;
   justify-content: space-between;
   margin-left: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 1opx;
   & .product-label {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     @media screen and (max-width: 700px) {

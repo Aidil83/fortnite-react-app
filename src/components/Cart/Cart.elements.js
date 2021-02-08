@@ -71,8 +71,12 @@ export const Info__title = styled.div`
   display: flex;
   justify-content: space-between;
   margin-left: 2px;
+  margin-bottom: 10px;
   & .product-label {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
+    @media screen and (max-width: 700px) {
+      margin-left: 8px;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -96,7 +100,6 @@ export const Info__productContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 85%;
-  margin-top: 25px;
   & .price-cost {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     margin-left: auto;

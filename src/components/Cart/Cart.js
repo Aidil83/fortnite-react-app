@@ -7,8 +7,7 @@ import {useContext} from 'react';
 import {StateContext} from '../../context/StateProvider';
 
 const Cart = () => {
-  const [{purchasedItems}] = useContext(StateContext);
-  console.log(purchasedItems);
+  const [{purchasedItems, modalPrice}] = useContext(StateContext);
   return (
     <Main>
       <Title><h1>my cart</h1></Title>

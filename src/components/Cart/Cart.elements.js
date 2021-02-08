@@ -40,6 +40,7 @@ export const Title = styled.div`
     letter-spacing: 0.05em;
   }
 `;
+
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,7 +48,6 @@ export const InfoContainer = styled.div`
   max-width: 500px;
   margin: 0 auto;
   margin-top: 40px;
-}
 `
 
 export const CartProduct__container = styled.div`

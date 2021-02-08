@@ -12,19 +12,20 @@ const Modal = ({handleModal, setIsModal}) => {
     if (!purchasedItems.includes(modalData)) {
       dispatch({
         type: "PURCHASEDITEM",
-        value: modalData,
+        value: {modalData, modalPrice},
       })
       dispatch({
         type: "CARTCOUNT",
         payload: cartCount,
       })
+      console.log(modalData);
     }
     setIsModal(prevStateModal => !prevStateModal);
   }
 
-  // useEffect(() => {
-  //   console.log(purchasedItems);
-  // }, [purchasedItems])
+  useEffect(() => {
+    console.log(purchasedItems);
+  }, [purchasedItems])
 
   return (
     <ModalMain>

@@ -100,8 +100,15 @@ export const Info__productContainer = styled.div`
   & .price-cost {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     margin-left: auto;
-    margin-right: 10%;
+    margin-right: 8.5%;
     min-width: 2.5em;
+    @media screen and (min-width: 768px) {
+      margin-right: 9.75%;
+    }
+    @media screen and (min-width: 968px) {
+      margin-right: 10%;
+      min-width: 2.5em;
+    }
   }
 `
 

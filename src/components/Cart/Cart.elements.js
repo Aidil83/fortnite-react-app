@@ -99,7 +99,7 @@ export const Info__productContainer = styled.div`
   & .price-cost {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     margin-left: auto;
-    margin-right: 13%;
+    margin-right: 11%;
   }
 `
 

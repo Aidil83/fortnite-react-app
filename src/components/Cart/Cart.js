@@ -14,7 +14,9 @@ import { useContext } from "react";
 import { StateContext } from "../../context/StateProvider";
 
 const Cart = () => {
-  const [{ purchasedItems }] = useContext(StateContext);
+  const [{ purchasedItems, cartCount }] = useContext(StateContext);
+
+  const pluralItem = cartCount > 1 ? "items" : "item";
   return (
     <Main>
       <Title>
@@ -37,7 +39,9 @@ const Cart = () => {
         <Total>
           <Total__header>cart totals</Total__header>
           <Total__subtotal>
-            <div className="subtotal-name">Subtotal</div>
+            <div className="subtotal-name">
+              Subtotal ({`${cartCount}`} {`${pluralItem}`})
+            </div>
             <div className="subtotal-price">$99.99</div>
           </Total__subtotal>
           <Total__shipping>

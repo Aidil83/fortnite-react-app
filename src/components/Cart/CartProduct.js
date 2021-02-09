@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { StateContext } from "../../context/StateProvider";
 import {
   Info,
   Info__product,
@@ -10,9 +11,22 @@ import {
 const CartProduct = ({ purchasedItem }) => {
   const [isClose, setIsClose] = useState(false);
   const { modalData, modalPrice } = purchasedItem;
+  // double destructuring:
+  const [{ purchasedItems, closeItem }, dispatch] = useContext(StateContext);
 
-  const handleClose = () => {
+  const handleClose = (productId) => {
+    console.log(productId);
+    console.log(purchasedItems, "old");
     setIsClose(true);
+    const newModalData = purchasedItems.filter(
+      (item) => item.modalData.id !== productId
+    );
+    console.log(newModalData);
+    dispatch({
+      type: "CLOSEITEM",
+      payload: newModalData,
+    });
+    console.log(closeItem, "item closed");
   };
 
   return (
@@ -28,7 +42,7 @@ const CartProduct = ({ purchasedItem }) => {
               <div className="product-rarity">{modalData.rarity.value}</div>
             </Info__name>
             <div className="price-cost">${modalPrice.price}</div>
-            <Info__close onClick={handleClose} />
+            <Info__close onClick={() => handleClose(modalData.id)} />
           </Info__productContainer>
           <hr style={{ opacity: 0.3 }} />
         </Info>

@@ -1,31 +1,35 @@
-import {useContext, useEffect} from 'react'
-import {StateContext} from '../../context/StateProvider'
-import {InfoContainer, ModalClose, ModalFooter, ModalMain} from './Modal.elements'
-import gold_coin from "../../images/merch_image_icon/gold-coin.png"
+import { useContext, useEffect } from "react";
+import { StateContext } from "../../context/StateProvider";
+import {
+  InfoContainer,
+  ModalClose,
+  ModalFooter,
+  ModalMain,
+} from "./Modal.elements";
+import gold_coin from "../../images/merch_image_icon/gold-coin.png";
 
-const Modal = ({handleModal, setIsModal}) => {
+const Modal = ({ handleModal, setIsModal }) => {
   const [state, dispatch] = useContext(StateContext);
-  const {modalData, purchasedItems, modalPrice, cartCount} = state;
+  const { modalData, purchasedItems, modalPrice, cartCount } = state;
 
   const handlePurchase = () => {
     // Restrict user from purchasing the same item:
     if (!purchasedItems.includes(modalData)) {
       dispatch({
         type: "PURCHASEDITEM",
-        value: {modalData, modalPrice},
-      })
+        value: { modalData, modalPrice },
+      });
       dispatch({
         type: "CARTCOUNT",
         payload: cartCount,
-      })
-      console.log(modalData);
+      });
     }
-    setIsModal(prevStateModal => !prevStateModal);
-  }
+    setIsModal((prevStateModal) => !prevStateModal);
+  };
 
-  useEffect(() => {
-    console.log(purchasedItems);
-  }, [purchasedItems])
+  // useEffect(() => {
+  //   console.log(purchasedItems);
+  // }, [purchasedItems]);
 
   return (
     <ModalMain>
@@ -34,7 +38,10 @@ const Modal = ({handleModal, setIsModal}) => {
           <span>{modalData.type.value}</span>
         </div>
         {/* NOTE: Can't pass background gradient as props in styled-component. Hence, this is the workaround: */}
-        <div className="modal-background" style={{background: `${modalPrice.background}`}}>
+        <div
+          className="modal-background"
+          style={{ background: `${modalPrice.background}` }}
+        >
           <img src={modalData.images.featured} alt="Featured-image" />
         </div>
         <ModalClose onClick={handleModal} />
@@ -52,7 +59,7 @@ const Modal = ({handleModal, setIsModal}) => {
         </ModalFooter>
       </div>
     </ModalMain>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

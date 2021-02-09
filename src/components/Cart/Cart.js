@@ -38,35 +38,37 @@ const Cart = () => {
           </CartProduct__container>
         </InfoContainer>
         {/* Cart card */}
-        <Total>
-          <Total__header>cart totals</Total__header>
-          <Total__subtotal>
-            <div className="subtotal-name">
-              Subtotal ({`${purchasedItems.length}`} {`${pluralItem}`})
-            </div>
-            <CurrencyFormat
-              renderText={(value) => (
-                <div className="subtotal-price">{`${value}`}</div>
-              )}
-              decimalScale={2}
-              value={getCartTotal(purchasedItems)}
-              displayType={"text"}
-              thousandSeparator={true}
-              prefix={"$"}
-            />
-          </Total__subtotal>
-          <Total__shipping>
-            <div className="shipping-name">Shipping</div>
-            <div className="shipping-price">FREE</div>
-          </Total__shipping>
-          <Total__total>
-            <div className="total-name">Total</div>
-            <div className="total-price">$99.99</div>
-          </Total__total>
-          <Total__btn>
-            <button className="checkoutBtn">proceed to checkout</button>
-          </Total__btn>
-        </Total>
+        <CurrencyFormat
+          renderText={(value) => (
+            <>
+              <Total>
+                <Total__header>cart totals</Total__header>
+                <Total__subtotal>
+                  <div className="subtotal-name">
+                    Subtotal ({`${purchasedItems.length}`} {`${pluralItem}`})
+                  </div>
+                  <div className="subtotal-price">{`${value}`}</div>
+                </Total__subtotal>
+                <Total__shipping>
+                  <div className="shipping-name">Shipping</div>
+                  <div className="shipping-price">FREE</div>
+                </Total__shipping>
+                <Total__total>
+                  <div className="total-name">Total</div>
+                  <div className="total-price">{`${value}`}</div>
+                </Total__total>
+                <Total__btn>
+                  <button className="checkoutBtn">proceed to checkout</button>
+                </Total__btn>
+              </Total>
+            </>
+          )}
+          decimalScale={2}
+          value={getCartTotal(purchasedItems)}
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix={"$"}
+        />
       </MainContainer>
     </Main>
   );

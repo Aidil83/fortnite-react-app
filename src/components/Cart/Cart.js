@@ -16,8 +16,8 @@ import CurrencyFormat from "react-currency-format";
 import { getCartTotal } from "../../context/reducer";
 
 const Cart = () => {
-  const [{ purchasedItems, cartCount }] = useContext(StateContext);
-  const pluralItem = cartCount > 1 ? "items" : "item";
+  const [{ purchasedItems }] = useContext(StateContext);
+  const pluralItem = purchasedItems.length > 1 ? "items" : "item";
 
   return (
     <Main>
@@ -42,7 +42,7 @@ const Cart = () => {
           <Total__header>cart totals</Total__header>
           <Total__subtotal>
             <div className="subtotal-name">
-              Subtotal ({`${cartCount}`} {`${pluralItem}`})
+              Subtotal ({`${purchasedItems.length}`} {`${pluralItem}`})
             </div>
             <CurrencyFormat
               renderText={(value) => (

@@ -1,18 +1,41 @@
-import {useContext, useState} from "react";
-import styled, {css} from "styled-components/macro";
-import {StateContext} from '../../context/StateProvider';
+import { useContext, useState } from "react";
+import styled, { css } from "styled-components/macro";
+import { StateContext } from "../../context/StateProvider";
 import forniteLogo from "../../images/text_image/forniteLogo.png";
-import {NavCartBtn} from "./Navbar.elements";
-import {NavButton, NavContainer, NavLogo, NavMenu, NavMenuIcon, NavMenuItem, NavmenuItemSignIn} from "./Navbar.elements";
-import {NavMenuLeft, NavMenuRight, NavUserSignIn, NavUserLogo, NavMenuLeftMobile, NavCurrentHamburgerIcon} from "./Navbar.elements";
-import {NavHamburgerIcon, NavCloseIcon, Open, Close, SearchContainer, SearchContainerHidden, NavCart} from "./Navbar.elements";
+import { NavCartBtn } from "./Navbar.elements";
+import {
+  NavButton,
+  NavContainer,
+  NavLogo,
+  NavMenu,
+  NavMenuIcon,
+  NavMenuItem,
+  NavmenuItemSignIn,
+} from "./Navbar.elements";
+import {
+  NavMenuLeft,
+  NavMenuRight,
+  NavUserSignIn,
+  NavUserLogo,
+  NavMenuLeftMobile,
+  NavCurrentHamburgerIcon,
+} from "./Navbar.elements";
+import {
+  NavHamburgerIcon,
+  NavCloseIcon,
+  Open,
+  Close,
+  SearchContainer,
+  SearchContainerHidden,
+  NavCart,
+} from "./Navbar.elements";
 
-const Navbar = ({isOpen, handleToggle, count}) => {
+const Navbar = ({ isOpen, handleToggle, count }) => {
   const [isSearch, setIsSearch] = useState(true);
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
 
-  const [{cartCount}] = useContext(StateContext);
+  const [{ cartCount }] = useContext(StateContext);
 
   const handleSearch = () => {
     setIsSearch(!isSearch);
@@ -31,8 +54,8 @@ const Navbar = ({isOpen, handleToggle, count}) => {
             ) : isOpen ? (
               <NavCloseIcon onClick={handleToggle} toggle={isOpen} />
             ) : (
-                  <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />
-                )}
+              <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />
+            )}
           </NavMenuLeftMobile>
           {isSearch && (
             <NavMenuLeft>
@@ -63,19 +86,19 @@ const Navbar = ({isOpen, handleToggle, count}) => {
                 </div>
               </SearchContainerHidden>
             ) : (
-                <SearchContainer>
-                  <div className="search__Box" onBlur={handleSearch}>
-                    <input
-                      handleToggle
-                      type="text"
-                      placeholder="Search..."
-                    ></input>
-                  </div>
-                  <div className="search__Btn" onClick={handleSearch}>
-                    <Close />
-                  </div>
-                </SearchContainer>
-              )}
+              <SearchContainer>
+                <div className="search__Box" onBlur={handleSearch}>
+                  <input
+                    handleToggle
+                    type="text"
+                    placeholder="Search..."
+                  ></input>
+                </div>
+                <div className="search__Btn" onClick={handleSearch}>
+                  <Close />
+                </div>
+              </SearchContainer>
+            )}
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
               <NavCartBtn to="/cart">
                 <NavCart />

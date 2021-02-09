@@ -21,7 +21,7 @@ const Modal = ({ handleModal, setIsModal }) => {
       });
       dispatch({
         type: "CARTCOUNT",
-        payload: cartCount,
+        payload: cartCount + 1,
       });
     }
     setIsModal((prevStateModal) => !prevStateModal);

@@ -12,13 +12,17 @@ const CartProduct = ({ purchasedItem }) => {
   const [isClose, setIsClose] = useState(false);
   const { modalData, modalPrice } = purchasedItem;
   // double destructuring:
-  const [{ purchasedItems }, dispatch] = useContext(StateContext);
+  const [{ cartCount }, dispatch] = useContext(StateContext);
 
   const handleClose = (productId) => {
     setIsClose(true);
     dispatch({
       type: "REMOVE_FROM_CART",
       payload: productId,
+    });
+    dispatch({
+      type: "CARTCOUNT",
+      payload: cartCount - 1,
     });
   };
 

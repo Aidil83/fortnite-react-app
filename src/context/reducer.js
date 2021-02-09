@@ -56,13 +56,11 @@ const reducer = (state, action) => {
     case "CARTCOUNT":
       return {
         ...state,
-        cartCount: action.payload + 1,
+        cartCount: action.payload,
       };
     case "REMOVE_FROM_CART":
       let newCart = [...state.purchasedItems];
 
-      console.log(state.purchasedItems, "this");
-      console.log(action, "idid");
       const index = state.purchasedItems.findIndex((cartItem) => {
         return cartItem.modalData.id === action.payload;
       });

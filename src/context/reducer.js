@@ -6,15 +6,14 @@ export const initialState = {
   firstCard: 0,
   purchasedItems: [],
   cartCount: 0,
-  closeItem: [],
 };
 
 const reducer = (state, action) => {
   // console.log(action);
 
-  // if (action.value) {
-  //   console.log([...state.purchasedItems, action.value]);
-  // }
+  if (action.value) {
+    console.log([...state.purchasedItems, action.value]);
+  }
 
   // NOTE: This is where all the logics happen:
   switch (action.type) {
@@ -59,10 +58,25 @@ const reducer = (state, action) => {
         ...state,
         cartCount: action.payload + 1,
       };
-    case "CLOSEITEM":
+    case "REMOVE_FROM_CART":
+      let newCart = [...state.purchasedItems];
+
+      console.log(state.purchasedItems, "this");
+      console.log(action, "idid");
+      const index = state.purchasedItems.findIndex((cartItem) => {
+        return cartItem.modalData.id === action.payload;
+      });
+
+      if (index >= 0) {
+        // item exists in basket, remove it...
+        newCart.splice(index, 1);
+      } else {
+        console.warn(`Can't remove product (id: ${action.payload}) as its not`);
+      }
+      // console.log(newCart, "removed 1");
       return {
         ...state,
-        closeItem: action.payload,
+        purchasedItems: newCart,
       };
     default:
       return state;

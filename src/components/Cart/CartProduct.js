@@ -12,21 +12,14 @@ const CartProduct = ({ purchasedItem }) => {
   const [isClose, setIsClose] = useState(false);
   const { modalData, modalPrice } = purchasedItem;
   // double destructuring:
-  const [{ purchasedItems, closeItem }, dispatch] = useContext(StateContext);
+  const [{ purchasedItems }, dispatch] = useContext(StateContext);
 
   const handleClose = (productId) => {
-    console.log(productId);
-    console.log(purchasedItems, "old");
     setIsClose(true);
-    const newModalData = purchasedItems.filter(
-      (item) => item.modalData.id !== productId
-    );
-    console.log(newModalData);
     dispatch({
-      type: "CLOSEITEM",
-      payload: newModalData,
+      type: "REMOVE_FROM_CART",
+      payload: productId,
     });
-    console.log(closeItem, "item closed");
   };
 
   return (

@@ -5,7 +5,6 @@ export const initialState = {
   hoverCard: {},
   firstCard: 0,
   purchasedItems: [],
-  cartCount: 0,
 };
 
 export const getCartTotal = (purchasedItem) =>
@@ -55,11 +54,6 @@ const reducer = (state, action) => {
       return {
         ...state,
         purchasedItems: [...state.purchasedItems, action.value],
-      };
-    case "CARTCOUNT":
-      return {
-        ...state,
-        cartCount: action.payload,
       };
     case "REMOVE_FROM_CART":
       let newCart = [...state.purchasedItems];

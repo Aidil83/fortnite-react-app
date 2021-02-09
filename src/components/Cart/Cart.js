@@ -12,11 +12,13 @@ import EditIcon from "@material-ui/icons/Edit";
 import CartProduct from "./CartProduct";
 import { useContext } from "react";
 import { StateContext } from "../../context/StateProvider";
+import CurrencyFormat from "react-currency-format";
+import { getCartTotal } from "../../context/reducer";
 
 const Cart = () => {
   const [{ purchasedItems, cartCount }] = useContext(StateContext);
-
   const pluralItem = cartCount > 1 ? "items" : "item";
+
   return (
     <Main>
       <Title>
@@ -42,7 +44,16 @@ const Cart = () => {
             <div className="subtotal-name">
               Subtotal ({`${cartCount}`} {`${pluralItem}`})
             </div>
-            <div className="subtotal-price">$99.99</div>
+            <CurrencyFormat
+              renderText={(value) => (
+                <div className="subtotal-price">{`${value}`}</div>
+              )}
+              decimalScale={2}
+              value={getCartTotal(purchasedItems)}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+            />
           </Total__subtotal>
           <Total__shipping>
             <div className="shipping-name">Shipping</div>

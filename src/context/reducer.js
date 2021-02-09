@@ -8,12 +8,15 @@ export const initialState = {
   cartCount: 0,
 };
 
+export const getCartTotal = (purchasedItem) =>
+  purchasedItem?.reduce((amount, item) => item.modalPrice.price + amount, 0);
+
 const reducer = (state, action) => {
   // console.log(action);
 
-  if (action.value) {
-    console.log([...state.purchasedItems, action.value]);
-  }
+  // if (action.value) {
+  //   console.log([...state.purchasedItems, action.value]);
+  // }
 
   // NOTE: This is where all the logics happen:
   switch (action.type) {

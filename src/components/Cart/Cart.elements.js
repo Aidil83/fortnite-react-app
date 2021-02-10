@@ -190,7 +190,19 @@ export const Total__shipping = styled.div`
   padding: 0.55em 0;
   ${fs};
   font-size: clamp(1rem, 3vw, 1.2rem);
+  & .shipping-price {
+    color: #00d200;
+  }
 `;
+
+export const Total__tax = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55em 0;
+  ${fs};
+  font-size: clamp(1rem, 3vw, 1.2rem);
+`;
+
 export const Total__total = styled.div`
   display: flex;
   justify-content: space-between;

@@ -150,7 +150,7 @@ export const Info__name = styled.div`
 export const Total = styled.div`
   width: 100%;
   max-width: 400px;
-  max-height: 280px;
+  max-height: 320px;
   background: #fafafa;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
   padding: 1.1em;
@@ -161,6 +161,7 @@ export const Total = styled.div`
   margin-top: 30px;
   @media (min-width: 1000px) {
     margin-top: 50px;
+    padding-bottom: 2em;
   }
 `;
 export const Total__header = styled.div`

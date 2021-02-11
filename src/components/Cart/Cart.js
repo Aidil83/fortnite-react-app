@@ -14,7 +14,11 @@ import CartProduct from "./CartProduct";
 import { useContext } from "react";
 import { StateContext } from "../../context/StateProvider";
 import CurrencyFormat from "react-currency-format";
-import { getCartTotal } from "../../context/reducer";
+import {
+  getCartTotal,
+  getEstimatedTax,
+  getTotalPrice,
+} from "../../context/reducer";
 
 const Cart = () => {
   const [{ purchasedItems }] = useContext(StateContext);
@@ -43,46 +47,57 @@ const Cart = () => {
           </CartProduct__container>
         </InfoContainer>
         {/* Cart card */}
-        <CurrencyFormat
-          renderText={(value) => {
-            // NOTE: Used regex to parse string with a comma thousand separator to a number.
-            console.log(value.replace(/[^\d\.\-]/g, ""));
-            const calcTax = value.replace(/[^\d\.\-]/g, "") * 0.08;
-            return (
-              <>
-                <Total>
-                  <Total__header>cart totals</Total__header>
-                  <Total__subtotal>
-                    <div className="subtotal-name">
-                      Subtotal ({`${purchasedItems.length}`} {`${pluralItem}`})
-                    </div>
-                    <div className="subtotal-price">{value}</div>
-                  </Total__subtotal>
-                  <Total__tax>
-                    <div className="tax-label">Estimated Tax</div>
-                    <div className="tax-price">${calcTax}</div>
-                  </Total__tax>
-                  <Total__shipping>
-                    <div className="shipping-name">Shipping</div>
-                    <div className="shipping-price">FREE</div>
-                  </Total__shipping>
-                  <Total__total>
-                    <div className="total-name">Total</div>
-                    <div className="total-price">{value}</div>
-                  </Total__total>
-                  <Total__btn>
-                    <button className="checkoutBtn">proceed to checkout</button>
-                  </Total__btn>
-                </Total>
-              </>
-            );
-          }}
-          decimalScale={2}
-          value={getCartTotal(purchasedItems)}
-          displayType={"text"}
-          thousandSeparator={true}
-          prefix={"$"}
-        />
+        <Total>
+          <Total__header>cart totals</Total__header>
+          <Total__subtotal>
+            <div className="subtotal-name">
+              Subtotal ({`${purchasedItems.length}`} {`${pluralItem}`})
+            </div>
+            <CurrencyFormat
+              renderText={(value) => {
+                return <div className="subtotal-price">{value}</div>;
+              }}
+              decimalScale={2}
+              value={getCartTotal(purchasedItems)}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+            />
+          </Total__subtotal>
+          <Total__tax>
+            <div className="tax-label">Estimated Tax</div>
+            <CurrencyFormat
+              renderText={(value) => {
+                return <div className="tax-price">{value}</div>;
+              }}
+              decimalScale={2}
+              value={getEstimatedTax(purchasedItems)}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+            />
+          </Total__tax>
+          <Total__shipping>
+            <div className="shipping-name">Shipping</div>
+            <div className="shipping-price">FREE</div>
+          </Total__shipping>
+          <Total__total>
+            <div className="total-name">Total</div>
+            <CurrencyFormat
+              renderText={(value) => {
+                return <div className="total-price">{value}</div>;
+              }}
+              decimalScale={2}
+              value={getTotalPrice(purchasedItems)}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+            />
+          </Total__total>
+          <Total__btn>
+            <button className="checkoutBtn">proceed to checkout</button>
+          </Total__btn>
+        </Total>
       </MainContainer>
     </Main>
   );

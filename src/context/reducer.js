@@ -7,8 +7,30 @@ export const initialState = {
   purchasedItems: [],
 };
 
+// NOTE: Used regex to parse string with a comma thousand separator to a number.
+// console.log(value.replace(/[^\d\.\-]/g, ""));
+// const calcTax = value.replace(/[^\d\.\-]/g, "") * 0.08;
+// const calcTotal = calcTax + value;
+
 export const getCartTotal = (purchasedItem) =>
   purchasedItem?.reduce((amount, item) => item.modalPrice.price + amount, 0);
+
+export const getEstimatedTax = (purchasedItem) => {
+  return (
+    purchasedItem?.reduce((amount, item) => item.modalPrice.price + amount, 0) *
+    0.08
+  );
+};
+
+export const getTotalPrice = (purchasedItem) => {
+  const subtotal = purchasedItem?.reduce(
+    (amount, item) => item.modalPrice.price + amount,
+    0
+  );
+
+  const tax = subtotal * 0.08;
+  return tax + subtotal;
+};
 
 const reducer = (state, action) => {
   // console.log(action);

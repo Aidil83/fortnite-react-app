@@ -18,7 +18,6 @@ export const MerchMain = styled.div`
 export const MerchHeroMain = styled.div`
   width: 100%;
   height: 100%;
-  /* margin-top: 6em; */
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -25,10 +25,6 @@ const Cart = () => {
   const [{ purchasedItems }] = useContext(StateContext);
   const pluralItem = purchasedItems.length > 1 ? "items" : "item";
 
-  const calcTax = (tax) => {
-    return tax * 0.08;
-  };
-
   return (
     <Main>
       <Title>

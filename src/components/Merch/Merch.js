@@ -127,7 +127,13 @@ const Merch = () => {
     <>
       {/* <MerchMain style={{backgroundImage: `url(${hoverCard.images?.featured})`}}> */}
       <MerchMain style={{ backgroundImage: `url(${backdrop6})` }}>
-        {isModal && <Modal handleModal={handleModal} setIsModal={setIsModal} />}
+        {isModal && (
+          <Modal
+            handleModal={handleModal}
+            setIsModal={setIsModal}
+            isModal={isModal}
+          />
+        )}
         <MerchHeroMain>
           <MerchHeroContainer>
             {firstCard === 0 ? (

@@ -5,10 +5,11 @@ import {
   ModalClose,
   ModalFooter,
   ModalMain,
+  ModalOverlay,
 } from "./Modal.elements";
 import gold_coin from "../../images/merch_image_icon/gold-coin.png";
 
-const Modal = ({ handleModal, setIsModal }) => {
+const Modal = ({ isModal, handleModal, setIsModal }) => {
   const [state, dispatch] = useContext(StateContext);
   const { modalData, purchasedItems, modalPrice } = state;
 
@@ -54,6 +55,7 @@ const Modal = ({ handleModal, setIsModal }) => {
           </div>
         </ModalFooter>
       </div>
+      <ModalOverlay isModal={isModal} onClick={() => setIsModal(false)} />
     </ModalMain>
   );
 };

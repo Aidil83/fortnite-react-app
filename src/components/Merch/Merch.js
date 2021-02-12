@@ -1,17 +1,26 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import {MerchListContainer, MerchSpinner, } from "./Merch.elements";
-import {MerchMain, MerchHeroContainer, MerchListCard, MerchHidden} from "./Merch.elements";
+import {
+  MerchHeroMain,
+  MerchListContainer,
+  MerchSpinner,
+} from "./Merch.elements";
+import {
+  MerchMain,
+  MerchHeroContainer,
+  MerchListCard,
+  MerchHidden,
+} from "./Merch.elements";
 import MerchCard from "./MerchCard";
-import {NavigateBefore, NavigateNext} from "@material-ui/icons";
-import {Modal} from '..';
-import {ModalData} from '../../data/ModalData';
-import {useContext} from 'react';
-import {StateContext} from '../../context/StateProvider';
-import backdrop6 from '../../images/backdrop/backdrop6.jpg';
+import { NavigateBefore, NavigateNext } from "@material-ui/icons";
+import { Modal } from "..";
+import { ModalData } from "../../data/ModalData";
+import { useContext } from "react";
+import { StateContext } from "../../context/StateProvider";
+import backdrop6 from "../../images/backdrop/backdrop6.jpg";
 
 const Merch = () => {
-  const [{hoverCard, firstCard, getApi}, dispatch] = useContext(StateContext);
+  const [{ hoverCard, firstCard, getApi }, dispatch] = useContext(StateContext);
 
   const [loadStart, setLoadStart] = useState(1);
   const [loadEnd, setLoadEnd] = useState(30);
@@ -22,7 +31,9 @@ const Merch = () => {
     (async () => {
       const res = await axios("https://fortnite-api.com/v2/cosmetics/br");
       const _data = res.data.data;
-      const featuredData = _data.filter((item) => item.images.featured !== null);
+      const featuredData = _data.filter(
+        (item) => item.images.featured !== null
+      );
       //IMPORTANT: shuffling method:
       function shuffle(array) {
         return array.sort(() => Math.random() - 0.5);
@@ -33,13 +44,13 @@ const Merch = () => {
       dispatch({
         type: "GETAPI",
         getApi: featuredData,
-      })
+      });
     })();
   }, []);
 
   useEffect(() => {
     setTimeout(() => setSpinner(false), 2500);
-  }, [loadStart, loadEnd])
+  }, [loadStart, loadEnd]);
 
   const handlePrevtBtn = () => {
     // NOTE: 30 cuz asynchronous render
@@ -73,85 +84,117 @@ const Merch = () => {
     if (modalData.rarity?.value === "legendary") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: {price: 2000, background: ModalData.legendCard.radialOrange},
-      })
-    }
-    else if (modalData.rarity?.value === "epic") {
+        modalPrice: {
+          price: 2000,
+          background: ModalData.legendCard.radialOrange,
+        },
+      });
+    } else if (modalData.rarity?.value === "epic") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: {price: 1000, background: ModalData.epicCard.radialPurple},
-      })
-    }
-    else if (modalData.rarity?.value === "rare") {
+        modalPrice: {
+          price: 1000,
+          background: ModalData.epicCard.radialPurple,
+        },
+      });
+    } else if (modalData.rarity?.value === "rare") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: {price: 500, background: ModalData.rareCard.radialBlue},
-      })
-    }
-    else if (modalData.rarity?.value === "uncommon") {
+        modalPrice: { price: 500, background: ModalData.rareCard.radialBlue },
+      });
+    } else if (modalData.rarity?.value === "uncommon") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: {price: 300, background: ModalData.uncommonCard.radialGreen},
-      })
-    }
-    else if (modalData.rarity?.value === "common") {
+        modalPrice: {
+          price: 300,
+          background: ModalData.uncommonCard.radialGreen,
+        },
+      });
+    } else if (modalData.rarity?.value === "common") {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: {price: 100, background: ModalData.commonCard.radialGray},
-      })
-    }
-    else {
+        modalPrice: { price: 100, background: ModalData.commonCard.radialGray },
+      });
+    } else {
       dispatch({
         type: "MODALPRICE",
-        modalPrice: {price: 700, background: ModalData.specialCard.radialTan},
-      })
+        modalPrice: { price: 700, background: ModalData.specialCard.radialTan },
+      });
     }
   };
 
   return (
     <>
       {/* <MerchMain style={{backgroundImage: `url(${hoverCard.images?.featured})`}}> */}
-      <MerchMain style={{backgroundImage: `url(${backdrop6})`}}>
+      <MerchMain style={{ backgroundImage: `url(${backdrop6})` }}>
         {isModal && <Modal handleModal={handleModal} setIsModal={setIsModal} />}
-        <MerchHeroContainer >
-          {firstCard === 0 ? (spinner ? <></> : (<div className="innerContainer">
-            <img src={getApi[1]?.images?.featured} alt="" />
-            <div className="inner-description">
-              <h1>{getApi[1]?.name}</h1>
-              <h4>{getApi[1]?.description}</h4>
-            </div>
-          </div>)) :
-            (spinner ? <></> : (<div className="innerContainer">
-              <img src={hoverCard?.images?.featured} alt="" />
-              <div className="inner-description">
-                <h1>{hoverCard?.name}</h1>
-                <h4>{hoverCard?.description}</h4>
+        <MerchHeroMain>
+          <MerchHeroContainer>
+            {firstCard === 0 ? (
+              spinner ? (
+                <></>
+              ) : (
+                <div className="innerContainer">
+                  <img src={getApi[1]?.images?.featured} alt="" />
+                  <div className="inner-description">
+                    <h1>{getApi[1]?.name}</h1>
+                    <h4>{getApi[1]?.description}</h4>
+                  </div>
+                </div>
+              )
+            ) : spinner ? (
+              <></>
+            ) : (
+              <div className="innerContainer">
+                <img src={hoverCard?.images?.featured} alt="" />
+                <div className="inner-description">
+                  <h1>{hoverCard?.name}</h1>
+                  <h4>{hoverCard?.description}</h4>
+                </div>
               </div>
-            </div>))}
-        </MerchHeroContainer>
-        <MerchListContainer>
-          {spinner ? <MerchListCard><MerchSpinner color={"#999999"} size={60} css={spinnerOverride} /></MerchListCard> : (<MerchListCard>
-            {getApi.map((item, id) => {
-              return (
-                // Display 30 images:
-                id >= loadStart &&
-                id <= loadEnd && <>
-                  <MerchCard item={item} id={id} handleModal={handleModal} />
-                  <MerchHidden>
-                    <img src={item.images.featured} alt={id} />
-                  </MerchHidden></>
-              );
-            })}
-          </MerchListCard>)}
-          <div className="buttonContainer">
-            <button>
-              <NavigateBefore onMouseDown={handlePrevtBtn} />
-            </button>
-            <button>
-              <NavigateNext onMouseDown={handleNextBtn} />
-            </button>
-          </div>
-        </MerchListContainer>
+            )}
+          </MerchHeroContainer>
+          <MerchListContainer>
+            {spinner ? (
+              <MerchListCard>
+                <MerchSpinner
+                  color={"#999999"}
+                  size={60}
+                  css={spinnerOverride}
+                />
+              </MerchListCard>
+            ) : (
+              <MerchListCard>
+                {getApi.map((item, id) => {
+                  return (
+                    // Display 30 images:
+                    id >= loadStart &&
+                    id <= loadEnd && (
+                      <>
+                        <MerchCard
+                          item={item}
+                          id={id}
+                          handleModal={handleModal}
+                        />
+                        <MerchHidden>
+                          <img src={item.images.featured} alt={id} />
+                        </MerchHidden>
+                      </>
+                    )
+                  );
+                })}
+              </MerchListCard>
+            )}
+            <div className="buttonContainer">
+              <button>
+                <NavigateBefore onMouseDown={handlePrevtBtn} />
+              </button>
+              <button>
+                <NavigateNext onMouseDown={handleNextBtn} />
+              </button>
+            </div>
+          </MerchListContainer>
+        </MerchHeroMain>
       </MerchMain>
     </>
   );
@@ -161,6 +204,6 @@ const spinnerOverride = `
   @media screen and (max-width: 767px){
     top: 150px;
   }
-`
+`;
 
 export default Merch;

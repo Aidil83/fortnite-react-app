@@ -11,11 +11,21 @@ export const MerchMain = styled.div`
   background-size: cover;
   top: 51px;
   width: 100%;
+  height: 100vh;
   margin-bottom: 50px;
 `;
 
+export const MerchHeroMain = styled.div`
+  width: 100%;
+  height: 100%;
+  /* margin-top: 6em; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 export const MerchHeroContainer = styled.div`
-  min-height: 32vh;
+  margin-bottom: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -42,6 +52,7 @@ export const MerchHeroContainer = styled.div`
     }
     & .inner-description {
       width: 40%;
+      max-width: 700px;
       height: 200px;
       padding-left: 10px;
       display: flex;

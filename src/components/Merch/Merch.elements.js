@@ -11,7 +11,7 @@ export const MerchMain = styled.div`
   background-size: cover;
   top: 51px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-bottom: 50px;
 `;
 
@@ -61,6 +61,11 @@ export const MerchHeroContainer = styled.div`
       color: #f0f0f0;
     }
   }
+  @media screen and (max-width: 1600px) {
+    margin-top: 50px;
+    padding-top: 10px;
+  }
+
   @media screen and (max-width: 767px) {
     overflow: hidden;
     display: none;

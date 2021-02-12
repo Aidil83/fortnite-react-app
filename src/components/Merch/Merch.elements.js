@@ -80,6 +80,7 @@ export const MerchListContainer = styled.div`
   width: 100%;
   & .buttonContainer {
     width: 70%;
+    max-width: 950px;
     display: flex;
     justify-content: space-around;
     button {

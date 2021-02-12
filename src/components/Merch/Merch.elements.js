@@ -49,6 +49,14 @@ export const MerchHeroContainer = styled.div`
       background-position: top;
       padding-top: 10px;
       padding-left: 130px;
+      @media screen and (min-width: 1600px) {
+        height: 350px;
+        margin-bottom: 20px;
+      }
+      @media screen and (min-width: 1800px) {
+        height: 400px;
+        margin-bottom: 70px;
+      }
     }
     & .inner-description {
       width: 40%;

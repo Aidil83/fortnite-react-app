@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled, { keyframes } from "styled-components/macro";
 import CloseIcon from "@material-ui/icons/Close";
 
 export const ModalMain = styled.div`
@@ -203,11 +203,21 @@ export const ModalFooter = styled.div`
   }
 `;
 
+const animateCart = keyframes`
+   0% {
+    opacity: 0; 
+  }
+  100%{
+    opacity: 1;
+  }
+`;
+
 export const ModalOverlay = styled.div`
   display: ${({ isModal }) => (isModal ? "block" : "none")};
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  animation: ${animateCart} 0.35s;
 `;

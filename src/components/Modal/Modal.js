@@ -20,6 +20,10 @@ const Modal = ({ isModal, handleModal, setIsModal }) => {
         type: "PURCHASEDITEM",
         value: { modalData, modalPrice },
       });
+      dispatch({
+        type: "PURCHASEDINDICATOR",
+        payload: true,
+      });
     }
     setIsModal((prevStateModal) => !prevStateModal);
   };

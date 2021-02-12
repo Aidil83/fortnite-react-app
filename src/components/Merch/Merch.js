@@ -77,6 +77,7 @@ const Merch = () => {
   // coming from MerchCard
   const handleModal = (modalData) => {
     setIsModal(!isModal);
+
     dispatch({
       type: "MODALDATA",
       modalData: modalData,

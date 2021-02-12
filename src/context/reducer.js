@@ -5,6 +5,7 @@ export const initialState = {
   hoverCard: {},
   firstCard: 0,
   purchasedItems: [],
+  purchasedIndicator: false,
 };
 
 // NOTE: Used regex to parse string with a comma thousand separator to a number.
@@ -76,6 +77,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         purchasedItems: [...state.purchasedItems, action.value],
+      };
+    case "PURCHASEDINDICATOR":
+      return {
+        ...state,
+        purchasedIndicator: action.payload,
       };
     case "REMOVE_FROM_CART":
       let newCart = [...state.purchasedItems];

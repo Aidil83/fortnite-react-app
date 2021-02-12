@@ -35,7 +35,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
 
-  const [{ purchasedItems }] = useContext(StateContext);
+  const [{ purchasedItems, purchasedIndicator }] = useContext(StateContext);
 
   const handleSearch = () => {
     setIsSearch(!isSearch);
@@ -100,7 +100,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               </SearchContainer>
             )}
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
-              <NavCartBtn to="/cart">
+              <NavCartBtn to="/cart" indicator={purchasedIndicator}>
                 <NavCart />
                 <span>{purchasedItems.length}</span>
                 <div className="cart-indication">

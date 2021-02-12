@@ -225,7 +225,7 @@ export const ModalOverlay = styled.div`
   width: 100%;
   height: 100vh;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.55);
   z-index: 1;
-  animation: ${animateInCart} 0.35s;
+  animation: ${animateInCart} 0.3s;
 `;

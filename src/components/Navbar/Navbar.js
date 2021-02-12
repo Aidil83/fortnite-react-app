@@ -109,6 +109,21 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               <NavUserLogo />
               <NavUserSignIn>SIGN IN</NavUserSignIn>
             </NavmenuItemSignIn>
+            <NavCartBtn
+              to="/cart"
+              css={`
+                margin-right: 10px;
+                @media screen and (min-width: 768px) {
+                  display: none;
+                }
+                @media screen and (max-width: 320px) {
+                  display: none;
+                }
+              `}
+            >
+              <NavCart />
+              <span>{purchasedItems.length}</span>
+            </NavCartBtn>
             <NavButton href="https://www.epicgames.com/fortnite/en-US/download">
               DOWNLOAD
             </NavButton>

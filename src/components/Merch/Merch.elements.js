@@ -1,6 +1,5 @@
 import styled from "styled-components/macro";
-import HashLoader from 'react-spinners/HashLoader';
-
+import HashLoader from "react-spinners/HashLoader";
 
 export const MerchMain = styled.div`
   display: flex;
@@ -9,6 +8,7 @@ export const MerchMain = styled.div`
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   top: 51px;
   width: 100%;
   margin-bottom: 50px;
@@ -26,7 +26,14 @@ export const MerchHeroContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(270.03deg, rgba(102, 110, 139, 0) -3.51%, rgba(102, 110, 139, 0.1) -3.5%, rgba(79, 87, 117, 0.7) 31.67%, rgba(79, 87, 117, 0.7) 68.25%, rgba(102, 110, 139, 0.1) 100.33%); 
+    background: linear-gradient(
+      270.03deg,
+      rgba(102, 110, 139, 0) -3.51%,
+      rgba(102, 110, 139, 0.1) -3.5%,
+      rgba(79, 87, 117, 0.7) 31.67%,
+      rgba(79, 87, 117, 0.7) 68.25%,
+      rgba(102, 110, 139, 0.1) 100.33%
+    );
     img {
       height: 330px;
       background-position: top;
@@ -43,9 +50,9 @@ export const MerchHeroContainer = styled.div`
       color: #f0f0f0;
     }
   }
-  @media screen and (max-width: 767px){
-  overflow: hidden;
-  display: none;
+  @media screen and (max-width: 767px) {
+    overflow: hidden;
+    display: none;
   }
 `;
 
@@ -76,9 +83,9 @@ export const MerchListContainer = styled.div`
       }
     }
   }
-  @media screen and (max-width: 767px){
-  overflow: hidden;
-  height: 70%;
+  @media screen and (max-width: 767px) {
+    overflow: hidden;
+    height: 70%;
   }
 `;
 
@@ -89,7 +96,7 @@ export const MerchSpinner = styled(HashLoader)`
   width: 100%;
   max-width: 1200px;
   margin: 5px 14px;
-  padding-top:5px; 
+  padding-top: 5px;
   display: flex;
   justify-content: center;
   flex-flow: wrap;
@@ -98,12 +105,12 @@ export const MerchSpinner = styled(HashLoader)`
   position: relative;
   top: 140px;
 
-  @media screen and (min-width: 1200px){
-  overflow: hidden;
+  @media screen and (min-width: 1200px) {
+    overflow: hidden;
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
   }
-`
+`;
 
 export const MerchListCard = styled.div`
   height: 100%;
@@ -112,18 +119,17 @@ export const MerchListCard = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 5px 14px;
-  padding-top:5px; 
+  padding-top: 5px;
   display: flex;
   justify-content: center;
   flex-flow: wrap;
   overflow-x: hidden;
   overflow-y: auto;
 
-  @media screen and (min-width: 1200px){
-  overflow: hidden;
+  @media screen and (min-width: 1200px) {
+    overflow: hidden;
   }
 `;
-
 
 export const MerchHidden = styled.div`
   display: none;

@@ -1,10 +1,19 @@
-import {Blog, Cart, Footer, Merch, Navbar, Sidebar, Wrapper} from "./components";
-import {AppContainer, RouteError, RouteErrorImage} from "./App.elements";
+import {
+  Blog,
+  Cart,
+  Footer,
+  Merch,
+  Navbar,
+  Sidebar,
+  Wrapper,
+  Checkout,
+} from "./components";
+import { AppContainer, RouteError, RouteErrorImage } from "./App.elements";
 import GlobalStyle from "./globalStyles";
-import {useState} from "react";
+import { useState } from "react";
 import styled from "styled-components/macro";
-import {SliderData} from "./data/SliderData";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { SliderData } from "./data/SliderData";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import construction from "./images/construction/maintenance.jpg";
 
 function App() {
@@ -34,6 +43,9 @@ function App() {
           <Route path="/cart" exact>
             <Cart />
           </Route>
+          <Route path="/checkout" exact>
+            <Checkout />
+          </Route>
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">
             <RouteError img={construction}>
@@ -41,7 +53,9 @@ function App() {
                 <div className="container">
                   <div className="inner-container">
                     <h1>under development</h1>
-                    <h4>We’re making lots of improvements and will be back soon</h4>
+                    <h4>
+                      We’re making lots of improvements and will be back soon
+                    </h4>
                   </div>
                 </div>
               </RouteErrorImage>
@@ -55,7 +69,7 @@ function App() {
 }
 
 const AppOverlay = styled.div`
-  display: ${({isOpen}) => (isOpen ? "block" : "none")};
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   position: fixed;
   top: 0;
   bottom: 0;

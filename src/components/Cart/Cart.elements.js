@@ -218,6 +218,7 @@ export const Total__btn = styled.div`
   justify-content: center;
   & .checkoutBtn {
     border: none;
+    text-decoration: none;
     padding: 0.6em 1.5em 0.3em 1.5em;
     margin: 1em;
     text-transform: uppercase;
@@ -229,6 +230,11 @@ export const Total__btn = styled.div`
     letter-spacing: 0.05em;
     background-color: #1d0070;
     color: #fff;
+    cursor: pointer;
+    &:hover {
+      background-color: #000069;
+      color: #f3f3f3;
+    }
   }
 `;
 

@@ -19,6 +19,7 @@ import {
   getEstimatedTax,
   getTotalPrice,
 } from "../../context/reducer";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [{ purchasedItems }] = useContext(StateContext);
@@ -95,7 +96,9 @@ const Cart = () => {
             />
           </Total__total>
           <Total__btn>
-            <button className="checkoutBtn">proceed to checkout</button>
+            <Link to="/checkout" className="checkoutBtn">
+              proceed to checkout
+            </Link>
           </Total__btn>
         </Total>
       </MainContainer>

@@ -1,10 +1,10 @@
-import styled, { css, keyframes } from "styled-components/macro";
-import { Link } from "react-router-dom";
-import { FaUserPlus } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
-import { IoCloseOutline, IoSearchOutline } from "react-icons/io5";
-import { GiShoppingCart } from "react-icons/gi";
+import styled, {css, keyframes} from "styled-components/macro";
+import {Link} from "react-router-dom";
+import {FaUserPlus} from "react-icons/fa";
+import {GiHamburgerMenu} from "react-icons/gi";
+import {AiOutlineClose} from "react-icons/ai";
+import {IoCloseOutline, IoSearchOutline} from "react-icons/io5";
+import {GiShoppingCart} from "react-icons/gi";
 
 const media = {
   Laptop: "@media (max-width: 1740px)",
@@ -29,7 +29,7 @@ export const NavContainer = styled.div`
 export const NavLogo = styled(Link)`
   position: relative;
   z-index: 1;
-  background-image: url(${({ img }) => img});
+  background-image: url(${({img}) => img});
   background-position: 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -49,7 +49,7 @@ export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: ${({ isSearch }) =>
+  justify-content: ${({isSearch}) =>
     isSearch ? "space-between" : "flex-end"};
   font-family: sans-serif, arial;
   font-size: 11px;
@@ -77,7 +77,7 @@ export const NavMenuLeftMobile = styled.div`
   @media screen and (max-width: 1190px) {
     position: relative;
     z-index: 1;
-    display: ${({ isSearch }) => (isSearch ? "flex" : "none")};
+    display: ${({isSearch}) => (isSearch ? "flex" : "none")};
     align-items: center;
     justify-content: center;
     height: 51px;
@@ -107,12 +107,12 @@ export const NavCurrentHamburgerIcon = styled(GiHamburgerMenu)`
 
 export const NavHamburgerIcon = styled(GiHamburgerMenu)`
   animation-name: ${animateCloseIcon};
-  animation-duration: ${({ isOpen }) => (isOpen ? "0s" : "0.7s")};
+  animation-duration: ${({isOpen}) => (isOpen ? "0s" : "0.7s")};
 `;
 
 export const NavCloseIcon = styled(AiOutlineClose)`
   animation-name: ${animateCloseIcon};
-  animation-duration: ${({ isOpen }) => (isOpen ? "0s" : "0.7s")};
+  animation-duration: ${({isOpen}) => (isOpen ? "0s" : "0.7s")};
 `;
 
 export const NavMenuRight = styled.li`
@@ -205,7 +205,7 @@ export const NavMenuIcon = styled.i`
   height: 51px;
   ${NavLink};
   ${NavMobileReset};
-  ${({ primary }) => (primary ? `${NavUnderline}` : null)};
+  ${({primary}) => (primary ? `${NavUnderline}` : null)};
 
   margin: 0 7px;
 
@@ -292,7 +292,7 @@ export const SearchContainer = styled.div`
 `;
 
 export const SearchContainerHidden = styled.div`
-  visibility: ${({ isLoad }) => (isLoad ? "visible" : "hidden")};
+  visibility: ${({isLoad}) => (isLoad ? "visible" : "hidden")};
   position: absolute;
   left: 0;
   right: 278px;
@@ -352,7 +352,7 @@ export const SearchContainerHidden = styled.div`
 `;
 
 export const Open = styled(IoSearchOutline)`
-  display: ${({ isSearch }) => (isSearch ? "flex" : "none")};
+  display: ${({isSearch}) => (isSearch ? "flex" : "none")};
 `;
 
 export const Close = styled(IoCloseOutline)`
@@ -414,6 +414,41 @@ export const NavCartBtn = styled(Link)`
     width: 30px;
     max-width: 30px;
     font-size: 0.85rem;
+  }
+  & .cart-indication {
+    display: flex;
+    position: absolute;
+    top: 45px;
+    right: -58px;
+    width: 150px;
+    height: 100%;
+    padding-bottom: 12px;
+    border-radius: 2px;
+    transform: rotate(180deg);
+    background-color: #ff5454;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      63% 75%,
+      51% 100%,
+      38% 75%,
+      0% 75%
+    );
+    color: #000;
+    div {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 30px;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(180deg);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1.25px;
+    }
   }
 `;
 

@@ -203,12 +203,20 @@ export const ModalFooter = styled.div`
   }
 `;
 
-const animateCart = keyframes`
+const animateInCart = keyframes`
    0% {
     opacity: 0; 
   }
   100%{
     opacity: 1;
+  }
+`;
+const animateOutCart = keyframes`
+   0% {
+    opacity: 1; 
+  }
+  100%{
+    opacity: 0;
   }
 `;
 
@@ -219,5 +227,5 @@ export const ModalOverlay = styled.div`
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  animation: ${animateCart} 0.35s;
+  animation: ${animateInCart} 0.35s;
 `;

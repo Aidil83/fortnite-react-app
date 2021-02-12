@@ -103,6 +103,9 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               <NavCartBtn to="/cart">
                 <NavCart />
                 <span>{purchasedItems.length}</span>
+                <div className="cart-indication">
+                  <div>Item Added!</div>
+                </div>
               </NavCartBtn>
             </NavMenuIcon>
             <NavmenuItemSignIn to="/sign_in">

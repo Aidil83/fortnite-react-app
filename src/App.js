@@ -7,6 +7,7 @@ import {
   Sidebar,
   Wrapper,
   Checkout,
+  SignIn,
 } from "./components";
 import { AppContainer, RouteError, RouteErrorImage } from "./App.elements";
 import GlobalStyle from "./globalStyles";
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path="/checkout" exact>
             <Checkout />
+          </Route>
+          <Route path="/sign_in" exact>
+            <SignIn />
           </Route>
           {/* NOTE: Catch any routes that don't match and display 404. */}
           <Route path="/">

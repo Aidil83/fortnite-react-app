@@ -7,3 +7,4 @@ export { default as Merch } from "./Merch/Merch";
 export { default as Modal } from "./Modal/Modal";
 export { default as Cart } from "./Cart/Cart";
 export { default as Checkout } from "./Checkout/Checkout";
+export { default as SignIn } from "./SignIn/SignIn";

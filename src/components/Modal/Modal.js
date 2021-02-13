@@ -22,7 +22,7 @@ const Modal = ({ isModal, handleModal, setIsModal }) => {
       });
       dispatch({
         type: "PURCHASEDINDICATOR",
-        payload: true,
+        payload: handlePurchase,
       });
     }
     setIsModal((prevStateModal) => !prevStateModal);

@@ -5,7 +5,7 @@ export const initialState = {
   hoverCard: {},
   firstCard: 0,
   purchasedItems: [],
-  purchasedIndicator: false,
+  purchasedIndicator: null,
 };
 
 // NOTE: Used regex to parse string with a comma thousand separator to a number.

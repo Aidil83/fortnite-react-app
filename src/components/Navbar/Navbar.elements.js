@@ -401,20 +401,20 @@ export const NavButton = styled.a`
   }
 `;
 
-const animateIndicator = keyframes`
-   0% {
-    opacity: 0; 
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-`;
+// const animateIndicator = keyframes`
+//    0% {
+//     opacity: 0;
+//   }
+//   10% {
+//     opacity: 1;
+//   }
+//   90% {
+//     opacity: 1;
+//   }
+//   100%{
+//     opacity: 0;
+//   }
+// `;
 
 export const NavCartBtn = styled(Link)`
   height: 51px;
@@ -431,8 +431,7 @@ export const NavCartBtn = styled(Link)`
     font-size: 0.85rem;
   }
   & .cart-indication {
-    display: ${({ indicator }) => (indicator ? "flex" : "none")};
-    animation: ${animateIndicator} 4s forwards;
+    display: none;
     position: absolute;
     top: 45px;
     right: -58px;

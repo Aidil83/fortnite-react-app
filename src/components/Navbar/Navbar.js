@@ -1,4 +1,5 @@
-import { useContext, useState } from "react";
+import gsap from "gsap/gsap-core";
+import { useContext, useEffect, useState } from "react";
 import styled, { css } from "styled-components/macro";
 import { StateContext } from "../../context/StateProvider";
 import forniteLogo from "../../images/text_image/forniteLogo.png";
@@ -34,8 +35,27 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
   const [isSearch, setIsSearch] = useState(true);
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
+  const [loadIndicator, setLoadIndicator] = useState(0);
 
   const [{ purchasedItems, purchasedIndicator }] = useContext(StateContext);
+
+  useEffect(() => {
+    if (loadIndicator >= 1)
+      gsap
+        .timeline()
+        .to(".cart-indication", {
+          display: "flex",
+          autoAlpha: 1,
+          duration: 0.3,
+        })
+        .to(".cart-indication", { display: "flex", duration: 2 })
+        .to(".cart-indication", {
+          display: "none",
+          autoAlpha: 0,
+          duration: 0.35,
+        });
+    setLoadIndicator(loadIndicator + 1);
+  }, [purchasedIndicator]);
 
   const handleSearch = () => {
     setIsSearch(!isSearch);

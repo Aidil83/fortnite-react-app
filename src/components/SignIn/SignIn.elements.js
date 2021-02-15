@@ -11,9 +11,11 @@ export const Main = styled.div`
 
 export const LoginContainer = styled.div`
   width: 85%;
-  max-width: 500px;
-  min-height: 80vh;
+  max-width: 320px;
+  min-height: 90%;
   height: 100%;
+  max-height: 800px;
+  padding-top: 30px;
   margin-bottom: 9vh;
   display: flex;
   flex-direction: column;
@@ -52,20 +54,21 @@ export const LoginInner = styled.div`
   }
   & input {
     height: 2.2rem;
+    max-width: 400px;
     border: none;
     border-radius: 10px;
   }
   & .login-btn {
     margin: 3.5em auto;
     width: fit-content;
-    padding: 1em 7em;
+    padding: 1em 6em;
     background-color: #8000ff;
     color: #fff;
     border: none;
     border-radius: 20px;
     font-family: Roboto;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 12px;
   }
   & .option-title {

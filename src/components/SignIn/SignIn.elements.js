@@ -88,6 +88,9 @@ export const LoginInner = styled.div`
     font-size: clamp(0.8rem, 4vw, 1.1rem);
     line-height: 12px;
     cursor: pointer;
+    &:hover {
+      background-color: #7301e6;
+    }
   }
   & .option-title {
     display: flex;
@@ -118,15 +121,23 @@ export const LoginInner = styled.div`
     margin-bottom: 2rem;
     padding: 0.5em 1.8em;
     padding-left: 1.1em;
-    background: #e0ffe9;
-    border-radius: 20px;
-    border: 1px solid #a9a9a9;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    border: 1px solid #7c7c7c;
     color: #6d6d6d;
     cursor: pointer;
+    &:hover {
+      background-color: #fdff7c;
+      color: #000;
+      border: 1px solid #e7e7e7;
+      & .demo-logo {
+        color: #00e239;
+      }
+    }
     & .demo-logo {
       margin-right: 0.2em;
       font-size: clamp(1.4rem, 4vw, 1.8rem);
-      color: #00ff00;
+      color: #5bc3ff;
     }
     & .demo-name {
       font-size: clamp(1rem, 4vw, 1.1rem);

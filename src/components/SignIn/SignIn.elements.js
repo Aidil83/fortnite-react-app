@@ -23,6 +23,10 @@ export const LoginContainer = styled.div`
   justify-content: center;
   background-color: #e7e7e7;
   border-radius: 6px;
+  @media screen and (min-width: 768px) {
+    max-width: 400px;
+    min-height: 600px;
+  }
 `;
 
 export const LoginInner = styled.div`
@@ -35,7 +39,7 @@ export const LoginInner = styled.div`
     margin-bottom: 1em;
     font-family: Roboto;
     font-weight: bold;
-    font-size: 24px;
+    font-size: clamp(1.2rem, 4vw, 1.7rem);
     line-height: 28px;
     margin-left: 0.15em;
   }
@@ -43,7 +47,7 @@ export const LoginInner = styled.div`
     margin-bottom: 0.3em;
     font-family: Roboto;
     font-weight: normal;
-    font-size: 18px;
+    font-size: clamp(1rem, 4vw, 1.3rem);
     line-height: 21px;
     margin-left: 0.25em;
   }
@@ -51,10 +55,13 @@ export const LoginInner = styled.div`
     margin-top: 1.75em;
     margin-bottom: 0.3em;
     margin-left: 0.25em;
+    font-size: clamp(1rem, 4vw, 1.3rem);
   }
   & input {
-    height: 2.2rem;
-    max-width: 400px;
+    min-height: 2.2rem;
+    height: 100vh;
+    max-height: 2.7rem;
+    max-width: 350px;
     border: none;
     border-radius: 10px;
   }
@@ -68,7 +75,7 @@ export const LoginInner = styled.div`
     border-radius: 20px;
     font-family: Roboto;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: clamp(1rem, 4vw, 1.1rem);
     line-height: 12px;
   }
   & .option-title {
@@ -77,7 +84,7 @@ export const LoginInner = styled.div`
     align-self: center;
     align-items: center;
     font-family: Roboto;
-    font-size: 12px;
+    font-size: clamp(0.8rem, 4vw, 1rem);
     line-height: 14px;
     margin: 0.8em 0;
     color: #a6a6a6;
@@ -86,7 +93,7 @@ export const LoginInner = styled.div`
       text-align: center;
     }
     & hr {
-      width: 80%;
+      width: 70%;
       border: none;
       height: 2px;
       background: #fff;
@@ -98,14 +105,18 @@ export const LoginInner = styled.div`
     align-items: center;
     margin-top: 2em;
     padding: 0.5em 1.8em;
+    padding-left: 1.1em;
     background: #e0ffe9;
     border-radius: 20px;
     border: 1px solid #a9a9a9;
     color: #6d6d6d;
     & .demo-logo {
       margin-right: 0.2em;
-      font-size: 1.4rem;
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
       color: #00ff00;
+    }
+    & .demo-name {
+      font-size: clamp(1rem, 4vw, 1.1rem);
     }
   }
 `;

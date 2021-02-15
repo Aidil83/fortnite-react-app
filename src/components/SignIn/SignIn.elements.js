@@ -91,6 +91,10 @@ export const LoginInner = styled.div`
     &:hover {
       background-color: #7301e6;
     }
+    &:focus {
+      outline: none;
+      background-color: #5a01b4;
+    }
   }
   & .option-title {
     display: flex;
@@ -133,6 +137,12 @@ export const LoginInner = styled.div`
       & .demo-logo {
         color: #00e239;
       }
+    }
+    &:focus {
+      outline: none;
+      background-color: #fdff7c;
+      color: #000;
+      border: 1px solid #e7e7e7;
     }
     & .demo-logo {
       margin-right: 0.2em;

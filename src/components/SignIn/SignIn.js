@@ -8,11 +8,11 @@ const SignIn = () => {
           <div className="login-name">Login</div>
           <div className="login-username">Username</div>
           <div className="input-container">
-            <input type="text" />
+            <input type="text" placeholder="Type here..." />
           </div>
           <div className="login-password">Password</div>
           <div className="input-container">
-            <input type="text" />
+            <input type="text" placeholder="Type here..." />
           </div>
           <button className="login-btn">login</button>
           <div className="option-title">

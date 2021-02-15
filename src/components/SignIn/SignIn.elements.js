@@ -67,8 +67,10 @@ export const LoginInner = styled.div`
     & input {
       border: none;
       border-radius: 10px;
-      padding: 0.85em 1em;
+      padding: 0.75em 1em;
       width: 100%;
+      font-size: 1rem;
+      
       &:focus {
         outline: none;
         box-shadow: 0 0 5px #b038ff;

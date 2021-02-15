@@ -57,13 +57,23 @@ export const LoginInner = styled.div`
     margin-left: 0.25em;
     font-size: clamp(1rem, 4vw, 1.3rem);
   }
-  & input {
+  & .input-container {
     min-height: 2.2rem;
     height: 100vh;
     max-height: 2.7rem;
     max-width: 350px;
-    border: none;
-    border-radius: 10px;
+    padding: 1em 0;
+
+    & input {
+      border: none;
+      border-radius: 10px;
+      padding: 0.85em 1em;
+      width: 100%;
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 5px #b038ff;
+      }
+    }
   }
   & .login-btn {
     margin: 3em auto;

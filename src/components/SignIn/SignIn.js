@@ -7,9 +7,13 @@ const SignIn = () => {
         <LoginInner>
           <div className="login-name">Login</div>
           <div className="login-username">Username</div>
-          <input type="text" />
+          <div className="input-container">
+            <input type="text" />
+          </div>
           <div className="login-password">Password</div>
-          <input type="text" />
+          <div className="input-container">
+            <input type="text" />
+          </div>
           <button className="login-btn">login</button>
           <div className="option-title">
             <hr />

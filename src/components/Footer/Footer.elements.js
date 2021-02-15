@@ -17,10 +17,10 @@ export const Main = styled.footer`
   background-color: #2a2a2a;
   overflow: hidden;
   @media screen and (min-width: 1024px) {
-  height: 50vh;
+    height: 50vh;
   }
   @media screen and (min-width: 1300px) {
-  height: 100%;
+    height: 100%;
   }
 `;
 

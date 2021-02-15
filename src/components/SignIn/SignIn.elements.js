@@ -11,15 +11,16 @@ export const Main = styled.div`
 
 export const LoginContainer = styled.div`
   width: 85%;
+  max-width: 500px;
   min-height: 80vh;
   height: 100%;
-  margin-bottom: 20%;
+  margin-bottom: 9vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #e7e7e7;
-  border-radius: 4px;
+  border-radius: 6px;
 `;
 
 export const LoginInner = styled.div`

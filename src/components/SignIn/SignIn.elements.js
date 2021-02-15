@@ -77,6 +77,7 @@ export const LoginInner = styled.div`
     text-transform: uppercase;
     font-size: clamp(0.8rem, 4vw, 1.1rem);
     line-height: 12px;
+    cursor: pointer;
   }
   & .option-title {
     display: flex;
@@ -111,6 +112,7 @@ export const LoginInner = styled.div`
     border-radius: 20px;
     border: 1px solid #a9a9a9;
     color: #6d6d6d;
+    cursor: pointer;
     & .demo-logo {
       margin-right: 0.2em;
       font-size: clamp(1.4rem, 4vw, 1.8rem);

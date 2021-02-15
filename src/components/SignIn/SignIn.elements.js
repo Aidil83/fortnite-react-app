@@ -66,16 +66,16 @@ export const LoginInner = styled.div`
     border-radius: 10px;
   }
   & .login-btn {
-    margin: 3.5em auto;
+    margin: 3em auto;
     width: fit-content;
-    padding: 1em 6em;
+    padding: 0.8em 6em;
     background-color: #8000ff;
     color: #fff;
     border: none;
     border-radius: 20px;
     font-family: Roboto;
     text-transform: uppercase;
-    font-size: clamp(1rem, 4vw, 1.1rem);
+    font-size: clamp(0.8rem, 4vw, 1.1rem);
     line-height: 12px;
   }
   & .option-title {
@@ -104,6 +104,7 @@ export const LoginInner = styled.div`
     display: flex;
     align-items: center;
     margin-top: 2em;
+    margin-bottom: 2rem;
     padding: 0.5em 1.8em;
     padding-left: 1.1em;
     background: #e0ffe9;

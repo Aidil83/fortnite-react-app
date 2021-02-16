@@ -22,8 +22,30 @@ export const BlogButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const BlogButton = styled.button``;
-export const BlogLoadMore = styled.p``;
+export const BlogButton = styled.button`
+  border: 4px solid #000;
+  background-color: #fff;
+  padding: 0em 1.6em;
+  transition: 0.3s ease-in-out;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+
+  &:hover {
+    transform: skewX(-4deg);
+    transition: 0.3s ease-in-out;
+    background-color: #000;
+    border: 4px solid #000;
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+  }
+`;
+export const BlogLoadMore = styled.p`
+  font-family: "Luckiest Guy", Roboto;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 2;
+`;
 export const BlogImageContainer = styled.div`
   position: relative;
   min-width: 100%;

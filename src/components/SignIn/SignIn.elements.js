@@ -31,7 +31,7 @@ box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.3);
   }
 `;
 
-export const LoginInner = styled.div`
+export const LoginInner = styled.form`
   width: 90%;
   min-height: 430px;
   height: 100%;

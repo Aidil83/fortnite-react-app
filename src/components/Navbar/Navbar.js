@@ -1,3 +1,4 @@
+import { VerifiedUser } from "@material-ui/icons";
 import gsap from "gsap/gsap-core";
 import { useContext, useEffect, useState } from "react";
 import styled, { css } from "styled-components/macro";
@@ -37,7 +38,9 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
   const [loadCount, setLoadCount] = useState(0);
   const [loadIndicator, setLoadIndicator] = useState(0);
 
-  const [{ purchasedItems, purchasedIndicator }] = useContext(StateContext);
+  const [{ purchasedItems, purchasedIndicator, trackLogin }] = useContext(
+    StateContext
+  );
 
   useEffect(() => {
     if (loadIndicator >= 1)
@@ -129,8 +132,12 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               </NavCartBtn>
             </NavMenuIcon>
             <NavmenuItemSignIn to="/sign_in">
-              <NavUserLogo />
-              <NavUserSignIn>SIGN IN</NavUserSignIn>
+              {trackLogin === "SIGN IN" ? (
+                <NavUserLogo />
+              ) : (
+                <VerifiedUser style={{ fontSize: "1.2rem" }} />
+              )}
+              <NavUserSignIn>{trackLogin}</NavUserSignIn>
             </NavmenuItemSignIn>
             <NavCartBtn
               to="/cart"

@@ -6,12 +6,9 @@ export const initialState = {
   firstCard: 0,
   purchasedItems: [],
   purchasedIndicator: null,
+  trackLogin: "SIGN IN",
+  trackDemo: "Bob",
 };
-
-// NOTE: Used regex to parse string with a comma thousand separator to a number.
-// console.log(value.replace(/[^\d\.\-]/g, ""));
-// const calcTax = value.replace(/[^\d\.\-]/g, "") * 0.08;
-// const calcTotal = calcTax + value;
 
 export const getCartTotal = (purchasedItem) =>
   purchasedItem?.reduce((amount, item) => item.modalPrice.price + amount, 0);
@@ -100,6 +97,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         purchasedItems: newCart,
+      };
+    case "TRACK_LOGIN":
+      return {
+        ...state,
+        trackLogin: action.payload,
       };
     default:
       return state;

@@ -7,6 +7,7 @@ export const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+background: radial-gradient(45.93% 79.75% at 51% 47%,rgba(20,0,255,0.273292) 0%,#6633D1 59.98%,#4C309B 110.99%,#4C309B 100%);
 `;
 
 export const LoginContainer = styled.div`
@@ -22,6 +23,7 @@ export const LoginContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #e7e7e7;
+box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   @media screen and (min-width: 768px) {
     max-width: 400px;

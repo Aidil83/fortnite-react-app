@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const SidebarMain = styled.div`
   display: none;
@@ -8,7 +8,7 @@ export const SidebarMain = styled.div`
     display: block;
     position: fixed;
     z-index: 3;
-    right: ${({isOpen}) => (isOpen ? "0" : "-1080px")};
+    right: ${({ isOpen }) => (isOpen ? "0" : "-1080px")};
     transition: 300ms;
     top: 51px;
     height: calc(100vh - 51px);
@@ -21,9 +21,9 @@ export const SidebarMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 400px;
+  height: 320px;
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: white;
 `;

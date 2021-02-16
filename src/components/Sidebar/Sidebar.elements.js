@@ -40,3 +40,18 @@ export const SidebarItem = styled(Link)`
     color: #fff;
   }
 `;
+
+export const SidebarFooter = styled.div`
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  margin-top: auto;
+  background-color: lime;
+
+  & .Footer__container {
+    height: 100px;
+    width: 100%;
+    background-color: aqua;
+  }
+`;

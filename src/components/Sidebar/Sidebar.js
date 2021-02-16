@@ -1,4 +1,11 @@
-import { SidebarItem, SidebarMain, SidebarMenu } from "./Sidebar.elements";
+import {
+  SidebarFooter,
+  SidebarItem,
+  SidebarMain,
+  SidebarMenu,
+} from "./Sidebar.elements";
+import { GiShoppingCart } from "react-icons/gi";
+import { FaUserPlus } from "react-icons/fa";
 
 const Sidebar = ({ isOpen, handleToggle }) => {
   return (
@@ -27,6 +34,17 @@ const Sidebar = ({ isOpen, handleToggle }) => {
             CART
           </SidebarItem>
         </SidebarMenu>
+        <SidebarFooter>
+          <div className="Footer__container">
+            <div className="Footer__searchBar">
+              <input type="text" placeholder="Search..." />
+            </div>
+            <div className="Footer__icons">
+              <FaUserPlus />
+              <GiShoppingCart />
+            </div>
+          </div>
+        </SidebarFooter>
       </SidebarMain>
     </>
   );

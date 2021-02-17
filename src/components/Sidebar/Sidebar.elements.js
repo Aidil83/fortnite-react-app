@@ -83,12 +83,12 @@ export const SidebarFooter = styled.div`
         padding: 1em 0;
         border-right: solid 1px #3d3d3d;
         h3 {
-          font-size: 1rem;
+          font-size: 1.1rem;
           margin-right: 0.6em;
         }
       }
       & .icon {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         align-self: center;
       }
       & .icon-cart {

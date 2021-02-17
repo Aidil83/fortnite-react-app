@@ -40,11 +40,15 @@ const Sidebar = ({ isOpen, handleToggle }) => {
                 <input type="text" placeholder="Search..." />
               </div>
               <div className="Footer__icons">
-                <Link to="/sign_in" className="icon-signIn">
+                <Link
+                  to="/sign_in"
+                  className="icon-signIn"
+                  onClick={handleToggle}
+                >
                   <h3>Sign In</h3>
                   <FaUserPlus className="icon" />
                 </Link>
-                <Link to="/cart" className="icon-cart">
+                <Link to="/cart" className="icon-cart" onClick={handleToggle}>
                   <GiShoppingCart className="icon" />
                 </Link>
               </div>

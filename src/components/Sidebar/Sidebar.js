@@ -39,8 +39,13 @@ const Sidebar = ({ isOpen, handleToggle }) => {
                 <input type="text" placeholder="Search..." />
               </div>
               <div className="Footer__icons">
-                <FaUserPlus />
-                <GiShoppingCart />
+                <div className="icon-signIn">
+                  <h3>Sign In</h3>
+                  <FaUserPlus className="icon" />
+                </div>
+                <div className="icon-cart">
+                  <GiShoppingCart className="icon" />
+                </div>
               </div>
             </div>
           </SidebarFooter>

@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export const SidebarMain = styled.div`
   display: none;
@@ -8,11 +8,11 @@ export const SidebarMain = styled.div`
     display: block;
     position: fixed;
     z-index: 3;
-    right: ${({ isOpen }) => (isOpen ? "0" : "-1080px")};
+    right: ${({isOpen}) => (isOpen ? "0" : "-1080px")};
     transition: 300ms;
     top: 51px;
     height: calc(100vh - 51px);
-    width: calc(100% - 100px);
+    width: calc(100% - 50px);
     background-color: #2a2a2a;
   }
 `;
@@ -47,14 +47,56 @@ export const SidebarFooter = styled.div`
   display: flex;
   align-items: flex-end;
   margin-top: auto;
-  background-color: lime;
 
   & .Footer__container {
-    height: 100px;
+    height: 120px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    background-color: aqua;
+    justify-content: space-between;
+    background-color: #303030;
+    & .Footer__searchBar {
+      padding: 1em;
+      input {
+        border: none;
+        width: 100%;
+        padding: 0.4em 0.5em;
+        border-radius: 4px;
+        background-color: #444444;
+        font-size: 1.2rem;
+        border-style: none;
+        outline: none;
+        color: white;
+      }
+    }
+    & .Footer__icons {
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      border-top: solid 1px #3d3d3d;
+      & .icon-signIn {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0;
+        border-right: solid 1px #3d3d3d;
+        h3 {
+          font-size: 1rem;
+          margin-right: 0.6em;
+        }
+      }
+      & .icon {
+        font-size: 1.5rem;
+        align-self: center;
+      }
+      & .icon-cart {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        height: 100%;
+      }
+    }
   }
 `;

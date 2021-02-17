@@ -41,6 +41,7 @@ export const SidebarItem = styled(Link)`
   color: #ccc;
 
   &:hover {
+          background-color: #3d3d3d;
     color: #fff;
   }
 `;

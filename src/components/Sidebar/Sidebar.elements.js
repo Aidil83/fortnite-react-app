@@ -12,7 +12,8 @@ export const SidebarMain = styled.div`
     transition: 300ms;
     top: 51px;
     height: calc(100vh - 51px);
-    width: calc(100% - 50px);
+    width: 85vw;
+    max-width: 400px;
     background-color: #2a2a2a;
   }
 `;
@@ -63,10 +64,11 @@ export const SidebarFooter = styled.div`
     background-color: #303030;
     & .Footer__searchBar {
       padding: 1em;
+      align-self: center;
       input {
         border: none;
         width: 100%;
-        max-width: 300px;
+        /* max-width: 300px; */
         padding: 0.4em 0.5em;
         border-radius: 4px;
         background-color: #444444;

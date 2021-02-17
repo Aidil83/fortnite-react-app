@@ -6,6 +6,7 @@ import {
 } from "./Sidebar.elements";
 import { GiShoppingCart } from "react-icons/gi";
 import { FaUserPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ isOpen, handleToggle }) => {
   return (
@@ -39,13 +40,13 @@ const Sidebar = ({ isOpen, handleToggle }) => {
                 <input type="text" placeholder="Search..." />
               </div>
               <div className="Footer__icons">
-                <div className="icon-signIn">
+                <Link to="/sign_in" className="icon-signIn">
                   <h3>Sign In</h3>
                   <FaUserPlus className="icon" />
-                </div>
-                <div className="icon-cart">
+                </Link>
+                <Link to="/cart" className="icon-cart">
                   <GiShoppingCart className="icon" />
-                </div>
+                </Link>
               </div>
             </div>
           </SidebarFooter>

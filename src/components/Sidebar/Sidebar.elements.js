@@ -68,7 +68,6 @@ export const SidebarFooter = styled.div`
       input {
         border: none;
         width: 100%;
-        /* max-width: 300px; */
         padding: 0.4em 0.5em;
         border-radius: 4px;
         background-color: #444444;
@@ -83,6 +82,7 @@ export const SidebarFooter = styled.div`
       height: 100%;
       justify-content: space-between;
       border-top: solid 1px #3d3d3d;
+      text-decoration: none;
       & .icon-signIn {
         display: flex;
         height: 100%;
@@ -91,20 +91,37 @@ export const SidebarFooter = styled.div`
         align-items: center;
         padding: 1em 0;
         border-right: solid 1px #3d3d3d;
+        cursor: pointer;
+        &:hover {
+          background-color: #3d3d3d;
+         & .icon, h3 {
+            color:#fff;
+          }
+        }
         h3 {
           font-size: 1.1rem;
           margin-right: 0.6em;
+          color: #ccc;
         }
       }
       & .icon {
         font-size: 1.8rem;
         align-self: center;
+        text-decoration: none;
+        color: #ccc;
       }
       & .icon-cart {
         display: flex;
         justify-content: center;
         width: 150px;
         height: 100%;
+        cursor: pointer;
+        &:hover {
+          background-color: #3d3d3d;
+          & .icon {
+            color: #fff;
+          }
+        }
       }
     }
   }

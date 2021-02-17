@@ -21,7 +21,7 @@ export const SidebarMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 320px;
+  height: 100%;
   width: 100%;
   font-size: 0.8rem;
   font-weight: 500;
@@ -43,7 +43,7 @@ export const SidebarItem = styled(Link)`
 
 export const SidebarFooter = styled.div`
   width: 100%;
-  height: 200px;
+  height: 100%;
   display: flex;
   align-items: flex-end;
   margin-top: auto;
@@ -52,6 +52,9 @@ export const SidebarFooter = styled.div`
   & .Footer__container {
     height: 100px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     background-color: aqua;
   }
 `;

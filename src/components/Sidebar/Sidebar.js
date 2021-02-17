@@ -33,18 +33,18 @@ const Sidebar = ({ isOpen, handleToggle }) => {
           <SidebarItem to="/cart" onClick={handleToggle}>
             CART
           </SidebarItem>
+          <SidebarFooter>
+            <div className="Footer__container">
+              <div className="Footer__searchBar">
+                <input type="text" placeholder="Search..." />
+              </div>
+              <div className="Footer__icons">
+                <FaUserPlus />
+                <GiShoppingCart />
+              </div>
+            </div>
+          </SidebarFooter>
         </SidebarMenu>
-        <SidebarFooter>
-          <div className="Footer__container">
-            <div className="Footer__searchBar">
-              <input type="text" placeholder="Search..." />
-            </div>
-            <div className="Footer__icons">
-              <FaUserPlus />
-              <GiShoppingCart />
-            </div>
-          </div>
-        </SidebarFooter>
       </SidebarMain>
     </>
   );

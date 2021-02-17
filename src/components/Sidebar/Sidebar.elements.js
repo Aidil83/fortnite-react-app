@@ -26,6 +26,9 @@ export const SidebarMenu = styled.div`
   font-size: 0.8rem;
   font-weight: 500;
   color: white;
+    @media screen and (min-width: 769px) {
+        max-height: 500px;
+  }
 `;
 export const SidebarItem = styled(Link)`
   padding: 1em 2em;
@@ -47,6 +50,9 @@ export const SidebarFooter = styled.div`
   display: flex;
   align-items: flex-end;
   margin-top: auto;
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
 
   & .Footer__container {
     height: 120px;
@@ -60,6 +66,7 @@ export const SidebarFooter = styled.div`
       input {
         border: none;
         width: 100%;
+        max-width: 300px;
         padding: 0.4em 0.5em;
         border-radius: 4px;
         background-color: #444444;

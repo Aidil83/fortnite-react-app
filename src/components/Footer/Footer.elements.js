@@ -50,6 +50,7 @@ export const SocialContainer = styled.div`
       position: absolute;
       right: 50px;
       border: 1px solid #ccc;
+      cursor: pointer;
       &:hover {
         color: #ff0;
         border: 1px solid #ff0;

@@ -20,8 +20,21 @@ import {
   CopyrightContainer,
   PlatFormContainer,
 } from "./Footer.elements";
+import gsap from "gsap/gsap-core";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
 
 const Footer = () => {
+  const scrollTop = (e) => {
+    e.stopPropagation();
+    gsap.to(window, {
+      duration: 0.7,
+      scrollTo: {
+        y: "top",
+        offsetY: 70,
+      },
+    });
+  };
   return (
     <Main>
       <MainContainer>
@@ -34,7 +47,7 @@ const Footer = () => {
             />
             <Instagram />
             <YouTube />
-            <KeyboardArrowUp className="arrow" />
+            <KeyboardArrowUp className="arrow" onClick={scrollTop} />
           </ul>
         </SocialContainer>
         <LinkContainer>

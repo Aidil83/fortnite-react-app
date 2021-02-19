@@ -13,8 +13,9 @@ const Modal = ({ isModal, handleModal, setIsModal }) => {
   const [state, dispatch] = useContext(StateContext);
   const { modalData, purchasedItems, modalPrice } = state;
 
-  const handlePurchase = () => {
+  const handlePurchase = (e) => {
     // Restrict user from purchasing the same item:
+    e.stopPropagation();
     if (!purchasedItems.includes(modalData)) {
       dispatch({
         type: "PURCHASEDITEM",

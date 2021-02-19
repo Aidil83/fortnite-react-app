@@ -7,10 +7,32 @@ export const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-background: radial-gradient(45.93% 79.75% at 51% 47%,rgba(20,0,255,0.273292) 0%,#6633D1 59.98%,#4C309B 110.99%,#4C309B 100%);
+  background: radial-gradient(
+    45.93% 79.75% at 51% 47%,
+    rgba(20, 0, 255, 0.273292) 0%,
+    #6633d1 59.98%,
+    #4c309b 110.99%,
+    #4c309b 100%
+  );
+`;
+
+export const LoginBackdrop1 = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 600px;
+`;
+
+export const LoginBackdrop2 = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  width: 600px;
 `;
 
 export const LoginContainer = styled.div`
+  position: relative;
+  z-index: 1;
   width: 85%;
   max-width: 320px;
   min-height: 90%;
@@ -23,7 +45,7 @@ export const LoginContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #e7e7e7;
-box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   @media screen and (min-width: 768px) {
     max-width: 400px;
@@ -72,7 +94,7 @@ export const LoginInner = styled.form`
       padding: 0.75em 1em;
       width: 100%;
       font-size: 1rem;
-      
+
       &:focus {
         outline: none;
         box-shadow: 0 0 5px #b038ff;

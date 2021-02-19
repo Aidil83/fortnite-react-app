@@ -1,8 +1,16 @@
-import { LoginContainer, LoginInner, Main } from "./SignIn.elements";
+import {
+  LoginBackdrop1,
+  LoginBackdrop2,
+  LoginContainer,
+  LoginInner,
+  Main,
+} from "./SignIn.elements";
 import { HiBadgeCheck } from "react-icons/hi";
 import { useContext, useState } from "react";
 import { StateContext } from "../../context/StateProvider";
 import { useHistory } from "react-router-dom";
+import signInImage1 from "../../images/signIn-image/signIn.png";
+import signInImage2 from "../../images/signIn-image/signIn2.png";
 const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -30,6 +38,8 @@ const SignIn = () => {
 
   return (
     <Main>
+      <LoginBackdrop1 src={signInImage1} alt="backdrop1" />
+      <LoginBackdrop2 src={signInImage2} alt="backdrop2" />
       <LoginContainer>
         <LoginInner>
           <div className="login-name">Login</div>

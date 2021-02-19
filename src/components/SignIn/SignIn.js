@@ -21,6 +21,11 @@ const SignIn = () => {
 
   const handleDemo = (e) => {
     e.preventDefault();
+    dispatch({
+      type: "TRACK_LOGIN",
+      payload: username,
+    });
+    history.goBack();
   };
 
   return (

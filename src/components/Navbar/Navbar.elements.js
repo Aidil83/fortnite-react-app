@@ -399,21 +399,6 @@ export const NavButton = styled.a`
   }
 `;
 
-// const animateIndicator = keyframes`
-//    0% {
-//     opacity: 0;
-//   }
-//   10% {
-//     opacity: 1;
-//   }
-//   90% {
-//     opacity: 1;
-//   }
-//   100%{
-//     opacity: 0;
-//   }
-// `;
-
 export const NavCartBtn = styled(Link)`
   height: 51px;
   display: flex;

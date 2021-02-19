@@ -131,6 +131,11 @@ export const SidebarFooter = styled.div`
           width: 30px;
           max-width: 30px;
           font-size: 0.85rem;
+          @media screen and (max-width: 768px) {
+            top: 760px;
+            right: 8px;
+            color: #ccc;
+          }
         }
         & .cart-indication {
           display: none;

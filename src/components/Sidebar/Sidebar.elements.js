@@ -125,15 +125,16 @@ export const SidebarFooter = styled.div`
           }
         }
         span {
-          position: absolute;
+          position: relative;
           top: 10px;
           right: -22px;
           width: 30px;
           max-width: 30px;
           font-size: 0.85rem;
           @media screen and (max-width: 768px) {
-            top: 760px;
-            right: 8px;
+            top: 10px;
+            right: 0;
+            width: 10px;
             color: #ccc;
           }
         }

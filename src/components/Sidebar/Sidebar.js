@@ -7,8 +7,12 @@ import {
 import { GiShoppingCart } from "react-icons/gi";
 import { FaUserPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { StateContext } from "../../context/StateProvider";
 
 const Sidebar = ({ isOpen, handleToggle }) => {
+  const [{ trackLogin }] = useContext(StateContext);
+
   return (
     <>
       <SidebarMain isOpen={isOpen}>
@@ -45,7 +49,7 @@ const Sidebar = ({ isOpen, handleToggle }) => {
                   className="icon-signIn"
                   onClick={handleToggle}
                 >
-                  <h3>Sign In</h3>
+                  <h3>{trackLogin}</h3>
                   <FaUserPlus className="icon" />
                 </Link>
                 <Link to="/cart" className="icon-cart" onClick={handleToggle}>

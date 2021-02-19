@@ -72,9 +72,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
         <NavLogo to="/" img={forniteLogo} />
         <NavMenu isSearch={isSearch}>
           <NavMenuLeftMobile isSearch={isSearch}>
-            {count > 1 ? (
-              <NavCurrentHamburgerIcon onClick={handleToggle} />
-            ) : isOpen ? (
+            {isOpen ? (
               <NavCloseIcon onClick={handleToggle} toggle={isOpen} />
             ) : (
               <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />

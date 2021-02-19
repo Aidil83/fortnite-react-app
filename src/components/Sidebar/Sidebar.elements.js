@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const SidebarMain = styled.div`
   display: none;
@@ -8,7 +8,7 @@ export const SidebarMain = styled.div`
     display: block;
     position: fixed;
     z-index: 3;
-    right: ${({isOpen}) => (isOpen ? "0" : "-1080px")};
+    right: ${({ isOpen }) => (isOpen ? "0" : "-1080px")};
     transition: 300ms;
     top: 51px;
     height: calc(100vh - 51px);
@@ -27,8 +27,8 @@ export const SidebarMenu = styled.div`
   font-size: 0.8rem;
   font-weight: 500;
   color: white;
-    @media screen and (min-width: 769px) {
-        max-height: 500px;
+  @media screen and (min-width: 769px) {
+    max-height: 500px;
   }
 `;
 export const SidebarItem = styled(Link)`
@@ -41,7 +41,7 @@ export const SidebarItem = styled(Link)`
   color: #ccc;
 
   &:hover {
-          background-color: #3d3d3d;
+    background-color: #3d3d3d;
     color: #fff;
   }
 `;
@@ -95,8 +95,9 @@ export const SidebarFooter = styled.div`
         cursor: pointer;
         &:hover {
           background-color: #3d3d3d;
-         & .icon, h3 {
-            color:#fff;
+          & .icon,
+          h3 {
+            color: #fff;
           }
         }
         h3 {
@@ -121,6 +122,49 @@ export const SidebarFooter = styled.div`
           background-color: #3d3d3d;
           & .icon {
             color: #fff;
+          }
+        }
+        span {
+          position: absolute;
+          top: 10px;
+          right: -22px;
+          width: 30px;
+          max-width: 30px;
+          font-size: 0.85rem;
+        }
+        & .cart-indication {
+          display: none;
+          position: absolute;
+          top: 45px;
+          right: -58px;
+          width: 150px;
+          height: 100%;
+          padding-bottom: 12px;
+          border-radius: 2px;
+          transform: rotate(180deg);
+          background-color: #ff5454;
+          clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 75%,
+            63% 75%,
+            51% 100%,
+            38% 75%,
+            0% 75%
+          );
+          color: #000;
+          div {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 30px;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(180deg);
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1.25px;
           }
         }
       }

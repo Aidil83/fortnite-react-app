@@ -23,7 +23,7 @@ const SignIn = () => {
     e.preventDefault();
     dispatch({
       type: "TRACK_LOGIN",
-      payload: username,
+      payload: "Player123",
     });
     history.goBack();
   };

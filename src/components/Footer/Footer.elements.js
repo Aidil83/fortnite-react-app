@@ -38,7 +38,6 @@ export const SocialContainer = styled.div`
   justify-content: space-around;
   height: 50px;
   width: 100%;
-  /* background-color: #000; */
   ul {
     width: 170px;
     display: flex;
@@ -46,6 +45,15 @@ export const SocialContainer = styled.div`
     .MuiSvgIcon-root {
       font-size: 1.8rem;
       color: #ccc;
+    }
+    .arrow {
+      position: absolute;
+      right: 50px;
+      border: 1px solid #ccc;
+      &:hover {
+        color: #ff0;
+        border: 1px solid #ff0;
+      }
     }
   }
 `;

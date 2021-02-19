@@ -11,7 +11,7 @@ import { useContext } from "react";
 import { StateContext } from "../../context/StateProvider";
 
 const Sidebar = ({ isOpen, handleToggle }) => {
-  const [{ trackLogin }] = useContext(StateContext);
+  const [{ trackLogin, purchasedItems }] = useContext(StateContext);
 
   return (
     <>
@@ -54,6 +54,10 @@ const Sidebar = ({ isOpen, handleToggle }) => {
                 </Link>
                 <Link to="/cart" className="icon-cart" onClick={handleToggle}>
                   <GiShoppingCart className="icon" />
+                  <span>{purchasedItems?.length}</span>
+                  <div className="cart-indication">
+                    <div>Item Added!</div>
+                  </div>
                 </Link>
               </div>
             </div>

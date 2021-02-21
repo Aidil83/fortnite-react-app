@@ -17,17 +17,28 @@ export const Main = styled.div`
 `;
 
 export const LoginBackdrop1 = styled.img`
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  width: 600px;
+  display: none;
+  @media screen and (min-width: 1024px) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    width: 40vw;
+    max-width: 1500px;
+    overflow: hidden;
+  }
 `;
 
 export const LoginBackdrop2 = styled.img`
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-  width: 600px;
+  display: none;
+  @media screen and (min-width: 1024px) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40vw;
+    max-width: 1500px;
+  }
 `;
 
 export const LoginContainer = styled.div`

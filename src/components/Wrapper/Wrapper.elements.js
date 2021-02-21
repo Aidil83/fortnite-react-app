@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components/macro";
 
 const media = {
   Laptop: "@media (max-width: 1740px)",
-  ipadPro: "@media only screen and (max-width: 1024px)",
+  ipadPro: "@media only screen and (min-width: 1024px)",
   ipad: "@media only screen and (max-width: 768px)",
   mobile: "@media only screen and (max-width: 480px)",
   mobileSm: "@media only screen and (max-width: 320px)",
@@ -138,11 +138,11 @@ export const WrapperTextContainer = styled.div`
 `;
 
 export const WrapperCaption = styled.div`
-  width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth}px;
+  width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth};
   height: 45px;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
-  font-size: 2rem;
+  font-size: clamp(2rem, 9.6vw, 2.3rem);
   color: ${({ slide }) => slide.captionColor};
 
   ${media.ipad} {
@@ -154,8 +154,6 @@ export const WrapperTitleTxt = styled.div`
   display: flex;
   justify-content: center;
   align-self: ${({ slide }) => slide.alignSelf};
-  /* height: 200px; */
-  height: 170px;
   line-height: 93.4px;
   width: 800px;
   font-family: "Luckiest Guy", cursive;
@@ -186,7 +184,7 @@ export const WrapperTitleTxt = styled.div`
     font-size: 90px;
   }
 
-  @media (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     margin-right: 0;
     width: ${({ slide }) => slide.widthTitleIpad}px;
     font-size: ${({ slide }) => slide.fontSizeTitleIpadSm};

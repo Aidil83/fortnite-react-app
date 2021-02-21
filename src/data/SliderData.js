@@ -51,7 +51,7 @@ export const SliderData = [
     widthTitleLaptop: "100%",
     posTitleBottomLaptop: "16%",
     posTitleBottomMobileWeb: "16%",
-    fontSizeTitleIpad: "clamp(3.8rem, 6vw, 10rem)",
+    fontSizeTitleIpad: "clamp(2.8rem, 6vw, 10rem)",
     alt: "Zero Point",
     backgroundImage: "linear-gradient(#0a2a8a, #178fd7, #0a2a8a)",
   },

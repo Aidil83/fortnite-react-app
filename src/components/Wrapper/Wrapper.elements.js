@@ -31,7 +31,7 @@ export const WrapperImage = styled.div`
 
   /* NOTE: Prevents auto scrolling after refreshing page: */
   overflow-anchor: none;
-  &.mobile2 {
+  /* &.mobile2 {
     @media (max-width: 768px) {
       background-image: url(${({ imgMobile }) => imgMobile});
     }
@@ -40,7 +40,7 @@ export const WrapperImage = styled.div`
     @media (max-width: 768px) {
       background-image: url(${({ imgMobile }) => imgMobile});
     }
-  }
+  } */
 `;
 
 export const PrevBtn = styled.button`
@@ -156,7 +156,7 @@ export const WrapperText = styled.img`
   margin-bottom: 0;
   opacity: 1;
 
-  ${media.ipad} {
+  /* ${media.ipad} {
     left: ${({ slide }) => slide.imgTxtIpad};
 
     &.mobile3 {
@@ -164,7 +164,7 @@ export const WrapperText = styled.img`
       bottom: 150%;
       margin-bottom: -45px;
     }
-  }
+  } */
 `;
 
 export const WrapperSection = styled.div`

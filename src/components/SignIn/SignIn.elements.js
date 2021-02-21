@@ -22,8 +22,8 @@ export const LoginBackdrop1 = styled.img`
     display: block;
     position: absolute;
     bottom: 0;
-    left: -30px;
-    width: 40vw;
+    left: -40px;
+    width: 33vw;
     max-width: 1500px;
     overflow: hidden;
   }
@@ -35,8 +35,8 @@ export const LoginBackdrop2 = styled.img`
     display: block;
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 40vw;
+    right: -15px;
+    width: 33vw;
     max-width: 1500px;
   }
 `;

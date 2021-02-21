@@ -129,7 +129,7 @@ export const WrapperTextContainer = styled.div`
   left: ${({ slide }) => slide.WrapperContainerLeft};
   bottom: ${({ slide }) => slide.WrapperContainerBottom};
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
     height: ${({ slide }) => slide.WrapperTextContainerHeight};
     width: 100%;
     bottom: 0;
@@ -139,7 +139,6 @@ export const WrapperTextContainer = styled.div`
 
 export const WrapperCaption = styled.div`
   width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth}px;
-  /* height: 145px; */
   height: 45px;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
@@ -295,8 +294,7 @@ export const WrapperButton = styled.button`
   position: absolute;
   bottom: 120px;
   background-color: ${({ slide }) => slide.bgBtnColor};
-  height: 48px;
-  width: 228px;
+  padding: 0.65em 1.5em;
   outline: none;
   border: none;
   cursor: pointer;
@@ -316,8 +314,8 @@ export const WrapperLearnMore = styled.p`
   color: black;
   font-family: "Luckiest Guy", cursive;
   font-size: 1.5rem;
-  width: 230px;
-  height: 100%;
+  /* width: 230px;
+  height: 100%; */
   letter-spacing: 2.1px;
   transition: 550ms ease;
   color: ${({ slide }) => slide.txtBtnColor};

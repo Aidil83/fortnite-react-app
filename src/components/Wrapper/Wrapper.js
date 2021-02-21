@@ -1,13 +1,24 @@
-import {useEffect, useRef, useState} from "react";
-import styled, {css} from "styled-components/macro";
-import {NavigateBefore, NavigateNext} from "@material-ui/icons";
-import {TweenMax} from "gsap";
-import {WrapperHidden, PrevBtn} from "./Wrapper.elements";
-import {WrapperImage, WrapperText, WrapperButton, WrapperLearnMore, NextBtn} from "./Wrapper.elements";
-import {WrapperTitleTxt, WrapperTextContainer, WrapperCaption, WrapperSection} from "./Wrapper.elements";
+import { useEffect, useRef, useState } from "react";
+import styled, { css } from "styled-components/macro";
+import { NavigateBefore, NavigateNext } from "@material-ui/icons";
+import { TweenMax } from "gsap";
+import { WrapperHidden, PrevBtn } from "./Wrapper.elements";
+import {
+  WrapperImage,
+  WrapperText,
+  WrapperButton,
+  WrapperLearnMore,
+  NextBtn,
+} from "./Wrapper.elements";
+import {
+  WrapperTitleTxt,
+  WrapperTextContainer,
+  WrapperCaption,
+  WrapperSection,
+} from "./Wrapper.elements";
 
 // NOTE: Using GSAP animation library:
-const Wrapper = ({slides}) => {
+const Wrapper = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -23,7 +34,7 @@ const Wrapper = ({slides}) => {
       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
     };
 
-    timeout.current = setTimeout(nextSlide, 4000);
+    // timeout.current = setTimeout(nextSlide, 4000);
 
     return function () {
       if (timeout.current) clearTimeout(timeout.current);
@@ -123,15 +134,15 @@ const Wrapper = ({slides}) => {
                     alt={slide.alt}
                   />
                 ) : (
-                    <WrapperTitleTxt
-                      slide={slide}
-                      ref={(e) => {
-                        animateSnowdown = e;
-                      }}
-                    >
-                      {slide.title}
-                    </WrapperTitleTxt>
-                  )}
+                  <WrapperTitleTxt
+                    slide={slide}
+                    ref={(e) => {
+                      animateSnowdown = e;
+                    }}
+                  >
+                    {slide.title}
+                  </WrapperTitleTxt>
+                )}
                 <WrapperSection ref={(e) => (animateSection = e)} slide={slide}>
                   {slide.section}
                 </WrapperSection>

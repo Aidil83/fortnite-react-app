@@ -24,8 +24,8 @@ export const SliderData = [
 
     WrapperTextContainerHeight: "49%",
 
-    imgmobileBigwidth: "380px",
-    imgmobileBigheight: "200px",
+    imgmobileBigwidth: "320px",
+    imgmobileBigheight: "110px",
   },
   {
     bgImage: bgImageTwo,

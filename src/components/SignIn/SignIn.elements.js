@@ -18,7 +18,7 @@ export const Main = styled.div`
 
 export const LoginBackdrop1 = styled.img`
   display: none;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     display: block;
     position: absolute;
     bottom: 0;
@@ -31,7 +31,7 @@ export const LoginBackdrop1 = styled.img`
 
 export const LoginBackdrop2 = styled.img`
   display: none;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     display: block;
     position: absolute;
     bottom: 0;

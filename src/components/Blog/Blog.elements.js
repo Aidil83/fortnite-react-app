@@ -45,6 +45,7 @@ export const BlogLoadMore = styled.p`
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2;
+  cursor: pointer;
 `;
 export const BlogImageContainer = styled.div`
   position: relative;

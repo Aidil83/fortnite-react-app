@@ -103,6 +103,8 @@ export const NextBtn = styled.button`
 `;
 
 export const WrapperTextContainer = styled.div`
+  width: 100%;
+  height: 100%;
   /* display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -114,34 +116,11 @@ export const WrapperTextContainer = styled.div`
   bottom: ${({ slide }) => slide.WrapperContainerBottom}; */
 `;
 
-export const WrapperCaption = styled.div`
-  /* width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth};
-  height: 45px;
-  align-self: center;
-  font-family: "Luckiest Guy", cursive;
-  font-size: clamp(2rem, 9.6vw, 2.3rem);
-  color: ${({ slide }) => slide.captionColor}; */
-`;
-
-export const WrapperTitleTxt = styled.div`
-  /* display: flex;
-  justify-content: center;
-  align-self: ${({ slide }) => slide.alignSelf};
-  line-height: 93.4px;
-  width: 800px;
-  font-family: "Luckiest Guy", cursive;
-  font-size: clamp(6.1rem, 6vw, 10rem);
-  font-weight: 500;
-  font-style: italic;
-  letter-spacing: 3.1px;
-  background-image: ${({ slide }) => slide.backgroundImage};
-  background-size: 100%;
-  /* NOTE: Ignore the linting: */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-`;
-
 export const WrapperText = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-top: 100px;
   /* display: flex;
   position: absolute;
   top: 0;
@@ -165,6 +144,33 @@ export const WrapperText = styled.img`
       margin-bottom: -45px;
     }
   } */
+`;
+
+export const WrapperTitleTxt = styled.div`
+  /* display: flex;
+  justify-content: center;
+  align-self: ${({ slide }) => slide.alignSelf};
+  line-height: 93.4px;
+  width: 800px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: clamp(6.1rem, 6vw, 10rem);
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 3.1px;
+  background-image: ${({ slide }) => slide.backgroundImage};
+  background-size: 100%;
+  /* NOTE: Ignore the linting: */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
+export const WrapperCaption = styled.div`
+  /* width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth};
+  height: 45px;
+  align-self: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: clamp(2rem, 9.6vw, 2.3rem);
+  color: ${({ slide }) => slide.captionColor}; */
 `;
 
 export const WrapperSection = styled.div`

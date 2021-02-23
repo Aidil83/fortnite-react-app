@@ -197,12 +197,16 @@ export const WrapperButton = styled.button`
   position: absolute;
   bottom: 160px;
   background-color: ${({ slide }) => slide.bgBtnColor};
-  padding: 0.45em 1.2em;
+  padding: 0.35em 0.8em;
   outline: none;
   border: none;
   cursor: pointer;
   animation: ${loadText} 1s linear;
   transition: 550ms ease-out;
+
+  ${media.ipad} {
+    padding: 0.7em 1.5em;
+  }
 
   /* &:hover {
     transform: skewX(-5deg);
@@ -216,7 +220,7 @@ export const WrapperLearnMore = styled.p`
   align-items: center; */
   color: black;
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(1.4rem, 7vw, 1.8rem);
+  font-size: clamp(1.5rem, 7vw, 1.8rem);
   letter-spacing: 2.1px;
   transition: 550ms ease;
   color: ${({ slide }) => slide.txtBtnColor};
@@ -225,6 +229,6 @@ export const WrapperLearnMore = styled.p`
     transform: translateX(1.5%);
   }
   ${media.ipad} {
-    font-size: clamp(1.8rem, 6vw, 7vw);
+    font-size: clamp(1.8rem, 5vw, 6vw);
   }
 `;

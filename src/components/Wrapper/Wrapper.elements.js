@@ -107,6 +107,7 @@ export const WrapperTextContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   /* display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -120,6 +121,7 @@ export const WrapperTextContainer = styled.div`
 
 export const WrapperText = styled.img`
   width: 100%;
+  max-width: 700px;
   /* height: 100%; */
   /* max-height: 100px; */
   object-fit: contain;
@@ -229,6 +231,6 @@ export const WrapperLearnMore = styled.p`
     transform: translateX(1.5%);
   }
   ${media.ipad} {
-    font-size: clamp(1.8rem, 5vw, 6vw);
+    font-size: clamp(1.8rem, 5vw, 1.9rem);
   }
 `;

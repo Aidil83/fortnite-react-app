@@ -44,7 +44,7 @@ export const WrapperImage = styled.div`
 `;
 
 export const PrevBtn = styled.button`
-  position: absolute;
+  /* position: absolute;
   bottom: 110px;
   left: 5%;
   height: 70px;
@@ -77,11 +77,11 @@ export const PrevBtn = styled.button`
     height: 40px;
     width: 40px;
     font-size: 1rem;
-  }
+  } */
 `;
 
 export const NextBtn = styled.button`
-  position: absolute;
+  /* position: absolute;
   bottom: 110px;
   right: 5%;
   height: 70px;
@@ -99,11 +99,11 @@ export const NextBtn = styled.button`
 
   &:hover {
     background-color: orange;
-  }
+  } */
 `;
 
 export const WrapperTextContainer = styled.div`
-  display: flex;
+  /* display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: flex-start;
@@ -111,20 +111,20 @@ export const WrapperTextContainer = styled.div`
   height: 49%;
   position: absolute;
   left: ${({ slide }) => slide.WrapperContainerLeft};
-  bottom: ${({ slide }) => slide.WrapperContainerBottom};
+  bottom: ${({ slide }) => slide.WrapperContainerBottom}; */
 `;
 
 export const WrapperCaption = styled.div`
-  width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth};
+  /* width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth};
   height: 45px;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(2rem, 9.6vw, 2.3rem);
-  color: ${({ slide }) => slide.captionColor};
+  color: ${({ slide }) => slide.captionColor}; */
 `;
 
 export const WrapperTitleTxt = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-self: ${({ slide }) => slide.alignSelf};
   line-height: 93.4px;
@@ -138,11 +138,11 @@ export const WrapperTitleTxt = styled.div`
   background-size: 100%;
   /* NOTE: Ignore the linting: */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 `;
 
 export const WrapperText = styled.img`
-  display: flex;
+  /* display: flex;
   position: absolute;
   top: 0;
   bottom: 72px;
@@ -154,7 +154,7 @@ export const WrapperText = styled.img`
   height: ${({ slide }) => slide.imgTxtHeight};
   object-fit: contain;
   margin-bottom: 0;
-  opacity: 1;
+  opacity: 1; */
 
   /* ${media.ipad} {
     left: ${({ slide }) => slide.imgTxtIpad};
@@ -168,14 +168,14 @@ export const WrapperText = styled.img`
 `;
 
 export const WrapperSection = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 2.2rem;
   width: 200px;
   height: 45px;
-  left: 297px;
+  left: 297px; */
 `;
 
 // NOTE: Animate after refresh page:
@@ -194,7 +194,7 @@ const loadText = keyframes`
 `;
 
 export const WrapperButton = styled.button`
-  position: absolute;
+  /* position: absolute;
   bottom: 120px;
   background-color: ${({ slide }) => slide.bgBtnColor};
   padding: 0.65em 1.5em;
@@ -202,16 +202,16 @@ export const WrapperButton = styled.button`
   border: none;
   cursor: pointer;
   animation: ${loadText} 1s linear;
-  transition: 550ms ease-out;
+  transition: 550ms ease-out; */
 
-  &:hover {
+  /* &:hover {
     transform: skewX(-5deg);
     background-color: ${({ slide }) => slide.bgBtnColor};
-  }
+  } */
 `;
 
 export const WrapperLearnMore = styled.p`
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   color: black;
@@ -223,5 +223,5 @@ export const WrapperLearnMore = styled.p`
 
   &:hover {
     transform: translateX(1.5%);
-  }
+  } */
 `;

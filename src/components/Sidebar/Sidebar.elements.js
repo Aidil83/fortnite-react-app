@@ -92,6 +92,7 @@ export const SidebarFooter = styled.div`
         align-items: center;
         padding: 1em 0;
         border-right: solid 1px #3d3d3d;
+        text-decoration: none;
         cursor: pointer;
         &:hover {
           background-color: #3d3d3d;
@@ -109,7 +110,6 @@ export const SidebarFooter = styled.div`
       & .icon {
         font-size: 1.8rem;
         align-self: center;
-        text-decoration: none;
         color: #ccc;
       }
       & .icon-cart {

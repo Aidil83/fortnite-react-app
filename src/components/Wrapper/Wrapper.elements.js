@@ -4,7 +4,7 @@ const media = {
   Laptop: "@media only screen and (min-width: 1740px)",
   ipadPro: "@media only screen and (min-width: 1024px)",
   ipad: "@media only screen and (min-width: 768px)",
-  mobile: "@media only screen and (min-width: 480px)",
+  mobile: "@media only screen and (min-width: 375px)",
   mobileSm: "@media only screen and (min-width: 320px)",
 };
 
@@ -44,6 +44,7 @@ export const WrapperImage = styled.div`
 `;
 
 export const PrevBtn = styled.button`
+  display: none;
   /* position: absolute;
   bottom: 110px;
   left: 5%;
@@ -81,6 +82,7 @@ export const PrevBtn = styled.button`
 `;
 
 export const NextBtn = styled.button`
+  display: none;
   /* position: absolute;
   bottom: 110px;
   right: 5%;
@@ -125,7 +127,7 @@ export const WrapperText = styled.img`
   /* height: 100%; */
   /* max-height: 100px; */
   object-fit: contain;
-  margin-bottom: 7vh;
+  margin-bottom: 16vh;
   /* left: ${({ slide }) => slide.imgTxtLeft}; */
 
   /* height: ${({ slide }) => slide.imgTxtHeight}; */
@@ -197,7 +199,7 @@ const loadText = keyframes`
 
 export const WrapperButton = styled.button`
   position: absolute;
-  bottom: 160px;
+  bottom: 150px;
   background-color: ${({ slide }) => slide.bgBtnColor};
   padding: 0.35em 0.8em;
   outline: none;
@@ -206,14 +208,19 @@ export const WrapperButton = styled.button`
   animation: ${loadText} 1s linear;
   transition: 550ms ease-out;
 
-  ${media.ipad} {
-    padding: 0.7em 1.5em;
+  ${media.mobile} {
+    bottom: 23vh;
   }
 
-  /* &:hover {
+  ${media.ipad} {
+    padding: 0.7em 1.5em;
+    bottom: 20vh;
+  }
+
+  &:hover {
     transform: skewX(-5deg);
     background-color: ${({ slide }) => slide.bgBtnColor};
-  } */
+  }
 `;
 
 export const WrapperLearnMore = styled.p`

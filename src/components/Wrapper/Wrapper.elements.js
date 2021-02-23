@@ -1,11 +1,11 @@
 import styled, { keyframes } from "styled-components/macro";
 
 const media = {
-  Laptop: "@media (max-width: 1740px)",
+  Laptop: "@media only screen and (min-width: 1740px)",
   ipadPro: "@media only screen and (min-width: 1024px)",
-  ipad: "@media only screen and (max-width: 768px)",
-  mobile: "@media only screen and (max-width: 480px)",
-  mobileSm: "@media only screen and (max-width: 320px)",
+  ipad: "@media only screen and (min-width: 768px)",
+  mobile: "@media only screen and (min-width: 480px)",
+  mobileSm: "@media only screen and (min-width: 320px)",
 };
 
 export const WrapperHidden = styled.div`
@@ -105,6 +105,8 @@ export const NextBtn = styled.button`
 export const WrapperTextContainer = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: flex-end;
   /* display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -118,22 +120,14 @@ export const WrapperTextContainer = styled.div`
 
 export const WrapperText = styled.img`
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  /* max-height: 100px; */
   object-fit: contain;
-  margin-top: 100px;
-  /* display: flex;
-  position: absolute;
-  top: 0;
-  bottom: 72px;
-  right: 0;
-  left: ${({ slide }) => slide.imgTxtLeft};
-  margin: auto;
+  margin-bottom: 7vh;
+  /* left: ${({ slide }) => slide.imgTxtLeft}; */
 
-  width: 576px;
-  height: ${({ slide }) => slide.imgTxtHeight};
-  object-fit: contain;
-  margin-bottom: 0;
-  opacity: 1; */
+  /* height: ${({ slide }) => slide.imgTxtHeight}; */
+  /* opacity: 1; */
 
   /* ${media.ipad} {
     left: ${({ slide }) => slide.imgTxtIpad};
@@ -200,15 +194,15 @@ const loadText = keyframes`
 `;
 
 export const WrapperButton = styled.button`
-  /* position: absolute;
-  bottom: 120px;
+  position: absolute;
+  bottom: 160px;
   background-color: ${({ slide }) => slide.bgBtnColor};
-  padding: 0.65em 1.5em;
+  padding: 0.45em 1.2em;
   outline: none;
   border: none;
   cursor: pointer;
   animation: ${loadText} 1s linear;
-  transition: 550ms ease-out; */
+  transition: 550ms ease-out;
 
   /* &:hover {
     transform: skewX(-5deg);
@@ -219,15 +213,18 @@ export const WrapperButton = styled.button`
 export const WrapperLearnMore = styled.p`
   /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   color: black;
   font-family: "Luckiest Guy", cursive;
-  font-size: 1.5rem;
+  font-size: clamp(1.4rem, 7vw, 1.8rem);
   letter-spacing: 2.1px;
   transition: 550ms ease;
   color: ${({ slide }) => slide.txtBtnColor};
 
   &:hover {
     transform: translateX(1.5%);
-  } */
+  }
+  ${media.ipad} {
+    font-size: clamp(1.8rem, 6vw, 7vw);
+  }
 `;

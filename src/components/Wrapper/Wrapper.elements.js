@@ -44,6 +44,7 @@ export const WrapperImage = styled.div`
 `;
 
 export const PrevBtn = styled.button`
+  display: none;
   /* position: absolute;
   bottom: 110px;
   left: 5%;
@@ -125,7 +126,7 @@ export const WrapperText = styled.img`
   /* height: 100%; */
   /* max-height: 100px; */
   object-fit: contain;
-  margin-bottom: 7vh;
+  margin-bottom: 10vh;
   /* left: ${({ slide }) => slide.imgTxtLeft}; */
 
   /* height: ${({ slide }) => slide.imgTxtHeight}; */
@@ -197,7 +198,7 @@ const loadText = keyframes`
 
 export const WrapperButton = styled.button`
   position: absolute;
-  bottom: 160px;
+  bottom: 150px;
   background-color: ${({ slide }) => slide.bgBtnColor};
   padding: 0.35em 0.8em;
   outline: none;
@@ -208,12 +209,13 @@ export const WrapperButton = styled.button`
 
   ${media.ipad} {
     padding: 0.7em 1.5em;
+    bottom: 16vh;
   }
 
-  /* &:hover {
+  &:hover {
     transform: skewX(-5deg);
     background-color: ${({ slide }) => slide.bgBtnColor};
-  } */
+  }
 `;
 
 export const WrapperLearnMore = styled.p`

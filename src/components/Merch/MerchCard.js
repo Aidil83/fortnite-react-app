@@ -69,12 +69,13 @@ const Main = styled.div`
   & .imageWrapper {
     transition: 0.175s;
     transform: skew(25rad);
-    -webkit-transform: skew(25rad);
     width: 85px;
     height: 92px;
     border: 2.5px #fff solid;
     border-radius: 5px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* overflow: hidden; */
     &:hover {
       background: linear-gradient(to bottom, #ffbb00, #000);
       overflow: hidden;
@@ -94,31 +95,30 @@ const Main = styled.div`
     margin-top: 2px;
     width: 80px;
     white-space: nowrap;
-    overflow: hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     font-family: sans-serif;
   }
   &:hover .imageWrapper {
     /* max-height cuz I'm telling the container to not expand more than 80px in height.*/
-    max-height: 80px;
-    margin: 0;
-    overflow: hidden;
-    transition: 0.15s;
-    transform: skew(25rad) scale(1.2);
+    /* max-height: 80px; */
+    /* margin: 0; */
+    /* transition: 0.15s; */
+    /* transform: skew(25rad) scale(1.2); */
     background: linear-gradient(to bottom, #ffae00, #fff);
   }
-  &:hover span {
+  /* &:hover span {
     position: relative;
     background-color: #fdfdfd;
     border-radius: 3px;
     padding: 3px;
-  }
+  } */
 
-  &:hover ${CardNum} {
+  /* &:hover ${CardNum} {
     height: 20%;
     color: black;
     background-color: rgba(255, 255, 255, 0.95);
-  }
+  } */
 `;
 
 export default MerchCard;

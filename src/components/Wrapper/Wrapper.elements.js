@@ -213,8 +213,6 @@ export const WrapperButton = styled.button`
   cursor: pointer;
   animation: ${loadText} 1s linear;
   transition: 550ms ease-out;
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
 
   ${media.mobile} {
     bottom: 23vh;
@@ -232,9 +230,6 @@ export const WrapperButton = styled.button`
 `;
 
 export const WrapperLearnMore = styled.p`
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   color: black;
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(1.5rem, 7vw, 1.7rem);

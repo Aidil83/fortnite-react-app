@@ -67,9 +67,10 @@ const Main = styled.div`
   cursor: pointer;
   transition: 0.175s;
   & .imageWrapper {
+    position: relative;
+    z-index: 1;
     transition: 0.175s;
     transform: skew(25rad);
-    -webkit-transform: skew(25rad);
     width: 85px;
     height: 92px;
     border: 2.5px #fff solid;
@@ -80,6 +81,7 @@ const Main = styled.div`
       overflow: hidden;
     }
     img {
+      z-index: 0;
       height: 100px;
       width: 100px;
       position: relative;

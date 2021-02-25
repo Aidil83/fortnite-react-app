@@ -27,6 +27,9 @@ export const BlogButton = styled.button`
   background-color: #fff;
   padding: 0em 1.6em;
   transition: 0.3s ease-in-out;
+  @media screen and (max-width: 678px) {
+    padding-top: 0.5em;
+  }
 
   &:hover {
     transform: skewX(-4deg);

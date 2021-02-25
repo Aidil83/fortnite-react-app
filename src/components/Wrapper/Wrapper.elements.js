@@ -239,7 +239,11 @@ export const WrapperLearnMore = styled.p`
   &:hover {
     transform: translateX(1.5%);
   }
+  @media only screen and (max-width: 765px) {
+    padding-top: 0.5em;
+  }
   ${media.ipad} {
     font-size: clamp(1.8rem, 7vw, 1.7rem);
+    padding: 0.2em 0.4em;
   }
 `;

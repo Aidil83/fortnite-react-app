@@ -1,32 +1,38 @@
-import {useContext} from 'react';
-import {useEffect, useState} from 'react';
+import { useContext } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
-import {StateContext} from '../../context/StateProvider';
-import {MerchData} from '../../data/MerchData';
-import {merchCardLogic} from './merchCardLogic';
+import { StateContext } from "../../context/StateProvider";
+import { MerchData } from "../../data/MerchData";
+import { merchCardLogic } from "./merchCardLogic";
 
-const MerchCard = ({item, id, handleModal}) => {
+const MerchCard = ({ item, id, handleModal }) => {
   const [bgCard, setBgCard] = useState("");
   const [, dispatch] = useContext(StateContext);
 
   useEffect(() => {
     merchCardLogic(item, MerchData, setBgCard);
-  }, [bgCard])
+  }, [bgCard]);
 
   const handleHoverCard = (item) => {
     dispatch({
       type: "HOVERCARD",
       hoverCard: item,
-    })
+    });
     dispatch({
       type: "FIRSTCARD",
       firsCard: 1,
-    })
-  }
+    });
+  };
 
   return (
-    <Main onClick={() => handleModal(item)} onMouseEnter={() => handleHoverCard(item)}>
-      <div className="imageWrapper" key={id} style={{background: `${bgCard}`}}
+    <Main
+      onClick={() => handleModal(item)}
+      onMouseEnter={() => handleHoverCard(item)}
+    >
+      <div
+        className="imageWrapper"
+        key={id}
+        style={{ background: `${bgCard}` }}
       >
         <CardNum>{id}</CardNum>
         <img src={item.images.smallIcon} alt={id} />
@@ -45,10 +51,10 @@ export const CardNum = styled.div`
   max-width: 100%;
   padding-right: 3px;
   border-radius: 0 25% 50% 0;
-  background-color: rgba(255,255,255,.90);
+  background-color: rgba(255, 255, 255, 0.9);
   text-align: start;
   color: black;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: 900;
   font-family: sans-serif;
 `;
@@ -63,13 +69,15 @@ const Main = styled.div`
   & .imageWrapper {
     transition: 0.175s;
     transform: skew(25rad);
+    -webkit-transform: skew(25rad);
     width: 85px;
     height: 92px;
     border: 2.5px #fff solid;
     border-radius: 5px;
     overflow: hidden;
     &:hover {
-      background: linear-gradient(to bottom,#ffbb00,#000),
+      background: linear-gradient(to bottom, #ffbb00, #000);
+      overflow: hidden;
     }
     img {
       height: 100px;
@@ -106,10 +114,10 @@ const Main = styled.div`
     padding: 3px;
   }
 
-  &:hover ${CardNum}{
+  &:hover ${CardNum} {
     height: 20%;
     color: black;
-    background-color: rgba(255,255,255,.95);
+    background-color: rgba(255, 255, 255, 0.95);
   }
 `;
 

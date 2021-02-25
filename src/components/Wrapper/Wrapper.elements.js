@@ -207,7 +207,7 @@ export const WrapperButton = styled.button`
   position: absolute;
   bottom: 150px;
   background-color: ${({ slide }) => slide.bgBtnColor};
-  padding: 0.35em 0.8em;
+  /* padding: 0.35em 0.8em; */
   outline: none;
   border: none;
   cursor: pointer;
@@ -238,6 +238,7 @@ export const WrapperLearnMore = styled.p`
   color: black;
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(1.5rem, 7vw, 1.7rem);
+  padding: 0.2em 0.4em;
   letter-spacing: 2.1px;
   transition: 550ms ease;
   color: ${({ slide }) => slide.txtBtnColor};

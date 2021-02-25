@@ -27,9 +27,6 @@ export const BlogButton = styled.button`
   background-color: #fff;
   padding: 0em 1.6em;
   transition: 0.3s ease-in-out;
-  @media screen and (max-width: 678px) {
-    padding-top: 0.5em;
-  }
 
   &:hover {
     transform: skewX(-4deg);
@@ -40,7 +37,7 @@ export const BlogButton = styled.button`
   }
 `;
 export const BlogLoadMore = styled.p`
-  font-family: "Luckiest Guy", Roboto;
+  font-family: "Bowlby One SC", cursive, Roboto;
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0;

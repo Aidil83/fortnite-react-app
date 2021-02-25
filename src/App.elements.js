@@ -1,7 +1,8 @@
 import styled from "styled-components/macro";
 
 export const AppContainer = styled.div`
-overflow-y: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
 `;
 
 export const RouteError = styled.div`
@@ -12,7 +13,7 @@ export const RouteError = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-image: url(${({img}) => img});
+  background-image: url(${({ img }) => img});
   background-repeat: no-repeat;
   background-size: cover;
 `;
@@ -44,18 +45,18 @@ export const RouteErrorImage = styled.div`
       }
       h4 {
         align-self: center;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-style: normal;
         font-weight: 600;
-        font-size: clamp(.9rem, 2vw, 1.7rem);
+        font-size: clamp(0.9rem, 2vw, 1.7rem);
         line-height: 26px;
         width: 95%;
         text-align: center;
         letter-spacing: 0.05em;
-        @media screen and (min-width: 375px){
+        @media screen and (min-width: 375px) {
           width: 80%;
         }
-        @media screen and (min-width: 678px){
+        @media screen and (min-width: 678px) {
           line-height: 46px;
         }
       }

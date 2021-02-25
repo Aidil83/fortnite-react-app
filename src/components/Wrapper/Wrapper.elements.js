@@ -158,8 +158,8 @@ export const WrapperTitleTxt = styled.div`
   background-image: ${({ slide }) => slide.backgroundImage};
   background-size: 100%;
   /* NOTE: Ignore the linting: */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
 `;
 
 export const WrapperCaption = styled.div`

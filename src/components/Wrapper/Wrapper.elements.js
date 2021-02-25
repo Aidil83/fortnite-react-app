@@ -207,6 +207,8 @@ export const WrapperButton = styled.button`
   cursor: pointer;
   animation: ${loadText} 1s linear;
   transition: 550ms ease-out;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
 
   ${media.mobile} {
     bottom: 23vh;
@@ -229,7 +231,7 @@ export const WrapperLearnMore = styled.p`
   align-items: center; */
   color: black;
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(1.5rem, 7vw, 1.8rem);
+  font-size: clamp(1.5rem, 7vw, 1.7rem);
   letter-spacing: 2.1px;
   transition: 550ms ease;
   color: ${({ slide }) => slide.txtBtnColor};
@@ -238,6 +240,6 @@ export const WrapperLearnMore = styled.p`
     transform: translateX(1.5%);
   }
   ${media.ipad} {
-    font-size: clamp(1.8rem, 5vw, 1.9rem);
+    font-size: clamp(1.8rem, 7vw, 1.7rem);
   }
 `;

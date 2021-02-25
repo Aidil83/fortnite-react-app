@@ -29,14 +29,14 @@ const MerchCard = ({ item, id, handleModal }) => {
       onClick={() => handleModal(item)}
       onMouseEnter={() => handleHoverCard(item)}
     >
-      <div
+      <span
         className="imageWrapper"
         key={id}
         style={{ background: `${bgCard}` }}
       >
         <CardNum>{id}</CardNum>
         <img src={item.images.smallIcon} alt={id} />
-      </div>
+      </span>
       <span>{item.name}</span>
     </Main>
   );
@@ -75,10 +75,10 @@ const Main = styled.div`
     height: 92px;
     border: 2.5px #fff solid;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: hidden !important;
     &:hover {
       background: linear-gradient(to bottom, #ffbb00, #000);
-      overflow: hidden;
+      overflow: hidden !important;
     }
     img {
       z-index: 0;

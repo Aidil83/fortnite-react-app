@@ -207,7 +207,6 @@ export const WrapperButton = styled.button`
   position: absolute;
   bottom: 150px;
   background-color: ${({ slide }) => slide.bgBtnColor};
-  /* padding: 0.35em 0.8em; */
   outline: none;
   border: none;
   cursor: pointer;
@@ -219,12 +218,11 @@ export const WrapperButton = styled.button`
   }
 
   ${media.ipad} {
-    padding: 0.7em 1.5em;
     bottom: 20vh;
   }
 
   &:hover {
-    transform: skewX(-5deg);
+    /* transform: skewX(-5deg); */
     background-color: ${({ slide }) => slide.bgBtnColor};
   }
 `;

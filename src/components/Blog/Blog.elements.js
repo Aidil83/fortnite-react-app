@@ -27,8 +27,6 @@ export const BlogButton = styled.button`
   background-color: #fff;
   padding: 0em 1.6em;
   transition: 0.3s ease-in-out;
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
 
   &:hover {
     transform: skewX(-4deg);
@@ -36,7 +34,6 @@ export const BlogButton = styled.button`
     background-color: #000;
     border: 4px solid #000;
     color: #fff;
-    -webkit-backface-visibility: hidden;
   }
 `;
 export const BlogLoadMore = styled.p`

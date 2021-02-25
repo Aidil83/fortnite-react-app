@@ -32,14 +32,14 @@ export const ModalMain = styled.div`
     }
     & .modal-type {
       position: absolute;
-      top: 50%;
+      top: 230px;
       z-index: 3;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       @media screen and (min-width: 375px) {
-        top: 49%;
+        top: 48%;
       }
       @media screen and (min-width: 414px) {
         top: 51%;
@@ -49,11 +49,11 @@ export const ModalMain = styled.div`
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 3px 8px;
-        border-radius: 11px;
-        font-size: 2rem;
-        font-family: "Luckiest Guy";
-        letter-spacing: 0.105em;
+        padding: 0.05em 0.25em;
+        border-radius: 15px;
+        font-size: 1.65rem;
+        font-family: "Bowlby One SC", cursive, Roboto;
+        letter-spacing: 0.07em;
         background-color: #1f0061;
         text-transform: uppercase;
         color: #fff;

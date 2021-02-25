@@ -28,6 +28,12 @@ export const WrapperImage = styled.div`
   overflow-x: hidden;
   overflow-y: hidden;
   will-change: top;
+  ${media.mobile} {
+    background-size: 1200px 797px;
+  }
+  ${media.ipad} {
+    background-size: cover;
+  }
 
   /* NOTE: Prevents auto scrolling after refreshing page: */
   overflow-anchor: none;

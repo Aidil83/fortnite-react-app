@@ -29,7 +29,7 @@ export const WrapperImage = styled.div`
   overflow-y: hidden;
   will-change: top;
   ${media.mobile} {
-    background-size: 1200px 797px;
+    background-size: 1240px 797px;
   }
   ${media.ipad} {
     background-size: cover;

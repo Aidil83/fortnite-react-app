@@ -44,7 +44,7 @@ const MerchCard = ({ item, id, handleModal }) => {
 
 export const CardNum = styled.div`
   position: absolute;
-  top: -3px;
+  top: -1px;
   left: -1px;
   z-index: 999;
   height: 15px;

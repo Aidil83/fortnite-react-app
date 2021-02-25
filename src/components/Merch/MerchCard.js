@@ -81,10 +81,11 @@ const Main = styled.div`
     }
     img {
       z-index: 0;
-      height: 100px;
-      width: 100px;
+      height: 87px;
+      width: 80px;
       position: relative;
-      right: 10px;
+      object-fit: cover;
+      object-position: 100% 0;
     }
   }
   span {
@@ -101,24 +102,24 @@ const Main = styled.div`
   }
   &:hover .imageWrapper {
     /* max-height cuz I'm telling the container to not expand more than 80px in height.*/
-    /* max-height: 80px; */
-    /* margin: 0; */
-    /* transition: 0.15s; */
-    /* transform: skew(25rad) scale(1.2); */
+    max-height: 80px;
+    margin: 0;
+    transition: 0.15s;
+    transform: skew(25rad) scale(1.2);
     background: linear-gradient(to bottom, #ffae00, #fff);
   }
-  /* &:hover span {
+  &:hover span {
     position: relative;
     background-color: #fdfdfd;
     border-radius: 3px;
     padding: 3px;
-  } */
+  }
 
-  /* &:hover ${CardNum} {
+  &:hover ${CardNum} {
     height: 20%;
     color: black;
     background-color: rgba(255, 255, 255, 0.95);
-  } */
+  }
 `;
 
 export default MerchCard;

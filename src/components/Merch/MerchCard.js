@@ -85,7 +85,6 @@ const Main = styled.div`
       width: 80px;
       position: relative;
       object-fit: cover;
-      object-position: 100% 0;
     }
   }
   span {

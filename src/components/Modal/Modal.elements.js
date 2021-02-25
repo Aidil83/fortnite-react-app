@@ -10,7 +10,6 @@ export const ModalMain = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* overflow: hidden; */
   transition: 0.3s;
 
   & .modal-container {
@@ -91,8 +90,8 @@ export const ModalClose = styled(CloseIcon)`
   z-index: 3;
   height: 30px;
   margin: 13px;
-  color: #ffae35;
   color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
 `;
 
 export const InfoContainer = styled.div`

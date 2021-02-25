@@ -92,6 +92,12 @@ export const ModalClose = styled(CloseIcon)`
   margin: 13px;
   color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
+  @media only screen and (min-width: 768px) {
+    right: 5px;
+  }
+  @media only screen and (min-width: 1370px) {
+    right: 0px;
+  }
 `;
 
 export const InfoContainer = styled.div`

@@ -47,14 +47,15 @@ export const CardNum = styled.div`
   top: -3px;
   left: -1px;
   z-index: 999;
-  height: 18%;
+  height: 15px;
   max-width: 100%;
   padding-right: 3px;
+  padding-left: 2px;
   border-radius: 0 25% 50% 0;
   background-color: rgba(255, 255, 255, 0.9);
   text-align: start;
   color: black;
-  font-size: 0.7rem;
+  font-size: 10px;
   font-weight: 900;
   font-family: sans-serif;
 `;
@@ -106,6 +107,9 @@ const Main = styled.div`
     transition: 0.15s;
     transform: skew(25rad) scale(1.2);
     background: linear-gradient(to bottom, #ffae00, #fff);
+    img {
+      height: 75px;
+    }
   }
   &:hover span {
     position: relative;
@@ -115,7 +119,7 @@ const Main = styled.div`
   }
 
   &:hover ${CardNum} {
-    height: 20%;
+    height: 15px;
     color: black;
     background-color: rgba(255, 255, 255, 0.95);
   }

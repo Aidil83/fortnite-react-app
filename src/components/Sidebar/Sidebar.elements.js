@@ -28,7 +28,7 @@ export const SidebarMenu = styled.div`
   font-weight: 500;
   color: white;
   @media screen and (min-width: 769px) {
-    max-height: 280px;
+    max-height: 169px;
   }
 `;
 export const SidebarItem = styled(Link)`

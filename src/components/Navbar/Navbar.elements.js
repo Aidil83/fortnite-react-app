@@ -78,7 +78,7 @@ export const NavMenuLeftMobile = styled.div`
   @media screen and (max-width: 1190px) {
     position: relative;
     z-index: 1;
-    display: ${({ isSearch }) => (isSearch ? "flex" : "none")};
+    display: ${({ isSearch }) => (isSearch ? "none" : "flex")};
     align-items: center;
     justify-content: center;
     height: 51px;

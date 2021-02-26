@@ -50,7 +50,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   width: 100%;
   justify-content: ${({ isSearch }) =>
-    isSearch ? "space-between" : "flex-end"};
+    isSearch ? "flex-end" : "space-between"};
   font-family: sans-serif, arial;
   font-size: 11px;
 
@@ -206,13 +206,7 @@ export const NavMenuIcon = styled.i`
   height: 51px;
   ${NavLink};
   ${NavMobileReset};
-  ${({ primary }) => (primary ? `${NavUnderline}` : null)};
   margin: 0 7px;
-  ul {
-    position: relative;
-    z-index: 1;
-    padding: 10px;
-  }
 `;
 
 const animateSearchBar = keyframes`
@@ -235,8 +229,8 @@ const animateSearchBarHidden = keyframes`
 
 export const SearchContainer = styled.div`
   position: relative;
-  display: ${({ toggle }) => (toggle ? "none" : "flex")};
-  /* display: flex; */
+  display: flex;
+  visibility: ${({ toggle }) => (toggle ? "visible" : "hidden")};
   justify-content: flex-end;
   align-items: center;
   margin-right: 20px;
@@ -350,7 +344,7 @@ export const SearchContainerHidden = styled.div`
 `;
 
 export const Open = styled(IoSearchOutline)`
-  display: ${({ isSearch }) => (isSearch ? "flex" : "none")};
+  display: flex;
 `;
 
 export const Close = styled(IoCloseOutline)`

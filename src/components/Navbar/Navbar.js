@@ -32,7 +32,7 @@ import {
 } from "./Navbar.elements";
 
 const Navbar = ({ isOpen, handleToggle, count }) => {
-  const [isSearch, setIsSearch] = useState(true);
+  const [isSearch, setIsSearch] = useState(false);
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
   const [loadIndicator, setLoadIndicator] = useState(0);
@@ -65,16 +65,22 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
     setIsSearch(!isSearch);
     setLoadCount(loadCount + 1);
     if (loadCount >= 1) setIsLoad(true);
-    console.log(inputRef);
-    inputRef.focus();
   };
+
+  //NOTE: keeps the focus on input.
+  useEffect(() => {
+    if (isSearch) {
+      inputRef.current.focus();
+      console.log("focus");
+    }
+  }, [isSearch]);
 
   return (
     <>
       <NavContainer>
         <NavLogo to="/" img={forniteLogo} onClick={handleToggle} />
         <NavMenu isSearch={isSearch}>
-          <NavMenuLeftMobile isSearch={isSearch}>
+          <NavMenuLeftMobile>
             {isOpen ? (
               <NavCloseIcon onClick={handleToggle} toggle={isOpen} />
             ) : (
@@ -93,14 +99,21 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
           {/* )} */}
 
           <NavMenuRight>
-            <NavMenuIcon primary isSearch={isSearch} onClick={handleSearch}>
-              {isSearch && (
-                <ul>
-                  <Open isSearch={isSearch} />
-                </ul>
-              )}
+            <NavMenuIcon
+              primary
+              onClick={handleSearch}
+              css={`
+                position: absolute;
+                right: 295px;
+                width: 37px;
+                z-index: 1;
+                justify-content: center;
+                visibility: ${isSearch ? "hidden" : "visible"};
+              `}
+            >
+              <Open />
             </NavMenuIcon>
-            {
+            {/* {
               <SearchContainerHidden isSearch={isSearch} isLoad={isLoad}>
                 <div className="search__Box">
                   <input
@@ -115,25 +128,26 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                   <Close />
                 </div>
               </SearchContainerHidden>
-            }
+            } */}
             {
-              <SearchContainer toggle={handleSearch}>
-                <div className="search__Box" onBlur={handleSearch}>
+              <SearchContainer toggle={isSearch}>
+                <div className="search__Box">
                   <input
                     handleToggle
                     type="text"
                     placeholder="Search..."
-                    ref={(e) => {
-                      inputRef = e;
-                    }}
-                  ></input>
+                    // ref={(e) => {
+                    //   inputRef = e;
+                    // }}
+                    ref={inputRef}
+                  />
                 </div>
-                <div className="search__Btn">
+                <div className="search__Btn" onClick={handleSearch}>
                   <Close />
                 </div>
               </SearchContainer>
             }
-            <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
+            <NavMenuIcon css="margin-right: 8px">
               <NavCartBtn to="/cart" indicator={purchasedIndicator}>
                 <NavCart />
                 <span>{purchasedItems.length}</span>

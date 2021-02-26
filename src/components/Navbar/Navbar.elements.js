@@ -121,6 +121,7 @@ export const NavMenuRight = styled.li`
   min-width: 350px;
   align-items: center;
   justify-content: flex-end;
+  margin-left: auto;
 
   /* NOTE: Brute force the button to stick to the hamburger icon */
   @media screen and (max-width: 768px) {

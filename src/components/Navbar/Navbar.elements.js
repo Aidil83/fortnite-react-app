@@ -65,6 +65,7 @@ export const NavMenuLeft = styled.li`
   z-index: 1;
   display: flex;
   align-items: center;
+  margin-right: auto;
 
   @media screen and (max-width: 1190px) {
     display: none;

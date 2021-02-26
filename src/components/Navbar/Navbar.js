@@ -20,7 +20,6 @@ import {
   NavUserSignIn,
   NavUserLogo,
   NavMenuLeftMobile,
-  NavCurrentHamburgerIcon,
 } from "./Navbar.elements";
 import {
   NavHamburgerIcon,
@@ -78,16 +77,16 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />
             )}
           </NavMenuLeftMobile>
-          {isSearch && (
-            <NavMenuLeft>
-              <NavMenuItem to="/merch">MERCH</NavMenuItem>
-              {/* <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem> */}
-              <NavMenuItem to="/creative">CREATIVE</NavMenuItem>
-              {/* <NavMenuItem to="/save_the_world">SAVE THE WORLD</NavMenuItem> */}
-              {/* <NavMenuItem to="/competitive">COMPETITIVE</NavMenuItem> */}
-              <NavMenuItem to="/news">NEWS</NavMenuItem>
-            </NavMenuLeft>
-          )}
+          {/* {isSearch && ( */}
+          <NavMenuLeft>
+            <NavMenuItem to="/merch">MERCH</NavMenuItem>
+            {/* <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem> */}
+            <NavMenuItem to="/creative">CREATIVE</NavMenuItem>
+            {/* <NavMenuItem to="/save_the_world">SAVE THE WORLD</NavMenuItem> */}
+            {/* <NavMenuItem to="/competitive">COMPETITIVE</NavMenuItem> */}
+            <NavMenuItem to="/news">NEWS</NavMenuItem>
+          </NavMenuLeft>
+          {/* )} */}
 
           <NavMenuRight>
             <NavMenuIcon primary isSearch={isSearch}>

@@ -17,18 +17,18 @@ const Sidebar = ({ isOpen, handleToggle }) => {
     <>
       <SidebarMain isOpen={isOpen}>
         <SidebarMenu>
-          <SidebarItem to="/battle_Pass" onClick={handleToggle}>
+          {/* <SidebarItem to="/battle_Pass" onClick={handleToggle}>
             BATTLE PASS
-          </SidebarItem>
+          </SidebarItem> */}
           <SidebarItem to="/creative" onClick={handleToggle}>
             CREATIVE
           </SidebarItem>
-          <SidebarItem to="/save_the_world" onClick={handleToggle}>
+          {/* <SidebarItem to="/save_the_world" onClick={handleToggle}>
             SAVE THE WORLD
-          </SidebarItem>
-          <SidebarItem to="/competitive" onClick={handleToggle}>
+          </SidebarItem> */}
+          {/* <SidebarItem to="/competitive" onClick={handleToggle}>
             COMPETIVE
-          </SidebarItem>
+          </SidebarItem> */}
           <SidebarItem to="/news" onClick={handleToggle}>
             NEWS
           </SidebarItem>

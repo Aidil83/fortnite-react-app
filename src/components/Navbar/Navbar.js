@@ -80,12 +80,12 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
           </NavMenuLeftMobile>
           {isSearch && (
             <NavMenuLeft>
-              <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem>
-              <NavMenuItem to="/creative">CREATIVE</NavMenuItem>
-              <NavMenuItem to="/save_the_world">SAVE THE WORLD</NavMenuItem>
-              <NavMenuItem to="/competitive">COMPETITIVE</NavMenuItem>
-              <NavMenuItem to="/news">NEWS</NavMenuItem>
               <NavMenuItem to="/merch">MERCH</NavMenuItem>
+              {/* <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem> */}
+              <NavMenuItem to="/creative">CREATIVE</NavMenuItem>
+              {/* <NavMenuItem to="/save_the_world">SAVE THE WORLD</NavMenuItem> */}
+              {/* <NavMenuItem to="/competitive">COMPETITIVE</NavMenuItem> */}
+              <NavMenuItem to="/news">NEWS</NavMenuItem>
             </NavMenuLeft>
           )}
 

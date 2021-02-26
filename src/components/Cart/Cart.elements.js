@@ -54,10 +54,13 @@ export const InfoContainer = styled.div`
 export const CartProduct__container = styled.div`
   height: 100%;
   @media (min-width: 1020px) {
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
-    height: 600px;
-    width: 105%;
+    /* height: 600px; */
+    height: 63vh;
+    width: 100%;
   }
 `;
 
@@ -100,7 +103,7 @@ export const Info__productContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 85%;
+  height: 90%;
   & .price-cost {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     margin-left: auto;

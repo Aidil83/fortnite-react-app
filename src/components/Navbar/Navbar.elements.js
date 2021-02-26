@@ -235,7 +235,8 @@ const animateSearchBarHidden = keyframes`
 
 export const SearchContainer = styled.div`
   position: relative;
-  display: flex;
+  display: ${({ toggle }) => (toggle ? "none" : "flex")};
+  /* display: flex; */
   justify-content: flex-end;
   align-items: center;
   margin-right: 20px;
@@ -297,12 +298,10 @@ export const SearchContainerHidden = styled.div`
   right: 278px;
   top: 0;
   bottom: 0;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-right: 20px;
-
   input {
     opacity: 0;
     transition: 1s;

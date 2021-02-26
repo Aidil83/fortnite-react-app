@@ -1,6 +1,6 @@
 import { VerifiedUser } from "@material-ui/icons";
 import gsap from "gsap/gsap-core";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components/macro";
 import { StateContext } from "../../context/StateProvider";
 import forniteLogo from "../../images/text_image/forniteLogo.png";
@@ -37,6 +37,8 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
   const [loadCount, setLoadCount] = useState(0);
   const [loadIndicator, setLoadIndicator] = useState(0);
 
+  let inputRef = useRef(null);
+
   const [{ purchasedItems, purchasedIndicator, trackLogin }] = useContext(
     StateContext
   );
@@ -63,6 +65,8 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
     setIsSearch(!isSearch);
     setLoadCount(loadCount + 1);
     if (loadCount >= 1) setIsLoad(true);
+    console.log(inputRef);
+    inputRef.focus();
   };
 
   return (
@@ -89,36 +93,46 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
           {/* )} */}
 
           <NavMenuRight>
-            <NavMenuIcon primary isSearch={isSearch}>
+            <NavMenuIcon primary isSearch={isSearch} onClick={handleSearch}>
               {isSearch && (
-                <ul onClick={handleSearch}>
+                <ul>
                   <Open isSearch={isSearch} />
                 </ul>
               )}
             </NavMenuIcon>
-            {isSearch ? (
+            {
               <SearchContainerHidden isSearch={isSearch} isLoad={isLoad}>
                 <div className="search__Box">
-                  <input type="text" placeholder="Search..." />
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    ref={(e) => {
+                      inputRef = e;
+                    }}
+                  />
                 </div>
                 <div className="search__Btn" onClick={handleSearch}>
                   <Close />
                 </div>
               </SearchContainerHidden>
-            ) : (
-              <SearchContainer>
+            }
+            {
+              <SearchContainer toggle={handleSearch}>
                 <div className="search__Box" onBlur={handleSearch}>
                   <input
                     handleToggle
                     type="text"
                     placeholder="Search..."
+                    ref={(e) => {
+                      inputRef = e;
+                    }}
                   ></input>
                 </div>
-                <div className="search__Btn" onClick={handleSearch}>
+                <div className="search__Btn">
                   <Close />
                 </div>
               </SearchContainer>
-            )}
+            }
             <NavMenuIcon css="margin-right: 8px" isSearch={isSearch}>
               <NavCartBtn to="/cart" indicator={purchasedIndicator}>
                 <NavCart />

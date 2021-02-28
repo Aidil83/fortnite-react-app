@@ -105,6 +105,10 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
     }
   }, [isSearch]);
 
+  const clickAnywhere = () => {
+    setIsSearch(false);
+  };
+
   return (
     <>
       <NavContainer>
@@ -145,11 +149,10 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               </div>
             </NavMenuIcon>
             {
-              <SearchContainer toggle={isSearch}>
+              <SearchContainer toggle={isSearch} onBlur={clickAnywhere}>
                 <div className="search__Box">
                   <input
                     className="animateInput"
-                    onBlur={handleSearch}
                     type="text"
                     placeholder="Search..."
                     ref={inputRef}

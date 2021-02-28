@@ -149,7 +149,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                 <div className="search__Box">
                   <input
                     className="animateInput"
-                    handleToggle
+                    onBlur={handleSearch}
                     type="text"
                     placeholder="Search..."
                     ref={inputRef}

@@ -60,13 +60,37 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
     setLoadIndicator(loadIndicator + 1);
   }, [purchasedIndicator]);
 
-  // useEffect(() => {
-  //   if (!isSearch)
-  //     gsap.to(".animateInput", {
-  //       autoAlpha: 0,
-  //       duration: 0.3,
-  //     });
-  // }, [isSearch]);
+  useEffect(() => {
+    if (isSearch) {
+      gsap.to(".animateInput", {
+        visibility: "visible",
+        autoAlpha: 1,
+        duration: 0.8,
+        ease: "power1.out",
+      });
+      console.log("open");
+    } else {
+      gsap.to(".animateInput", {
+        visibility: "visible",
+        autoAlpha: 0,
+        duration: 0.5,
+      });
+      console.log("closed");
+    }
+
+    if (isSearch)
+      gsap.to(".animateClose", {
+        visibility: "visible",
+        autoAlpha: 1,
+        duration: 0.2,
+      });
+    else
+      gsap.to(".animateClose", {
+        visibility: "hidden",
+        autoAlpha: 0,
+        duration: 0,
+      });
+  }, [isSearch]);
 
   const handleSearch = () => {
     setIsSearch(!isSearch);
@@ -129,7 +153,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                   />
                 </div>
                 <div className="search__Btn" onClick={handleSearch}>
-                  <Close />
+                  <Close className="animateClose" />
                 </div>
               </SearchContainer>
             }

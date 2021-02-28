@@ -212,18 +212,15 @@ export const NavMenuIcon = styled.i`
 
 const animateSearchBar = keyframes`
   0%{
-    opacity: 0;
     width: 0px;
   }
 `;
 
 const animateSearchBarHidden = keyframes`
   0%{
-    opacity: 1;
     width: 240px;
   }
   100%{
-    opacity: 0;
     width: 0px;
   }
 `;
@@ -231,7 +228,7 @@ const animateSearchBarHidden = keyframes`
 export const SearchContainer = styled.div`
   position: relative;
   display: flex;
-  /* visibility: ${({ toggle }) => (toggle ? "visible" : "hidden")}; */
+  visibility: hidden;
   justify-content: flex-end;
   align-items: center;
   margin-right: 20px;
@@ -355,6 +352,7 @@ export const Close = styled(IoCloseOutline)`
   cursor: pointer;
   ${NavLink};
   transition: 280ms;
+  visibility: hidden;
 `;
 
 export const NavmenuItemSignIn = styled(Link)`

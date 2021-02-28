@@ -210,6 +210,12 @@ export const NavMenuIcon = styled.i`
   ${NavMobileReset};
   margin: 0 7px;
   & .searchContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
     ${NavUnderline};
   }
 `;
@@ -235,7 +241,7 @@ export const SearchContainer = styled.div`
   visibility: hidden;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 6px;
 
   input {
     position: relative;
@@ -279,8 +285,10 @@ export const SearchContainer = styled.div`
     min-width: 41px;
     height: 40px;
     cursor: pointer;
-    animation-name: ${animateSearchBar};
-    animation-duration: 0.75s;
+
+    & .animateClose {
+      display: none;
+    }
 
     &:hover {
       background-color: #505050;

@@ -68,24 +68,24 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
         duration: 0.8,
         ease: "power1.out",
       });
-      console.log("open");
     } else {
       gsap.to(".animateInput", {
         visibility: "visible",
         autoAlpha: 0,
         duration: 0.5,
       });
-      console.log("closed");
     }
 
     if (isSearch)
       gsap.to(".animateClose", {
+        display: "block",
         visibility: "visible",
         autoAlpha: 1,
         duration: 0.2,
       });
     else
       gsap.to(".animateClose", {
+        display: "none",
         visibility: "hidden",
         autoAlpha: 0,
         duration: 0,
@@ -137,6 +137,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                 z-index: 1;
                 justify-content: center;
                 visibility: ${isSearch ? "hidden" : "visible"};
+                margin-right: 0;
               `}
             >
               <div className="searchContainer">
@@ -159,7 +160,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                 </div>
               </SearchContainer>
             }
-            <NavMenuIcon css="margin-right: 8px">
+            <NavMenuIcon css="margin-right: 8px; margin-left: 0">
               <NavCartBtn to="/cart" indicator={purchasedIndicator}>
                 <NavCart />
                 <span>{purchasedItems.length}</span>

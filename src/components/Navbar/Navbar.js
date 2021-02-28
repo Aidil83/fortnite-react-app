@@ -27,7 +27,6 @@ import {
   Open,
   Close,
   SearchContainer,
-  SearchContainerHidden,
   NavCart,
 } from "./Navbar.elements";
 
@@ -71,7 +70,6 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
   useEffect(() => {
     if (isSearch) {
       inputRef.current.focus();
-      console.log("focus");
     }
   }, [isSearch]);
 

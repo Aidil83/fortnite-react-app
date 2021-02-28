@@ -231,7 +231,7 @@ const animateSearchBarHidden = keyframes`
 export const SearchContainer = styled.div`
   position: relative;
   display: flex;
-  visibility: ${({ toggle }) => (toggle ? "visible" : "hidden")};
+  /* visibility: ${({ toggle }) => (toggle ? "visible" : "hidden")}; */
   justify-content: flex-end;
   align-items: center;
   margin-right: 20px;
@@ -250,8 +250,9 @@ export const SearchContainer = styled.div`
 
   input[type="text"] {
     width: 240px;
-    animation-name: ${animateSearchBar};
-    animation-duration: 0.5s;
+    animation-name: ${({ toggle }) =>
+      toggle ? animateSearchBar : animateSearchBarHidden};
+    animation-duration: ${({ toggle }) => (toggle ? "0.5s" : "0.5s")};
 
     @media screen and (max-width: 812px) and (orientation: landscape) {
       width: 240px;

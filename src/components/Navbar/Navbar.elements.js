@@ -371,17 +371,17 @@ export const NavmenuItemSignIn = styled(Link)`
   ${NavLink}
   ${NavMobileReset}
   margin-left: 17px;
-  margin-right: 24px;
+  margin-right: 5px;
 `;
 
 export const NavUserLogo = styled(FaUserPlus)`
-  font-size: 1.4rem;
+  font-size: 2.3rem;
   margin-right: 7px;
 `;
 
 export const NavUserSignIn = styled.div`
-  padding-left: 8px;
-  margin-right: 2px;
+  width: 100%;
+  padding-left: 3px;
 `;
 
 export const NavButton = styled.a`

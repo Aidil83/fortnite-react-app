@@ -119,6 +119,7 @@ export const NavCloseIcon = styled(AiOutlineClose)`
 export const NavMenuRight = styled.li`
   display: flex;
   min-width: 350px;
+  height: 50px;
   align-items: center;
   justify-content: flex-end;
   margin-left: auto;
@@ -356,6 +357,7 @@ export const Close = styled(IoCloseOutline)`
 `;
 
 export const NavmenuItemSignIn = styled(Link)`
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;

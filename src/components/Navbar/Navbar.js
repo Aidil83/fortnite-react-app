@@ -85,7 +85,6 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               <NavHamburgerIcon onClick={handleToggle} isOpen={isOpen} />
             )}
           </NavMenuLeftMobile>
-          {/* {isSearch && ( */}
           <NavMenuLeft>
             <NavMenuItem to="/merch">MERCH</NavMenuItem>
             {/* <NavMenuItem to="/battle_Pass">BATTLE PASS</NavMenuItem> */}
@@ -94,7 +93,6 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
             {/* <NavMenuItem to="/competitive">COMPETITIVE</NavMenuItem> */}
             <NavMenuItem to="/news">NEWS</NavMenuItem>
           </NavMenuLeft>
-          {/* )} */}
 
           <NavMenuRight>
             <NavMenuIcon
@@ -111,22 +109,6 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
             >
               <Open />
             </NavMenuIcon>
-            {/* {
-              <SearchContainerHidden isSearch={isSearch} isLoad={isLoad}>
-                <div className="search__Box">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    ref={(e) => {
-                      inputRef = e;
-                    }}
-                  />
-                </div>
-                <div className="search__Btn" onClick={handleSearch}>
-                  <Close />
-                </div>
-              </SearchContainerHidden>
-            } */}
             {
               <SearchContainer toggle={isSearch}>
                 <div className="search__Box">
@@ -134,9 +116,6 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                     handleToggle
                     type="text"
                     placeholder="Search..."
-                    // ref={(e) => {
-                    //   inputRef = e;
-                    // }}
                     ref={inputRef}
                   />
                 </div>

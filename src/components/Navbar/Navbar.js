@@ -139,7 +139,9 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
                 visibility: ${isSearch ? "hidden" : "visible"};
               `}
             >
-              <Open />
+              <div className="searchContainer">
+                <Open />
+              </div>
             </NavMenuIcon>
             {
               <SearchContainer toggle={isSearch}>

@@ -45,6 +45,49 @@ export const NavLogo = styled(Link)`
   }
 `;
 
+const NavUnderline = css`
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 47px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #ff0;
+  }
+  &:before {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &:after {
+    opacity: 0;
+    transform: translateY(5px/2);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      opacity 0.2s;
+  }
+  &:hover,
+  &:focus {
+    &:before,
+    &:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    &:before {
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0.2s;
+    }
+    &:after {
+      transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0s 0.2s;
+    }
+  }
+`;
+
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
@@ -146,49 +189,6 @@ const NavLink = css`
   }
 `;
 
-const NavUnderline = css`
-  position: relative;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 47px;
-    left: 0;
-    right: 0;
-    height: 5px;
-    width: 100%;
-    background-color: #ff0;
-  }
-  &:before {
-    opacity: 0;
-    transform: translateY(5px);
-    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  &:after {
-    opacity: 0;
-    transform: translateY(5px/2);
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-      opacity 0.2s;
-  }
-  &:hover,
-  &:focus {
-    &:before,
-    &:after {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    &:before {
-      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-        opacity 0.2s;
-    }
-    &:after {
-      transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-        opacity 0s 0.2s;
-    }
-  }
-`;
-
 const NavMobileReset = css`
   @media screen and (max-width: 768px) {
     display: none;
@@ -209,6 +209,9 @@ export const NavMenuIcon = styled.i`
   ${NavLink};
   ${NavMobileReset};
   margin: 0 7px;
+  & .searchContainer {
+    ${NavUnderline};
+  }
 `;
 
 const animateSearchBar = keyframes`

@@ -16,8 +16,12 @@ export const Main = styled.footer`
   width: 100%;
   background-color: #2a2a2a;
   overflow: hidden;
+  margin-top: 20px;
+  padding-top: 50px;
+
   @media screen and (min-width: 1024px) {
     height: 50vh;
+    padding-top: 10px;
   }
   @media screen and (min-width: 1300px) {
     height: 100%;
@@ -48,7 +52,7 @@ export const SocialContainer = styled.div`
     }
     .arrow {
       position: absolute;
-      right: 50px;
+      right: 5vw;
       border: 1px solid #ccc;
       cursor: pointer;
       &:hover {

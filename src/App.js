@@ -30,7 +30,12 @@ function App() {
     <Router>
       <AppContainer>
         <GlobalStyle />
-        <Navbar isOpen={isOpen} count={count} handleToggle={handleToggle} />
+        <Navbar
+          isOpen={isOpen}
+          count={count}
+          handleToggle={handleToggle}
+          setIsOpen={setIsOpen}
+        />
         <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
         <AppOverlay onClick={handleToggle} isOpen={isOpen}></AppOverlay>
         <Switch>

@@ -30,7 +30,7 @@ import {
   NavCart,
 } from "./Navbar.elements";
 
-const Navbar = ({ isOpen, handleToggle, count }) => {
+const Navbar = ({ setIsOpen, isOpen, handleToggle, count }) => {
   const [isSearch, setIsSearch] = useState(false);
   const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
@@ -119,7 +119,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
   return (
     <>
       <NavContainer>
-        <NavLogo to="/" img={forniteLogo} onClick={handleToggle} />
+        <NavLogo to="/" img={forniteLogo} onClick={() => setIsOpen(false)} />
         <NavMenu isSearch={isSearch}>
           <NavMenuLeftMobile>
             {isOpen ? (

@@ -65,16 +65,19 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
       gsap.to(".animateInput", {
         visibility: "visible",
         autoAlpha: 1,
-        duration: 0.8,
+        width: 230,
+        duration: 0.55,
         ease: "power1.out",
       });
     } else if (loadIndicator < 1) {
       gsap.to(".animateInput", {
         visibility: "hidden",
+        width: 0,
       });
     } else {
       gsap.to(".animateInput", {
         visibility: "visible",
+        width: 0,
         autoAlpha: 0,
         duration: 0.5,
       });
@@ -85,7 +88,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
         display: "block",
         visibility: "visible",
         autoAlpha: 1,
-        duration: 0.2,
+        duration: 0.1,
       });
     else
       gsap.to(".animateClose", {
@@ -139,8 +142,8 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               primary
               onClick={handleSearch}
               css={`
-                position: absolute;
-                right: 295px;
+                position: relative;
+                left: 225px;
                 width: 37px;
                 z-index: 1;
                 justify-content: center;

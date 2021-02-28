@@ -257,9 +257,9 @@ export const SearchContainer = styled.div`
 
   input[type="text"] {
     width: 240px;
-    animation-name: ${({ toggle }) =>
+    /* animation-name: ${({ toggle }) =>
       toggle ? animateSearchBar : animateSearchBarHidden};
-    animation-duration: ${({ toggle }) => (toggle ? "0.5s" : "0.5s")};
+    animation-duration: ${({ toggle }) => (toggle ? "0.5s" : "0.5s")}; */
 
     @media screen and (max-width: 812px) and (orientation: landscape) {
       width: 240px;

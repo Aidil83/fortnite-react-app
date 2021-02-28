@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components/macro";
+import styled, {keyframes} from "styled-components/macro";
 
 const media = {
   Laptop: "@media only screen and (min-width: 1740px)",
@@ -18,7 +18,7 @@ export const WrapperImage = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-image: url(${({ img }) => img});
+  background-image: url(${({img}) => img});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -41,18 +41,29 @@ export const WrapperImage = styled.div`
   overflow-anchor: none;
   /* &.mobile2 {
     @media (max-width: 768px) {
-      background-image: url(${({ imgMobile }) => imgMobile});
+      background-image: url(${({imgMobile}) => imgMobile});
     }
   }
   &.mobile3 {
     @media (max-width: 768px) {
-      background-image: url(${({ imgMobile }) => imgMobile});
+      background-image: url(${({imgMobile}) => imgMobile});
     }
   } */
 `;
 
 export const PrevBtn = styled.button`
-  display: none;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  outline: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  .MuiSvgIcon-root {
+    font-size: 4rem;
+  }
   /* position: absolute;
   bottom: 110px;
   left: 5%;
@@ -90,7 +101,18 @@ export const PrevBtn = styled.button`
 `;
 
 export const NextBtn = styled.button`
-  display: none;
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  outline: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  .MuiSvgIcon-root {
+    font-size: 4rem;
+  }
   /* position: absolute;
   bottom: 110px;
   right: 5%;
@@ -122,11 +144,11 @@ export const WrapperTextContainer = styled.div`
   flex-flow: column wrap;
   justify-content: center;
   align-items: flex-start;
-  width: ${({ slide }) => slide.posCaptionRight};
+  width: ${({slide}) => slide.posCaptionRight};
   height: 49%;
   position: absolute;
-  left: ${({ slide }) => slide.WrapperContainerLeft};
-  bottom: ${({ slide }) => slide.WrapperContainerBottom}; */
+  left: ${({slide}) => slide.WrapperContainerLeft};
+  bottom: ${({slide}) => slide.WrapperContainerBottom}; */
 `;
 
 export const WrapperText = styled.img`
@@ -136,13 +158,13 @@ export const WrapperText = styled.img`
   /* max-height: 100px; */
   object-fit: contain;
   margin-bottom: 16vh;
-  /* left: ${({ slide }) => slide.imgTxtLeft}; */
+  /* left: ${({slide}) => slide.imgTxtLeft}; */
 
-  /* height: ${({ slide }) => slide.imgTxtHeight}; */
+  /* height: ${({slide}) => slide.imgTxtHeight}; */
   /* opacity: 1; */
 
   /* ${media.ipad} {
-    left: ${({ slide }) => slide.imgTxtIpad};
+    left: ${({slide}) => slide.imgTxtIpad};
 
     &.mobile3 {
       height: 100px;
@@ -155,7 +177,7 @@ export const WrapperText = styled.img`
 export const WrapperTitleTxt = styled.div`
   /* display: flex;
   justify-content: center;
-  align-self: ${({ slide }) => slide.alignSelf};
+  align-self: ${({slide}) => slide.alignSelf};
   line-height: 93.4px;
   width: 800px;
   font-family: "Luckiest Guy", cursive;
@@ -163,7 +185,7 @@ export const WrapperTitleTxt = styled.div`
   font-weight: 500;
   font-style: italic;
   letter-spacing: 3.1px;
-  background-image: ${({ slide }) => slide.backgroundImage};
+  background-image: ${({slide}) => slide.backgroundImage};
   background-size: 100%;
   /* NOTE: Ignore the linting: */
   /* -webkit-background-clip: text; */
@@ -171,12 +193,12 @@ export const WrapperTitleTxt = styled.div`
 `;
 
 export const WrapperCaption = styled.div`
-  /* width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth};
+  /* width: ${({wrapperCaptionWidth}) => wrapperCaptionWidth};
   height: 45px;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(2rem, 9.6vw, 2.3rem);
-  color: ${({ slide }) => slide.captionColor}; */
+  color: ${({slide}) => slide.captionColor}; */
 `;
 
 export const WrapperSection = styled.div`
@@ -208,7 +230,7 @@ const loadText = keyframes`
 export const WrapperButton = styled.button`
   position: absolute;
   bottom: 150px;
-  background-color: ${({ slide }) => slide.bgBtnColor};
+  background-color: ${({slide}) => slide.bgBtnColor};
   outline: none;
   border: none;
   cursor: pointer;
@@ -225,7 +247,7 @@ export const WrapperButton = styled.button`
 
   &:hover {
     transform: skewX(-5deg);
-    background-color: ${({ slide }) => slide.bgBtnColor};
+    background-color: ${({slide}) => slide.bgBtnColor};
   }
 `;
 
@@ -235,7 +257,7 @@ export const WrapperLearnMore = styled.p`
   font-size: clamp(1rem, 6vw, 1.4rem);
   padding: 0.1em 0.4em;
   transition: 550ms ease;
-  color: ${({ slide }) => slide.txtBtnColor};
+  color: ${({slide}) => slide.txtBtnColor};
 
   &:hover {
     transform: translateX(1.5%);

@@ -297,7 +297,7 @@ export const SearchContainerHidden = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 7px;
   input {
     opacity: 0;
     transition: 1s;

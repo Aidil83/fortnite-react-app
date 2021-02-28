@@ -60,6 +60,14 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
     setLoadIndicator(loadIndicator + 1);
   }, [purchasedIndicator]);
 
+  // useEffect(() => {
+  //   if (!isSearch)
+  //     gsap.to(".animateInput", {
+  //       autoAlpha: 0,
+  //       duration: 0.3,
+  //     });
+  // }, [isSearch]);
+
   const handleSearch = () => {
     setIsSearch(!isSearch);
     setLoadCount(loadCount + 1);
@@ -113,6 +121,7 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
               <SearchContainer toggle={isSearch}>
                 <div className="search__Box">
                   <input
+                    className="animateInput"
                     handleToggle
                     type="text"
                     placeholder="Search..."

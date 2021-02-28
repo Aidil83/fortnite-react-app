@@ -68,6 +68,10 @@ const Navbar = ({ isOpen, handleToggle, count }) => {
         duration: 0.8,
         ease: "power1.out",
       });
+    } else if (loadIndicator < 1) {
+      gsap.to(".animateInput", {
+        visibility: "hidden",
+      });
     } else {
       gsap.to(".animateInput", {
         visibility: "visible",

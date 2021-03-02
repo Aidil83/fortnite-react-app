@@ -39,16 +39,6 @@ export const WrapperImage = styled.div`
 
   /* NOTE: Prevents auto scrolling after refreshing page: */
   overflow-anchor: none;
-  /* &.mobile2 {
-    @media (max-width: 768px) {
-      background-image: url(${({imgMobile}) => imgMobile});
-    }
-  }
-  &.mobile3 {
-    @media (max-width: 768px) {
-      background-image: url(${({imgMobile}) => imgMobile});
-    }
-  } */
 `;
 
 export const PrevBtn = styled.button`
@@ -140,15 +130,6 @@ export const WrapperTextContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /* display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: flex-start;
-  width: ${({slide}) => slide.posCaptionRight};
-  height: 49%;
-  position: absolute;
-  left: ${({slide}) => slide.WrapperContainerLeft};
-  bottom: ${({slide}) => slide.WrapperContainerBottom}; */
 `;
 
 export const WrapperText = styled.img`
@@ -158,20 +139,6 @@ export const WrapperText = styled.img`
   /* max-height: 100px; */
   object-fit: contain;
   margin-bottom: 16vh;
-  /* left: ${({slide}) => slide.imgTxtLeft}; */
-
-  /* height: ${({slide}) => slide.imgTxtHeight}; */
-  /* opacity: 1; */
-
-  /* ${media.ipad} {
-    left: ${({slide}) => slide.imgTxtIpad};
-
-    &.mobile3 {
-      height: 100px;
-      bottom: 150%;
-      margin-bottom: -45px;
-    }
-  } */
 `;
 
 export const WrapperTitleTxt = styled.div`

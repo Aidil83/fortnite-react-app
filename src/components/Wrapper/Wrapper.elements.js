@@ -54,6 +54,9 @@ export const PrevBtn = styled.button`
   .MuiSvgIcon-root {
     font-size: 4rem;
   }
+  &:hover {
+    background-color: rgba(0, 0, 0, .3)
+  } 
   /* position: absolute;
   bottom: 110px;
   left: 5%;
@@ -103,6 +106,10 @@ export const NextBtn = styled.button`
   .MuiSvgIcon-root {
     font-size: 4rem;
   }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .3)
+  } 
   /* position: absolute;
   bottom: 110px;
   right: 5%;
@@ -119,9 +126,7 @@ export const NextBtn = styled.button`
     font-size: 2rem;
   }
 
-  &:hover {
-    background-color: orange;
-  } */
+  */
 `;
 
 export const WrapperTextContainer = styled.div`

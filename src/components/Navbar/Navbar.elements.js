@@ -365,6 +365,7 @@ export const Close = styled(IoCloseOutline)`
 
 export const NavmenuItemSignIn = styled(Link)`
   height: 100%;
+  width: min-content;
   display: flex;
   justify-content: space-around;
   align-items: center;

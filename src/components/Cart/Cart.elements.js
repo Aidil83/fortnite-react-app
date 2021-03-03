@@ -96,6 +96,16 @@ export const Info__title = styled.div`
     margin-left: auto;
     margin-right: 10%;
   }
+  & .edit-icon {
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      color: blue;
+      transform: scale(1.2);
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 25%;
+    }
+  }
 `;
 
 export const Info__productContainer = styled.div`

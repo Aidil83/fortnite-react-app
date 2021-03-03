@@ -371,7 +371,7 @@ export const NavmenuItemSignIn = styled(Link)`
   ${NavLink}
   ${NavMobileReset}
   margin-left: 17px;
-  margin-right: 5px;
+  margin-right: 15px;
 `;
 
 export const NavUserLogo = styled(FaUserPlus)`

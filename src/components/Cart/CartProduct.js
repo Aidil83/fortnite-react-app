@@ -8,7 +8,7 @@ import {
   Info__close,
 } from "./Cart.elements";
 
-const CartProduct = ({ purchasedItem }) => {
+const CartProduct = ({ purchasedItem, isEdit }) => {
   const { modalData, modalPrice } = purchasedItem;
   // double destructuring:
   const [, dispatch] = useContext(StateContext);

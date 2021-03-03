@@ -11,7 +11,7 @@ import { Total, Total__header, Total__subtotal } from "./Cart.elements";
 import { Total__shipping, Total__total, Total__btn } from "./Cart.elements";
 import EditIcon from "@material-ui/icons/Edit";
 import CartProduct from "./CartProduct";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { StateContext } from "../../context/StateProvider";
 import CurrencyFormat from "react-currency-format";
 import {
@@ -24,6 +24,11 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const [{ purchasedItems }] = useContext(StateContext);
   const pluralItem = purchasedItems.length > 1 ? "items" : "item";
+  const [isEdit, setIsEdit] = useState(false);
+
+  const handleEdit = () => {
+    setIsEdit(!isEdit);
+  };
 
   return (
     <Main>
@@ -32,14 +37,20 @@ const Cart = () => {
       </Title>
       <MainContainer>
         <InfoContainer>
-          <Info__title>
+          <Info__title isEdit={isEdit}>
             <div className="product-label">Product</div>
             <div className="price-label">Price</div>
-            <EditIcon className="edit-icon" />
+            <EditIcon className="edit-icon" onClick={handleEdit} />
           </Info__title>
           <CartProduct__container>
             {purchasedItems.map((purchasedItem, index) => {
-              return <CartProduct key={index} purchasedItem={purchasedItem} />;
+              return (
+                <CartProduct
+                  key={index}
+                  purchasedItem={purchasedItem}
+                  isEdit={isEdit}
+                />
+              );
             })}
           </CartProduct__container>
         </InfoContainer>

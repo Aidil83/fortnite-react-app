@@ -97,6 +97,7 @@ export const Info__title = styled.div`
     margin-right: 10%;
   }
   & .edit-icon {
+    display: ${({ isEdit }) => (isEdit ? "none" : "block")};
     cursor: pointer;
     transition: 0.2s;
     &:hover {

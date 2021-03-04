@@ -1,3 +1,4 @@
+import { Checkbox } from "@material-ui/core";
 import { useContext, useState } from "react";
 import { StateContext } from "../../context/StateProvider";
 import {
@@ -6,7 +7,6 @@ import {
   Info__name,
   Info__productContainer,
   Info__close,
-  Info__checkbox,
 } from "./Cart.elements";
 
 const CartProduct = ({ purchasedItem, isEdit }) => {
@@ -33,8 +33,15 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
             <div className="product-rarity">{modalData.rarity.value}</div>
           </Info__name>
           <div className="price-cost">${modalPrice.price}</div>
-          <Info__close onClick={handleClose} isEdit={isEdit} />
-          <Info__checkbox isEdit={isEdit} />
+          <Info__close
+            onClick={handleClose}
+            isEdit={isEdit}
+            style={{ display: isEdit ? "none" : "block" }}
+          />
+          <Checkbox
+            inputProps={{ "aria-label": "uncontrolled-checkbox" }}
+            style={{ display: isEdit ? "block" : "none", padding: 0 }}
+          />
         </Info__productContainer>
         <hr style={{ opacity: 0.3 }} />
       </Info>

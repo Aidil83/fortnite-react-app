@@ -98,7 +98,8 @@ export const Info__title = styled.div`
     margin-right: 10%;
   }
   & .edit-icon {
-    display: ${({ isEdit }) => (isEdit ? "none" : "block")};
+    /* display: ${({ isEdit }) => (isEdit ? "none" : "block")}; */
+    display: block;
     cursor: pointer;
     transition: 0.2s;
     &:hover {
@@ -257,8 +258,4 @@ export const Info__close = styled(CloseIcon)`
   display: ${({ isEdit }) => (isEdit ? "none" : "block")};
   color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
-`;
-export const Info__checkbox = styled(CheckBoxOutlineBlankIcon)`
-  /* display: ${({ isEdit }) => (isEdit ? "block" : "none")}; */
-  display: none;
 `;

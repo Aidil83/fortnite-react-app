@@ -32,7 +32,7 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
             <div className="product-rarity">{modalData.rarity.value}</div>
           </Info__name>
           <div className="price-cost">${modalPrice.price}</div>
-          <Info__close onClick={handleClose} />
+          <Info__close onClick={handleClose} isEdit={isEdit} />
         </Info__productContainer>
         <hr style={{ opacity: 0.3 }} />
       </Info>

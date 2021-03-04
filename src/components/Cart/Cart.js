@@ -20,6 +20,7 @@ import {
   getTotalPrice,
 } from "../../context/reducer";
 import { Link } from "react-router-dom";
+import DotOption from "./DotOption";
 
 const Cart = () => {
   const [{ purchasedItems }] = useContext(StateContext);
@@ -40,7 +41,8 @@ const Cart = () => {
           <Info__title isEdit={isEdit}>
             <div className="product-label">Product</div>
             <div className="price-label">Price</div>
-            <EditIcon className="edit-icon" onClick={handleEdit} />
+            {!isEdit && <EditIcon className="edit-icon" onClick={handleEdit} />}
+            {isEdit && <DotOption />}
           </Info__title>
           <CartProduct__container>
             {purchasedItems.map((purchasedItem, index) => {

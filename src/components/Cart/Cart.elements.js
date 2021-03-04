@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components/macro";
 import CloseIcon from "@material-ui/icons/Close";
+import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 
 const fs = css`
   font-family: "Roboto", sans-serif;
@@ -253,6 +254,10 @@ export const Total__btn = styled.div`
 `;
 
 export const Info__close = styled(CloseIcon)`
+  display: ${({ isEdit }) => (isEdit ? "none" : "block")};
   color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
+`;
+export const Info__checkbox = styled(CheckBoxOutlineBlankIcon)`
+  display: ${({ isEdit }) => (isEdit ? "block" : "none")};
 `;

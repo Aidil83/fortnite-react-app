@@ -5,24 +5,28 @@ export const initialState = {
   hoverCard: {},
   firstCard: 0,
   purchasedItems: [],
+  deleteSelected: [],
   purchasedIndicator: null,
   trackLogin: "SIGN IN",
   trackDemo: "Bob",
+  isTick: false,
 };
 
 export const getCartTotal = (purchasedItem) =>
-  purchasedItem?.reduce((amount, item) => item.modalPrice.price + amount, 0);
+  purchasedItem?.reduce((amount, item) => item?.modalPrice?.price + amount, 0);
 
 export const getEstimatedTax = (purchasedItem) => {
   return (
-    purchasedItem?.reduce((amount, item) => item.modalPrice.price + amount, 0) *
-    0.08
+    purchasedItem?.reduce(
+      (amount, item) => item?.modalPrice?.price + amount,
+      0
+    ) * 0.08
   );
 };
 
 export const getTotalPrice = (purchasedItem) => {
   const subtotal = purchasedItem?.reduce(
-    (amount, item) => item.modalPrice.price + amount,
+    (amount, item) => item?.modalPrice?.price + amount,
     0
   );
 
@@ -80,6 +84,11 @@ const reducer = (state, action) => {
         ...state,
         purchasedIndicator: action.payload,
       };
+    case "DELETE_SELECTED":
+      return {
+        ...state,
+        deleteSelected: action.payload,
+      };
     case "REMOVE_FROM_CART":
       let newCart = [...state.purchasedItems];
 
@@ -88,7 +97,7 @@ const reducer = (state, action) => {
       });
 
       if (index >= 0) {
-        // If item exists in basket, remove it...
+        // item exists in basket, remove it...
         newCart.splice(index, 1);
       } else {
         console.warn(

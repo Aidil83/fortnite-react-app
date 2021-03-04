@@ -10,8 +10,9 @@ import {
 } from "./Cart.elements";
 
 const CartProduct = ({ purchasedItem, isEdit }) => {
-  const { modalData, modalPrice } = purchasedItem;
-  const [storeTicked, setStoreTicked] = useState(modalData);
+  const { modalData, modalPrice, isTick } = purchasedItem;
+  const [storeTicked, setStoreTicked] = useState(purchasedItem);
+  const [isSelected, setIsSelected] = useState(false);
   // double destructuring:
   const [, dispatch] = useContext(StateContext);
 
@@ -23,14 +24,14 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
   };
 
   const handleCheckbox = () => {
-    console.log(!storeTicked.isTick);
-    if (storeTicked.isTick == undefined)
-      setStoreTicked({ ...storeTicked, isTick: true });
-    else if (storeTicked.isTick === true)
-      setStoreTicked({ ...storeTicked, isTick: false });
-    else setStoreTicked({ ...storeTicked, isTick: true });
-
-    return;
+    setStoreTicked({ ...storeTicked, isTick: !storeTicked.isTick });
+    // if (storeTicked.isTick == undefined)
+    //   setStoreTicked({ ...storeTicked, isTick: true });
+    // else if (storeTicked.isTick === true)
+    //   setStoreTicked({ ...storeTicked, isTick: false });
+    // else setStoreTicked({ ...storeTicked, isTick: true });
+    // console.log(storeTicked, !storeTicked.isTick);
+    // return;
   };
 
   return (

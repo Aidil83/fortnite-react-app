@@ -23,7 +23,7 @@ import { Link } from "react-router-dom";
 import DotOption from "./DotOption";
 
 const Cart = () => {
-  const [{ purchasedItems }] = useContext(StateContext);
+  const [{ purchasedItems }, dispatch] = useContext(StateContext);
   const pluralItem = purchasedItems.length > 1 ? "items" : "item";
   const [isEdit, setIsEdit] = useState(false);
 

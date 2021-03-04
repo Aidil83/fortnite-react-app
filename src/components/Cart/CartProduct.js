@@ -23,8 +23,13 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
   };
 
   const handleCheckbox = () => {
-    console.log(storeTicked);
-    setStoreTicked({ ...storeTicked, isTick: true });
+    console.log(!storeTicked.isTick);
+    if (storeTicked.isTick == undefined)
+      setStoreTicked({ ...storeTicked, isTick: true });
+    else if (storeTicked.isTick === true)
+      setStoreTicked({ ...storeTicked, isTick: false });
+    else setStoreTicked({ ...storeTicked, isTick: true });
+
     return;
   };
 

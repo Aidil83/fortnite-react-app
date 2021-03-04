@@ -11,6 +11,7 @@ import {
 
 const CartProduct = ({ purchasedItem, isEdit }) => {
   const { modalData, modalPrice } = purchasedItem;
+  const [storeTicked, setStoreTicked] = useState(modalData);
   // double destructuring:
   const [, dispatch] = useContext(StateContext);
 
@@ -19,6 +20,12 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
       type: "REMOVE_FROM_CART",
       payload: modalData.id,
     });
+  };
+
+  const handleCheckbox = () => {
+    console.log(storeTicked);
+    setStoreTicked({ ...storeTicked, isTick: true });
+    return;
   };
 
   return (
@@ -41,6 +48,7 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
           <Checkbox
             inputProps={{ "aria-label": "uncontrolled-checkbox" }}
             style={{ display: isEdit ? "block" : "none", padding: 0 }}
+            onClick={handleCheckbox}
           />
         </Info__productContainer>
         <hr style={{ opacity: 0.3 }} />

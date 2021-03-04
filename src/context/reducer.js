@@ -88,10 +88,12 @@ const reducer = (state, action) => {
       });
 
       if (index >= 0) {
-        // item exists in basket, remove it...
+        // If item exists in basket, remove it...
         newCart.splice(index, 1);
       } else {
-        console.warn(`Can't remove product (id: ${action.payload}) as its not`);
+        console.warn(
+          `Can't remove product (id: ${action.payload}) as its not there.`
+        );
       }
       // console.log(newCart, "removed 1");
       return {

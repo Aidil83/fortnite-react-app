@@ -4,7 +4,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
-const options = ["Delete selected", "Deselect all", "Delete all"];
+const options = ["Delete selected", "Delete all", "Deselect all"];
 
 const ITEM_HEIGHT = 48;
 

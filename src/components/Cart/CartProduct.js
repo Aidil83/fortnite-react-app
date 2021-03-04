@@ -6,6 +6,7 @@ import {
   Info__name,
   Info__productContainer,
   Info__close,
+  Info__checkbox,
 } from "./Cart.elements";
 
 const CartProduct = ({ purchasedItem, isEdit }) => {
@@ -33,6 +34,7 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
           </Info__name>
           <div className="price-cost">${modalPrice.price}</div>
           <Info__close onClick={handleClose} isEdit={isEdit} />
+          <Info__checkbox isEdit={isEdit} />
         </Info__productContainer>
         <hr style={{ opacity: 0.3 }} />
       </Info>

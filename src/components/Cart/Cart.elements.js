@@ -259,5 +259,6 @@ export const Info__close = styled(CloseIcon)`
   cursor: pointer;
 `;
 export const Info__checkbox = styled(CheckBoxOutlineBlankIcon)`
-  display: ${({ isEdit }) => (isEdit ? "block" : "none")};
+  /* display: ${({ isEdit }) => (isEdit ? "block" : "none")}; */
+  display: none;
 `;

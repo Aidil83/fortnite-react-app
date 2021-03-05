@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import IconButton from "@material-ui/core/IconButton";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import { StateContext } from "../../context/StateProvider";
 
 const options = ["Delete selected", "Delete all", "Deselect all"];
 
 const ITEM_HEIGHT = 48;
 
 const DotOption = () => {
+  // const [{ saveFunc }] = useContext(StateContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -16,7 +18,9 @@ const DotOption = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (option) => {
+    // if (option === "Delete selected") ;
+    // 1)
     setAnchorEl(null);
   };
 
@@ -44,15 +48,17 @@ const DotOption = () => {
           },
         }}
       >
-        {options.map((option) => (
-          <MenuItem
-            key={option}
-            selected={option === "Pyxis"}
-            onClick={handleClose}
-          >
-            {option}
-          </MenuItem>
-        ))}
+        {options.map((option) => {
+          return (
+            <MenuItem
+              key={option}
+              selected={option === "Pyxis"}
+              onClick={() => handleClose(option)}
+            >
+              {option}
+            </MenuItem>
+          );
+        })}
       </Menu>
     </div>
   );

@@ -10,6 +10,7 @@ export const initialState = {
   trackLogin: "SIGN IN",
   trackDemo: "Bob",
   isTick: false,
+  saveFunc: null,
 };
 
 export const getCartTotal = (purchasedItem) =>
@@ -85,9 +86,27 @@ const reducer = (state, action) => {
         purchasedIndicator: action.payload,
       };
     case "DELETE_SELECTED":
+      let newCart1 = [...state.purchasedItems];
+
+      const index1 = state.purchasedItems.findIndex((cartItem) => {
+        return (
+          cartItem.modalData.id === action.payload.modalData.id &&
+          cartItem.isTick === true
+        );
+      });
+
+      if (index1 >= 0) {
+        // item exists in basket, remove it...
+        newCart1.splice(index1, 1);
+      } else {
+        console.warn(
+          `Can't remove product (id: ${action.payload}) as its not there.`
+        );
+      }
+      // console.log(newCart1, "removed 1");
       return {
         ...state,
-        deleteSelected: action.payload,
+        purchasedItems: newCart1,
       };
     case "REMOVE_FROM_CART":
       let newCart = [...state.purchasedItems];

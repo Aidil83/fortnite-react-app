@@ -1,5 +1,5 @@
 import { Checkbox } from "@material-ui/core";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { StateContext } from "../../context/StateProvider";
 import {
   Info,
@@ -12,7 +12,6 @@ import {
 const CartProduct = ({ purchasedItem, isEdit }) => {
   const { modalData, modalPrice, isTick } = purchasedItem;
   const [storeTicked, setStoreTicked] = useState(purchasedItem);
-  const [isSelected, setIsSelected] = useState(false);
   // double destructuring:
   const [, dispatch] = useContext(StateContext);
 

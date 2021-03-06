@@ -26,14 +26,16 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
     setStoreTicked({ ...storeTicked, isTick: !storeTicked.isTick });
     console.log(purchasedItems, "<-");
     const tickPurchasedItems = purchasedItems.map((item) => {
-      if (item.modalData.id === storeTicked.modalData.id) {
-      return (
-        item.isTick = !isTick;
-        tickPurchasedItems.push(item);
-
-      )
-      }
+      if (item.modalData.id === storeTicked.modalData.id) return item;
     });
+    // const tickPurchasedItems = purchasedItems.map((item) => {
+    //   if (item.modalData.id === storeTicked.modalData.id) {
+    //     return (
+    //     item.isTick = !isTick;
+    //     tickPurchasedItems.push(item);
+    //     )
+    //   }
+    // });
 
     console.log(tickPurchasedItems, "new");
 

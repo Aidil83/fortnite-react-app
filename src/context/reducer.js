@@ -10,7 +10,7 @@ export const initialState = {
   trackLogin: "SIGN IN",
   trackDemo: "Bob",
   isTick: false,
-  saveFunc: null,
+  saveTick: null,
 };
 
 export const getCartTotal = (purchasedItem) =>
@@ -88,12 +88,11 @@ const reducer = (state, action) => {
     case "DELETE_SELECTED":
       let newCart1 = [...state.purchasedItems];
 
-      const index1 = state.purchasedItems.findIndex((cartItem) => {
-        return (
-          cartItem.modalData.id === action.payload.modalData.id &&
-          cartItem.isTick === true
-        );
+      const index1 = state.saveTick.filter((isTickItem) => {
+        return isTickItem.isTick === false;
       });
+      console.log(state.saveTick);
+      console.log(index1);
 
       if (index1 >= 0) {
         // item exists in basket, remove it...
@@ -132,6 +131,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         trackLogin: action.payload,
+      };
+    case "SAVE_TICK":
+      return {
+        ...state,
+        saveTick: action.payload,
       };
     default:
       return state;

@@ -10,7 +10,7 @@ const options = ["Delete selected", "Delete all", "Deselect all"];
 const ITEM_HEIGHT = 48;
 
 const DotOption = () => {
-  // const [{ saveFunc }] = useContext(StateContext);
+  const [{ saveTick, purchasedItems }, dispatch] = useContext(StateContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -19,8 +19,11 @@ const DotOption = () => {
   };
 
   const handleClose = (option) => {
-    // if (option === "Delete selected") ;
-    // 1)
+    if (option === "Delete selected")
+      dispatch({
+        type: "DELETE_SELECTED",
+        payload: saveTick,
+      });
     setAnchorEl(null);
   };
 

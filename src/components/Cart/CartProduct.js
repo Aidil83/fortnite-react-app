@@ -13,7 +13,7 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
   const { modalData, modalPrice, isTick } = purchasedItem;
   const [storeTicked, setStoreTicked] = useState(purchasedItem);
   // double destructuring:
-  const [, dispatch] = useContext(StateContext);
+  const [{ purchasedItems }, dispatch] = useContext(StateContext);
 
   const handleClose = () => {
     dispatch({
@@ -24,13 +24,23 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
 
   const handleCheckbox = () => {
     setStoreTicked({ ...storeTicked, isTick: !storeTicked.isTick });
-    // if (storeTicked.isTick == undefined)
-    //   setStoreTicked({ ...storeTicked, isTick: true });
-    // else if (storeTicked.isTick === true)
-    //   setStoreTicked({ ...storeTicked, isTick: false });
-    // else setStoreTicked({ ...storeTicked, isTick: true });
-    // console.log(storeTicked, !storeTicked.isTick);
-    // return;
+    console.log(purchasedItems, "<-");
+    const tickPurchasedItems = purchasedItems.map((item) => {
+      if (item.modalData.id === storeTicked.modalData.id) {
+      return (
+        item.isTick = !isTick;
+        tickPurchasedItems.push(item);
+
+      )
+      }
+    });
+
+    console.log(tickPurchasedItems, "new");
+
+    dispatch({
+      type: "SAVE_TICK",
+      payload: tickPurchasedItems,
+    });
   };
 
   return (

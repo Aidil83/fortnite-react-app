@@ -24,20 +24,16 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
 
   const handleCheckbox = () => {
     setStoreTicked({ ...storeTicked, isTick: !storeTicked.isTick });
+    let tickPurchasedItems = [];
     console.log(purchasedItems, "<-");
-    const tickPurchasedItems = purchasedItems.map((item) => {
-      if (item.modalData.id === storeTicked.modalData.id) return item;
+    purchasedItems.forEach((item) => {
+      if (item.modalData.id === storeTicked.modalData.id) {
+        item.isTick = !isTick;
+        tickPurchasedItems.push(purchasedItems);
+      }
     });
-    // const tickPurchasedItems = purchasedItems.map((item) => {
-    //   if (item.modalData.id === storeTicked.modalData.id) {
-    //     return (
-    //     item.isTick = !isTick;
-    //     tickPurchasedItems.push(item);
-    //     )
-    //   }
-    // });
 
-    console.log(tickPurchasedItems, "new");
+    console.log(tickPurchasedItems);
 
     dispatch({
       type: "SAVE_TICK",

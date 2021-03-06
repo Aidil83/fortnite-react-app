@@ -19,10 +19,11 @@ const DotOption = () => {
   };
 
   const handleClose = (option) => {
+    console.log(purchasedItems, "DotOptions");
     if (option === "Delete selected")
       dispatch({
         type: "DELETE_SELECTED",
-        payload: saveTick,
+        payload: purchasedItems,
       });
     setAnchorEl(null);
   };

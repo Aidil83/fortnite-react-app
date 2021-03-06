@@ -88,24 +88,14 @@ const reducer = (state, action) => {
     case "DELETE_SELECTED":
       let newCart1 = [...state.purchasedItems];
 
-      const index1 = state.saveTick.filter((isTickItem) => {
+      const index1 = action.payload.filter((isTickItem) => {
         return isTickItem.isTick === false;
       });
-      console.log(state.saveTick);
-      console.log(index1);
+      console.log(index1, "index1");
 
-      if (index1 >= 0) {
-        // item exists in basket, remove it...
-        newCart1.splice(index1, 1);
-      } else {
-        console.warn(
-          `Can't remove product (id: ${action.payload}) as its not there.`
-        );
-      }
-      // console.log(newCart1, "removed 1");
       return {
         ...state,
-        purchasedItems: newCart1,
+        purchasedItems: index1,
       };
     case "REMOVE_FROM_CART":
       let newCart = [...state.purchasedItems];

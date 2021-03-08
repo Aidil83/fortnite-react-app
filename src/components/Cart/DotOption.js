@@ -30,8 +30,7 @@ const DotOption = () => {
         type: "DELETE_ALL",
         payload: purchasedItems,
       });
-
-    setAnchorEl(null);
+    else if (option === "") setAnchorEl(null);
   };
 
   return (

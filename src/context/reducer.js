@@ -102,6 +102,16 @@ const reducer = (state, action) => {
         ...state,
         purchasedItems: [],
       };
+    case "DESELECT_ALL":
+      let cart2 = action.payload.map((item) => {
+        item.isTick = false;
+        return item;
+      });
+      console.log(cart2, "cart2");
+      return {
+        ...state,
+        purchasedItems: cart2,
+      };
     case "REMOVE_FROM_CART":
       let newCart = [...state.purchasedItems];
 

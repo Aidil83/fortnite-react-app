@@ -9,7 +9,7 @@ const options = ["Delete selected", "Delete all", "Deselect all"];
 
 const ITEM_HEIGHT = 48;
 
-const DotOption = () => {
+const DotOption = ({ setIsEdit }) => {
   const [{ purchasedItems }, dispatch] = useContext(StateContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -30,7 +30,14 @@ const DotOption = () => {
         type: "DELETE_ALL",
         payload: purchasedItems,
       });
-    else if (option === "") setAnchorEl(null);
+    else if (option === "Deselect all")
+      dispatch({
+        type: "DESELECT_ALL",
+        payload: purchasedItems,
+      });
+
+    // setIsEdit((prevStateEdit) => !prevStateEdit);
+    setAnchorEl(null);
   };
 
   return (

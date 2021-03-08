@@ -24,15 +24,14 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
 
   const handleCheckbox = () => {
     setStoreTicked({ ...storeTicked, isTick: !storeTicked.isTick });
-    console.log(purchasedItems, "current");
     purchasedItems.forEach((item) => {
       if (item.modalData.id === storeTicked.modalData.id) {
         item.isTick = !storeTicked.isTick;
-        console.log(true);
+        console.log(item);
       }
     });
 
-    console.log(purchasedItems, "new");
+    // console.log(purchasedItems, "new");
 
     dispatch({
       type: "SAVE_TICK",
@@ -61,6 +60,7 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
             inputProps={{ "aria-label": "uncontrolled-checkbox" }}
             style={{ display: isEdit ? "block" : "none", padding: 0 }}
             onClick={handleCheckbox}
+            checked={purchasedItem.isTick}
           />
         </Info__productContainer>
         <hr style={{ opacity: 0.3 }} />

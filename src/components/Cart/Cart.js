@@ -42,7 +42,7 @@ const Cart = () => {
             <div className="product-label">Product</div>
             <div className="price-label">Price</div>
             {!isEdit && <EditIcon className="edit-icon" onClick={handleEdit} />}
-            {isEdit && <DotOption />}
+            {isEdit && <DotOption setIsEdit={setIsEdit} />}
           </Info__title>
           <CartProduct__container>
             {purchasedItems.map((purchasedItem, index) => {

@@ -25,6 +25,12 @@ const DotOption = () => {
         type: "DELETE_SELECTED",
         payload: purchasedItems,
       });
+    else if (option === "Delete all")
+      dispatch({
+        type: "DELETE_ALL",
+        payload: purchasedItems,
+      });
+
     setAnchorEl(null);
   };
 

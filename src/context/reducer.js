@@ -97,6 +97,11 @@ const reducer = (state, action) => {
         ...state,
         purchasedItems: index1,
       };
+    case "DELETE_ALL":
+      return {
+        ...state,
+        purchasedItems: [],
+      };
     case "REMOVE_FROM_CART":
       let newCart = [...state.purchasedItems];
 

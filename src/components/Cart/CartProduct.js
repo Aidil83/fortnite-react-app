@@ -24,8 +24,12 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
 
   const handleCheckbox = () => {
     setStoreTicked({ ...storeTicked, isTick: !storeTicked.isTick });
+    console.log(purchasedItems, "current");
     purchasedItems.forEach((item) => {
-      if (item.modalData.id === storeTicked.modalData.id) item.isTick = !isTick;
+      if (item.modalData.id === storeTicked.modalData.id) {
+        item.isTick = !storeTicked.isTick;
+        console.log(true);
+      }
     });
 
     console.log(purchasedItems, "new");

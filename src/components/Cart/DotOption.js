@@ -10,7 +10,7 @@ const options = ["Delete selected", "Delete all", "Deselect all"];
 const ITEM_HEIGHT = 48;
 
 const DotOption = () => {
-  const [{ saveTick, purchasedItems }, dispatch] = useContext(StateContext);
+  const [{ purchasedItems }, dispatch] = useContext(StateContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 

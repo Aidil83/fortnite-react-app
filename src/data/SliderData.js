@@ -37,16 +37,24 @@ export const SliderData = [
     txtBtnColor: "#fff",
 
     alignSelf: "center",
-    wrapperCaptionWidth: "auto",
-    wrapperTxtHeight: "35%",
-    wrapperCaptionHeight: "35%",
-    WrapperTextContainerHeight: "49%",
-
-    posCaptionTop: "57%",
-    posCaptionRight: "25%",
+    // ==================
+    //   WrapperCaption
+    // ==================
+    wrapperCaption__width: "max-content",
+    wrapperCaption__marginTop: "100%",
+    // wrapperTxtHeight: "35%",
+    // wrapperCaptionHeight: "35%",
+    // WrapperTextContainerHeight: "49%",
+    // ===================
+    //   WrapperTitleTxt
+    // ===================
+    wrapperTitleTxt__marginTop: "70%",
+    wrapperTitleTxt__marginRight: "8px",
+    // posCaptionTop: "57%",
+    // posCaptionRight: "25%",
     captionColor: "#000",
-    posCaptionRight: "100%",
-    posCaptionHeight: " 8%",
+    // posCaptionRight: "100%",
+    // posCaptionHeight: " 8%",
 
     widthTitleLaptop: "100%",
     posTitleBottomLaptop: "16%",

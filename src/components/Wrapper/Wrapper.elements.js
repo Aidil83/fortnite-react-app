@@ -42,7 +42,7 @@ export const WrapperImage = styled.div`
 `;
 
 export const PrevBtn = styled.button`
-  display: none;
+  /* display: none; */
   position: absolute;
   left: 2%;
   top: 50%;
@@ -99,7 +99,7 @@ export const PrevBtn = styled.button`
 `;
 
 export const NextBtn = styled.button`
-  display: none;
+  /* display: none; */
   position: absolute;
   right: 2%;
   top: 50%;
@@ -158,29 +158,33 @@ export const WrapperText = styled.img`
 `;
 
 export const WrapperTitleTxt = styled.div`
-  /* display: flex;
+  position: absolute;
+  display: flex;
   justify-content: center;
   align-self: ${({ slide }) => slide.alignSelf};
   line-height: 93.4px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: ${({ slide }) => slide.wrapperTitleTxt__marginTop};
+  margin-right: ${({ slide }) => slide.wrapperTitleTxt__marginRight};
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(6.1rem, 6vw, 10rem);
+  font-size: clamp(3.3rem, 6vw, 10rem);
   font-weight: 500;
   font-style: italic;
   letter-spacing: 3.1px;
   background-image: ${({ slide }) => slide.backgroundImage};
   background-size: 100%;
   /* NOTE: Ignore the linting: */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const WrapperCaption = styled.div`
-  width: ${({ wrapperCaptionWidth }) => wrapperCaptionWidth};
-  height: 45px;
+  width: ${({ slide }) => slide.wrapperCaption__width};
   align-self: center;
+  margin-top: ${({ slide }) => slide.wrapperCaption__marginTop};
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(2rem, 9.6vw, 2.3rem);
+  font-size: clamp(1.9rem, 6vw, 2.3rem);
   color: ${({ slide }) => slide.captionColor};
 `;
 

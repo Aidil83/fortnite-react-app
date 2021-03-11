@@ -42,9 +42,6 @@ export const SliderData = [
     // ==================
     wrapperCaption__width: "max-content",
     wrapperCaption__marginTop: "100%",
-    // wrapperTxtHeight: "35%",
-    // wrapperCaptionHeight: "35%",
-    // WrapperTextContainerHeight: "49%",
     // ===================
     //   WrapperTitleTxt
     // ===================
@@ -56,10 +53,10 @@ export const SliderData = [
     // posCaptionRight: "100%",
     // posCaptionHeight: " 8%",
 
-    widthTitleLaptop: "100%",
-    posTitleBottomLaptop: "16%",
-    posTitleBottomMobileWeb: "16%",
-    fontSizeTitleIpad: "clamp(2.8rem, 6vw, 10rem)",
+    // widthTitleLaptop: "100%",
+    // posTitleBottomLaptop: "16%",
+    // posTitleBottomMobileWeb: "16%",
+    // fontSizeTitleIpad: "clamp(2.8rem, 6vw, 10rem)",
     alt: "Zero Point",
     backgroundImage: "linear-gradient(#0a2a8a, #178fd7, #0a2a8a)",
   },
@@ -77,32 +74,35 @@ export const SliderData = [
     bgBtnColor: "#0b0b33",
     txtBtnColor: "#fff",
 
-    WrapperContainerLeft: "2.1%",
-    WrapperContainerBottom: "20%",
-    WrapperTextContainerHeight: "42%",
-    posCaptionHeight: " 5%",
+    // ===================
+    //   WrapperTitleTxt
+    // ===================
+    // WrapperContainerLeft: "2.1%",
+    // WrapperContainerBottom: "20%",
+    // WrapperTextContainerHeight: "42%",
+    // posCaptionHeight: " 5%",
     //desktop
 
-    posCaptionTop: "31.1%",
-    posCaptionRight: "42%",
+    // posCaptionTop: "31.1%",
+    // posCaptionRight: "42%",
     captionColor: "#fff",
 
     alignSelf: "flex-start",
     wrapperCaptionWidth: 150,
-    wrapperTxtHeight: "22%",
-    wrapperCaptionHeight: "35%",
+    // wrapperTxtHeight: "22%",
+    // wrapperCaptionHeight: "35%",
 
-    posTitleBottomLaptop: "28%",
-    marginRightTitleLaptop: "41%",
-    widthTitleLaptop: "50%",
+    // posTitleBottomLaptop: "28%",
+    // marginRightTitleLaptop: "41%",
+    // widthTitleLaptop: "50%",
 
-    marginRightTitleLaptopSm: "31%",
-    posTitleBottomLaptopSm: "27%",
+    // marginRightTitleLaptopSm: "31%",
+    // posTitleBottomLaptopSm: "27%",
     //Ipad
 
-    fontSizeTitleIpad: "clamp(3.6rem, 6vw, 10rem)",
-    fontSizeTitleIpadSm: "clamp(6.1rem, 6vw, 10rem)",
-    widthTitleIpad: 500,
+    // fontSizeTitleIpad: "clamp(3.6rem, 6vw, 10rem)",
+    // fontSizeTitleIpadSm: "clamp(6.1rem, 6vw, 10rem)",
+    // widthTitleIpad: 500,
   },
   {
     bgImage: bgImageFour,

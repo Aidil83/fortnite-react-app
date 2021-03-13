@@ -189,14 +189,16 @@ export const WrapperCaption = styled.div`
 `;
 
 export const WrapperSection = styled.div`
-  /* display: flex;
+  position: absolute;
+  display: flex;
   justify-content: center;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
-  font-size: 2.2rem;
+  font-size: 2rem;
   width: 200px;
   height: 45px;
-  left: 297px; */
+  top: 450px;
+  left: 57px;
 `;
 
 // NOTE: Animate after refresh page:

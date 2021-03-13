@@ -93,7 +93,8 @@ export const SliderData = [
     // ==================
     //   WrapperCaption
     // ==================
-
+    wrapperCaption__width: "max-content",
+    wrapperCaption__marginTop: "25%",
     // posCaptionTop: "31.1%",
     // posCaptionRight: "42%",
     captionColor: "#fff",

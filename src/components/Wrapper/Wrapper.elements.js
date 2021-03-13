@@ -168,10 +168,10 @@ export const WrapperTitleTxt = styled.div`
   margin-top: ${({ slide }) => slide.wrapperTitleTxt__marginTop};
   margin-right: ${({ slide }) => slide.wrapperTitleTxt__marginRight};
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(3.3rem, 6vw, 10rem);
+  font-size: ${({ slide }) => slide.wrapperTitleTxt__fontSize};
   font-weight: 500;
   font-style: italic;
-  letter-spacing: 3.1px;
+  letter-spacing: 2.1px;
   background-image: ${({ slide }) => slide.backgroundImage};
   background-size: 100%;
   /* NOTE: Ignore the linting: */

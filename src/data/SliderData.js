@@ -37,16 +37,19 @@ export const SliderData = [
     txtBtnColor: "#fff",
 
     alignSelf: "center",
-    // ==================
-    //   WrapperCaption
-    // ==================
-    wrapperCaption__width: "max-content",
-    wrapperCaption__marginTop: "100%",
     // ===================
     //   WrapperTitleTxt
     // ===================
     wrapperTitleTxt__marginTop: "70%",
     wrapperTitleTxt__marginRight: "8px",
+
+    wrapperTitleTxt__fontSize: "clamp(3.3rem, 6vw, 10rem)",
+
+    // ==================
+    //   WrapperCaption
+    // ==================
+    wrapperCaption__width: "max-content",
+    wrapperCaption__marginTop: "100%",
     // posCaptionTop: "57%",
     // posCaptionRight: "25%",
     captionColor: "#000",
@@ -77,11 +80,19 @@ export const SliderData = [
     // ===================
     //   WrapperTitleTxt
     // ===================
+    wrapperTitleTxt__marginTop: "100%",
+    wrapperTitleTxt__marginRight: "5px",
+    wrapperTitleTxt__fontSize: "clamp(3.2rem, 6vw, 10rem)",
+
     // WrapperContainerLeft: "2.1%",
     // WrapperContainerBottom: "20%",
     // WrapperTextContainerHeight: "42%",
     // posCaptionHeight: " 5%",
     //desktop
+
+    // ==================
+    //   WrapperCaption
+    // ==================
 
     // posCaptionTop: "31.1%",
     // posCaptionRight: "42%",

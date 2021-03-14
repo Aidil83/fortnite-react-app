@@ -30,8 +30,9 @@ export const WrapperImage = styled.div`
   overflow-x: hidden;
   overflow-y: hidden;
   will-change: top;
-  ${media.mobile} {
-    background-size: 1300px 920px;
+  ${media.mobileSm} {
+    /* background-image: url(${({ imgMobile }) => imgMobile}); */
+    /* background-size: 1300px 920px; */
   }
   ${media.ipad} {
     background-size: cover;

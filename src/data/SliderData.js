@@ -24,6 +24,11 @@ export const SliderData = [
 
     WrapperTextContainerHeight: "49%",
 
+    // ==================
+    //   WrapperButton
+    // ==================
+    wrapperButton__bottom: "150px",
+
     imgmobileBigwidth: "320px",
     imgmobileBigheight: "110px",
   },
@@ -52,7 +57,14 @@ export const SliderData = [
     wrapperCaption__marginTop: "100%",
     // posCaptionTop: "57%",
     // posCaptionRight: "25%",
+
+    // ==================
+    //   WrapperButton
+    // ==================
+    wrapperButton__bottom: "150px",
+
     captionColor: "#000",
+
     // posCaptionRight: "100%",
     // posCaptionHeight: " 8%",
 
@@ -80,7 +92,7 @@ export const SliderData = [
     // ===================
     //   WrapperTitleTxt
     // ===================
-    wrapperTitleTxt__marginTop: "100%",
+    wrapperTitleTxt__marginTop: "135%",
     wrapperTitleTxt__marginRight: "5px",
     wrapperTitleTxt__fontSize: "clamp(3.2rem, 6vw, 10rem)",
 
@@ -94,13 +106,25 @@ export const SliderData = [
     //   WrapperCaption
     // ==================
     wrapperCaption__width: "max-content",
-    wrapperCaption__marginTop: "25%",
+    wrapperCaption__marginTop: "95%",
     // posCaptionTop: "31.1%",
     // posCaptionRight: "42%",
     captionColor: "#fff",
 
     alignSelf: "flex-start",
     wrapperCaptionWidth: 150,
+
+    // ==================
+    //   WrapperSection
+    // ==================
+    wrapperCaption__top: "565px",
+    wrapperCaption__left: "57px",
+
+    // ==================
+    //   WrapperButton
+    // ==================
+    wrapperButton__bottom: "75px",
+
     // wrapperTxtHeight: "22%",
     // wrapperCaptionHeight: "35%",
 

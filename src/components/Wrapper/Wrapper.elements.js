@@ -196,11 +196,11 @@ export const WrapperSection = styled.div`
   justify-content: center;
   align-self: center;
   font-family: "Luckiest Guy", cursive;
-  font-size: 2rem;
+  font-size: 1.6rem;
   width: 200px;
   height: 45px;
-  top: 450px;
-  left: 57px;
+  top: ${({ slide }) => slide.wrapperCaption__top};
+  left: ${({ slide }) => slide.wrapperCaption__left};
 `;
 
 // NOTE: Animate after refresh page:
@@ -220,7 +220,7 @@ const loadText = keyframes`
 
 export const WrapperButton = styled.button`
   position: absolute;
-  bottom: 150px;
+  bottom: ${({ slide }) => slide.wrapperButton__bottom};
   background-color: ${({ slide }) => slide.bgBtnColor};
   outline: none;
   border: none;

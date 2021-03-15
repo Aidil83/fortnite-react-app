@@ -114,11 +114,7 @@ const Wrapper = ({ slides }) => {
       {slides.map((slide, index) => (
         <div key={index}>
           {index === current && (
-            <WrapperImage
-              className={`mobile${index}`}
-              img={slide.bgImage}
-              imgMobile={slide.bgImageMobile}
-            >
+            <WrapperImage className={`mobile${index}`} slide={slide}>
               <WrapperTextContainer slide={slide}>
                 <WrapperCaption ref={(e) => (animateCaption = e)} slide={slide}>
                   {slide.caption}

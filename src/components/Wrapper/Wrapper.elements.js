@@ -18,7 +18,7 @@ export const WrapperImage = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-image: url(${({ img }) => img});
+  background-image: url(${({ slide }) => slide.bgImage});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -30,11 +30,16 @@ export const WrapperImage = styled.div`
   overflow-x: hidden;
   overflow-y: hidden;
   will-change: top;
-  @media screen and (max-width: 520px) {
-    &.mobile2 {
-      background-image: url(${({ imgMobile }) => imgMobile});
-    /* background-size: 1300px 920px; */
+  @media screen and (max-width: 620px) {
+    /* Dynamic className needed without affecting slider 1 & 2 images. */
+    &.mobile2 { 
+      background-image: url(${({ slide }) => slide.bgImageMobile});
+    }
+    &.mobile3 {
+      background-image: url(${({ slide }) => slide.bgImageMobile});
+    }
   }
+  @media screen and (max-width: 520px) {
   ${media.ipad} {
     background-size: cover;
   }
@@ -151,12 +156,10 @@ export const WrapperTextContainer = styled.div`
 `;
 
 export const WrapperText = styled.img`
-  width: 100%;
+  width: 95%;
   max-width: 700px;
-  /* height: 100%; */
-  /* max-height: 100px; */
   object-fit: contain;
-  margin-bottom: 16vh;
+  margin-bottom: ${({ slide }) => slide.wrapperText__marginBottom};
 `;
 
 export const WrapperTitleTxt = styled.div`

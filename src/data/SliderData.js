@@ -22,6 +22,11 @@ export const SliderData = [
     imgTxtHeight: "174px",
     imgTxtLeft: "3px",
 
+    // ============
+    //  WrapperTxt
+    // ============
+    wrapperText__marginBottom: "16vh",
+
     WrapperTextContainerHeight: "49%",
 
     // ==================
@@ -150,6 +155,11 @@ export const SliderData = [
 
     bgBtnColor: "#ff0",
     txtBtnColor: "#000",
+
+    // ============
+    //  WrapperTxt
+    // ============
+    wrapperText__marginBottom: "65vh",
 
     imgTxtLeft: "-200px",
     imgTxtHeight: "780px",

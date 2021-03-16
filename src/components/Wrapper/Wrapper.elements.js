@@ -5,6 +5,7 @@ const media = {
   ipadPro: "@media only screen and (min-width: 1024px)",
   ipad: "@media only screen and (min-width: 768px)",
   mobile: "@media only screen and (min-width: 375px)",
+  mobileLg: "@media only screen and (min-width: 414px)",
   mobileSm: "@media only screen and (min-width: 320px)",
 };
 
@@ -207,7 +208,13 @@ export const WrapperSection = styled.div`
   ${media.mobile} {
     &.mobile2 {
       top: 97%;
-      left: 87px;
+      left: 26%;
+    }
+  }
+  ${media.mobile} {
+    &.mobile2 {
+      top: 94%;
+      left: 26%;
     }
   }
 `;

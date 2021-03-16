@@ -139,7 +139,11 @@ const Wrapper = ({ slides }) => {
                     {slide.title}
                   </WrapperTitleTxt>
                 )}
-                <WrapperSection ref={(e) => (animateSection = e)} slide={slide}>
+                <WrapperSection
+                  ref={(e) => (animateSection = e)}
+                  className={`mobile${index}`}
+                  slide={slide}
+                >
                   {slide.section}
                 </WrapperSection>
               </WrapperTextContainer>

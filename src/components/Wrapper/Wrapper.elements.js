@@ -31,7 +31,7 @@ export const WrapperImage = styled.div`
   overflow-y: hidden;
   will-change: top;
   @media screen and (max-width: 620px) {
-    /* Dynamic className needed without affecting slider 1 & 2 images. */
+    /* Dynamic className needed without affecting slider 0 & 1 images. */
     &.mobile2 { 
       background-image: url(${({ slide }) => slide.bgImageMobile});
     }
@@ -204,6 +204,12 @@ export const WrapperSection = styled.div`
   height: 45px;
   top: ${({ slide }) => slide.wrapperCaption__top};
   left: ${({ slide }) => slide.wrapperCaption__left};
+  ${media.mobile} {
+    &.mobile2 {
+      top: 97%;
+      left: 87px;
+    }
+  }
 `;
 
 // NOTE: Animate after refresh page:
@@ -232,7 +238,7 @@ export const WrapperButton = styled.button`
   transition: 550ms ease-out;
 
   ${media.mobile} {
-    bottom: 23vh;
+    bottom: 15%;
   }
 
   ${media.ipad} {

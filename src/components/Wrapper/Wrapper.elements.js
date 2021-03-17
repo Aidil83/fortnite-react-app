@@ -161,6 +161,11 @@ export const WrapperText = styled.img`
   max-width: 700px;
   object-fit: contain;
   margin-bottom: ${({ slide }) => slide.wrapperText__marginBottom};
+  ${media.mobile} {
+    &.mobile3 {
+      margin-bottom: 70vh;
+    }
+  }
 `;
 
 export const WrapperTitleTxt = styled.div`
@@ -207,11 +212,11 @@ export const WrapperSection = styled.div`
   left: ${({ slide }) => slide.wrapperCaption__left};
   ${media.mobile} {
     &.mobile2 {
-      top: 97%;
-      left: 26%;
+      top: 96%;
+      left: 23%;
     }
   }
-  ${media.mobile} {
+  ${media.mobileLg} {
     &.mobile2 {
       top: 94%;
       left: 26%;

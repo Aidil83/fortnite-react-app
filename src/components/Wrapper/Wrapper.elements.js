@@ -33,18 +33,23 @@ export const WrapperImage = styled.div`
   will-change: top;
   @media screen and (max-width: 620px) {
     /* Dynamic className needed without affecting slider 0 & 1 images. */
-    &.mobile2 { 
+    &.mobile2 {
       background-image: url(${({ slide }) => slide.bgImageMobile});
     }
     &.mobile3 {
       background-image: url(${({ slide }) => slide.bgImageMobile});
     }
   }
-  @media screen and (max-width: 520px) {
-  ${media.ipad} {
-    background-size: cover;
+  @media screen and (min-width: 375px) {
+    &.mobile0 {
+      background-size: ${({ slide }) => slide.backdropBackgroundSize};
+    }
   }
-
+  ${media.ipad} {
+    &.mobile0 {
+      background-size: ${({ slide }) => slide.backdropBackgroundSize};
+    }
+  }
   /* NOTE: Prevents auto scrolling after refreshing page: */
   overflow-anchor: none;
 `;

@@ -52,6 +52,7 @@ export const SliderData = [
     //   WrapperTitleTxt
     // ===================
     wrapperTitleTxt__marginTop: "70%",
+    wrapperTitleTxt__ipadMarginTop: "40%", // ipad
     wrapperTitleTxt__marginRight: "8px",
 
     wrapperTitleTxt__fontSize: "clamp(3.3rem, 6vw, 10rem)",
@@ -61,6 +62,7 @@ export const SliderData = [
     // ==================
     wrapperCaption__width: "max-content",
     wrapperCaption__marginTop: "100%",
+    wrapperCaption__ipadMarginTop: "65%",
     // posCaptionTop: "57%",
     // posCaptionRight: "25%",
 

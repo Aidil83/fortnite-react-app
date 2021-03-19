@@ -193,6 +193,10 @@ export const WrapperTitleTxt = styled.div`
   /* NOTE: Ignore the linting: */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  ${media.ipad} {
+    font-size: clamp(8.3rem, 6vw, 10rem);
+    margin-top: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginTop};
+  }
 `;
 
 export const WrapperCaption = styled.div`
@@ -202,6 +206,10 @@ export const WrapperCaption = styled.div`
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(1.9rem, 6vw, 2.3rem);
   color: ${({ slide }) => slide.captionColor};
+  ${media.ipad} {
+    font-size: clamp(3.5rem, 6vw, 2.3rem);
+    margin-top: ${({ slide }) => slide.wrapperCaption__ipadMarginTop};
+  }
 `;
 
 export const WrapperSection = styled.div`

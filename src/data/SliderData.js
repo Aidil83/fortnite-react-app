@@ -14,7 +14,7 @@ export const SliderData = [
     btn: "LEARN MORE",
     widthTitleLaptop: "100%",
     posCaptionRight: "100%",
-    backdropBackgroundSize: "1160px 823px",
+    backdropBackgroundSize: "1200px 823px",
     alt: "Snowdown",
 
     bgBtnColor: "#ff0",

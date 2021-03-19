@@ -47,7 +47,7 @@ export const WrapperImage = styled.div`
   }
   ${media.ipad} {
     &.mobile0 {
-      background-size: ${({ slide }) => slide.backdropBackgroundSize};
+      background-size: cover;
     }
   }
   /* NOTE: Prevents auto scrolling after refreshing page: */

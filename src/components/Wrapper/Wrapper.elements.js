@@ -217,7 +217,7 @@ export const WrapperSection = styled.div`
   left: ${({ slide }) => slide.wrapperCaption__left};
   ${media.mobile} {
     &.mobile2 {
-      top: 96%;
+      top: 93%;
       left: 23%;
     }
   }

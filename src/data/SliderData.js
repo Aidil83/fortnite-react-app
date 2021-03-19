@@ -98,7 +98,7 @@ export const SliderData = [
     // ===================
     //   WrapperTitleTxt
     // ===================
-    wrapperTitleTxt__marginTop: "135%",
+    wrapperTitleTxt__marginTop: "165%",
     wrapperTitleTxt__marginRight: "5px",
     wrapperTitleTxt__fontSize: "clamp(3.2rem, 6vw, 10rem)",
 
@@ -112,7 +112,7 @@ export const SliderData = [
     //   WrapperCaption
     // ==================
     wrapperCaption__width: "max-content",
-    wrapperCaption__marginTop: "95%",
+    wrapperCaption__marginTop: "115%",
     // posCaptionTop: "31.1%",
     // posCaptionRight: "42%",
     captionColor: "#fff",

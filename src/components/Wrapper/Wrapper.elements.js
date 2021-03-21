@@ -1,12 +1,14 @@
 import styled, { keyframes } from "styled-components/macro";
 
 const media = {
-  Laptop: "@media only screen and (min-width: 1740px)",
-  ipadPro: "@media only screen and (min-width: 1024px)",
-  ipad: "@media only screen and (min-width: 768px)",
-  mobile: "@media only screen and (min-width: 375px)",
-  mobileLg: "@media only screen and (min-width: 414px)",
   mobileSm: "@media only screen and (min-width: 320px)",
+  mobile: "@media only screen and (min-width: 375px)",
+  iphoneX:
+    "@media only screen and (min-width: 375px) and (min-height: 812px) and (max-height: 812px)",
+  mobileLg: "@media only screen and (min-width: 414px)",
+  ipad: "@media only screen and (min-width: 768px)",
+  ipadPro: "@media only screen and (min-width: 1024px)",
+  Laptop: "@media only screen and (min-width: 1740px)",
 };
 
 export const WrapperHidden = styled.div`
@@ -225,14 +227,21 @@ export const WrapperSection = styled.div`
   left: ${({ slide }) => slide.wrapperSection__left};
   ${media.mobile} {
     &.mobile2 {
-      top: 98%;
-      left: 23%;
+      font-size: clamp(2rem, 6vw, 2rem);
+      top: 94vh;
+      left: 23.5%;
     }
   }
   ${media.mobileLg} {
     &.mobile2 {
-      top: 96.5%;
+      top: 93.5vh;
       left: 26%;
+    }
+  }
+  ${media.iphoneX} {
+    &.mobile2 {
+      top: 90.5vh;
+      left: 23%;
     }
   }
 `;

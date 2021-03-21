@@ -100,7 +100,7 @@ export const SliderData = [
     // ===================
     //   WrapperTitleTxt
     // ===================
-    wrapperTitleTxt__marginTop: "165%",
+    wrapperTitleTxt__marginTop: "140%",
     wrapperTitleTxt__marginRight: "5px",
     wrapperTitleTxt__fontSize: "clamp(3.2rem, 6vw, 10rem)",
 
@@ -114,7 +114,7 @@ export const SliderData = [
     //   WrapperCaption
     // ==================
     wrapperCaption__width: "max-content",
-    wrapperCaption__marginTop: "115%",
+    wrapperCaption__marginTop: "105%",
     // posCaptionTop: "31.1%",
     // posCaptionRight: "42%",
     captionColor: "#fff",
@@ -125,8 +125,8 @@ export const SliderData = [
     // ==================
     //   WrapperSection
     // ==================
-    wrapperCaption__top: "565px",
-    wrapperCaption__left: "57px",
+    wrapperSection__top: "102%",
+    wrapperSection__left: "57px",
 
     // ==================
     //   WrapperButton

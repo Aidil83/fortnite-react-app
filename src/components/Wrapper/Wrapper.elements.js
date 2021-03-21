@@ -221,17 +221,17 @@ export const WrapperSection = styled.div`
   font-size: 1.6rem;
   width: 200px;
   height: 45px;
-  top: ${({ slide }) => slide.wrapperCaption__top};
-  left: ${({ slide }) => slide.wrapperCaption__left};
+  top: ${({ slide }) => slide.wrapperSection__top};
+  left: ${({ slide }) => slide.wrapperSection__left};
   ${media.mobile} {
     &.mobile2 {
-      top: 93%;
+      top: 98%;
       left: 23%;
     }
   }
   ${media.mobileLg} {
     &.mobile2 {
-      top: 94%;
+      top: 96.5%;
       left: 26%;
     }
   }

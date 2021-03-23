@@ -8,7 +8,7 @@ const media = {
   mobileLg: "@media only screen and (min-width: 414px)",
   ipad: "@media only screen and (min-width: 768px)",
   ipadPro: "@media only screen and (min-width: 1024px)",
-  Laptop: "@media only screen and (min-width: 1740px)",
+  laptop: "@media only screen and (min-width: 1740px)",
 };
 
 export const WrapperHidden = styled.div`
@@ -214,6 +214,11 @@ export const WrapperCaption = styled.div`
     margin-top: ${({ slide }) => slide.wrapperCaption__ipadMarginTop};
     margin-right: ${({ slide }) => slide.wrapperCaption__ipadMarginRight};
   }
+  ${media.ipadPro} {
+    font-size: clamp(3.5rem, 6vw, 2.3rem);
+    margin-top: ${({ slide }) => slide.wrapperCaption__ipadProMarginTop};
+    margin-right: ${({ slide }) => slide.wrapperCaption__ipadProMarginRight};
+  }
 `;
 
 export const WrapperSection = styled.div`
@@ -251,6 +256,20 @@ export const WrapperSection = styled.div`
       font-size: 2.3rem;
       top: 67.5vh;
       left: 12%;
+    }
+  }
+  ${media.ipadPro} {
+    &.mobile2 {
+      font-size: 2.3rem;
+      top: 59.5vh;
+      left: 45vw;
+    }
+  }
+  ${media.laptop} {
+    &.mobile2 {
+      font-size: 2.3rem;
+      top: 60%;
+      left: 45vw;
     }
   }
 `;

@@ -102,6 +102,9 @@ export const SliderData = [
     // ===================
     wrapperTitleTxt__marginTop: "75vh",
     wrapperTitleTxt__marginRight: "5px",
+    // ipad:
+    wrapperTitleTxt__ipadMarginTop: "40vh",
+    wrapperTitleTxt__ipadMarginRight: "-45px",
     wrapperTitleTxt__fontSize: "clamp(3.2rem, 6vw, 10rem)",
 
     // WrapperContainerLeft: "2.1%",
@@ -115,6 +118,8 @@ export const SliderData = [
     // ==================
     wrapperCaption__width: "max-content",
     wrapperCaption__marginTop: "52vh",
+    wrapperCaption__ipadMarginTop: "-25vh",
+    wrapperCaption__ipadMarginRight: "260px",
     // posCaptionTop: "31.1%",
     // posCaptionRight: "42%",
     captionColor: "#fff",

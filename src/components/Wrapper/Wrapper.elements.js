@@ -180,7 +180,7 @@ export const WrapperTitleTxt = styled.div`
   display: flex;
   justify-content: center;
   align-self: ${({ slide }) => slide.alignSelf};
-  line-height: 93.4px;
+  line-height: 103.4px;
   width: 100%;
   max-width: 800px;
   margin-top: ${({ slide }) => slide.wrapperTitleTxt__marginTop};
@@ -198,6 +198,7 @@ export const WrapperTitleTxt = styled.div`
   ${media.ipad} {
     font-size: clamp(8.3rem, 6vw, 10rem);
     margin-top: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginTop};
+    margin-right: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginRight};
   }
 `;
 
@@ -211,6 +212,7 @@ export const WrapperCaption = styled.div`
   ${media.ipad} {
     font-size: clamp(3.5rem, 6vw, 2.3rem);
     margin-top: ${({ slide }) => slide.wrapperCaption__ipadMarginTop};
+    margin-right: ${({ slide }) => slide.wrapperCaption__ipadMarginRight};
   }
 `;
 
@@ -242,6 +244,13 @@ export const WrapperSection = styled.div`
     &.mobile2 {
       top: 90.5vh;
       left: 23%;
+    }
+  }
+  ${media.ipad} {
+    &.mobile2 {
+      font-size: 2.3rem;
+      top: 67.5vh;
+      left: 12%;
     }
   }
 `;

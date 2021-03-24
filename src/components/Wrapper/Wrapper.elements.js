@@ -212,15 +212,15 @@ export const WrapperCaption = styled.div`
   align-self: center;
   margin-top: ${({ slide }) => slide.wrapperCaption__marginTop};
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(1.9rem, 6vw, 2.3rem);
+  font-size: clamp(1.9rem, 8vw, 2.5rem);
   color: ${({ slide }) => slide.captionColor};
   ${media.ipad} {
-    font-size: clamp(3.5rem, 6vw, 2.3rem);
+    /* font-size: clamp(3.5rem, 6vw, 2.3rem); */
     margin-top: ${({ slide }) => slide.wrapperCaption__ipadMarginTop};
     margin-right: ${({ slide }) => slide.wrapperCaption__ipadMarginRight};
   }
   ${media.ipadPro} {
-    font-size: clamp(3.5rem, 6vw, 2.3rem);
+    /* font-size: clamp(3.5rem, 6vw, 2.3rem); */
     margin-top: ${({ slide }) => slide.wrapperCaption__ipadProMarginTop};
     margin-right: ${({ slide }) => slide.wrapperCaption__ipadProMarginRight};
   }

@@ -77,40 +77,6 @@ export const PrevBtn = styled.button`
   ${media.ipad} {
     display: flex;
   }
-  /* position: absolute;
-  bottom: 110px;
-  left: 5%;
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  font-size: 3rem;
-  cursor: pointer;
-  outline: none;
-  .MuiSvgIcon-root {
-    font-size: 2rem;
-  }
-
-  &:hover {
-    background-color: orange;
-  }
-
-  ${media.mobile} {
-    bottom: 113px;
-    left: 6px;
-    height: 60px;
-    width: 60px;
-  }
-
-  ${media.mobileSm} {
-    bottom: 123px;
-    left: 3px;
-    height: 40px;
-    width: 40px;
-    font-size: 1rem;
-  } */
 `;
 
 export const NextBtn = styled.button`
@@ -135,32 +101,15 @@ export const NextBtn = styled.button`
   ${media.ipad} {
     display: flex;
   }
-
-  /* position: absolute;
-  bottom: 110px;
-  right: 5%;
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  font-size: 3rem;
-  cursor: pointer;
-  outline: none;
-  .MuiSvgIcon-root {
-    font-size: 2rem;
-  }
-
-  */
 `;
 
 export const WrapperTextContainer = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 1000px;
+  height: 500px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
 `;
 
 export const WrapperText = styled.img`
@@ -176,15 +125,16 @@ export const WrapperText = styled.img`
 `;
 
 export const WrapperTitleTxt = styled.div`
-  position: absolute;
+  /* position: absolute; */
+  /* NOTE: needed: */
   display: flex;
   justify-content: center;
-  align-self: ${({ slide }) => slide.alignSelf};
+  /* align-self: ${({ slide }) => slide.alignSelf}; */
   line-height: 103.4px;
   width: 100%;
   max-width: 800px;
-  margin-top: ${({ slide }) => slide.wrapperTitleTxt__marginTop};
-  margin-right: ${({ slide }) => slide.wrapperTitleTxt__marginRight};
+  /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__marginTop};
+  margin-right: ${({ slide }) => slide.wrapperTitleTxt__marginRight}; */
   font-family: "Luckiest Guy", cursive;
   font-size: ${({ slide }) => slide.wrapperTitleTxt__fontSize};
   font-weight: 500;
@@ -197,88 +147,89 @@ export const WrapperTitleTxt = styled.div`
   -webkit-text-fill-color: transparent;
   ${media.ipad} {
     font-size: clamp(8.3rem, 6vw, 10rem);
-    margin-top: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginTop};
-    margin-right: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginRight};
+    /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginTop};
+    margin-right: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginRight}; */
   }
   ${media.laptop} {
     font-size: clamp(8.3rem, 6vw, 10rem);
-    margin-top: ${({ slide }) => slide.wrapperTitleTxt__laptopMarginTop};
-    margin-right: ${({ slide }) => slide.wrapperTitleTxt__laptopMarginRight};
+    /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__laptopMarginTop};
+    margin-right: ${({ slide }) => slide.wrapperTitleTxt__laptopMarginRight}; */
   }
 `;
 
 export const WrapperCaption = styled.div`
   width: ${({ slide }) => slide.wrapperCaption__width};
-  align-self: center;
-  margin-top: ${({ slide }) => slide.wrapperCaption__marginTop};
+  /* align-self: center; */
+  /* margin-top: ${({ slide }) => slide.wrapperCaption__marginTop}; */
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(1.9rem, 8vw, 2.5rem);
   color: ${({ slide }) => slide.captionColor};
   ${media.ipad} {
     /* font-size: clamp(3.5rem, 6vw, 2.3rem); */
-    margin-top: ${({ slide }) => slide.wrapperCaption__ipadMarginTop};
-    margin-right: ${({ slide }) => slide.wrapperCaption__ipadMarginRight};
+    /* margin-top: ${({ slide }) => slide.wrapperCaption__ipadMarginTop};
+    margin-right: ${({ slide }) => slide.wrapperCaption__ipadMarginRight}; */
   }
   ${media.ipadPro} {
     /* font-size: clamp(3.5rem, 6vw, 2.3rem); */
-    margin-top: ${({ slide }) => slide.wrapperCaption__ipadProMarginTop};
-    margin-right: ${({ slide }) => slide.wrapperCaption__ipadProMarginRight};
+    /* margin-top: ${({ slide }) => slide.wrapperCaption__ipadProMarginTop};
+    margin-right: ${({ slide }) => slide.wrapperCaption__ipadProMarginRight}; */
   }
   ${media.laptop} {
-    margin-top: ${({ slide }) => slide.wrapperCaption__laptopMarginTop};
-    margin-right: ${({ slide }) => slide.wrapperCaption__laptopMarginRight};
+    /* margin-top: ${({ slide }) => slide.wrapperCaption__laptopMarginTop};
+    margin-right: ${({ slide }) => slide.wrapperCaption__laptopMarginRight}; */
   }
 `;
 
 export const WrapperSection = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-self: center;
+  /* position: absolute; */
+  /* display: flex; */
+  /* justify-content: center;
+  align-self: center; */
   font-family: "Luckiest Guy", cursive;
   font-size: 1.6rem;
   width: 200px;
   height: 45px;
-  top: ${({ slide }) => slide.wrapperSection__top};
-  left: ${({ slide }) => slide.wrapperSection__left};
+  margin-top: 60px;
+  /* top: ${({ slide }) => slide.wrapperSection__top};
+  left: ${({ slide }) => slide.wrapperSection__left}; */
   ${media.mobile} {
     &.mobile2 {
       font-size: clamp(2rem, 6vw, 2rem);
-      top: 94vh;
-      left: 23.5%;
+      /* top: 94vh;
+      left: 23.5%; */
     }
   }
   ${media.mobileLg} {
     &.mobile2 {
-      top: 93.5vh;
-      left: 26%;
+      /* top: 93.5vh;
+      left: 26%; */
     }
   }
   ${media.iphoneX} {
     &.mobile2 {
-      top: 90.5vh;
-      left: 23%;
+      /* top: 90.5vh;
+      left: 23%; */
     }
   }
   ${media.ipad} {
     &.mobile2 {
       font-size: 2.3rem;
-      top: 67.5vh;
-      left: 12%;
+      /* top: 67.5vh;
+      left: 12%; */
     }
   }
   ${media.ipadPro} {
     &.mobile2 {
       font-size: 2.3rem;
-      top: 59.5vh;
-      left: 45vw;
+      /* top: 59.5vh;
+      left: 45vw; */
     }
   }
   ${media.laptop} {
     &.mobile2 {
       font-size: 2.3rem;
-      top: 58%;
-      left: 16.5vw;
+      /* top: 58%;
+      left: 16.5vw; */
     }
   }
 `;

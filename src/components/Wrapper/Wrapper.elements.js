@@ -104,8 +104,12 @@ export const NextBtn = styled.button`
 `;
 
 export const WrapperTextContainer = styled.div`
-  width: 1000px;
-  height: 500px;
+  position: absolute;
+  top: 50%;
+  max-width: 1000px;
+  min-height: 250px;
+  height: 100%;
+  max-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;

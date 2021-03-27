@@ -23,6 +23,10 @@ export const SliderData = [
     imgTxtHeight: "174px",
     imgTxtLeft: "3px",
 
+    // ====================
+    //  WrapperTxtContainer
+    // ====================
+
     // ============
     //  WrapperTxt
     // ============

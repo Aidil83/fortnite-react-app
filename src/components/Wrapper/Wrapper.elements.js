@@ -105,7 +105,7 @@ export const NextBtn = styled.button`
 
 export const WrapperTextContainer = styled.div`
   position: absolute;
-  top: 42%;
+  top: ${({ slide }) => slide.wrapperTextContainer__posTop};
   max-width: 1000px;
   width: 100%;
   min-height: 250px;
@@ -115,6 +115,21 @@ export const WrapperTextContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  ${media.mobile} {
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_mobileLg};
+  }
+  ${media.iphoneX} {
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_iphoneX};
+  }
+  ${media.ipad} {
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_ipad};
+    right: ${({ slide }) => slide.wrapperTextContainer__posRight_ipad};
+    width: ${({ slide }) => slide.wrapperTextContainer__width_ipad};
+  }
+  ${media.ipadPro} {
+    /* width: ${({ slide }) => slide.wrapperTextContainer__width_ipad}; */
+    right: ${({ slide }) => slide.wrapperTextContainer__posRight_ipadPro};
+  }
 `;
 
 export const WrapperText = styled.img`

@@ -26,7 +26,12 @@ export const SliderData = [
     // ====================
     //  WrapperTxtContainer
     // ====================
-
+    wrapperTextContainer__posTop: "50%",
+    wrapperTextContainer__posTop_mobileLg: "60%",
+    wrapperTextContainer__posTop_mobileXl: "50%",
+    wrapperTextContainer__posTop_iphoneX: "55%",
+    wrapperTextContainer__posTop_ipad: "58%",
+    wrapperTextContainer__posTop_ipadpro: "45%",
     // ============
     //  WrapperTxt
     // ============
@@ -52,6 +57,17 @@ export const SliderData = [
     txtBtnColor: "#fff",
 
     alignSelf: "center",
+
+    // ====================
+    //  WrapperTxtContainer
+    // ====================
+    wrapperTextContainer__posTop: "40%",
+    wrapperTextContainer__posTop_mobileLg: "43%",
+    wrapperTextContainer__posTop_mobileXl: "50%",
+    wrapperTextContainer__posTop_iphoneX: "45%",
+    wrapperTextContainer__posTop_ipad: "45%",
+    wrapperTextContainer__posTop_ipadpro: "45%",
+
     // ===================
     //   WrapperTitleTxt
     // ===================
@@ -102,6 +118,21 @@ export const SliderData = [
 
     bgBtnColor: "#0b0b33",
     txtBtnColor: "#fff",
+
+    // ====================
+    //  WrapperTxtContainer
+    // ====================
+    wrapperTextContainer__posTop: "50%",
+    wrapperTextContainer__posTop_mobileLg: "50%",
+    wrapperTextContainer__posTop_mobileXl: "50%",
+    wrapperTextContainer__posTop_iphoneX: "55%",
+
+    wrapperTextContainer__posTop_ipad: "25%",
+    wrapperTextContainer__posRight_ipad: "25%",
+    wrapperTextContainer__width_ipad: "700px",
+
+    // wrapperTextContainer__posTop_ipadpro: "45%",
+    wrapperTextContainer__posRight_ipadPro: "42%",
 
     // ===================
     //   WrapperTitleTxt
@@ -174,6 +205,16 @@ export const SliderData = [
 
     bgBtnColor: "#ff0",
     txtBtnColor: "#000",
+
+    // ====================
+    //  WrapperTxtContainer
+    // ====================
+    wrapperTextContainer__posTop: "23%",
+    wrapperTextContainer__posTop_mobileLg: "28%",
+    wrapperTextContainer__posTop_mobileXl: "50%",
+    wrapperTextContainer__posTop_iphoneX: "30%",
+    wrapperTextContainer__posTop_ipad: "45%",
+    wrapperTextContainer__posTop_ipadpro: "45%",
 
     // ============
     //  WrapperTxt

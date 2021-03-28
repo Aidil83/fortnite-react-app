@@ -105,8 +105,9 @@ export const NextBtn = styled.button`
 
 export const WrapperTextContainer = styled.div`
   position: absolute;
-  top: 50%;
+  top: 42%;
   max-width: 1000px;
+  width: 100%;
   min-height: 250px;
   height: 100%;
   max-height: 500px;
@@ -134,7 +135,7 @@ export const WrapperTitleTxt = styled.div`
   display: flex;
   justify-content: center;
   /* align-self: ${({ slide }) => slide.alignSelf}; */
-  line-height: 103.4px;
+  line-height: 60px;
   width: 100%;
   max-width: 800px;
   /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__marginTop};

@@ -132,10 +132,11 @@ export const WrapperText = styled.img`
 export const WrapperTitleTxt = styled.div`
   /* position: absolute; */
   /* NOTE: needed: */
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   /* align-self: ${({ slide }) => slide.alignSelf}; */
-  line-height: 60px;
+  text-align: center;
+  line-height: 0.8em;
   width: 100%;
   max-width: 800px;
   /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__marginTop};
@@ -164,7 +165,7 @@ export const WrapperTitleTxt = styled.div`
 
 export const WrapperCaption = styled.div`
   width: ${({ slide }) => slide.wrapperCaption__width};
-  /* align-self: center; */
+  text-align: center;
   /* margin-top: ${({ slide }) => slide.wrapperCaption__marginTop}; */
   font-family: "Luckiest Guy", cursive;
   font-size: clamp(1.9rem, 8vw, 2.5rem);
@@ -188,8 +189,8 @@ export const WrapperCaption = styled.div`
 export const WrapperSection = styled.div`
   /* position: absolute; */
   /* display: flex; */
-  /* justify-content: center;
-  align-self: center; */
+  /* justify-content: center; */
+  text-align: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 1.6rem;
   width: 200px;

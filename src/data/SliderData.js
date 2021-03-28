@@ -112,7 +112,7 @@ export const SliderData = [
     wrapperTitleTxt__ipadMarginTop: "40vh",
     wrapperTitleTxt__ipadMarginRight: "-45px",
     wrapperTitleTxt__laptopMarginRight: "55vw",
-    wrapperTitleTxt__fontSize: "clamp(3.2rem, 17vw, 5.3rem)",
+    wrapperTitleTxt__fontSize: "clamp(3rem,8vw,5rem)",
 
     // WrapperContainerLeft: "2.1%",
     // WrapperContainerBottom: "20%",

@@ -132,6 +132,7 @@ export const WrapperTextContainer = styled.div`
   ${media.ipadPro} {
     /* width: ${({ slide }) => slide.wrapperTextContainer__width_ipad}; */
     right: ${({ slide }) => slide.wrapperTextContainer__posRight_ipadPro};
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_ipadPro};
   }
 `;
 
@@ -208,7 +209,7 @@ export const WrapperCaption = styled.div`
   text-align: center;
   /* margin-top: ${({ slide }) => slide.wrapperCaption__marginTop}; */
   font-family: "Luckiest Guy", cursive;
-  font-size: clamp(1.9rem, 8vw, 2.5rem);
+  font-size: clamp(1rem, 8vw, 2.5rem);
   color: ${({ slide }) => slide.captionColor};
   ${media.ipad} {
     /* font-size: clamp(3.5rem, 6vw, 2.3rem); */

@@ -142,7 +142,12 @@ export const WrapperText = styled.img`
   margin-bottom: ${({ slide }) => slide.wrapperText__marginBottom};
   ${media.mobile} {
     &.mobile3 {
-      margin-bottom: 88vh;
+      margin-bottom: 74vh;
+    }
+  }
+  ${media.mobileLg} {
+    &.mobile3 {
+      margin-bottom: 70vh;
     }
   }
 `;
@@ -156,7 +161,7 @@ export const WrapperTitleTxt = styled.div`
   text-align: center;
   line-height: 0.8em;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__marginTop};
   margin-right: ${({ slide }) => slide.wrapperTitleTxt__marginRight}; */
   font-family: "Luckiest Guy", cursive;
@@ -173,6 +178,9 @@ export const WrapperTitleTxt = styled.div`
     font-size: clamp(8.3rem, 6vw, 10rem);
     /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginTop};
     margin-right: ${({ slide }) => slide.wrapperTitleTxt__ipadMarginRight}; */
+  }
+  ${media.ipadPro} {
+    font-size: ${({ slide }) => slide.wrapperTitleTxt__fontSize_ipadPro};
   }
   ${media.laptop} {
     font-size: clamp(8.3rem, 6vw, 10rem);

@@ -33,12 +33,15 @@ export const WrapperImage = styled.div`
   overflow-x: hidden;
   overflow-y: hidden;
   will-change: top;
+
+  @media screen and (max-width: 1024px) {
+    &.mobile3 {
+      background-image: url(${({ slide }) => slide.bgImageMobile});
+    }
+  }
   @media screen and (max-width: 620px) {
     /* Dynamic className needed without affecting slider 0 & 1 images. */
     &.mobile2 {
-      background-image: url(${({ slide }) => slide.bgImageMobile});
-    }
-    &.mobile3 {
       background-image: url(${({ slide }) => slide.bgImageMobile});
     }
   }

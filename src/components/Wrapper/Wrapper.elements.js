@@ -142,7 +142,7 @@ export const WrapperText = styled.img`
   margin-bottom: ${({ slide }) => slide.wrapperText__marginBottom};
   ${media.mobile} {
     &.mobile3 {
-      margin-bottom: 70vh;
+      margin-bottom: 88vh;
     }
   }
 `;

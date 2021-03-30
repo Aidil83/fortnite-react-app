@@ -8,7 +8,8 @@ const media = {
   mobileLg: "@media only screen and (min-width: 414px)",
   ipad: "@media only screen and (min-width: 768px)",
   ipadPro: "@media only screen and (min-width: 1024px)",
-  laptop: "@media only screen and (min-width: 1740px)",
+  laptop: "@media only screen and (min-width: 1440px)",
+  desktop: "@media only screen and (min-width: 1770px)",
 };
 
 export const WrapperHidden = styled.div`
@@ -134,6 +135,9 @@ export const WrapperTextContainer = styled.div`
     right: ${({ slide }) => slide.wrapperTextContainer__posRight_ipadPro};
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_ipadPro};
   }
+  ${media.desktop} {
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop};
+  }
 `;
 
 export const WrapperText = styled.img`
@@ -172,7 +176,6 @@ export const WrapperTitleTxt = styled.div`
   /* NOTE: needed: */
   /* display: flex; */
   /* justify-content: center; */
-  /* align-self: ${({ slide }) => slide.alignSelf}; */
   text-align: center;
   line-height: 0.8em;
   width: 100%;
@@ -198,9 +201,12 @@ export const WrapperTitleTxt = styled.div`
     font-size: ${({ slide }) => slide.wrapperTitleTxt__fontSize_ipadPro};
   }
   ${media.laptop} {
-    font-size: clamp(8.3rem, 6vw, 10rem);
+    font-size: clamp(5rem, 15vw, 6.2rem);
     /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__laptopMarginTop};
     margin-right: ${({ slide }) => slide.wrapperTitleTxt__laptopMarginRight}; */
+  }
+  @media only screen and (min-width: 1024px) and (min-height: 1000px) {
+    font-size: clamp(5rem, 15vw, 8.2rem);
   }
 `;
 

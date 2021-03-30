@@ -20,13 +20,12 @@ import {
   CopyrightContainer,
   PlatFormContainer,
 } from "./Footer.elements";
-import gsap from "gsap/gsap-core";
-import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
 const Footer = () => {
   const scrollTop = (e) => {
-    e.stopPropagation();
     gsap.to(window, {
       duration: 0.7,
       scrollTo: {

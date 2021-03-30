@@ -65,7 +65,7 @@ export const SliderData = [
     wrapperTextContainer__posTop_mobileLg: "43%",
     wrapperTextContainer__posTop_mobileXl: "50%",
     wrapperTextContainer__posTop_iphoneX: "45%",
-    wrapperTextContainer__posTop_ipad: "45%",
+    wrapperTextContainer__posTop_ipad: "47%",
     wrapperTextContainer__posTop_ipadpro: "45%",
 
     // ===================

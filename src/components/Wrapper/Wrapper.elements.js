@@ -150,6 +150,20 @@ export const WrapperText = styled.img`
       margin-bottom: 70vh;
     }
   }
+  ${media.iphoneX} {
+    &.mobile3 {
+      margin-bottom: 72vh;
+    }
+  }
+  ${media.ipad} {
+    &.mobile3 {
+      margin-bottom: 90vh;
+    }
+  ${media.ipadPro} {
+    &.mobile3 {
+      margin-bottom: 86vh;
+    }
+  }
 `;
 
 export const WrapperTitleTxt = styled.div`

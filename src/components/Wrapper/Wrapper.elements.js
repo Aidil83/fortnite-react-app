@@ -138,6 +138,9 @@ export const WrapperTextContainer = styled.div`
   ${media.desktop} {
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop};
   }
+  @media screen and (max-width: 774px) and (min-height: 915px) {
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop_sm};
+  }
 `;
 
 export const WrapperText = styled.img`
@@ -164,6 +167,7 @@ export const WrapperText = styled.img`
     &.mobile3 {
       margin-bottom: 90vh;
     }
+  }
   ${media.ipadPro} {
     &.mobile3 {
       margin-bottom: 86vh;
@@ -205,8 +209,12 @@ export const WrapperTitleTxt = styled.div`
     /* margin-top: ${({ slide }) => slide.wrapperTitleTxt__laptopMarginTop};
     margin-right: ${({ slide }) => slide.wrapperTitleTxt__laptopMarginRight}; */
   }
-  @media only screen and (min-width: 1024px) and (min-height: 1000px) {
+  /* @media only screen and (min-width: 1024px) and (min-height: 1000px) {
     font-size: clamp(5rem, 15vw, 8.2rem);
+  } */
+
+  @media screen and (min-width: 375px) and (min-height: 915px) {
+    font-size: ${({ slide }) => slide.wrapperTitleTxt__fontSize_desktop_sm};
   }
 `;
 

@@ -68,6 +68,7 @@ export const SliderData = [
     wrapperTextContainer__posTop_ipad: "47%",
     wrapperTextContainer__posTop_ipadPro: "48%",
     wrapperTextContainer__posTop_desktop: "53%",
+    wrapperTextContainer__posTop_desktop_sm: "47%",
 
     // ===================
     //   WrapperTitleTxt
@@ -79,6 +80,7 @@ export const SliderData = [
 
     wrapperTitleTxt__fontSize: "clamp(3.3rem, 17vw, 8.3rem)",
     wrapperTitleTxt__fontSize_ipadPro: "clamp(3.3rem, 15vw, 10rem)",
+    wrapperTitleTxt__fontSize_desktop_sm: "clamp(4.3rem,13vw,7rem)",
 
     // ==================
     //   WrapperCaption

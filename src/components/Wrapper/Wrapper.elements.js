@@ -9,7 +9,7 @@ const media = {
   ipad: "@media only screen and (min-width: 768px)",
   ipadPro: "@media only screen and (min-width: 1024px)",
   laptop: "@media only screen and (min-width: 1440px)",
-  desktop: "@media only screen and (min-width: 1770px)",
+  desktop: "@media only screen and (min-width: 1750px)",
 };
 
 export const WrapperHidden = styled.div`
@@ -135,8 +135,12 @@ export const WrapperTextContainer = styled.div`
     right: ${({ slide }) => slide.wrapperTextContainer__posRight_ipadPro};
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_ipadPro};
   }
+  @media screen and (max-width: 620px) and (min-height: 915px) {
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop620};
+  }
   ${media.desktop} {
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop};
+    right: ${({ slide }) => slide.wrapperTextContainer__posRight_desktop774};
   }
   @media screen and (max-width: 774px) and (min-height: 915px) {
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop_sm};

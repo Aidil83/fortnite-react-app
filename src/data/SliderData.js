@@ -138,6 +138,9 @@ export const SliderData = [
     // wrapperTextContainer__posTop_ipadpro: "45%",
     wrapperTextContainer__posRight_ipadPro: "42%",
 
+    wrapperTextContainer__posRight_desktop774: "62%",
+    wrapperTextContainer__posTop_desktop620: "58%",
+
     // ===================
     //   WrapperTitleTxt
     // ===================

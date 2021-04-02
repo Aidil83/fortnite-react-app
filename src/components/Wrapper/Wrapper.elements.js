@@ -143,9 +143,9 @@ export const WrapperTextContainer = styled.div`
   @media screen and (max-width: 620px) and (min-height: 915px) {
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop620};
   }
-  @media screen and (min-width: 621px) and (min-height: 915px) {
-    top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop620};
-    right: ${({ slide }) => slide.wrapperTextContainer__posRight_desktop774};
+  @media screen and (min-width: 621px) and (max-width: 767px) and (min-height: 915px) {
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop621};
+    right: ${({ slide }) => slide.wrapperTextContainer__posRight_desktop621};
   }
   ${media.desktop} {
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop};
@@ -228,6 +228,10 @@ export const WrapperTitleTxt = styled.div`
 
   @media screen and (min-width: 375px) and (min-height: 915px) {
     font-size: ${({ slide }) => slide.wrapperTitleTxt__fontSize_desktop_sm};
+  }
+
+  @media screen and (min-width: 621px) and (max-width: 767px) and (min-height: 915px) {
+    font-size: ${({ slide }) => slide.wrapperTitleTxt__fontSize_desktop621};
   }
 `;
 

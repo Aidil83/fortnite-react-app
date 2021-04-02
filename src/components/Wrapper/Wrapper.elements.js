@@ -86,10 +86,12 @@ export const PrevBtn = styled.button`
   ${media.ipad} {
     display: flex;
   }
+  @media screen and (max-width: 414px) {
+    display: none;
+  }
 `;
 
 export const NextBtn = styled.button`
-  /* display: none; */
   position: absolute;
   right: 2%;
   top: 50%;
@@ -109,6 +111,9 @@ export const NextBtn = styled.button`
 
   ${media.ipad} {
     display: flex;
+  }
+  @media screen and (max-width: 414px) {
+    display: none;
   }
 `;
 

@@ -51,6 +51,11 @@ export const WrapperImage = styled.div`
       background-size: ${({ slide }) => slide.backdropBackgroundSize};
     }
   }
+  @media screen and (min-width: 375px) and (min-height: 915px) {
+    &.mobile0 {
+      background-size: cover;
+    }
+  }
   ${media.ipad} {
     &.mobile0 {
       background-size: cover;
@@ -137,6 +142,10 @@ export const WrapperTextContainer = styled.div`
   }
   @media screen and (max-width: 620px) and (min-height: 915px) {
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop620};
+  }
+  @media screen and (min-width: 621px) and (min-height: 915px) {
+    top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop620};
+    right: ${({ slide }) => slide.wrapperTextContainer__posRight_desktop774};
   }
   ${media.desktop} {
     top: ${({ slide }) => slide.wrapperTextContainer__posTop_desktop};

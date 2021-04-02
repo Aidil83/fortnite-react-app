@@ -61,18 +61,20 @@ const Navbar = ({ setIsOpen, isOpen, handleToggle, count }) => {
   }, [purchasedIndicator]);
 
   useEffect(() => {
-    if (isSearch) {
+    if (loadCount < 1) {
+      gsap.to(".animateInput", {
+        visibility: "visible",
+        width: 0,
+        autoAlpha: 0,
+        duration: 0,
+      });
+    } else if (isSearch) {
       gsap.to(".animateInput", {
         visibility: "visible",
         autoAlpha: 1,
         width: 230,
         duration: 0.55,
         ease: "power1.out",
-      });
-    } else if (loadIndicator < 1) {
-      gsap.to(".animateInput", {
-        visibility: "hidden",
-        width: 0,
       });
     } else {
       gsap.to(".animateInput", {

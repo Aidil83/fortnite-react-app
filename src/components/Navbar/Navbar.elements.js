@@ -220,21 +220,6 @@ export const NavMenuIcon = styled.i`
   }
 `;
 
-const animateSearchBar = keyframes`
-  0%{
-    width: 0px;
-  }
-`;
-
-const animateSearchBarHidden = keyframes`
-  0%{
-    width: 240px;
-  }
-  100%{
-    width: 0px;
-  }
-`;
-
 export const SearchContainer = styled.div`
   position: relative;
   display: flex;
@@ -245,6 +230,7 @@ export const SearchContainer = styled.div`
 
   input {
     position: relative;
+    width: 0px;
     height: 40px;
     padding-left: 15px;
     border-radius: 2px;
@@ -253,16 +239,6 @@ export const SearchContainer = styled.div`
     border-style: none;
     outline: none;
     color: white;
-  }
-
-  input[type="text"] {
-    width: 240px;
-    @media screen and (max-width: 812px) and (orientation: landscape) {
-      width: 240px;
-      animation-name: ${animateSearchBar} {
-        width: 240px;
-      }
-    }
   }
 
   .search__Box {
@@ -315,12 +291,6 @@ export const SearchContainerHidden = styled.div`
     border-style: none;
     outline: none;
     color: white;
-  }
-
-  input[type="text"] {
-    width: 380px;
-    animation-name: ${animateSearchBarHidden};
-    animation-duration: 0.4s;
   }
 
   &.search__Box {

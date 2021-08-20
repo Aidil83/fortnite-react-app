@@ -22,7 +22,7 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
     });
   };
 
-  const handleCheckbox = (checked, c_id) => {
+  const handleCheckbox = (c_id) => {
     const modifiedItems = purchasedItems.map((item) => {
       if (item.modalData.id === c_id) {
         item.isTick = !item.isTick;
@@ -66,9 +66,7 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
           <Checkbox
             inputProps={{ "aria-label": "uncontrolled-checkbox" }}
             style={{ display: isEdit ? "block" : "none", padding: 0 }}
-            onChange={() =>
-              handleCheckbox(purchasedItem.isTick, purchasedItem.modalData.id)
-            }
+            onChange={() => handleCheckbox(purchasedItem.modalData.id)}
             checked={purchasedItem.isTick}
           />
         </Info__productContainer>

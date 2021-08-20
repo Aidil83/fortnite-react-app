@@ -6,15 +6,6 @@ import { AiOutlineClose } from "react-icons/ai";
 import { IoCloseOutline, IoSearchOutline } from "react-icons/io5";
 import { GiShoppingCart } from "react-icons/gi";
 
-const media = {
-  Laptop: "@media (max-width: 1740px)",
-  ipadPro: "@media only screen and (device-width: 1024px)",
-  ipad: "@media only screen and (device-width: 768px)",
-  mobile: "@media only screen and (max-device-width: 480px)",
-  mobileSm: "@media only screen and (max-device-width: 320px)",
-  orientation: "@media screen and (orientation: landscape)",
-};
-
 export const NavContainer = styled.div`
   display: flex;
   align-items: center;

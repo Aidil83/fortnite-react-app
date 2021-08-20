@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   MerchHeroMain,
   MerchListContainer,
@@ -18,6 +17,8 @@ import { ModalData } from "../../data/ModalData";
 import { useContext } from "react";
 import { StateContext } from "../../context/StateProvider";
 import backdrop6 from "../../images/backdrop/backdrop6.jpg";
+import { useQuery } from "react-query";
+import { getForniteApi } from "../../api/forniteApi";
 
 const Merch = () => {
   const [{ hoverCard, firstCard, getApi }, dispatch] = useContext(StateContext);
@@ -27,26 +28,30 @@ const Merch = () => {
   const [isModal, setIsModal] = useState(false);
   const [spinner, setSpinner] = useState(true);
 
-  useEffect(() => {
-    (async () => {
-      const res = await axios("https://fortnite-api.com/v2/cosmetics/br");
-      const _data = res.data.data;
-      const featuredData = _data.filter(
-        (item) => item.images.featured !== null
-      );
-      //IMPORTANT: shuffling method:
-      function shuffle(array) {
-        return array.sort(() => Math.random() - 0.5);
-      }
-      //NOTE: shuffle image cards after the first load:
-      shuffle(featuredData);
+  const { isLoading, data, error } = useQuery("forniteApiData", () =>
+    getForniteApi(dispatch)
+  );
 
-      dispatch({
-        type: "GETAPI",
-        getApi: featuredData,
-      });
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     const res = await axios("https://fortnite-api.com/v2/cosmetics/br");
+  //     const _data = res.data.data;
+  //     const featuredData = _data.filter(
+  //       (item) => item.images.featured !== null
+  //     );
+  //     //IMPORTANT: shuffling method:
+  //     function shuffle(array) {
+  //       return array.sort(() => Math.random() - 0.5);
+  //     }
+  //     //NOTE: shuffle image cards after the first load:
+  //     shuffle(featuredData);
+
+  //     dispatch({
+  //       type: "GETAPI",
+  //       getApi: featuredData,
+  //     });
+  //   })();
+  // }, []);
 
   useEffect(() => {
     setTimeout(() => setSpinner(false), 2500);
@@ -138,7 +143,7 @@ const Merch = () => {
         <MerchHeroMain>
           <MerchHeroContainer>
             {firstCard === 0 ? (
-              spinner ? (
+              isLoading ? (
                 <></>
               ) : (
                 <div className="innerContainer">
@@ -149,7 +154,7 @@ const Merch = () => {
                   </div>
                 </div>
               )
-            ) : spinner ? (
+            ) : isLoading ? (
               <></>
             ) : (
               <div className="innerContainer">
@@ -162,7 +167,7 @@ const Merch = () => {
             )}
           </MerchHeroContainer>
           <MerchListContainer>
-            {spinner ? (
+            {isLoading ? (
               <MerchListCard>
                 <MerchSpinner
                   color={"#999999"}

@@ -88,10 +88,7 @@ const reducer = (state, action) => {
     case "DELETE_SELECTED":
       let newCart1 = [...state.purchasedItems];
 
-      const index1 = action.payload.filter((isTickItem) => {
-        return isTickItem.isTick === false;
-      });
-      console.log(index1, "index1");
+      const index1 = action.payload.filter((item) => item.isTick === false);
 
       return {
         ...state,

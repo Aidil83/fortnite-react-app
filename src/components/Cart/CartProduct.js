@@ -22,14 +22,21 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
     });
   };
 
-  const handleCheckbox = () => {
-    setStoreTicked({ ...storeTicked, isTick: !storeTicked.isTick });
-    purchasedItems.forEach((item) => {
-      if (item.modalData.id === storeTicked.modalData.id) {
-        item.isTick = !storeTicked.isTick;
-        console.log(item);
+  const handleCheckbox = (checked, c_id) => {
+    const modifiedItems = purchasedItems.map((item) => {
+      if (item.modalData.id === c_id) {
+        item.isTick = !item.isTick;
       }
+      return item;
     });
+    setStoreTicked(modifiedItems);
+
+    // purchasedItems.forEach((item) => {
+    //   if (item.modalData.id === storeTicked.modalData.id) {
+    //     item.isTick = !storeTicked.isTick;
+    //     console.log(item);
+    //   }
+    // });
 
     // console.log(purchasedItems, "new");
 
@@ -59,7 +66,9 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
           <Checkbox
             inputProps={{ "aria-label": "uncontrolled-checkbox" }}
             style={{ display: isEdit ? "block" : "none", padding: 0 }}
-            onClick={handleCheckbox}
+            onChange={() =>
+              handleCheckbox(purchasedItem.isTick, purchasedItem.modalData.id)
+            }
             checked={purchasedItem.isTick}
           />
         </Info__productContainer>

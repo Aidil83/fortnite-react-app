@@ -1,3 +1,4 @@
+import { useContext, useState } from "react";
 import {
   CartProduct__container,
   InfoContainer,
@@ -11,7 +12,6 @@ import { Total, Total__header, Total__subtotal } from "./Cart.elements";
 import { Total__shipping, Total__total, Total__btn } from "./Cart.elements";
 import EditIcon from "@material-ui/icons/Edit";
 import CartProduct from "./CartProduct";
-import { useContext, useState } from "react";
 import { StateContext } from "../../context/StateProvider";
 import CurrencyFormat from "react-currency-format";
 import {

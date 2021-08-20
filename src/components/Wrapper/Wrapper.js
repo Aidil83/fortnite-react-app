@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import styled, { css } from "styled-components/macro";
 import { NavigateBefore, NavigateNext } from "@material-ui/icons";
 import { TweenMax } from "gsap";
 import { WrapperHidden, PrevBtn } from "./Wrapper.elements";
@@ -106,10 +105,10 @@ const Wrapper = ({ slides }) => {
   return (
     <>
       <WrapperHidden>
-        <img src={slides[0].bgImage} />
-        <img src={slides[1].bgImage} />
-        <img src={slides[2].bgImage} />
-        <img src={slides[3].bgImage} />
+        <img src={slides[0].bgImage} alt="" />
+        <img src={slides[1].bgImage} alt="" />
+        <img src={slides[2].bgImage} alt="" />
+        <img src={slides[3].bgImage} alt="" />
       </WrapperHidden>
       {slides.map((slide, index) => (
         <div key={index}>

@@ -31,15 +31,6 @@ const CartProduct = ({ purchasedItem, isEdit }) => {
     });
     setStoreTicked(modifiedItems);
 
-    // purchasedItems.forEach((item) => {
-    //   if (item.modalData.id === storeTicked.modalData.id) {
-    //     item.isTick = !storeTicked.isTick;
-    //     console.log(item);
-    //   }
-    // });
-
-    // console.log(purchasedItems, "new");
-
     dispatch({
       type: "SAVE_TICK",
       payload: purchasedItems,

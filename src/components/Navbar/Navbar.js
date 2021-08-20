@@ -1,7 +1,6 @@
 import { VerifiedUser } from "@material-ui/icons";
 import gsap from "gsap/gsap-core";
 import { useContext, useEffect, useRef, useState } from "react";
-import styled, { css } from "styled-components/macro";
 import { StateContext } from "../../context/StateProvider";
 import forniteLogo from "../../images/text_image/forniteLogo.png";
 import { NavCartBtn } from "./Navbar.elements";
@@ -32,15 +31,13 @@ import {
 
 const Navbar = ({ setIsOpen, isOpen, handleToggle, count }) => {
   const [isSearch, setIsSearch] = useState(false);
-  const [isLoad, setIsLoad] = useState(false);
   const [loadCount, setLoadCount] = useState(0);
   const [loadIndicator, setLoadIndicator] = useState(0);
 
   let inputRef = useRef(null);
 
-  const [{ purchasedItems, purchasedIndicator, trackLogin }] = useContext(
-    StateContext
-  );
+  const [{ purchasedItems, purchasedIndicator, trackLogin }] =
+    useContext(StateContext);
 
   useEffect(() => {
     if (loadIndicator >= 1)
@@ -58,7 +55,7 @@ const Navbar = ({ setIsOpen, isOpen, handleToggle, count }) => {
           duration: 0.35,
         });
     setLoadIndicator(loadIndicator + 1);
-  }, [purchasedIndicator]);
+  }, [purchasedIndicator, loadIndicator]);
 
   useEffect(() => {
     if (loadCount < 1) {
@@ -99,12 +96,11 @@ const Navbar = ({ setIsOpen, isOpen, handleToggle, count }) => {
         autoAlpha: 0,
         duration: 0,
       });
-  }, [isSearch]);
+  }, [isSearch, loadCount]);
 
   const handleSearch = () => {
     setIsSearch(!isSearch);
     setLoadCount(loadCount + 1);
-    if (loadCount >= 1) setIsLoad(true);
   };
 
   //NOTE: keeps the focus on input.

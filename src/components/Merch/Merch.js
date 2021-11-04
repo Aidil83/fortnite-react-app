@@ -28,7 +28,7 @@ const Merch = () => {
   const [isModal, setIsModal] = useState(false);
   const [spinner, setSpinner] = useState(true);
 
-  const { isLoading, data, error } = useQuery("forniteApiData", () =>
+  const { isLoading } = useQuery("forniteApiData", () =>
     getForniteApi(dispatch)
   );
 
